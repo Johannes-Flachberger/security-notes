@@ -1,0 +1,44 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "#tool",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#theory",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "tag:#note",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -1.7,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1.79713541666667,
+  "collapse-forces": false,
+  "centerStrength": 0.268229166666667,
+  "repelStrength": 3.38541666666667,
+  "linkStrength": 0.716145833333333,
+  "linkDistance": 128,
+  "scale": 1.2880754760991762,
+  "close": true
+}

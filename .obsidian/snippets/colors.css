@@ -1,0 +1,120 @@
+/*=================================================*/
+/* ================ Heading Styles =============== */
+/*=================================================*/
+
+:root {
+  --heading-hue: 215;   /* blue hue */
+  --heading-sat: 90%;
+}
+
+/* H1–H6 with decreasing lightness */
+.cm-s-obsidian .HyperMD-header.HyperMD-header-1,
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 75%);
+  padding: 25px 0 5px 0;
+}
+
+.cm-s-obsidian .HyperMD-header.HyperMD-header-2,
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 65%);
+  padding: 20px 0 5px 0;
+}
+
+.cm-s-obsidian .HyperMD-header.HyperMD-header-3,
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 55%);
+  padding: 15px 0 2px 0;
+}
+
+.cm-s-obsidian .HyperMD-header.HyperMD-header-4,
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 50%);
+  padding: 10px 0 2px 0;
+}
+
+.cm-s-obsidian .HyperMD-header.HyperMD-header-5,
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 45%);
+  padding: 5px 0 0px 0;
+}
+
+.cm-s-obsidian .HyperMD-header.HyperMD-header-6,
+.markdown-preview-view h6,
+.markdown-rendered h6 {
+  color: hsl(var(--heading-hue), var(--heading-sat), 40%);
+  padding: 5px 0 0px 0;
+}
+
+/*=================================================*/
+/* ============== Inline Text Styles ============= */
+/*=================================================*/
+
+/* Bold text */
+.cm-strong,
+.markdown-preview-view strong,
+.markdown-preview-view b,
+.markdown-rendered strong,
+.markdown-rendered b {
+	color: #9ae8fd !important;
+}
+
+/* Inline code */
+.cm-s-obsidian span.cm-inline-code,
+/* Live Preview */
+.markdown-preview-view code:not(pre code),
+/* Reading View */
+.markdown-rendered code:not(pre code) {
+	color: #dd4269 !important; /* reddish */
+}
+
+
+/* === PDF Export (Print Styles) === */
+@media print {
+	h1 {
+		color: #64b5f6;
+		padding: 15px 0 5px 0;
+	}
+
+	h2 {
+		color: #2e94e8;
+		padding: 10px 0 5px 0;
+	}
+
+	h3 {
+		color: #1479cc;
+		padding: 10px 0 2px 0;
+	}
+
+	h4 {
+		color: #0e6fc4;
+		padding: 5px 0 2px 0;
+	}
+
+	h5 {
+		color: #0e65bc;
+		padding: 5px 0 0px 0;
+	}
+
+	h6 {
+		color: #0e65bc;
+		padding: 5px 0 0px 0;
+	}
+
+	.markdown-preview-view strong,
+	.markdown-preview-view b,
+	.markdown-rendered strong,
+	.markdown-rendered b,
+	strong,
+	b {
+		color: #03003a !important;
+	}
+
+	code:not(pre code) {
+		color: #a21a3c !important;
+	}
+}

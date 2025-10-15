@@ -1,0 +1,19 @@
+{
+  "theme": "obsidian",
+  "translucency": false,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "coloredHeadings",
+    "competeTaskNoStrikethrough",
+    "niceHeadings",
+    "collapseEmbeddedSearchResults",
+    "coloredBold",
+    "colors",
+    "cleanEmbeds"
+  ],
+  "interfaceFontFamily": "",
+  "baseFontSize": 19,
+  "textFontFamily": "",
+  "accentColor": "#0468b4",
+  "showViewHeader": true
+}

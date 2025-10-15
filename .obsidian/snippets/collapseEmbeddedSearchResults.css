@@ -1,0 +1,5 @@
+/*Hide embedded search result previews. */
+
+.internal-query .search-result-file-matches {
+	display: none;
+}
