@@ -17,7 +17,7 @@ This leads to the following structure and formatting rules.
 # Knowledge Base Structure
 ## Directory Structure
 On a top level, the above mentioned dimensions are represented as top level folders which are then detailed and further splitted in subfolders:
-- /Theory
+- /Methods
 	- /Pentesting
 	- /Security-Engineering
 - /Tech-Specifics
@@ -32,7 +32,7 @@ On a top level, the above mentioned dimensions are represented as top level fold
 ## Notes Structure
 ### Structure of Pentesting Method Notes
 Pentesting Methods are structured followring the MITRE ATT@CK Framework. Specifically, the Tactics of the "Enterprise Matrix" are used.
-### Structure of Technology Notes
+### Structure of Tech-Specifics Notes
 Technology notes use the following overall structure:
 - Fundamentals
 - Pentesting
@@ -48,7 +48,7 @@ Tool notes can contain sections about how the tool can be used to test a specifi
 ### Integration of Technologies and Pentesting Methods
 For each technology (and possibly tool), tags are set to identify the MITRE ATT@CK Enterprise tactics they are relevant for. Based on that, queries can be used in method notes to identify all technologies that can be (ab)used for a specific tactic. Further, simple links can be used.
 
-Tags:
+**Tags:**
 - In
 	- #tactic/reconnaissance
 	- #tactic/ressource-development

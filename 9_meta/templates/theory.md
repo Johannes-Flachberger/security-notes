@@ -1,4 +1,0 @@
-**Type:** #type/theory
-**Tags:** 
-
----
