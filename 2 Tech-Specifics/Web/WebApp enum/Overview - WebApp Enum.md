@@ -6,10 +6,10 @@ Here, both passive and active recon techniques are listed
 [[3 Tools/web/Burp Suite|Burp Suite]] pro contains an excellent web app vulnerability scanner
 
 > [!Note]
-> Some webapps use their hostname in links and redirects --> if we want to bypass DNS or dont access to a DNS but prevent the links from braking we need to put the hostname in the `/etc/hosts` file. E.g. when testing VMs in isolate environments, hostnames might be used that are not listed in DNS.
+> Some webapps use their hostname in links and redirects --> if we want to bypass DNS or dont have access to a DNS but prevent the links from braking we need to put the hostname in the `/etc/hosts` file. E.g. when testing VMs in isolate environments, hostnames might be used that are not listed in DNS.
 > e.g. `cat "192.168.50.16 exampledomain" >> /etc/hosts` 
 
-# Approach
+# Workflow
 1. Enumerate the technology stack
 2. Enumerate the application
 # Techniques

@@ -21,7 +21,6 @@ Databases exist that contain every actual and historical certificate for a domai
 - `./sublist3r.py -d <url>`
 ## [[3 Tools/web/Netcraft|Netcraft]]
 passive enum
-
 # API enumeration
 General methodology:
 emumerate the available paths step by step
