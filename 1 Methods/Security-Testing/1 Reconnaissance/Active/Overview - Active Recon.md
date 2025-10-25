@@ -12,7 +12,7 @@ See [[1 Methods/Security-Testing/1 Reconnaissance/Active/Port scanning|Port scan
 ## 2. Vulnerability Scanning
 See [[1 Methods/Security-Testing/1 Reconnaissance/Active/Vulnerability Scanning|Vulnerability Scanning]]
 ##  3. Web enumeration
-See [[2 Tech-Specifics/Web/WebApp enum/Overview - WebApp Enum|Overview - WebApp Enum]]
+See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - Web Application Enum|Overview - Web Application Enum]]
 ## 4. Enumerate each discovered network service
 ```query
 tag:#tactic/reconnaissance/active path:"2 Tech-Specifics/Network"

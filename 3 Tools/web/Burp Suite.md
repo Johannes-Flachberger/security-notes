@@ -29,7 +29,7 @@ modify and repeat requests manually
 ## Intruder
 carry out automated attacks (fuzzing), eg. bruteforcing sql injections
 in positions tab, set the parts you want to fuzz
-Payload: set wordlists, e.g. [[3 Tools/bruteforce/seclists|seclists]]
+Payload: set wordlists, e.g. [[3 Tools/bruteforce/SecLists|SecLists]]
 ### attack modes
 **Sniper**
 tries every word of a word list --> good for single position attacks

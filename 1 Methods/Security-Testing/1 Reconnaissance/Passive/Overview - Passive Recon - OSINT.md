@@ -9,7 +9,7 @@ Less strict interpretation: We can also make contact, but only like a normal use
 - gather information for social engineering or password guessing
 
 This file describes general recon techniques that can be used for organizations, individuals, etc. Also check technology specific recon notes:
-- [[2 Tech-Specifics/Web/WebApp enum/Overview - WebApp Enum|Overview - WebApp Enum]]
+- [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - Web Application Enum|Overview - Web Application Enum]]
 # OSINT Framework
 A framework of useful ressources: https://osintframework.com/
 # Techniques

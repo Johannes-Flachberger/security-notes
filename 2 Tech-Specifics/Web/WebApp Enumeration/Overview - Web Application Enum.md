@@ -28,8 +28,8 @@ Discover the technology stack in use:
 	- Version scan reveals webserver
 	- `http-enum` script reveals interesting paths
 ## Subdomain enumeration
-- [[2 Tech-Specifics/Web/WebApp enum/Subdomain enumeration|Subdomain enumeration]]
-## directory enumeration
+- [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain enumeration|Subdomain enumeration]]
+## Directory Enumeration
 wordlists: `/usr/share/wordlists/dirb/`
 - [[3 Tools/web/gobuster|gobuster]] - active
 	- dir mode
@@ -51,7 +51,7 @@ Missing headers are not necessarily a vulnerablilty in itself, but they can be a
 ## Analyse TLS config
 https://www.ssllabs.com/ssltest/ - passive
 analyses TLS configuration and compares against best practices - it can also detect some vulnerabiliities, e.g. Poodle or Heartbleed
-## virtual hosts (vhost)
+## Virtual Hosts (vhost)
 - [[3 Tools/web/gobuster|gobuster]]
 - ffuf
 ## check metadata files

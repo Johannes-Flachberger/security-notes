@@ -2,7 +2,7 @@
 
 ---
 # Useful commands:
-powershell basics in [[2 Tech-Specifics/OS/Windows/powershell]]
+powershell basics in [[3 Tools/shells/PowerShell]]
 cmd basics in [[2 Tech-Specifics/OS/Windows/cmd cheatsheet]]
 ## enumerate users
 `whoami /priv`: show current users privileges

@@ -4,11 +4,14 @@
 These files are expecially sensitive, since they can provide critical information to an attacker. Depending on your current privileges & configuration (issues) they may be accessible or not
 ## OS independent
 - SQLite Databases
-### Webservers
+## Webservers
 - `/phpmyadmin.php`: gives info about database, system, etc...
-- `/var/log/apache2/access.log`: the accessed requests for Apache  webserver
+**Apache logs**
+- on linux: `/var/log/apache2/access.log`
+**XAMPP logs**
+- xampp apache on windows: `C:\xampp\apache\logs\`
 ## Linux
-- `/etc/passwd`: user accounts, login shells - readable by all users
+- `/etc/passwd`: user accounts, login shells - **readable by all users**
 - `/etc/shadow`: password hashes
 - `/home/<user>/.ssh/`: ssh keys, known hosts
 	- e.g. `.../.ssh/id_rsa

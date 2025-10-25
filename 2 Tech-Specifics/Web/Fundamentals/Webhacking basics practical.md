@@ -30,7 +30,7 @@ doesnt work anymore
 change page parameter in request to some file like /etc/passwd
 can you include a remote file?
 ## SQL injection
-[[2 Tech-Specifics/Web/Web Application Attacks/SQL Injection]]
+[[2 Tech-Specifics/Web/WebApp Attacks/Attacks/Injection Attacks/SQL Injection]]
 ## upload vulns
 upload a simple php webshell
 ```php

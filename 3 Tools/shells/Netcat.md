@@ -19,12 +19,6 @@ can also be used for **port scanning**:
 	- `-z` = zero io mode
 - UDP Scan: same as tcp scan, use `-u` additionally
 	- if filtered, ports will be listed as open because no "ICMP port unreachable" is received 
-## stabilisation: rlwrap
-gives better featured shell out of the box
-has to be installed`sudo apt install rlwrap`
-start special listener: `rlwrap nc -lvnp <port>`
-some manual stabilisation may be helpful, eg. step 4 of python method
-
 # Use Cases
 ### Manual SMTP Connection
 connect to port 25, send [[2 Tech-Specifics/Network/Protocols/TCP 25 SMTP|SMTP]] commands manually
