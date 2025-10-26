@@ -6,13 +6,13 @@ data entered by the user is not filtered or validated
 -> the user can enter - "inject" commands/code/queries into the system
 
 multiple scenarios are possible:
-- [[2 Tech-Specifics/Web/WebApp Attacks/Attacks/Injection Attacks/Command Injection|command injection]]: inject os/shell commands
+- [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Command Injection|command injection]]: inject os/shell commands
 - hibernate injecition: java database stuff
 - LDAP injection: inject stuff into the domain
 - HTML
 - Javascript
 - XML
-- [[2 Tech-Specifics/Web/WebApp Attacks/Attacks/Injection Attacks/SQL Injection|SQL injection]]
+- [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL injection]]
 
 ### Impact:
 - data loss

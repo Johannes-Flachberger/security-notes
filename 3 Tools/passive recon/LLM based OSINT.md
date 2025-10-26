@@ -10,7 +10,7 @@
 - Perplexity - much faster than ChatGPT deep research
 # Use Cases & Prompts
 
-> [!TIP] Hint: Use the [[1 Methods/Security-Testing/1 Reconnaissance/Overview - Reconnaissance#Big Checklist|Big Reconnaissance Checklist]] in Prompts
+> [!TIP] Hint: Use the [[1 Methods/Security-Testing/1 Reconnaissance/Overview - 1 Reconnaissance#Big Checklist|Big Reconnaissance Checklist]] in Prompts
 ## Get employee info
 ```
 Can you print out all the public information about company structure and employees of <company>?

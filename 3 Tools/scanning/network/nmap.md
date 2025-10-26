@@ -131,7 +131,7 @@ add further scripts:
 - NSE usage: https://nmap.org/book/nse-usage.html
 ## Vulnerability Scanning
 ^eee943
-Also see [[1 Methods/Security-Testing/1 Reconnaissance/Active/Vulnerability Scanning|Vulnerability Scanning]]
+Also see [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
 Use scripts for vulnerability scanning - script category `vuln`
 - e.g. run all scripts from the `vuln` category: `nmap -sV --sript "vuln"`
 - e.g. the https://nmap.org/nsedoc/scripts/vulners.html script checks service versions for known vulnerabillities, and also lists Exploit PoCs using the keyword "EXPOIT".
