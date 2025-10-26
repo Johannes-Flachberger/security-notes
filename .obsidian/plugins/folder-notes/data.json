@@ -18,8 +18,8 @@
   "openFolderNoteOnClickInPath": true,
   "openInNewTab": false,
   "focusExistingTab": false,
-  "oldFolderNoteName": "{{folder_name}}",
-  "folderNoteName": "Overview {{folder_name}}",
+  "oldFolderNoteName": "Overview - {{folder_name}}",
+  "folderNoteName": "Overview - {{folder_name}}",
   "folderNoteType": ".md",
   "disableFolderHighlighting": false,
   "newFolderNoteName": "{{folder_name}}",
@@ -62,7 +62,7 @@
     "explorer": true,
     "path": true
   },
-  "settingsTab": "general",
+  "settingsTab": "file_explorer",
   "supportedFileTypes": [
     "md"
   ],
