@@ -12,14 +12,13 @@ if you want to enumerate multiple ips:
 	put ips into a file, one each line
 	`xargs -n 1 enum4linux -a < targets.txt`
 ## SMBClient
-for connecting to shares (drives/basically data)
+for connecting to shares
 `smbclient //[IP]/[SHARE] -options` 
 in smb client shell: “help” for available commands 
 ## smbget
-download files on SMB shares
+download files from SMB shares
 recursively download whole share: `smbget -R smb://<ip>/<sharename>`
 ## net view
-^d4fe5a
 smb enumeration on windows
 lists domains, resources, and computers belonging to a given host.
 e.g. `net view \\dc01 /all`

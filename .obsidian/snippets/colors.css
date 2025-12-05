@@ -69,7 +69,7 @@
 .markdown-preview-view code:not(pre code),
 /* Reading View */
 .markdown-rendered code:not(pre code) {
-	color: #dd4269 !important; /* reddish */
+	color: #da496d !important; /* reddish */
 }
 
 
@@ -115,6 +115,6 @@
 	}
 
 	code:not(pre code) {
-		color: #a21a3c !important;
+		color: #742d3f !important;
 	}
 }

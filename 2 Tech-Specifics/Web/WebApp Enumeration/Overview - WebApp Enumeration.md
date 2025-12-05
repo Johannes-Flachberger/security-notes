@@ -14,29 +14,18 @@ Here, both passive and active recon techniques are listed
 2. Enumerate the application
 # Techniques
 ## Technology Identification
-Discover the technology stack in use:
-1. host OS
-2. Web Server
-3. Database
-4. Front End & Back End framework
-**Tools:**
-- [[3 Tools/web/Wappalyzer|Wappalyzer]] - passive & active
-	- reveals the whole technology stack: OS, UI frameworks, webservers, databases, javascript libraries,...
-- [[3 Tools/web/Netcraft|Netcraft]] - passive
-	- analyse site report (icon to the right of the results) 
-- [[3 Tools/scanning/network/nmap]] - active 
-	- Version scan reveals webserver
-	- `http-enum` script reveals interesting paths
+[[2 Tech-Specifics/Web/WebApp Enumeration/Server Side technology Identification|Server Side technology Identification]]
 ## Subdomain enumeration
 - [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain enumeration|Subdomain enumeration]]
 ## Directory Enumeration
 wordlists: `/usr/share/wordlists/dirb/`
 - [[3 Tools/web/gobuster|gobuster]] - active
-	- dir mode
-- nmap - script `http-enum`
+- [[3 Tools/scanning/network/nmap|nmap]] - script `http-enum`
 - dirb - active
 - dirbuster - active
 - [[3 Tools/web/Photon|photon]]
+## API enumeration
+[[2 Tech-Specifics/Web/Rest API|Rest API]]
 ## Analyse HTTP Response Headers
 analyse HTTP headers to get information about the websites security posture
 Missing headers are not necessarily a vulnerablilty in itself, but they can be a sign that a webserver is poorly hardened

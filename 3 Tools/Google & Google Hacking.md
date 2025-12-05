@@ -3,7 +3,7 @@
 **Purpose:** Reconnaissance using Google
 
 ---
-# Approach
+# Workflow
 use google or any other search engine features to find content
 start broad, then get narrow with operators
 # Ressources

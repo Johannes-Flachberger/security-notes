@@ -1,0 +1,10 @@
+/*Hide embedded search result previews. */
+
+.internal-query .search-result-file-matches {
+	display: none;
+}
+
+/* Hide the query text */
+.internal-query-header-title {
+    display: none;
+}

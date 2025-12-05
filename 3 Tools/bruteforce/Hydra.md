@@ -1,10 +1,10 @@
-**Link:**
 **Tags:** #type/tool #tactic/credential-access 
-**Purpose:** brute force tool
+**Link:** https://www.kali.org/tools/hydra/
+**Purpose:** brute force network protocol logins
 
 ---
 # Info
-more than 50 Protocols, including Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB
+supports more than 50 Protocols, including Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB
 # Usage
 `hydra -l [username] -P [wordlist path] [server] [service]`
 eg. `hydra -t 4 -l [user] -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp`

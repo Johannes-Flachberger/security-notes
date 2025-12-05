@@ -17,16 +17,12 @@ See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Over
 ```query
 tag:#tactic/reconnaissance/active path:"2 Tech-Specifics/Network"
 ```
+
 # Tools
 ```query
-tag:#tactic/reconnaissance/passive tag:#type/tool 
+tag:#tactic/reconnaissance/active tag:#type/tool 
 ```
-
-
-
-
-
-
-
-
-
+# Tech-Specific Attack vectors
+```query
+tag:#tactic/reconnaissance/active tag:#type/tech-specific 
+```

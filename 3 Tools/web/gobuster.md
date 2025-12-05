@@ -7,6 +7,15 @@
 enumerate website directories, subdomains, etc
 brute force, makes use of wordlist, in kali some are located in /usr/share/wordlists/dirbuster
 # Usage
+## options:
+`-u`: target url
+`-e`: print full urls in console
+`-w`: path to wordlist
+`-U` and `-P`: username and password for basic authentications
+`-p <file>`: pattern file to use
+`-c <cookies>`: specify cookie 
+`-t`: number of threads
+`-x`: match files with extensions
 ## directory enum
 `gobuster dir -u http://<IP>:[port] -w <wordlist>`
 eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
@@ -18,8 +27,7 @@ eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/direct
 > 
 ## subdomain enum
 `gobuster dns -d example.com -w wordlist.txt -t 10`
-## patterns
-^eab456
+## Patterns
 gobuster can mutate each entry in a wordlist with one or more patterns
 1. create a pattern file - e.g:
 ```
@@ -28,14 +36,6 @@ gobuster can mutate each entry in a wordlist with one or more patterns
 ```
 {gobuster} matches each entry in the wordfile
 2. use the pattern file using the `-p <pattern-file>` option. 
-## options:
-`-u`: target url
-`-e`: print full urls in console
-`-w`: path to wordlist
-`-U` and `-P`: username and password for basic authentications
-`-p <file>`: pattern file to use
-`-c <cookies>`: specify cookie 
-`-t`: number of threads
 
 **alternatives**
 - ffuf

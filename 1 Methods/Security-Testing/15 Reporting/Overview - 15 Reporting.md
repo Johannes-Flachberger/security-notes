@@ -22,3 +22,13 @@ E.g. PCI DSS certified companies are not allowed to use TLS 1.0, but it might be
 Provide both executive summaries and in-depth technical information for security professionals.
 ## Structure
 
+
+# Tech-Specific Attack Vectors
+```query
+tag:#tactic/reporting  tag:#type/tech-specific 
+```
+# Tools
+```query
+tag:#tactic/reporting tag:#type/tool 
+```
+

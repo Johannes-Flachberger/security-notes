@@ -12,13 +12,14 @@
 Usernames can be enumerated using VRFY and EXPN commands
 - VRFY: asks server if email address exists
 - EXPN: asks server if user is part of a mailing list
-Be careful to check what the response code actually means:
-	Response Codes & Further commands: https://mailtrap.io/blog/smtp-commands-and-responses/
+Be careful to check what the response code actually means, dont rely just on the message the server sends: [Response Codes](https://mailtrap.io/blog/smtp-commands-and-responses/#SMTP-response-codes)
 ### Manual Enumeration
-connect to port 25 and send commands manually
+connect to port 25 and send [commands](https://mailtrap.io/blog/smtp-commands-and-responses/#Essential-SMTP-commands-in-the-order-they-may-be-used) manually
 - Manual Connection with [[3 Tools/shells/Netcat#Manual SMTP Connection|Netcat]]
-- Manual Connection with [[2 Tech-Specifics/Network/Protocols/Telnet|Telnet]]
+	- Note: sometimes, netcat does not send CRLF sequences, therefore better use telnet or socat
+- Manual Connection with [[2 Tech-Specifics/Network/Protocols/TCP 23 Telnet|TCP 23 Telnet]]
+- Manual Connection with [[3 Tools/shells/Socat|Socat]]
 ### Automated enumeration
 - [[3 Tools/Metasploit framework/Metasploit|Metasploit]]
-	- Module `Smtp_version` - for getting information about the smtp server
-	- Module `Smtp_enum` - for bruteforcing passwords
+	- Module `smtp_version` - for getting information about the smtp server
+	- Module `smtp_enum` - for bruteforcing passwords

@@ -28,7 +28,7 @@ On a top level, the above mentioned dimensions are represented as top level fold
 	- /ICS
 - /Tools
 	- /Pentesting
-	- Engineering
+	- /Engineering
 ## Notes Structure
 ### Structure of Pentesting Method Notes
 Pentesting Methods are structured followring the MITRE ATT@CK Framework. Specifically, the Tactics of the "Enterprise Matrix" are used.
@@ -70,6 +70,6 @@ For each technology (and possibly tool), tags are set to identify the MITRE ATT@
 Each tool that is useful to pentest or audit a certain technology is linked from the respective technology note.
 
 A query can then be used to provide an overview of the technologies the tool relates to.
-e.g. nmap is useful for a variaty of technologies, while snmp-walk is specific to the snmp protocol.
+e.g. nmap is useful for a variety of technologies, while snmp-walk is specific to the snmp protocol.
 # Comparison to HackTricks Wiki
 The HackTricks Wiki consists of [HackTricks](https://book.hacktricks.wiki/en/index.html)  and [HackTricks Cloud](https://cloud.hacktricks.wiki/en/index.html). Combined  they are a vast knowledge base that goes into detail that this knowledge base does not provide for most topics.  However, my security-notes knowledge base focuses more on providing a "walkthrough" for usual pentesting screnarios. That means  that  means, that  a bigger focus is put on the techniques including when and how to use them in a structured pentest. HackTricks can then be used as a Wiki to extract detailed information about certain details. 

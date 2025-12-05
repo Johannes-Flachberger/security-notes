@@ -1,14 +1,15 @@
 **Type:** #type/note
-**Tags:** #todo
+**Tags:** #todo #tactic/initial-access 
 
 ---
-# Exploit databases
-**ExploitDB - first stop for exploits**
-http://exploit-db.com/
-**NVD - Vulnerabilities for specific software**
-https://nvd.nist.gov/vuln/full-listing
-good for looking at new vulnerabilites, not so great for searching for a specific application
-**CVE Mitre** 
-# Vulnerabilty Scanning
-[[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
-
+In general, initial access can be achieved using
+- [[1 Methods/Security-Testing/3 Initial Access/Server Side Attacks|Server Side Attacks]]
+- [[1 Methods/Security-Testing/3 Initial Access/Client Side Attacks|Client Side Attacks]]
+# Tech-Specific Attack Vectors
+```query
+tag:#tactic/initial-access  tag:#type/tech-specific 
+```
+# Tools
+```query
+tag:#tactic/initial-access  tag:#type/tool 
+```

@@ -7,6 +7,8 @@
 sophisticated reverse shell tool, however, special payload is required for connection
 static binary: https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/socat
 # Usage
+add`,crlf` to send crel sequences (e.g. useful for smtp)
+
 ## Reverse Shell
 start socat listener:
 `socat TCP-L:<port> -`

@@ -1,4 +1,4 @@
-**Tags:** #type/tech-specific #tactic/execution 
+**Tags:** #type/tech-specific #tactic/execution/server-side 
 
 ---
 # Fundamentals
@@ -7,6 +7,6 @@
 ## Entrypoints
 - HTTP request metadata, such as the user agent string
 # Pentesting
-Bypass filters using: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Filter Bypassing|Filter Bypassing]]
+Bypass filters using: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Filter Bypassing - Injection|Filter Bypassing - Injection]]
 Can be combined with [[2 Tech-Specifics/Web/WebApp Attacks/File Inclusion#Local File Inclusion (LFI)|Local File Inclusion]] to achieve code execution
 # Hardening

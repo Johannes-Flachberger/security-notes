@@ -16,6 +16,7 @@
 	- [ ] WHOIS data (domain registration details)
 	- [ ] IP geolocation and hosting providers
 	- [ ] VPNs, firewalls, proxies, and load balancers
+	- [ ] used software/applications
 
 3. [ ] **Employee Information**
 	- [ ] Names, email addresses, job titles

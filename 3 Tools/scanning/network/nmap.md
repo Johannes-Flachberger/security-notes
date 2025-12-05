@@ -15,7 +15,6 @@
 7. Traceroute 
 8. Scripts 
 9. Write output
-
 # Cheat Sheet: Port ranges
 - **Well-known ports:** 0 to 1023
 - **Registered ports:** 1024 to 49151
@@ -43,6 +42,9 @@ enter ip adress as domain names, ip adress, adress ranges `10.10.0-255.0-255` or
 `-oX FILENAME`: xml output, for importing into other toolsexce0
 	zusätzlich ```--webxml``` gibt einen xml output den man im browser öffnen kann
 `-oA FILENAME`: all output options at once
+
+# Snippets
+[[3 Tools/scanning/network/nmap snippets|nmap snippets]]
 
 ---
 # Discovery scans

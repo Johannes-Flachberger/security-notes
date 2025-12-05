@@ -1,4 +1,4 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/initial-access 
+**Tags:** #type/tool #tactic/reconnaissance/active #tactic/initial-access/server-side
 **Link:** [https://portswigger.net/burp/communitydownload](https://portswigger.net/burp/communitydownload) 
 **Purpose:** professional webhacking framework
 

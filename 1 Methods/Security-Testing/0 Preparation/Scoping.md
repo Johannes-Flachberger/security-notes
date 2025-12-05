@@ -2,7 +2,6 @@ All essential details of the pentest should be defined here. That includes the s
 
 Sometimes, clients provide a list of IPS/services - however you cannot detect "shadow IT" with that approach - if you want that, detailed reconnaissance work is crucial 
 
-
 # Methodologies
 White Box, Grey Box and Black Box tests each provide different focus regarding results, but also require a specific skillset:
 White Box:
@@ -11,4 +10,7 @@ White Box:
 - Deep understanding of the technologies used
 - **Overall:** technology specifics & blue team know how
 Black Box:
-- 
+
+Also consider an [assumed-breach pentest](https://turingpoint.de/en/blog/what-are-assumed-breach-penetration-tests/).
+
+

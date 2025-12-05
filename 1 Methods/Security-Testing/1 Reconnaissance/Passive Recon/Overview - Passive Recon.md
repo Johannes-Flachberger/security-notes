@@ -24,7 +24,7 @@ Regardless of the platform were information can be found, advanced search can be
 Find contact data, name servers, etc.
 Tool: [[3 Tools/passive recon/whois|whois]]
 ## DNS Enumeration
-- [[2 Tech-Specifics/Network/Protocols/DNS#Enumeration|DNS Enumeration]]
+- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS#Enumeration|DNS Enumeration]]
 ## Code repositories
 - eg. [[3 Tools/web/Github search|Github search]], Gitlab, Github Gist, Source Forge
 - Search for open repositories belonging to the target
@@ -49,12 +49,19 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 - [[3 Tools/passive recon/Shodan|Shodan]]: find internet connect (iot) devices
 - [[3 Tools/passive recon/Censys.io|Censys]]: IoT search engine
 - [[3 Tools/passive recon/Napalm FTP|Napalm FTP]]: find FTP servers
-
-## Tools
+## Document metadata
+Documents contain metadata that might reveal software versions, configurations, or timestamps.
+Find files online:
+- using [[3 Tools/web/gobuster|gobuster]] `-x`
+- using [[3 Tools/Google & Google Hacking|Google & Google Hacking]]
+- manually
+To extract metadata from a file:
+- [[3 Tools/utilities/exiftool|exiftool]] 
+# Tools
 ```query
 tag:#tactic/reconnaissance/passive tag:#type/tool 
 ```
-
-
-
-
+# Tech-Specific Attack vectors
+```query
+tag:#tactic/reconnaissance/passive tag:#type/tech-specific 
+```

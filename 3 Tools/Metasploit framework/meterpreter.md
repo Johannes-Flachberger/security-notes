@@ -1,6 +1,6 @@
 **Tags:** #type/tool #tactic/command-and-control
 **Link:** 
-**Purpose:** powerful shell listener and client
+**Purpose:** powerful shell listener and payload
 
 ---
 # Info

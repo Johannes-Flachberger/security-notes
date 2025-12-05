@@ -36,7 +36,9 @@ https://github.com/rapid7/metasploit-framework/wiki/Exploit-Ranking
 - hashdump: dump hashes on windows systems
 # Usage
 ## Basic process
-1. Start postgresql (database) – sometimes you can skip this
+1. Start the postgresql database
+	- `systemctl start postgresql`
+	- `(sudo) msfdb init`
 2. Start Metasploit (msfconsole)
 3. Search for exploit
 4. Choose (use) exploit (Ex.: xp_cmdshell enabled)

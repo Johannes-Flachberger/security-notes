@@ -13,8 +13,9 @@ These files are expecially sensitive, since they can provide critical informatio
 ## Linux
 - `/etc/passwd`: user accounts, login shells - **readable by all users**
 - `/etc/shadow`: password hashes
-- `/home/<user>/.ssh/`: ssh keys, known hosts
+- `/home/<user>/.ssh/`: ssh keys, known hosts, authorized_keys
 	- e.g. `.../.ssh/id_rsa
+	- e.g. `.../.ssh/authorized_keys
 - `/etc/issue`: contains a message or system identification to be printed before the login prompt. 
 - `/etc/profile`: controls system-wide default variables, such as Export variables, File creation mask (umask), Terminal types, Mail messages to indicate when new mail has arrived
 - `/proc/version`: specifies the version of the Linux kernel 
@@ -25,7 +26,7 @@ These files are expecially sensitive, since they can provide critical informatio
 - `C:\boot.ini`: contains the boot options for computers with BIOS firmware
 - `C:\inetpub\logs\LogFiles\W3SVC1\`: Logs of IIS webserver
 - `C:\inetpub\wwwroot\web.config`: configs of an IIS webserver
-# What to look for generically
+- `C:\Users\Public\Documents\`: read & writable by all users
 
 
 

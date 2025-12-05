@@ -4,7 +4,7 @@
 
 ---
 # Info
-**[[2 Tech-Specifics/Network/Protocols/SCP|SCP as a technology]]**
+**[[2 Tech-Specifics/Network/Protocols/TCP 22 SCP|SCP as a technology]]**
 transfer files between two machines using an ssh connection
 # Usage
 

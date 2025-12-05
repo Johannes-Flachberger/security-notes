@@ -4,12 +4,14 @@
   "cssTheme": "",
   "enabledCssSnippets": [
     "coloredHeadings",
-    "competeTaskNoStrikethrough",
     "niceHeadings",
-    "collapseEmbeddedSearchResults",
     "coloredBold",
+    "cleanEmbeds",
+    "collapseEmbeddedSearchResults",
     "colors",
-    "cleanEmbeds"
+    "tables",
+    "tasks",
+    "embeddedSearch"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 19,

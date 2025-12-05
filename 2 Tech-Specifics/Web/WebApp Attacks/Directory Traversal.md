@@ -18,6 +18,6 @@ Most of the time the webserver runs as dedicated user that has restricted permis
 - When using [[3 Tools/web/cURL|cURL]] : use the `--path-as-is` option
 - append `/.` to the path to circumvent eg. extension filters
 **Filter Bypassing**
-[[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Filter Bypassing|Filter Bypassing]]
+[[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Filter Bypassing - Injection|Filter Bypassing - Injection]]
 # Hardening
 sanitize input for `../` sequences and their encoded variants

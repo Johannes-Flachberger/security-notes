@@ -10,7 +10,7 @@ If there are multiple access points in a network, you usually use a RADIUS (Remo
 # IEEE 802.1X
 Also called network access control (NAC) or port-based network access control (PNAC).
 the goal is to enforce authentication on the network - if a client connect to a physical (ethernet) port, WLAN or VLAN, authentication is required before a connection to the network is permitted.
-uses [[2 Tech-Specifics/Network/Protocols/RADIUS|RADIUS]] and [[2 Tech-Specifics/Network/Protocols/EAP - Extensible authentication protocol|EAP]] (Extensible Authentication Protocol)
+uses [[2 Tech-Specifics/Network/Protocols/UDP 1812 RADIUS|UDP 1812 RADIUS]] and [[2 Tech-Specifics/Network/Protocols/Fundamentals/EAP Fundamentals|EAP]] (Extensible Authentication Protocol)
 
 3 main components:
 Supplicant: client, that knows IEEE 802.1X

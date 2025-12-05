@@ -19,7 +19,7 @@ This can be done e.g. using [[2 Tech-Specifics/Web/WebApp Attacks/XSS Exploitati
 ## Comman injection
 [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Command Injection|Command Injection]]
 ## Upload Vulnerabilities
-
+[[2 Tech-Specifics/Web/WebApp Attacks/Web Upload Vulnerabilities|Web Upload Vulnerabilities]]
 ## Further ideas:
 #todo 
 Server Side request forgery by manipulating /etc/hosts or /etc/resolv.conf

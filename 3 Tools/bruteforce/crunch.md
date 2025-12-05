@@ -1,6 +1,6 @@
-**Tags:** #type/tool #tactic/credential-access #tactic/ressource-development
+**Tags:** #type/tool #tactic/ressource-development
 **Link:** 
-**Purpose:** create lists for bruteforce attacks
+**Purpose:** create wordlists for bruteforce attacks
 
 ---
 # Info
