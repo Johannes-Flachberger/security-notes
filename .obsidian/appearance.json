@@ -9,9 +9,9 @@
     "cleanEmbeds",
     "collapseEmbeddedSearchResults",
     "colors",
-    "tables",
     "tasks",
-    "embeddedSearch"
+    "embeddedSearch",
+    "embeds"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 19,

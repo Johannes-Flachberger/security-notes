@@ -7,6 +7,7 @@
 
 # Usage
 show line number: `:set nu`
+write-with-sudo trick: `:w !sudo tee %`
 # 🧠 Vim Cheat Sheet
 
 ## 📍 Moving

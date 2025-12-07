@@ -11,5 +11,5 @@
 - there is an [[3 Tools/scanning/network/nmap|nmap]] script for discovery
 # Exploitation
 #tactic/impact
-- search for modbus in [[3 Tools/Metasploit framework/Metasploit|Metasploit]]
+- search for modbus in [[3 Tools/exploitation_frameworks/Metasploit/Overview - Metasploit|Overview - Metasploit]]
 - there is a modbus cli tool

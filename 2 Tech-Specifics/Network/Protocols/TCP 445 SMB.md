@@ -1,18 +1,35 @@
-**Tags:** #type/tech-specific #tactic/reconnaissance/active 
+**Tags:** #type/tech-specific #tactic/reconnaissance/active #tactic/exfiltration 
 
 ---
-# Theory
-Server Message Block
-SMB often goes along with netbios, which was historically used for computers to communicate with each other
-SMB default port: 445
-netbios default port: 139
-for manipulating remote data
+# Fundamentals
+default port: 445
+Purpose: remote access to files and printers
+SMB often goes along with [[2 Tech-Specifics/Network/Protocols/TCP 139 netbios|netbios]], which was historically used by windows
+
+**SMB Workgroup**
+identifies a group of machines that have access to each others smb shares
+**SMB Share**
+a folder or printer that is shared
+access right can be set for each share
 # Pentesting
+## Workflow
+1. get credentials - see [[#Credential Access]]
+2. Enumerate Workgroup, Shares, Permissions,...
+3. Access files - see [[#Exfiltration]]
+## Credential Access
+Legacy systems or misconfigured systems might support "guest access" without authentication. Try:
+- Usernames `Guest`, `ANONYMOUS LOGON`, `nobody`
+- Null Session: empty user and password
+
+Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Dictionary Attack]].
 ## Enumeration
-### Nmap:
-![[3 Tools/scanning/network/nmap snippets#SMB Enumeration|nmap snippets]]
-## nbtscan
-e.g. `sudo nbtscan -r 192.168.50.0/24`
-`-r` sets originating udp port to 137
-# Tool collection
-[[3 Tools/network/SMB tools|SMB tools]]
+> [!NOTE] Note
+> SMB enumeration requires valid credentials. --> first get [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]]
+
+Tools:
+- [[3 Tools/scanning/network/nmap snippets#SMB Enumeration|nmap]]
+- [[3 Tools/network/SMB tools#Enumeration|SMB tools]]
+## Exfiltration
+Browse data on smb shares.
+Tools:
+- [[3 Tools/network/SMB tools#Exfiltration|SMB tools]]

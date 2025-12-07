@@ -1,6 +1,6 @@
 **Tags:** #type/tool #tactic/ressource-development
 **Link:** 
-**Purpose:** create wordlists for bruteforce attacks
+**Purpose:** wordlist generator based on simple criteria
 
 ---
 # Info

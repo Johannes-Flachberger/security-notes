@@ -1,22 +1,18 @@
 **Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://www.googleguide.com/advanced_operators_reference.html
-**Purpose:** Reconnaissance using Google
+**Link:** https://www.google.com/advanced_search
+**Purpose:** advanced online search
 
 ---
-# Workflow
-use google or any other search engine features to find content
-start broad, then get narrow with operators
-# Ressources
-**Google hacking database** - collection of great queries
-https://www.exploit-db.com/google-hacking-database
-**Google dork builder**
-https://dorksearch.com/
-**operator reference**
-https://www.googleguide.com/advanced_operators_reference.html
-**advanced search gui**
-https://www.google.com/advanced_search
-# Essential operators
-## `-
+# Info
+use advanced search featrues to find content
+
+**Ressources:**
+- [google search operator reference](https://www.googleguide.com/advanced_operators_reference.html)
+- [Google hacking database](https://www.exploit-db.com/google-hacking-database): collection of great queries
+- [Google dork builder](https://dorksearch.com/)
+# Usage
+**Workflow:** start broad, then get narrow with operators
+## `-`
 exclude matching items from search
 e.g. `-site:google.com`
 ## `site`
@@ -40,7 +36,8 @@ searches websites or pages that contain links to the specified website or page
 displays websites that are similar or related to the URL
 ## `location`
 This operator finds information for a specific location.
-# example queries
+# Snippets
+
 ```css
 filetype:php
 filetype:asp     
@@ -51,4 +48,4 @@ Allinurl: aspx php
 filetype:asp inurl:php
 inurl:intranet intitle:human resources
 filetype:asp inurl:hr inurl:intranet
-´´´
+```

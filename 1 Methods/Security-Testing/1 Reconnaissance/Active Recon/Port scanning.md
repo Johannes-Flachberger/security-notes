@@ -8,7 +8,7 @@
 - Take scans in steps, each time probing for more specific information
 # Tools
 - **main tool:** [[3 Tools/scanning/network/nmap|nmap]]
-- portscanner modules from [[3 Tools/Metasploit framework/msfconsole|msfconsole]]
+- portscanner modules from [[3 Tools/exploitation_frameworks/Metasploit/msfconsole|msfconsole]]
 	- Metaspoit also supports db_nmap
 - [[3 Tools/shells/Netcat|Netcat]] can also be used for port scanning
 - on Windows: Poershell

@@ -1,23 +1,17 @@
-**Tags:** #type/tool #tactic/reconnaissance/active 
+**Tags:** #type/tool #tactic/reconnaissance/active #tactic/exfiltration 
 **Link:** 
 **Purpose:** Tool collection for SMB
 
 ---
+# Enumeration
 ## enum4linux
 enumerate smb infos, eg. different shares
-`-A` for all infos
 `enum4linux <options> [ip]`
 eg: `enum4linux -a [IP] | tee enum4linux.log` 
+`-a` to enumerate all infos
 if you want to enumerate multiple ips:
 	put ips into a file, one each line
 	`xargs -n 1 enum4linux -a < targets.txt`
-## SMBClient
-for connecting to shares
-`smbclient //[IP]/[SHARE] -options` 
-in smb client shell: “help” for available commands 
-## smbget
-download files from SMB shares
-recursively download whole share: `smbget -R smb://<ip>/<sharename>`
 ## net view
 smb enumeration on windows
 lists domains, resources, and computers belonging to a given host.
@@ -27,4 +21,16 @@ e.g. `net view \\dc01 /all`
 `/domain`: Lists all domains/workgroups on the network.
 `/domain:<DomainName>`: Lists all computers in the specified domain.
 `net view \\SERVER1`: List all shares on the server
+### nbtscan
+e.g. `nbtscan -r 192.168.50.0/24`
+`-r` sets originating udp port to 137
+
+# Exfiltration
+## SMBClient
+for connecting to shares
+`smbclient //[IP]/[SHARE] -options` 
+in smb client shell: “help” for available commands 
+## smbget
+download files from SMB shares
+recursively download whole share: `smbget -R smb://<ip>/<sharename>`
 

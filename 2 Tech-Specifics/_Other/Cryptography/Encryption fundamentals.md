@@ -16,8 +16,6 @@
 https://muirlandoracle.co.uk/2020/01/29/rsa-encryption/
 
 # Cracking
-#tactic/credential-access
-
 RSA cracking
 https://github.com/Ganapati/RsaCtfTool
 

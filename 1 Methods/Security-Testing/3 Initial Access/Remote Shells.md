@@ -8,8 +8,8 @@
 - [[3 Tools/shells/Netcat|Netcat]]: simple, by default very unstable
 - [[3 Tools/shells/powercat|powercat]]: basically Netcat for [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]]
 - [[3 Tools/shells/Socat|Socat]]: powerful, but difficult to use
-- [[3 Tools/Metasploit framework/Metasploit|Metasploit - multi/handler module]]: very stable
-- [[3 Tools/Metasploit framework/meterpreter|meterpreter]]: powerfull listener & client
+- [[3 Tools/exploitation_frameworks/Metasploit/Overview - Metasploit|Metasploit - multi/handler module]]: very stable
+- [[3 Tools/exploitation_frameworks/Metasploit/meterpreter|meterpreter]]: powerfull listener & client
 # Payloads
 - [[2 Tech-Specifics/OS/Windows/PowerShell#Reverse Shell Payloads|PowerShell]]
 - [[3 Tools/shells/bash#Simple Reverse Shell|bash]]
@@ -18,7 +18,7 @@
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 - [Pentestmonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 - [[3 Tools/bruteforce/SecLists|SecLists]]
-- [[3 Tools/Metasploit framework/msfvenom|msfvenom]]: Generate Payloads 
+- [[3 Tools/exploitation_frameworks/Metasploit/msfvenom|msfvenom]]: Generate Payloads 
 # general tricks:
 manually adjust tty size, to be able to use editors,...:
 `stty -a` for tty info (run in your own terminal)

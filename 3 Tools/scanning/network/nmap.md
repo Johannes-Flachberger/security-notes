@@ -123,7 +123,7 @@ scripts path: `/usr/share/nmap/scripts`
 multple script catagories exist, eg. discorvery, default....
 `--script "SCRIPT-NAME"`: execute script
 `--script "SCRIPT-CATEGORY"`: execute scripts from category
-`--script-help`: show script information
+`--script-help=<script filename>`: show script information
 `-sC`: run script of the "default" category
 add further scripts:
 - put .nse file in `/usr/share/nmap/scripts/`

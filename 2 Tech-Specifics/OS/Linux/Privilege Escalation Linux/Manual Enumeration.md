@@ -14,8 +14,10 @@ useful commands for manual enumeration for privesc
 - `ifconfig`: info about network interfaces
 
 ## netstat
-[[3 Tools/utilities/netstat]]
+See [[3 Tools/utilities/netstat|netstat]]
 ## find files
+See [[3 Tools/utilities/find|find]]
+
 - `find / -type f -perm 0777`: find files with the 777 permissions (files readable, writable, and executable by all users)
 - `find / -perm a=x`: find executable files
 - `find /home -user frank`: find all files for user “frank” under “/home”
@@ -31,6 +33,5 @@ useful commands for manual enumeration for privesc
 - `find / -perm -o w -type d 2>/dev/null`: Find world-writeable folders
 - `find / -writable 2>/dev/null`: search for writeable folders
 - `find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u`: search for subdirectories of writeable folders:
-
 - `find / -perm -o x -type d 2>/dev/null`: find world-executabe folders
   

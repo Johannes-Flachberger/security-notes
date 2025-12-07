@@ -1,3 +1,4 @@
+
 ```base
 filters:
   and:
@@ -18,12 +19,15 @@ views:
       - formula.used by
       - formula.tactis
     sort:
+      - property: formula.used by
+        direction: DESC
       - property: formula.tactis
         direction: DESC
       - property: file.name
         direction: ASC
     columnSize:
-      formula.used by: 103
+      file.name: 210
+      formula.used by: 102
   - type: table
     name: Reconnaissance
 

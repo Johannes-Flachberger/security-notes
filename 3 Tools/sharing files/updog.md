@@ -8,11 +8,11 @@ basically works like [[3 Tools/sharing files/simple python webserver|simple pyth
 # Usage
 `updog [-d DIRECTORY] [-p PORT] [--password PASSWORD] [--ssl]`
 
-|Argument|Description|
-|---|---|
-|-d DIRECTORY, --directory DIRECTORY|Root directory [Default=.]|
-|-p PORT, --port PORT|Port to serve [Default=9090]|
-|--password PASSWORD|Use a password to access the page. (No username)|
-|--ssl|Enable transport encryption via SSL|
-|--version|Show version|
-|-h, --help|Show help|
+| Argument                              | Description                                      |
+| ------------------------------------- | ------------------------------------------------ |
+| `-d DIRECTORY, --directory DIRECTORY` | Root directory [Default=.]                       |
+| `-p PORT, --port PORT`                | Port to serve [Default=9090]                     |
+| `--password PASSWORD`                 | Use a password to access the page. (No username) |
+| `--ssl`                               | Enable transport encryption via SSL              |
+| `--version`                           | Show version                                     |
+| `-h, --help`                          | Show help                                        |

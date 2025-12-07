@@ -2,13 +2,15 @@
 
 ---
 
-2 Arten:
-horizontal: move between users on one level of privilige
-vertical: move from low privile use to high privilege user
-
-# Tech-Specific Attack Vectors
+There are 2 types of privilege escalation:
+horizontal: move between users on one level of privilege
+vertical: gain additional privileges
+# Attack Vectors
 ```query
-tag:#tactic/privilege-escalation  tag:#type/tech-specific 
+tag:#tactic/privilege-escalation
+-tag:#type/tool
+-file:README
+-file:"Overview - 6 Privilege Escalation"
 ```
 # Tools
 ```query

@@ -15,7 +15,7 @@ check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 ## Enumeration
 #### search the filesystem
 ```powershell
-Get-ChildItem -Path C:\ -Recurse -Filter "myfile.txt" 
+Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Filter "myfile.txt" 
 ```
 **Hint:** use `*` as a wildcard
 #### print the current domain
