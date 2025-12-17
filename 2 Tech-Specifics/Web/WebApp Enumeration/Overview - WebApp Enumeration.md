@@ -18,11 +18,15 @@ Here, both passive and active recon techniques are listed
 ## Subdomain enumeration
 - [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain enumeration|Subdomain enumeration]]
 ## Directory Enumeration
+**Wordlist Based**
+Can find hidden directories, but is not as efficient as crawling.
 wordlists: `/usr/share/wordlists/dirb/`
 - [[3 Tools/web/gobuster|gobuster]] - active
 - [[3 Tools/scanning/network/nmap|nmap]] - script `http-enum`
 - dirb - active
 - dirbuster - active
+**Crawler**
+More efficient than wordlist based but cannot find hidden directories (i.e. where not site links to)
 - [[3 Tools/web/Photon|photon]]
 ## API enumeration
 [[2 Tech-Specifics/Web/Rest API|Rest API]]
@@ -52,11 +56,14 @@ analyses TLS configuration and compares against best practices - it can also det
 - contains a sitemap -> all sites that shall be discoverable
 - location: `http://<IP>/sitemap.xml`
 ## Debugging Page content
-use developer tools of your browser
-
+use browser developer tools
 - File extension might reveal programming language
 	- become less common, because web applications use the "route" concept
 - Source code can reveal libraries & their versions, e.g. in comments
 	- prettyfy javascript in developer settings
 - Use "Inspect" function to check specific page elements
 	- e.g inpect forms to find hidden additional form fields
+## Analyse website content
+Extract relevant data from webpage contents, e.g. email addresses, access keys,...
+Tools:
+- [[3 Tools/web/Photon|Photon]]

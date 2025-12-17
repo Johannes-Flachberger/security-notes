@@ -58,10 +58,22 @@ Find files online:
 To extract metadata from a file:
 - [[3 Tools/utilities/exiftool|exiftool]] 
 # Tools
-```query
-tag:#tactic/reconnaissance/passive tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reconnaissance/passive")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```
 # Tech-Specific Attack vectors
-```query
-tag:#tactic/reconnaissance/passive tag:#type/tech-specific 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reconnaissance/passive")
+    - file.tags.contains("#type/tech-specific")
+views:
+  - type: table
+    name: Table 
 ```

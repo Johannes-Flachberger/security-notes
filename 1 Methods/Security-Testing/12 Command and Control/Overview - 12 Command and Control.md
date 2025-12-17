@@ -5,6 +5,12 @@
 tag:#tactic/command-and-control  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/command-and-control tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/command-and-control")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

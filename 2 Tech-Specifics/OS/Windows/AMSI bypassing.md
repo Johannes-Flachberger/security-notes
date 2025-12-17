@@ -2,7 +2,7 @@
 
 ---
 
-AMSI is signature based malware detection
+AMSI =  signature based malware detection
 
 bypass its:
 1. get amsi bypass from

@@ -5,6 +5,12 @@
 tag:#tactic/exfiltration  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/exfiltration tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/exfiltration")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

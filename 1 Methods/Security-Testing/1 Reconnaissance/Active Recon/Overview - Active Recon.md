@@ -14,15 +14,33 @@ See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Sca
 ##  3. Web enumeration
 See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
 ## 4. Enumerate each discovered network service
-```query
-tag:#tactic/reconnaissance/active path:"2 Tech-Specifics/Network"
-```
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.path.contains("2 Tech-Specifics/Network")
+views:
+  - type: table
+    name: Table
 
+```
 # Tools
-```query
-tag:#tactic/reconnaissance/active tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```
 # Tech-Specific Attack vectors
-```query
-tag:#tactic/reconnaissance/active tag:#type/tech-specific 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.tags.contains("#type/tech-specific")
+views:
+  - type: table
+    name: Table 
 ```

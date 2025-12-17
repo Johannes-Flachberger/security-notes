@@ -12,7 +12,9 @@
 .markdown-preview-view h1,
 .markdown-rendered h1 {
   color: hsl(var(--heading-hue), var(--heading-sat), 75%);
-  padding: 25px 0 5px 0;
+  padding: 25px 0 0px 0;
+  border-bottom: 2px solid var(--divider-color);
+  margin: 0 0 5px 0 !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-2,

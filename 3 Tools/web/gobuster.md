@@ -5,7 +5,7 @@
 ---
 # Info
 enumerate website directories, subdomains, etc
-brute force, makes use of wordlist, in kali some are located in /usr/share/wordlists/dirbuster
+brute force, makes use of wordlist, in kali some are located in `/usr/share/wordlists/dirbuster`
 # Usage
 ## options:
 `-u`: target url
@@ -21,7 +21,7 @@ brute force, makes use of wordlist, in kali some are located in /usr/share/wordl
 eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
 
 > [!NOTE]
-> if a server return redirect code when a page is not found, you need to
+> If a server returns a redirect code when a page is not found, you need to
 > - add the HTTP status code to the "negative" codes in gobuster: `-b, --status-codes-blacklist` e.g. `-b 301`
 > - or match the response lenght: `--exclude-length 0`
 > 

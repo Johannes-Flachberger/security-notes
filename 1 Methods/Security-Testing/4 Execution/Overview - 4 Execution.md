@@ -13,6 +13,12 @@ tag:#tactic/execution/client-side  tag:#type/tech-specific
 ```
 
 # Tools
-```query
-tag:#tactic/execution tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/execution")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

@@ -13,6 +13,12 @@ tag:#tactic/privilege-escalation
 -file:"Overview - 6 Privilege Escalation"
 ```
 # Tools
-```query
-tag:#tactic/privilege-escalation tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/privilege-escalation")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

@@ -5,6 +5,12 @@
 tag:#tactic/lateral-movement  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/lateral-movement tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/lateral-movement")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

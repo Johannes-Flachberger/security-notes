@@ -1,11 +1,17 @@
 **Tags:** #type/tool #tactic/reconnaissance/active 
 **Link:** https://www.kali.org/tools/photon/
-**Purpose:** enumerate directories of webapp
+**Purpose:** website crawler for enumeration
 
 ---
 # Info
-shows internal, external pages and scripts
-#todo 
+follows links, harvests emails, files, and metadata; supports Wayback seeds and many output formats; fast thread management.
 # Usage
 
 `photon -u <URL> `
+
+| Argument | Purpose           |
+| -------- | ----------------- |
+| `-u`     | url to crawl      |
+| `-l`     | levels to crawl   |
+| `-t`     | number of threads |
+| `--keys` | find secrets      |

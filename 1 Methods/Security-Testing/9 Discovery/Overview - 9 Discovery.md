@@ -11,9 +11,15 @@ Very helpful ressource: "Living off the land binaries, scripts and libraries" (L
 - SMB enum on windows: [[3 Tools/network/SMB tools#net view|net view]]
 # Tech-Specific Attack Vectors
 ```query
-tag:#tactic/discovery  tag:#type/tech-specific 
+tag:#tactic/discovery -tag:#type/tool
 ```
 # Tools
-```query
-tag:#tactic/discovery tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/discovery")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

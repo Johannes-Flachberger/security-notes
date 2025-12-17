@@ -49,23 +49,20 @@ Tool notes can contain sections about how the tool can be used to test a specifi
 For each technology (and possibly tool), tags are set to identify the MITRE ATT@CK Enterprise tactics they are relevant for. Based on that, queries can be used in method notes to identify all technologies that can be (ab)used for a specific tactic. Further, simple links can be used.
 
 **Tags:**
-- In
-	- #tactic/reconnaissance
-	- #tactic/ressource-development
-	- #tactic/initial-access
-	- #tactic/execution
-- Through
-	- #tactic/persistence
-	- #tactic/privilege-escalation
-	- #tactic/defense-evasion
-	- #tactic/credential-access
-	- #tactic/discovery
-	- #tactic/lateral-movement
-- Out
-	- #tactic/collection
-	- #tactic/command-and-control
-	- #tactic/exfiltration
-	- #tactic/impact
+	- tactic/reconnaissance
+	- tactic/ressource-development
+	- tactic/initial-access
+	- tactic/execution
+	- tactic/persistence
+	- tactic/privilege-escalation
+	- tactic/defense-evasion
+	- tactic/credential-access
+	- tactic/discovery
+	- tactic/lateral-movement
+	- tactic/collection
+	- tactic/command-and-control
+	- tactic/exfiltration
+	- tactic/impact
 ### Integration of Tools and Technologies
 Each tool that is useful to pentest or audit a certain technology is linked from the respective technology note.
 

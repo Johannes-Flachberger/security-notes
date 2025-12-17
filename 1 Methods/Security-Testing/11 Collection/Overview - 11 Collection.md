@@ -5,6 +5,12 @@
 tag:#tactic/collection  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/collection tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/collection")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

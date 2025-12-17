@@ -28,7 +28,13 @@ Provide both executive summaries and in-depth technical information for security
 tag:#tactic/reporting  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/reporting tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/reporting")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```
 

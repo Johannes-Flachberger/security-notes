@@ -5,6 +5,12 @@
 tag:#tactic/persistence  tag:#type/tech-specific 
 ```
 # Tools
-```query
-tag:#tactic/persistence tag:#type/tool 
+```base
+filters:
+  and:
+    - file.tags.contains("#tactic/persistence")
+    - file.tags.contains("#type/tool")
+views:
+  - type: table
+    name: Table 
 ```

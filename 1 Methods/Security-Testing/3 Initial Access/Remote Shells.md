@@ -11,6 +11,7 @@
 - [[3 Tools/exploitation_frameworks/Metasploit/Overview - Metasploit|Metasploit - multi/handler module]]: very stable
 - [[3 Tools/exploitation_frameworks/Metasploit/meterpreter|meterpreter]]: powerfull listener & client
 # Payloads
+**Note:** When using a payload inside a webshell, [[2 Tech-Specifics/Web/encodings#URL|URL encode]] the payload properly.
 - [[2 Tech-Specifics/OS/Windows/PowerShell#Reverse Shell Payloads|PowerShell]]
 - [[3 Tools/shells/bash#Simple Reverse Shell|bash]]
 # Payload sources
