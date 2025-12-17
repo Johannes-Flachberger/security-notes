@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific
-
+---
+tags:
+  - type/tech-specific
 ---
 
 [[2 Tech-Specifics/_Other/File Formats/XML|xml basics]]

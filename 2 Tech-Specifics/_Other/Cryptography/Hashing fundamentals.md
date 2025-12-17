@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific 
-
+---
+tags:
+  - type/tech-specific 
 ---
 #todo add link to secure hashes/crypto eg https://www.keylength.com/
 # Hashing

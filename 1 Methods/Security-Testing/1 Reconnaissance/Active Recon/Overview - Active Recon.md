@@ -1,5 +1,8 @@
-**Tags:** #type/method #tactic/reconnaissance/active 
-
+---
+tags:
+  - type/method 
+  - tactic/reconnaissance/active 
+---
 Active recon makes contact with the target.
 Gather as detailed information as possible about exposed services - here are notes about some usually exposed services
 # Objective
@@ -32,14 +35,18 @@ filters:
     - file.tags.contains("#type/tool")
 views:
   - type: table
-    name: Table 
+    name: Table
+    order:
+      - file.name
+      - Purpose
+
 ```
-# Tech-Specific Attack vectors
+# Attack vectors
 ```base
 filters:
   and:
     - file.tags.contains("#tactic/reconnaissance/active")
-    - file.tags.contains("#type/tech-specific")
+    - '!file.tags.contains("type/tool")'
 views:
   - type: table
     name: Table 

@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific
-
+---
+tags:
+  - type/tech-specific
 ---
 great tool for encoding/decoding: [[3 Tools/defensive/Cyberchef|Cyberchef]]
 # base64

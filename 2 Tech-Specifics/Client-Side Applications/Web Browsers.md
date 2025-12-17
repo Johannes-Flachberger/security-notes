@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/execution 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/execution 
 ---
 # Fundamentals
 

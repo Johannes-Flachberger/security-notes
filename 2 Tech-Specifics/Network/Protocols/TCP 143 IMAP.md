@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific
-
+---
+tags:
+  - type/tech-specific
 ---
 # Fundamentals
 - makes it possible to keep your email synchronized across multiple devices (and mail clients)

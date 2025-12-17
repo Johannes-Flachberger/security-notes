@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/discovery
-**Link:** 
-**Purpose:** test if host is up
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+  - tactic/discovery
+Link: 
+Purpose: test if host is up
 ---
 # Info
 - uses ICMP echo requests

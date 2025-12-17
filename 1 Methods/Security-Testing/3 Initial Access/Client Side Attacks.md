@@ -1,5 +1,7 @@
-**Tags:** #type/note #todo 
-
+---
+tags:
+  - type/note 
+  - todo 
 ---
 # Fundamentals
 client side attacks target a pure client machine, e.g. a business notebook.
@@ -10,8 +12,14 @@ since client machines are not directly accessible by technical means, other tran
 Most of these initial access vectors rely on user some sort of user action, which can be provoked e.g. using [[2 Tech-Specifics/People/Phishing|Phishing]].
 
 To support this, client side attacks are typically preceded by [[1 Methods/Security-Testing/1 Reconnaissance/Passive Recon/Overview - Passive Recon|Passive Recon]].
-# Tech-specific attack vectors
-```query
-tag:#tactic/initial-access/client-side
-tag:#type/tech-specific
+# Attack vectors
+```base
+filters:
+  and:
+    - file.tags.contains("tactic/initial-access/client-side")
+    - '!file.tags.contains("type/tool")'
+views:
+  - type: table
+    name: Table
+
 ``` 

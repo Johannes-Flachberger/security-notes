@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** 
-**Purpose:** find files on linux
-
+---
+tags:
+  - type/tool
+Link: 
+Purpose: find files on linux
 ---
 # Info
 

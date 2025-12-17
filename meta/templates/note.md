@@ -1,3 +1,6 @@
-**Tags:** #type/note #todo 
-
+---
+tags:
+  - type/note 
+  - todo 
+---
 ---

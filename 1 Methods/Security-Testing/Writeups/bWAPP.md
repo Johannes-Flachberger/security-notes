@@ -1,5 +1,6 @@
-**Tags:** #type/note
-
+---
+tags:
+  - type/note
 ---
 # bWAPP
 better use on 10.0.1.11 

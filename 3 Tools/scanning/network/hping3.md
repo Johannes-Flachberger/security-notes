@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/discovery 
-**Link:** https://www.kali.org/tools/hping3/
-**Purpose:** forge packets, perform network and port scans
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+  - tactic/discovery 
+Link: https://www.kali.org/tools/hping3/
+Purpose: forge packets, perform network and port scans
 ---
 # Info
 

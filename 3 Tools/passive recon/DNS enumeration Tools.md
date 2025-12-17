@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** -
-**Purpose:** get dns information, 
-
+---
+tags:
+  - type/tool
+  - tactic/reconnaissance/passive
+Link:
+  - 
+Purpose: get dns information
 ---
 # Manual enumeration
 ## host

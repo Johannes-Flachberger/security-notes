@@ -1,8 +1,16 @@
+---
+---
 #todo 
 
-# Tech-Specific Attack Vectors
-```query
-tag:#tactic/persistence  tag:#type/tech-specific 
+# Attack Vectors
+```base
+filters:
+	and:
+	- file.tags.contains("tactic/persistence")
+    - '!file.tags.contains("type/tool")'
+views:
+- type: table
+  name: Table
 ```
 # Tools
 ```base
@@ -13,4 +21,7 @@ filters:
 views:
   - type: table
     name: Table 
+	order:
+  - file.name
+  - Purpose
 ```

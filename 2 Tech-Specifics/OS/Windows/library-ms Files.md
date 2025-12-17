@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/initial-access/client-side
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/initial-access/client-side
 ---
 # Fundamentals
 Windows `.library-ms`files:

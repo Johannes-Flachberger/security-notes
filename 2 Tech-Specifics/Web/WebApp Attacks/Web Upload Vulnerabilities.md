@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/initial-access/server-side  #tactic/lateral-movement #tactic/execution/server-side  
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/initial-access/server-side  #tactic/lateral-movement #tactic/execution/server-side  
 ---
 # Fundamentals
 - Simplest form: upload a .php file to a webserver, which then gets executed by the server.

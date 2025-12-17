@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/execution/server-side 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/execution/server-side 
 ---
 # Fundamentals
 execute system command in php: `<?php echo system('uname -a'); ?>`

@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** https://sqlmap.org/
-**Purpose:** Automatic SQL injection and database takeover tool
-
+---
+tags:
+  - type/tool
+Link: https://sqlmap.org/
+Purpose: Automatic SQL injection and database takeover tool
 ---
 # Info
 Automatically scans webpages for SQL injection vulnerabilities and provides features to exploit them. 

@@ -1,5 +1,7 @@
 {
-    "workbench.editorAssociations": {   
-        "*.md": "vscode.markdown.preview.editor",
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit"
     }
 }

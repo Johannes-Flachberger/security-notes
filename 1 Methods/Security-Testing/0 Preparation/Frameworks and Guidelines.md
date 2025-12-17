@@ -1,5 +1,6 @@
-**Tags:** #type/method
-
+---
+tags:
+  - type/method
 ---
 # OWASP Web Security Testing Guide
 - very comprehensive guide on how to perform penetration tests on web applications

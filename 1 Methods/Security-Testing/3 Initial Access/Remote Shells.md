@@ -1,5 +1,7 @@
-**Tags:** #type/method #tactic/command-and-control 
-
+---
+tags:
+  - type/method 
+  - tactic/command-and-control 
 ---
 **There are 2 types of remote shells:**
 - Reverse shells: target connects to your machine - usually better

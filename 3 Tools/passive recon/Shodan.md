@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://www.shodan.io/
-**Purpose:** IoT search engine
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://www.shodan.io/
+Purpose: IoT search engine
 ---
 # Info
 requires account

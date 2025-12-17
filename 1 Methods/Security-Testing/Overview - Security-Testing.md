@@ -1,3 +1,5 @@
+---
+---
 # Red Teaming vs Pentesting
 Pentesting can be considered a subform of redteaming, however there are real differences: 
 

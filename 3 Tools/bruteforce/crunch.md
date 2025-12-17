@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/ressource-development
-**Link:** 
-**Purpose:** wordlist generator based on simple criteria
-
+---
+tags:
+  - type/tool 
+  - tactic/ressource-development
+Link: 
+Purpose: wordlist generator based on simple criteria
 ---
 # Info
 create lists for bruteforce attacks based on very simple criteria

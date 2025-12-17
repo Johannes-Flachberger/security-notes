@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/defense-evasion 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/defense-evasion 
 ---
 # Pentesting
 ## Encoding

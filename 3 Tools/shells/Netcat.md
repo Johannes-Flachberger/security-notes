@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/command-and-control  #todo
-**Link:** 
-**Purpose:** simple tool for connect shell and listeners
-
+---
+tags:
+  - type/tool 
+  - tactic/command-and-control  #todo
+Link: 
+Purpose: simple tool for connect shell and listeners
 ---
 # Info
 simple tool to setup shell listeners and connect to shell

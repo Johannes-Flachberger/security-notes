@@ -1,5 +1,6 @@
-**Tags:** #type/method
-
+---
+tags:
+  - type/method
 ---
 
 # Tracking tokens

@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/command-and-control
-**Link:** https://www.kali.org/tools/freerdp3/
-**Purpose:** remote desktop protocol (RDP) client for X11 environments
-
+---
+tags:
+  - type/tool 
+  - tactic/command-and-control
+Link: https://www.kali.org/tools/freerdp3/
+Purpose: remote desktop protocol (RDP) client for X11 environments
 ---
 # Info
 open source remote desktop client

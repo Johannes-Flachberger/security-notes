@@ -1,5 +1,8 @@
-**Tags:** #type/method #tactic/reconnaissance/passive #tactic/ressource-development 
-
+---
+tags:
+  - type/method 
+  - tactic/reconnaissance/passive 
+  - tactic/ressource-development 
 ---
 
 - Usually outperforms traditional recon tools - still it is best to use traditional tools for fact-checking

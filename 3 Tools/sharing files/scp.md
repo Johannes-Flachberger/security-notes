@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/exfiltration 
-**Link:** 
-**Purpose:** transfer files using ssh
-
+---
+tags:
+  - type/tool 
+  - tactic/exfiltration 
+Link: 
+Purpose: transfer files using ssh
 ---
 # Info
 **[[2 Tech-Specifics/Network/Protocols/TCP 22 SCP|SCP as a technology]]**

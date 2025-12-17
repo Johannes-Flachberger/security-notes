@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/exfiltration
-**Link:** https://github.com/sc0tfree/updog
-**Purpose:** upload things to targets
-
+---
+tags:
+  - type/tool 
+  - tactic/exfiltration
+Link: https://github.com/sc0tfree/updog
+Purpose: upload things to targets
 ---
 # Info
 basically works like [[3 Tools/sharing files/simple python webserver|simple python webserver]] but allows http auth and https with self signed certificates - more easy to use

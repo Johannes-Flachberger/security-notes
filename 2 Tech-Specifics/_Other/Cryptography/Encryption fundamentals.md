@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific 
-
+---
+tags:
+  - type/tech-specific 
 ---
 # Encryption types
 ## Symmetric encryption

@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive  
-**Link:** https://trufflesecurity.com/trufflehog
-**Purpose:** search for sensitive information in git repos
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive  
+Link: https://trufflesecurity.com/trufflehog
+Purpose: search for sensitive information in git repos
 ---
 # Info
 Guide: https://trufflesecurity.com/blog/scanning-git-for-secrets-the-2024-comprehensive-guide

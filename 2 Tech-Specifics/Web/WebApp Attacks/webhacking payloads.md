@@ -1,5 +1,6 @@
-**Tags:** #type/tool  #tactic/ressource-development
-
+---
+tags:
+  - type/tool  #tactic/ressource-development
 ---
 
 Webhacking payloads

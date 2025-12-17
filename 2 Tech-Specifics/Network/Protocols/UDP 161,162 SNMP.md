@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #type/tool  #tactic/reconnaissance/active #tactic/credential-access 
-
+---
+tags:
+  - type/tech-specific 
+  - type/tool  #tactic/reconnaissance/active #tactic/credential-access 
 ---
 # Fundamentals
 **Detailed Fundamentals: [[2 Tech-Specifics/Network/Protocols/Fundamentals/UDP 161,162 SNMP Fundamentals|UDP 161,162 SNMP Fundamentals]]**

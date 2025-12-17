@@ -1,3 +1,5 @@
+---
+---
 beschlossen November 2022, Mitgliedstaaten müssen es innherhalb 21 Monaten in nationales Recht überführen
 - wird vorraussichtlich an DSGVO Regime eingeklinkt, so dass es auch Bußgelder etc. gibt
 - Leitungsorgane werden persönlich haftbar gemacht

@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/execution/client-side 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/execution/client-side 
 ---
 # Fundamentals
 HTML Applications are a mostly outdated technology from microsoft.

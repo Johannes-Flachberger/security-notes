@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/active 
-**Link:** https://github.com/OJ/gobuster
-**Purpose:** enumaration of varios things - subdomains, directories, s3 buckets, etc
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+Link: https://github.com/OJ/gobuster
+Purpose: enumaration of varios things - subdomains, directories, s3 buckets, etc
 ---
 # Info
 enumerate website directories, subdomains, etc

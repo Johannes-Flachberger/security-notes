@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific
-
+---
+tags:
+  - type/tech-specific
 ---
 # Fundamentals
 - each sub-procedures starts with `Sub Name()` and ends with `End Sub`

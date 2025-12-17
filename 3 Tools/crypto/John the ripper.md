@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/credential-access 
-**Link:** https://www.openwall.com/john/
-**Purpose:** hashcracking
-
+---
+tags:
+  - type/tool 
+  - tactic/credential-access 
+Link: https://www.openwall.com/john/
+Purpose: hashcracking
 ---
 # Info
 

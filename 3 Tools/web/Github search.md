@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive
-**Link:** https://docs.github.com/en/search-github
-**Purpose:** find and search in repos of a target organization
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive
+Link: https://docs.github.com/en/search-github
+Purpose: find and search in repos of a target organization
 ---
 # Info
 you need a free user account to fully leverage search features

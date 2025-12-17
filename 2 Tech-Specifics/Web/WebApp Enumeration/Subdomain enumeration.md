@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/reconnaissance 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/reconnaissance 
 ---
 A collection of techniques to enumerate subdomains.
 

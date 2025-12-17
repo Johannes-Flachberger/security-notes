@@ -1,6 +1,7 @@
-**Tags:** #type/tool
-**Purpose:** Advanced search & replace accross text files
-
+---
+tags:
+  - type/tool
+Purpose: Advanced search & replace accross text files
 ---
 
 Nice regex builder: https://regex101.com/
@@ -56,15 +57,15 @@ Nice regex builder: https://regex101.com/
 ---
 
 ## Assertions
-| Symbol | Meaning |
-|---------|----------|
-| `?=` | Lookahead |
-| `?!` | Negative lookahead |
-| `?<=` | Lookbehind |
-| `?<!` or `?!=` | Negative lookbehind |
-| `?>` | Once-only subexpression |
-| `?(...)` | Conditional (if-then) |
-| `?#` | Comment |
+| Symbol         | Meaning                 |
+| -------------- | ----------------------- |
+| `?=`           | Lookahead               |
+| `?!`           | Negative lookahead      |
+| `?<=`          | Lookbehind              |
+| `?<!` or `?!=` | Negative lookbehind     |
+| `?>`           | Once-only subexpression |
+| `?(...)`       | Conditional (if-then)   |
+| `?#`           | Comment                 |
 
 ---
 
@@ -78,7 +79,6 @@ Nice regex builder: https://regex101.com/
 | `{3,}` | 3 or more |
 | `{3,5}` | Between 3 and 5 |
 > Add `?` after a quantifier to make it **ungreedy**.
-
 ---
 
 ## Escape Sequences
@@ -87,7 +87,7 @@ Nice regex builder: https://regex101.com/
 | `\` | Escape next character |
 | `\Q` | Begin literal sequence |
 | `\E` | End literal sequence |
-> Escaping treats special characters literally.
+Escaping treats special characters literally.
 
 ---
 
@@ -95,10 +95,9 @@ Nice regex builder: https://regex101.com/
 ```
 ^ [ . $ { * ( \ + ) | ? < >
 ```
-> Use `\` to escape them.
+Use `\` to escape them.
 
 ---
-
 ## Special Characters
 | Symbol | Meaning |
 |---------|----------|
@@ -111,20 +110,18 @@ Nice regex builder: https://regex101.com/
 | `\xhh` | Hex character |
 
 ---
-
 ## Groups and Ranges
-| Pattern | Meaning |
-|----------|----------|
-| `.` | Any character except newline |
-| `(a|b)` | a or b |
-| `(...)` | Capturing group |
-| `(?:...)` | Non-capturing group |
-| `[abc]` | a, b, or c |
-| `[^abc]` | Not a, b, or c |
-| `[a-q]` | a through q |
-| `[A-Q]` | A through Q |
-| `[0-7]` | 0 through 7 |
-| `\x` | Group number x |
+| Pattern   | Meaning                      |
+| --------- | ---------------------------- |
+| `.`       | Any character except newline |
+| `(...)`   | Capturing group              |
+| `(?:...)` | Non-capturing group          |
+| `[abc]`   | a, b, or c                   |
+| `[^abc]`  | Not a, b, or c               |
+| `[a-q]`   | a through q                  |
+| `[A-Q]`   | A through Q                  |
+| `[0-7]`   | 0 through 7                  |
+| `\x`      | Group number x               |
 
 > Ranges are inclusive.
 
@@ -140,7 +137,7 @@ Nice regex builder: https://regex101.com/
 | `x` | Allow comments and whitespace |
 | `e` | Evaluate replacement |
 | `U` | Ungreedy pattern |
-> *Modifiers marked with `*` are PCRE-specific.*
+*Modifiers marked with `*` are PCRE-specific.*
 
 ---
 

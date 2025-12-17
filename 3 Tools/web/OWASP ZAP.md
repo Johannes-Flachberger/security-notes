@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/active 
-**Link:** https://www.zaproxy.org/
-**Purpose:** automatically scan web applications
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+Link: https://www.zaproxy.org/
+Purpose: automatically scan web applications
 ---
 # Info
 if a webapp is really vulnerable, OWASP ZAP might corrupt it

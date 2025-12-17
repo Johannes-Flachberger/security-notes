@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/command-and-control 
-**Link:** https://www.redhat.com/sysadmin/getting-started-socat
-**Purpose:** sophisticated reverse shell tool
-
+---
+tags:
+  - type/tool 
+  - tactic/command-and-control 
+Link: https://www.redhat.com/sysadmin/getting-started-socat
+Purpose: sophisticated reverse shell tool
 ---
 # Info
 sophisticated reverse shell tool, however, special payload is required for connection

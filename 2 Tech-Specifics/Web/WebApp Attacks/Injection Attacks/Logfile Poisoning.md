@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/execution/server-side 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/execution/server-side 
 ---
 # Fundamentals
 - inject data into a field that ends up in Logfiles

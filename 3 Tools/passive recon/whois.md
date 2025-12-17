@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://en.wikipedia.org/wiki/WHOIS
-**Purpose:** enumeration of domain registries
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://en.wikipedia.org/wiki/WHOIS
+Purpose: enumeration of domain registries
 ---
 # Info
 whois is a protocol that communicates with public databases which hold info about domain registration records

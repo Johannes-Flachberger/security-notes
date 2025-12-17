@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/credential-access 
-**Link:** https://www.kali.org/tools/hydra/
-**Purpose:** brute force network protocol logins
-
+---
+tags:
+  - type/tool 
+  - tactic/credential-access 
+Link: https://www.kali.org/tools/hydra/
+Purpose: brute force network protocol logins
 ---
 # Info
 supports more than 50 Protocols, including Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB

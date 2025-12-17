@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** 
-**Purpose:** popular editor with rich extension ecosystem
-
+---
+tags:
+  - type/tool
+Link: 
+Purpose: popular editor with rich extension ecosystem
 ---
 # Info
 code-oss is the open source version - it has the core features but lacks some microsoft proprietory features like devcontainers

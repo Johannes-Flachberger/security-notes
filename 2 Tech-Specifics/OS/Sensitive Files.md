@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #todo 
-
+---
+tags:
+  - type/tech-specific 
+  - todo 
 ---
 These files are expecially sensitive, since they can provide critical information to an attacker. Depending on your current privileges & configuration (issues) they may be accessible or not
 ## OS independent

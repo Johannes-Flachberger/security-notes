@@ -1,7 +1,9 @@
-**Tags:** #type/tool #defend/harden 
-**Link:** https://www.whonix.org/
-**Purpose:** anonymize all connections of a VM using the whonix gateway 
-
+---
+tags:
+  - type/tool 
+  - defend/harden 
+Link: https://www.whonix.org/
+Purpose: anonymize all connections of a VM using the whonix gateway 
 ---
 # Info
 

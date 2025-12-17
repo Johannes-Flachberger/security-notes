@@ -1,15 +1,29 @@
-**Tags:** #type/note #todo 
-
+---
+tags:
+  - type/note 
+  - todo 
 ---
 Which techniques for executing code are possible very much depend on related technology and the type of [[1 Methods/Security-Testing/3 Initial Access/Overview - 3 Initial Access|Initial Access]] that has been achieved.
 
-# Tech-Specific Attack Vectors - Server Side
-```query
-tag:#tactic/execution/server-side  tag:#type/tech-specific 
+# Attack Vectors - Server Side
+```base
+filters:
+	and:
+	- file.tags.contains("tactic/execution/server-side")
+    - '!file.tags.contains("type/tool")'
+views:
+- type: table
+  name: Table
 ```
-# Tech-Specific Attack Vectors - Client Side
-```query
-tag:#tactic/execution/client-side  tag:#type/tech-specific 
+# Attack Vectors - Client Side
+```base
+filters:
+	and:
+	- file.tags.contains("tactic/execution/client-side")
+    - '!file.tags.contains("type/tool")'
+views:
+- type: table
+  name: Table
 ```
 
 # Tools
@@ -20,5 +34,9 @@ filters:
     - file.tags.contains("#type/tool")
 views:
   - type: table
-    name: Table 
+    name: Table
+    order:
+      - file.name
+      - Purpose
+
 ```

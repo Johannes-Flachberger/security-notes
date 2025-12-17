@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/exfiltration 
-**Link:** 
-**Purpose:** Tool collection for SMB
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+  - tactic/exfiltration 
+Link: 
+Purpose: Tool collection for SMB
 ---
 # Enumeration
 ## enum4linux

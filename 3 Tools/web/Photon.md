@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/active 
-**Link:** https://www.kali.org/tools/photon/
-**Purpose:** website crawler for enumeration
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+Link: https://www.kali.org/tools/photon/
+Purpose: website crawler for enumeration
 ---
 # Info
 follows links, harvests emails, files, and metadata; supports Wayback seeds and many output formats; fast thread management.

@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/discovery 
-**Link:** 
-**Purpose:** List active network connections of the local machine
-
+---
+tags:
+  - type/tool 
+  - tactic/discovery 
+Link: 
+Purpose: List active network connections of the local machine
 ---
 # Info
 # Usage

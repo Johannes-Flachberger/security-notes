@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** https://github.com/besimorhino/powercat
-**Purpose:** the powershell version of netcat
-
+---
+tags:
+  - type/tool
+Link: https://github.com/besimorhino/powercat
+Purpose: the powershell version of netcat
 ---
 # Info
 Basically the same as [[3 Tools/shells/Netcat|Netcat]], but for windows

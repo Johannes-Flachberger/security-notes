@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/privilege-escalation 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/privilege-escalation 
 ---
 
 ## Resources

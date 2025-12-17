@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/exfiltration 
-**Link:** 
-**Purpose:** send HTTP requests manually
-
+---
+tags:
+  - type/tool 
+  - tactic/exfiltration 
+Link: 
+Purpose: send HTTP requests manually
 ---
 # Info
 send HTTP requests manually from the commandline

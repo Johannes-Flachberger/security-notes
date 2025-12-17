@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility
-**Purpose:** manual connections to microsoft databases
-
+---
+tags:
+  - type/tool
+Link: https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility
+Purpose: manual connections to microsoft databases
 ---
 # Info
 enables manual local and remote connections to microsoft databases

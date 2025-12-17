@@ -1,7 +1,8 @@
-**Tags:** #type/tool 
-**Link:** 
-**Purpose:** search inside files
-
+---
+tags:
+  - type/tool 
+Link: 
+Purpose: search inside files
 ---
 # Info
 #todo 

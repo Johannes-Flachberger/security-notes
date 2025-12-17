@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** https://www.mingw-w64.org/
-**Purpose:** multi platform cross compiler
-
+---
+tags:
+  - "#type/"
+Link: https://www.mingw-w64.org/
+Purpose: multi platform cross compiler
 ---
 # Info
 

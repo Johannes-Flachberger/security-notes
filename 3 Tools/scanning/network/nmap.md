@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/discovery
-**Link:** 
-**Purpose:** discovery scanning, port scanning, service detection, OS detection
-
+---
+tags:
+  - type/tool
+  - tactic/reconnaissance/active
+  - tactic/discovery
+Link: https://nmap.org/
+Purpose: network scanner
 ---
 # Info
 **GUI tool for building -sn nmap queries: zenmap (preinstalled on kali)**
@@ -45,7 +48,6 @@ enter ip adress as domain names, ip adress, adress ranges `10.10.0-255.0-255` or
 
 # Snippets
 [[3 Tools/scanning/network/nmap snippets|nmap snippets]]
-
 ---
 # Discovery scans
 if no options are provided for discovery scan:
@@ -73,7 +75,6 @@ try multiple scan types in case of one beeing blocked
 `-PA[port or port list]`: TCP ACK ping, only possible with privileged user, reply if port opened
 #### UDP scan
 `-PU`: reply if port closed
-
 ---
 # Port scans
 `-p`: specify ports to scan `-p<number>` to scan specified number of ports (supports range, list or - (all))
@@ -142,7 +143,6 @@ Be careful to know the implications of each script you run
  - category `safe` does not create an impact
 If you want to check for a specific vulnerability, just google the cve ID + "nse" 
 
-
 ---
 # Firewall detection
 ## Detect L3/L4 packet filter
@@ -173,7 +173,6 @@ info: closed, open/filtered
 - `-mtu`: set number of maximum transmission unit
 - `-D RND:10`: generate decoy packets using randomly generated IP adresses - makes it more difficult to know which of the source adresses was the actual one
 - `--spoof-mac 0`:randomise mac adress
-
 ---
 ## Spoofing
 youre only able to both spoof and monitor network traffic in special situations

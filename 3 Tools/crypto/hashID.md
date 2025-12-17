@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/credential-access 
-**Link:** https://pypi.org/project/hashID/
-**Purpose:** identify type of given hash
-
+---
+tags:
+  - type/tool 
+  - tactic/credential-access 
+Link: https://pypi.org/project/hashID/
+Purpose: identify type of given hash
 ---
 # Info
 hashID python tool

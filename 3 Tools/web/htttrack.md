@@ -1,7 +1,8 @@
-**Tags:** #type/tool 
-**Link:** https://www.httrack.com/html/fcguide.html
-**Purpose:** copy web pages
-
+---
+tags:
+  - type/tool 
+Link: https://www.httrack.com/html/fcguide.html
+Purpose: copy web pages
 ---
 # Info
 nice tool to copy webpages

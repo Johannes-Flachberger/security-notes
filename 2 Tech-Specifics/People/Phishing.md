@@ -1,5 +1,7 @@
-**Tags:** #type/method #tactic/initial-access/client-side 
-
+---
+tags:
+  - type/method 
+  - tactic/initial-access/client-side 
 ---
 # Introduction
 Two types:
@@ -86,10 +88,8 @@ Also see [[2 Tech-Specifics/People/MFA bypass|MFA bypass]]
 - also look out for file parsing vulnerabilities within [[2 Tech-Specifics/Client-Side Applications/Overview - Client-Side Applications|Client-Side Applications]], e.g. in popular pdf readers that could be exploited
 - [[2 Tech-Specifics/OS/Windows/library-ms Files|library-ms Files]] are often not filtered, an less well-known and can be used as a 1st stage payload, to deliver further client side execution payload
 
-Lots of different file types can be used to achieve client-side code execution:
-```query
-tag:#tactic/execution/client-side
-```
+Lots of different file types can be used to achieve client-side code execution.
+
 Further:
 - exe - often filtered, and quite obvious
 - Jscript

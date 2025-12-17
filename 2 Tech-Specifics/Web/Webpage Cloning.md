@@ -1,5 +1,6 @@
-**Tags:** #type/note 
-
+---
+tags:
+  - type/note 
 ---
 # Useful tools:
 - [[3 Tools/web/htttrack|htttrack]]

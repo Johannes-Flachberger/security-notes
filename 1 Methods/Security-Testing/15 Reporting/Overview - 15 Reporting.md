@@ -1,5 +1,6 @@
-**Tags:** #type/method 
-
+---
+tags:
+  - type/method 
 ---
 # Overview
 1. The purpose of the report.
@@ -24,8 +25,14 @@ Provide both executive summaries and in-depth technical information for security
 
 
 # Tech-Specific Attack Vectors
-```query
-tag:#tactic/reporting  tag:#type/tech-specific 
+```base
+filters:
+	and:
+	- file.tags.contains("tactic/reporting")
+	- file.tags.contains("type/tech-specific")
+views:
+- type: table
+  name: Table
 ```
 # Tools
 ```base
@@ -35,6 +42,9 @@ filters:
     - file.tags.contains("#type/tool")
 views:
   - type: table
-    name: Table 
+    name: Table
+    order:
+      - file.name
+      - Purpose
 ```
 

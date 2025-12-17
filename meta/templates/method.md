@@ -1,3 +1,5 @@
-**Tags:** #type/method
-
+---
+tags:
+  - type/method
+---
 ---

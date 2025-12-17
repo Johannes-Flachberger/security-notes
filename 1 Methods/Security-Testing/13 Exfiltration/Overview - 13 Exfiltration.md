@@ -1,8 +1,16 @@
+---
+---
 #todo 
 
 # Tech-Specific Attack Vectors
-```query
-tag:#tactic/exfiltration  tag:#type/tech-specific 
+```base
+filters:
+	and:
+	- file.tags.contains("tactic/exfiltration")
+    - '!file.tags.contains("type/tool")'
+views:
+- type: table
+  name: Table
 ```
 # Tools
 ```base
@@ -12,5 +20,9 @@ filters:
     - file.tags.contains("#type/tool")
 views:
   - type: table
-    name: Table 
+    name: Table
+    order:
+      - file.name
+      - Purpose
+
 ```

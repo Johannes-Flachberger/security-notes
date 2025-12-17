@@ -1,5 +1,7 @@
-**Tags:** #type/note #todo 
-
+---
+tags:
+  - type/note 
+  - todo 
 ---
 # WLAN basics
 WLAN operates on OSI L2, just as ethernet does - therefore Ethernet (LAN) and WLAN can interoperate on one Network. However, for this an access point is necessary. Routers are only necessary for inter-network communication (L3).

@@ -1,5 +1,10 @@
-**Tags:** #type/tech-specific #tactic/reconnaissance/active #tactic/lateral-movement #tactic/discovery #tactic/command-and-control 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/reconnaissance/active 
+  - tactic/lateral-movement 
+  - tactic/discovery 
+  - tactic/command-and-control 
 ---
 # Fundamentals
 Can directly execute encoded commands

@@ -1,7 +1,8 @@
-**Tags:** #type/tool
-**Link:** https://www.geeksforgeeks.org/linux-unix/wget-command-in-linux-unix/ 
-**Purpose:** Download files using http(s)
-
+---
+tags:
+  - type/tool
+Link: https://www.geeksforgeeks.org/linux-unix/wget-command-in-linux-unix/ 
+Purpose: Download files using http(s)
 ---
 # Info
 Download files using http(s)

@@ -1,6 +1,6 @@
 
-**Tags:** #type/tech-specific  
-
+tags:
+  - #type/tech-specific  
 ---
 # Add user
 if you have a shell with high privileges (SYSTEM user or administrator), you can simply add a new user in the administrator group and connect to it using any method 

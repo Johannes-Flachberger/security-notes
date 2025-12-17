@@ -1,7 +1,9 @@
-z**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://searchdns.netcraft.com/
-**Purpose:** general webserver enum: subdomain enumeraton, technology identification
-
+---
+ztags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://searchdns.netcraft.com/
+Purpose: general webserver enum: subdomain enumeraton, technology identification
 ---
 # Info
 Useful for subdomain enumeration

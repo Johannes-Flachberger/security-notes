@@ -1,5 +1,6 @@
-**Tags:** #type/method 
-
+---
+tags:
+  - type/method 
 ---
 # CIA triad
 confidentiality: keep data private

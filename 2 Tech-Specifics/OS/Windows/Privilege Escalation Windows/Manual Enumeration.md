@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/privilege-escalation 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/privilege-escalation 
 ---
 # Useful commands:
 powershell basics in [[2 Tech-Specifics/OS/Windows/PowerShell]]

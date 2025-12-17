@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific 
-
+---
+tags:
+  - type/tech-specific 
 ---
 # Fundamentals
 [[3 Tools/sharing files/scp|SCP as a Tool]]

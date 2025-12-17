@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup
-**Purpose:** perform dns lookups
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup
+Purpose: perform dns lookups
 ---
 # Info
 available per default on windows 

@@ -1,0 +1,21 @@
+/* Hide "Add property" button in all views */
+.metadata-add-button {
+  display: none !important;
+}
+
+/* Hide "Properties" header text */
+/* Reading view */
+.markdown-preview-view .metadata-heading {
+  display: none !important;
+}
+
+/* Live Preview / Editor (current Obsidian) */
+.markdown-source-view.mod-cm6 .metadata-container-title {
+  display: none !important;
+}
+
+/* Reduce space below Properties */
+.metadata-container {
+  margin-bottom: 6px !important;
+  padding-bottom: 0 !important;
+}

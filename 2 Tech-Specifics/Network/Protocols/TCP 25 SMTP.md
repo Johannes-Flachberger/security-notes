@@ -1,5 +1,7 @@
-**Tags:** #type/tech-specific #tactic/reconnaissance/active 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/reconnaissance/active 
 ---
 # Fundamentals
 - SMTP(simple mail transfer protocol): directs email to receiving mailbox

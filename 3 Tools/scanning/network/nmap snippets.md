@@ -1,5 +1,7 @@
-**Type:** #type/note #tactic/discovery
-
+---
+tags:
+  - type/note
+  - tactic/discovery
 ---
 This note extends the [[3 Tools/scanning/network/nmap]] tool notes with technology specific snippets
 

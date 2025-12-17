@@ -1,5 +1,6 @@
-**Tags:** #type/tech-specific 
-
+---
+tags:
+  - type/tech-specific 
 ---
 # SSH
 -  used for: server acces, data transfer, channeling of other protocols

@@ -1,7 +1,10 @@
-**Tags:** #type/tool #tactic/reconnaissance/active #tactic/discovery
-**Link:** https://www.tenable.com/downloads/nessus
-**Purpose:** commercial vulnerability scanner
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/active 
+  - tactic/discovery
+Link: https://www.tenable.com/downloads/nessus
+Purpose: commercial vulnerability scanner
 ---
 # Info
 

@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/credential-access
-**Link:** https://hashcat.net/hashcat/
-**Purpose:** hashcracking
-
+---
+tags:
+  - type/tool 
+  - tactic/credential-access
+Link: https://hashcat.net/hashcat/
+Purpose: hashcracking
 ---
 # Info
 > [!warning] may not work in VMs

@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/exfiltration 
-**Link:** 
-**Purpose:** transfer files using http
-
+---
+tags:
+  - type/tool 
+  - tactic/exfiltration 
+Link: 
+Purpose: transfer files using http
 ---
 more advanced alternative: [[3 Tools/sharing files/updog|updog]]
 # Info

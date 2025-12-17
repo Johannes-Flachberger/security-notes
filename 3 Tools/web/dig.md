@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://linux.die.net/man/1/dig
-**Purpose:** perfom DNS lookups 
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://linux.die.net/man/1/dig
+Purpose: perfom DNS lookups 
 ---
 # Info
 DNS fundamentals: [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|TCP,UDP 53 DNS]]

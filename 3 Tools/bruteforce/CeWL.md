@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/ressource-development 
-**Link:** 
-**Purpose:** wordlist generator based on websites
-
+---
+tags:
+  - type/tool 
+  - tactic/ressource-development 
+Link: 
+Purpose: wordlist generator based on websites
 ---
 # Info
 can crawl websites etc. and create wordlists from it

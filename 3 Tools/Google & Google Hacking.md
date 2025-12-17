@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/passive 
-**Link:** https://www.google.com/advanced_search
-**Purpose:** advanced online search
-
+---
+tags:
+  - type/tool 
+  - tactic/reconnaissance/passive 
+Link: https://www.google.com/advanced_search
+Purpose: advanced online search
 ---
 # Info
 use advanced search featrues to find content

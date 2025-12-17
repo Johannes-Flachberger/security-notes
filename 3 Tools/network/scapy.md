@@ -1,7 +1,9 @@
-**Tags:** #type/tool #tactic/reconnaissance/active 
-**Link:** https://scapy.readthedocs.io/en/latest/
-**Purpose:** **capy** is a powerful Python-based tool for **packet crafting, sending, sniffing, and analysis** of network traffic.
-
+---
+tags:
+  - type/tool
+  - tactic/reconnaissance/active
+Link: https://scapy.readthedocs.io/en/latest/
+Purpose: python-based network packet crafting, sending, analysis, etc.
 ---
 # Info
 

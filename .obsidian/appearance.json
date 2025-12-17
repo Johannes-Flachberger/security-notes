@@ -11,7 +11,8 @@
     "colors",
     "tasks",
     "embeddedSearch",
-    "embeds"
+    "embeds",
+    "properties"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 19,

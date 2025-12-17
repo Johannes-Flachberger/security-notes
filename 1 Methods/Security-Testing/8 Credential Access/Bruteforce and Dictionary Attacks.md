@@ -1,5 +1,7 @@
-**Tags:** #type/method #tactic/credential-access 
-
+---
+tags:
+  - type/method 
+  - tactic/credential-access 
 ---
 # Fundamentals
 Two types:

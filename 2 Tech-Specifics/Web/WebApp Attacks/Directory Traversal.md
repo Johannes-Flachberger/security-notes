@@ -1,5 +1,10 @@
-**Tags:** #type/tech-specific #tactic/credential-access #tactic/exfiltration #tactic/discovery 
-
+---
+tags:
+  - type/tech-specific 
+  - tactic/credential-access 
+  - tactic/exfiltration 
+  - tactic/discovery 
+  
 ---
 # Fundamentals
 - read files the webserver should not have access to
