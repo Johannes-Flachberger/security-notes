@@ -6,7 +6,7 @@ Link: https://www.kali.org/tools/photon/
 Purpose: website crawler for enumeration
 ---
 # Info
-follows links, harvests emails, files, and metadata; supports Wayback seeds and many output formats; fast thread management.
+A Website Crawler. It follows links, harvests emails, files, and metadata; supports Wayback seeds and many output formats; fast thread management.
 # Usage
 
 `photon -u <URL> `

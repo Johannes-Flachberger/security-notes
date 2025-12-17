@@ -5,7 +5,7 @@ tags:
 Link: 
 Purpose: transfer files using http
 ---
-more advanced alternative: [[3 Tools/sharing files/updog|updog]]
+more advanced alternative: [[3 Tools/file-transfer/updog|updog]]
 # Info
 sets up a 3 python webserver, then you can access files from remote machines that you are reachable from
 # Usage

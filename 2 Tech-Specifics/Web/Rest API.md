@@ -1,6 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
+  - type/tech-specific
+  - tactic/reconnaissance/active
 ---
 # Pentesting
 ## Enumeration
