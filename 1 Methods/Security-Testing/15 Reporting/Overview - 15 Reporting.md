@@ -28,7 +28,7 @@ Provide both executive summaries and in-depth technical information for security
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/reporting")
+	- file.tags.contains("attack/reporting")
 	- file.tags.contains("type/tech-specific")
 views:
 - type: table
@@ -38,7 +38,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reporting")
+    - file.tags.contains("#attack/reporting")
     - file.tags.contains("#type/tool")
 views:
   - type: table

@@ -11,7 +11,7 @@ vertical: gain additional privileges
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/privilege-escalation")
+	- file.tags.contains("attack/privilege-escalation")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -21,7 +21,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/privilege-escalation")
+    - file.tags.contains("#attack/privilege-escalation")
     - file.tags.contains("#type/tool")
 views:
   - type: table

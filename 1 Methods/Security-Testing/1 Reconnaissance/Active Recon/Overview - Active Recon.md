@@ -20,7 +20,7 @@ See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Over
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.tags.contains("#attack/reconnaissance/active")
     - file.path.contains("2 Tech-Specifics/Network")
 views:
   - type: table
@@ -31,7 +31,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.tags.contains("#attack/reconnaissance/active")
     - file.tags.contains("#type/tool")
 views:
   - type: table
@@ -45,7 +45,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reconnaissance/active")
+    - file.tags.contains("#attack/reconnaissance/active")
     - '!file.tags.contains("type/tool")'
 views:
   - type: table

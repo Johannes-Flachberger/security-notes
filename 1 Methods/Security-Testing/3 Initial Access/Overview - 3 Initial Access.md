@@ -9,7 +9,7 @@ In general, initial access can be achieved using
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/initial-access")
+	- file.tags.contains("attack/initial-access")
 	- '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -19,7 +19,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("tactic/initial-access")
+    - file.tags.contains("attack/initial-access")
     - file.tags.contains("type/tool")
 views:
   - type: table

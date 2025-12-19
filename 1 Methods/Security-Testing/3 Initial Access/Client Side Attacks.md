@@ -16,7 +16,7 @@ To support this, client side attacks are typically preceded by [[1 Methods/Secur
 ```base
 filters:
   and:
-    - file.tags.contains("tactic/initial-access/client-side")
+    - file.tags.contains("attack/initial-access/client-side")
     - '!file.tags.contains("type/tool")'
 views:
   - type: table

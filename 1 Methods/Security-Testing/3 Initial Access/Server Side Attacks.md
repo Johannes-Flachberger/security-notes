@@ -6,7 +6,7 @@ e.g. attacking network services:
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/initial-access")
+	- file.tags.contains("attack/initial-access")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table

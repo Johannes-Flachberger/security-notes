@@ -10,7 +10,7 @@ Tools:
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/ressource-development")
+	- file.tags.contains("attack/ressource-development")
 	- '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -20,7 +20,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("tactic/ressource-development")
+    - file.tags.contains("attack/ressource-development")
     - file.tags.contains("type/tool")
 views:
   - type: table

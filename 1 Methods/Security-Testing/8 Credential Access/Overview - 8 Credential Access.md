@@ -6,7 +6,7 @@
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/credential-access")
+	- file.tags.contains("attack/credential-access")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -16,7 +16,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/credential-access")
+    - file.tags.contains("#attack/credential-access")
     - file.tags.contains("#type/tool")
 views:
   - type: table

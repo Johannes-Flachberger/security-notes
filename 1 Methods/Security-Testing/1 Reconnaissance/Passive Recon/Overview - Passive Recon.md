@@ -62,7 +62,7 @@ To extract metadata from a file:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reconnaissance/passive")
+    - file.tags.contains("#attack/reconnaissance/passive")
     - file.tags.contains("#type/tool")
 views:
   - type: table
@@ -76,7 +76,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/reconnaissance/passive")
+    - file.tags.contains("#attack/reconnaissance/passive")
     - '!file.tags.contains("type/tool")'
 views:
   - type: table

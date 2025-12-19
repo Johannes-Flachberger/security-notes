@@ -9,7 +9,7 @@ Which techniques for executing code are possible very much depend on related tec
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/execution/server-side")
+	- file.tags.contains("attack/execution/server-side")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -19,7 +19,7 @@ views:
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/execution/client-side")
+	- file.tags.contains("attack/execution/client-side")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -30,7 +30,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/execution")
+    - file.tags.contains("#attack/execution")
     - file.tags.contains("#type/tool")
 views:
   - type: table

@@ -15,7 +15,7 @@ Very helpful ressource: "Living off the land binaries, scripts and libraries" (L
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/discovery")
+	- file.tags.contains("attack/discovery")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -25,7 +25,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/discovery")
+    - file.tags.contains("#attack/discovery")
     - file.tags.contains("#type/tool")
 views:
   - type: table

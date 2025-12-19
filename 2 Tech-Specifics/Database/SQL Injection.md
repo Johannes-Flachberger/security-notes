@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - attack/execution/server-side  #tactic/exfiltration #tactic/credential-access 
+  - attack/execution/server-side  #attack/exfiltration #attack/credential-access 
 ---
 # Fundamentals
 SQL Basics:  [[2 Tech-Specifics/Database/Overview - Database|Overview - Database]]

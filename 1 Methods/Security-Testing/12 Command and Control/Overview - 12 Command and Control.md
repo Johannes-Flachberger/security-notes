@@ -6,7 +6,7 @@
 ```base
 filters:
 	and:
-	- file.tags.contains("tactic/command-and-control")
+	- file.tags.contains("attack/command-and-control")
     - '!file.tags.contains("type/tool")'
 views:
 - type: table
@@ -16,7 +16,7 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("#tactic/command-and-control")
+    - file.tags.contains("#attack/command-and-control")
     - file.tags.contains("#type/tool")
 views:
   - type: table
