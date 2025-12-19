@@ -2,7 +2,7 @@
 tags:
   - type/tech-specific
 ---
-great tool for encoding/decoding: [[3 Tools/defensive/Cyberchef|Cyberchef]]
+great tool for encoding/decoding: [[3 Tools/utilities/Cyberchef|Cyberchef]]
 # base64
 binary encoding the characters, "=" is a placeholder
 eg. `TGV0J3MgU3RhcnQgU2ltcGxl`

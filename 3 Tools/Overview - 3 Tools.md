@@ -30,7 +30,7 @@ views:
       - property: file.name
         direction: ASC
     columnSize:
-      file.name: 232
+      file.name: 216
       formula.used by: 86
   - type: table
     name: Reconnaissance

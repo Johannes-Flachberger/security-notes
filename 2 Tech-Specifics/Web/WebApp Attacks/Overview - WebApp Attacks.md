@@ -1,6 +1,9 @@
 ---
 tags:
-  - type/tech-specific 
+  - type/tech-specific
+  - "#tactic/execution"
+  - tactic/exfiltration
+  - tactic/initial-access
 ---
 # Overview
 [[2 Tech-Specifics/Web/OWASP TOP 10/Overview - OWASP TOP 10|Overview - OWASP TOP 10]] gives an overview of the most common webapp attack vectors. Altough frameworks use different technologies, they often apply the same principles - that leads to similar attack vectors across frameworks.
