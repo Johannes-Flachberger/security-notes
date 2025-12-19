@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 **Run things**
 use the "run" dialog

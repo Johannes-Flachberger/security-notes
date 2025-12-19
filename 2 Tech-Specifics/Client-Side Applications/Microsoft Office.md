@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/execution/client-side 
+  - "#type/tech-specific" 
+  - "#attack/execution/client-side" 
 ---
 # Fundamentals
 

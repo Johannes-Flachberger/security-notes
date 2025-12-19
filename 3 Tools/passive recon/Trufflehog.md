@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/passive  
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive"  
 Link: https://trufflesecurity.com/trufflehog
 Purpose: search for sensitive information in git repos
 ---

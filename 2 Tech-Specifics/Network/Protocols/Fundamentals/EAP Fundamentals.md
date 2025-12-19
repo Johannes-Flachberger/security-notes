@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 standard framework for authentication on networks
 often used with 802.1x

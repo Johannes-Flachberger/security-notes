@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 # Overview
 Injection attack - vulnerable when website uses unsanitized user input and interprets it as code.

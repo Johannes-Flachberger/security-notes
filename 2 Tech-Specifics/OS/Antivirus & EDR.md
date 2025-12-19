@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 # Fundamentals
 Antivirus vs. EDR: EDR solutions additionally share data with a SIEM, to enable further analysis. 

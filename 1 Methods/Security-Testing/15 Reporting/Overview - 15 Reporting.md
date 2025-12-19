@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/method 
+  - "#type/method" 
 ---
 # Overview
 1. The purpose of the report.
@@ -28,8 +28,8 @@ Provide both executive summaries and in-depth technical information for security
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/reporting")
-	- file.tags.contains("type/tech-specific")
+	- file.tags.contains("#attack/reporting")
+	- file.tags.contains("#type/tech-specific")
 views:
 - type: table
   name: Table

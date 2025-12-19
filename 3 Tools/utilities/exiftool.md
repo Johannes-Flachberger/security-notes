@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://exiftool.org/
 Purpose: extract metadata from files
 ---

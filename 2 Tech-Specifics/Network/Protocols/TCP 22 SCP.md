@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 # Fundamentals
 [[3 Tools/file-transfer/scp|SCP as a Tool]]

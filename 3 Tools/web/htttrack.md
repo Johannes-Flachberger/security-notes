@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool 
+  - "#type/tool" 
 Link: https://www.httrack.com/html/fcguide.html
 Purpose: copy web pages
 ---

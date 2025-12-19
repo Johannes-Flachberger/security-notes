@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/reconnaissance/active 
-  - attack/exfiltration 
+  - "#type/tech-specific" 
+  - "#attack/reconnaissance/active" 
+  - "#attack/exfiltration" 
 ---
 # Fundamentals
 default port: 445

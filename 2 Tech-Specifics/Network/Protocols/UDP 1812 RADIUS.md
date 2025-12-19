@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 # Fundamentals
 short for Remote Authentication Dial-in User Service

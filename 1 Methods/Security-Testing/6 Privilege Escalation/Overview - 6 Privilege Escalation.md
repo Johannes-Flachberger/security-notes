@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/method 
-  - attack/privilege-escalation 
+  - "#type/method" 
+  - "#attack/privilege-escalation" 
 ---
 
 There are 2 types of privilege escalation:
@@ -11,8 +11,8 @@ vertical: gain additional privileges
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/privilege-escalation")
-    - '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/privilege-escalation")
+    - '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table

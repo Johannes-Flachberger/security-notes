@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/passive 
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive" 
 Link: https://github.com/gitleaks/gitleaks
 Purpose: Scan local git repos for credentials
 ---

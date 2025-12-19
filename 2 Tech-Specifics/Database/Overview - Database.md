@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 # Fundamentals
 most databases are relational databases:

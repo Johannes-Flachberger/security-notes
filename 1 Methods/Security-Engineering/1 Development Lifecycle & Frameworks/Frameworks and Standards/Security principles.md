@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/method 
+  - "#type/method" 
 ---
 # CIA triad
 confidentiality: keep data private

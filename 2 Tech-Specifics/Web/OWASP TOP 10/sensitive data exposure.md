@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 # Vulnerability
 sensitive data, such as credentials, ip adresses,... are exposed in requests, URLs,...

@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/passive 
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive" 
 Link: https://www.shodan.io/
 Purpose: IoT search engine
 ---

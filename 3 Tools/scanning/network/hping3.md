@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/active 
-  - attack/discovery 
+  - "#type/tool" 
+  - "#attack/reconnaissance/active" 
+  - "#attack/discovery" 
 Link: https://www.kali.org/tools/hping3/
 Purpose: forge packets, perform network and port scans
 ---

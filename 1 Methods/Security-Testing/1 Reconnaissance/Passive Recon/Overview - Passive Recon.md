@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/method
-  - attack/reconnaissance/passive
+  - "#type/method"
+  - "#attack/reconnaissance/passive"
 ---
 Uses publically available information without making contact with the target. eg. use DNS lookups to get general information & contact data of a given domain name.
 Less strict interpretation: We can also make contact, but only like a normal user does. For example, we can register an account and poke around to get an unterstanding of the target.
@@ -77,7 +77,7 @@ views:
 filters:
   and:
     - file.tags.contains("#attack/reconnaissance/passive")
-    - '!file.tags.contains("type/tool")'
+    - '!file.tags.contains("#type/tool")'
 views:
   - type: table
     name: Table 

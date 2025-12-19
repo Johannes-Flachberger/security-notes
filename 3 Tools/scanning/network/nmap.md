@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool
-  - attack/reconnaissance/active
-  - attack/discovery
+  - "#type/tool"
+  - "#attack/reconnaissance/active"
+  - "#attack/discovery"
 Link: https://nmap.org/
 Purpose: network scanner
 ---

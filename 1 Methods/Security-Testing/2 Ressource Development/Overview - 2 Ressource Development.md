@@ -10,8 +10,8 @@ Tools:
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/ressource-development")
-	- '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/ressource-development")
+	- '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table
@@ -20,8 +20,8 @@ views:
 ```base
 filters:
   and:
-    - file.tags.contains("attack/ressource-development")
-    - file.tags.contains("type/tool")
+    - file.tags.contains("#attack/ressource-development")
+    - file.tags.contains("#type/tool")
 views:
   - type: table
     name: Table

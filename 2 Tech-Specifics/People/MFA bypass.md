@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 # Fundamentals
 Different types of multifactor authentication are used:

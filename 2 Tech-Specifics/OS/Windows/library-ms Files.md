@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/initial-access/client-side
+  - "#type/tech-specific" 
+  - "#attack/initial-access/client-side"
 ---
 # Fundamentals
 Windows `.library-ms`files:

@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://github.com/besimorhino/powercat
 Purpose: the powershell version of netcat
 ---

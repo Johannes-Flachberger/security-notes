@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 # Fundamentals
 Common Database service, can be enumerated and exploited with metasploit

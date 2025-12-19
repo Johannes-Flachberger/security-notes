@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 ## python
 1. `python -c 'import pty; pty.spawn("/bin/sh")'` or `python2 ...` or `python3 ...` - spawns bash shell using python

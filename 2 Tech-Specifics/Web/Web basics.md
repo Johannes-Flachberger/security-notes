@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 **3 major languages of the internet:**
 1. HTML: gives structure to websites

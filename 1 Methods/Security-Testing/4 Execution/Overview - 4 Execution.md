@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/note 
+  - "#type/note" 
   - todo 
 ---
 Which techniques for executing code are possible very much depend on related technology and the type of [[1 Methods/Security-Testing/3 Initial Access/Overview - 3 Initial Access|Initial Access]] that has been achieved.
@@ -9,8 +9,8 @@ Which techniques for executing code are possible very much depend on related tec
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/execution/server-side")
-    - '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/execution/server-side")
+    - '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table
@@ -19,8 +19,8 @@ views:
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/execution/client-side")
-    - '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/execution/client-side")
+    - '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table

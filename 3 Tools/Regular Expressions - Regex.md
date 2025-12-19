@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Purpose: Advanced search & replace accross text files
 ---
 

@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/method 
+  - "#type/method" 
 ---
 
 - makes sense if you "own" multiple connections,... in a penetration test

@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/method
+  - "#type/method"
 ---
 # NCSC CAF
 https://www.ncsc.gov.uk/collection/caf/caf-principles-and-guidance

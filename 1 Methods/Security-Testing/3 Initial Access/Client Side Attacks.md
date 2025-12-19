@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/note 
+  - "#type/note" 
   - todo 
 ---
 # Fundamentals
@@ -16,8 +16,8 @@ To support this, client side attacks are typically preceded by [[1 Methods/Secur
 ```base
 filters:
   and:
-    - file.tags.contains("attack/initial-access/client-side")
-    - '!file.tags.contains("type/tool")'
+    - file.tags.contains("#attack/initial-access/client-side")
+    - '!file.tags.contains("#type/tool")'
 views:
   - type: table
     name: Table

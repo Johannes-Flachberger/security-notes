@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/passive
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive"
 Link: https://www.geeksforgeeks.org/linux-unix/host-command-in-linux-with-examples/
 Purpose: manually send DNS queries, DNS enumeration
 ---

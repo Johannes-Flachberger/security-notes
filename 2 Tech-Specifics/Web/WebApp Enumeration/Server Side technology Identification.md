@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/reconnaissance
+  - "#type/tech-specific" 
+  - "#attack/reconnaissance"
 ---
 
 Also known as web server fingerprinting/footprinting.

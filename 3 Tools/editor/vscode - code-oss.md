@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: 
 Purpose: popular editor with rich extension ecosystem
 ---

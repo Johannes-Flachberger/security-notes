@@ -6,8 +6,8 @@
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/lateral-movement")
-    - '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/lateral-movement")
+    - '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table

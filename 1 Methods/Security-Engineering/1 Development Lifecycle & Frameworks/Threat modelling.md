@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/method
+  - "#type/method"
 ---
 # STRIDE Model
 Threat categorization model

@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool
-  - defend/harden
+  - "#type/tool"
+  - "#defend/harden"
 Link:
 Purpose:
 ---

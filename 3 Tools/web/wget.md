@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://www.geeksforgeeks.org/linux-unix/wget-command-in-linux-unix/ 
 Purpose: Download files using http(s)
 ---

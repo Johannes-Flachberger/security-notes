@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/reconnaissance/passive   
+  - "#type/tech-specific" 
+  - "#attack/reconnaissance/passive"   
 ---
 Distributed database that translates domain names to IP addresses.
 # Fundamentals

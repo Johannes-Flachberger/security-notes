@@ -1,5 +1,5 @@
 ---
 tags:
-  - type/method
+  - "#type/method"
 ---
 ---

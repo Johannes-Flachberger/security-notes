@@ -1,7 +1,7 @@
 ---
 ztags:
-  - type/tool 
-  - attack/reconnaissance/passive 
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive" 
 Link: https://searchdns.netcraft.com/
 Purpose: general webserver enum: subdomain enumeraton, technology identification
 ---

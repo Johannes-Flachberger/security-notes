@@ -1,10 +1,10 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/execution/server-side 
-  - attack/credential-access 
-  - attack/exfiltration 
-  - attack/discovery 
+  - "#type/tech-specific" 
+  - "#attack/execution/server-side" 
+  - "#attack/credential-access" 
+  - "#attack/exfiltration" 
+  - "#attack/discovery" 
 ---
 # Fundamentals
 allows to include the contents of a file in the webapp code --> possible code execution or file display, similar to [[2 Tech-Specifics/Web/WebApp Attacks/Directory Traversal|Directory Traversal]]

@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/credential-access 
+  - "#type/tool" 
+  - "#attack/credential-access" 
 Link: https://www.kali.org/tools/seclists/
 Purpose: collection of wordlists that can be used for bruteforcing
 ---

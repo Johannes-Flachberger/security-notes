@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/privilege-escalation 
+  - "#type/tech-specific" 
+  - "#attack/privilege-escalation" 
 ---
 # Useful commands:
 powershell basics in [[2 Tech-Specifics/OS/Windows/PowerShell]]

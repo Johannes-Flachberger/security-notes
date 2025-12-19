@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 - protects against [[2 Tech-Specifics/Network/Infrastructure/Network attacks/MITM]] and [[2 Tech-Specifics/Network/Infrastructure/Network attacks/Sniffing]]
 - predecessor: SSL

@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/active 
+  - "#type/tool" 
+  - "#attack/reconnaissance/active" 
 Link: 
 Purpose: Collection of tools used for active recon
 ---

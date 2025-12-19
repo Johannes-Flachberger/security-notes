@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/active 
-  - attack/exfiltration 
+  - "#type/tool" 
+  - "#attack/reconnaissance/active" 
+  - "#attack/exfiltration" 
 Link: 
 Purpose: Tool collection for SMB
 ---

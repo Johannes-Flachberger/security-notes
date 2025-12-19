@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 great tool for encoding/decoding: [[3 Tools/utilities/Cyberchef|Cyberchef]]
 # base64

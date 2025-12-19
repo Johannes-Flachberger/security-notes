@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/method 
-  - attack/reconnaissance/active 
+  - "#type/method" 
+  - "#attack/reconnaissance/active" 
 ---
 Active recon makes contact with the target.
 Gather as detailed information as possible about exposed services - here are notes about some usually exposed services
@@ -46,7 +46,7 @@ views:
 filters:
   and:
     - file.tags.contains("#attack/reconnaissance/active")
-    - '!file.tags.contains("type/tool")'
+    - '!file.tags.contains("#type/tool")'
 views:
   - type: table
     name: Table 

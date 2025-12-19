@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://sqlmap.org/
 Purpose: Automatic SQL injection and database takeover tool
 ---

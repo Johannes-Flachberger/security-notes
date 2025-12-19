@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/passive 
-  - attack/reconnaissance/active 
+  - "#type/tool" 
+  - "#attack/reconnaissance/passive" 
+  - "#attack/reconnaissance/active" 
 Link: https://www.wappalyzer.com/
 Purpose: Identify which technology is used in websites
 ---

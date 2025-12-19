@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://www.cobaltstrike.com/product/core-impact
 Purpose: commercial exploitation framework and vulnerability scanner
 ---

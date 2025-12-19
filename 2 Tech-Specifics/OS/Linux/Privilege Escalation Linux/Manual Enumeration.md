@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/privilege-escalation 
+  - "#type/tech-specific" 
+  - "#attack/privilege-escalation" 
 ---
 
 useful commands for manual enumeration for privesc

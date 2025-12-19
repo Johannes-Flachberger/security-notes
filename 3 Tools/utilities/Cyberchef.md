@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://gchq.github.io/CyberChef/
 Purpose: slice, dice, encode, decode, parse and analyze data or files
 ---

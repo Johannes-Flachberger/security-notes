@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/active 
+  - "#type/tool" 
+  - "#attack/reconnaissance/active" 
 Link: https://www.kali.org/tools/photon/
 Purpose: website crawler for enumeration
 ---

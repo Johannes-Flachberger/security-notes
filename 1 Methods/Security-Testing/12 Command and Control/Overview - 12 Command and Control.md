@@ -6,8 +6,8 @@
 ```base
 filters:
 	and:
-	- file.tags.contains("attack/command-and-control")
-    - '!file.tags.contains("type/tool")'
+	- file.tags.contains("#attack/command-and-control")
+    - '!file.tags.contains("#type/tool")'
 views:
 - type: table
   name: Table

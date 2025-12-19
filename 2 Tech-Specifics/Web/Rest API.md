@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific
-  - attack/reconnaissance/active
+  - "#type/tech-specific"
+  - "#attack/reconnaissance/active"
 ---
 # Pentesting
 ## Enumeration

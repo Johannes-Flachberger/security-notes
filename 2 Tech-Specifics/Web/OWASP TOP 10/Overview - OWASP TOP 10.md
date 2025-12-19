@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific
+  - "#type/tech-specific"
 ---
 Last Version: https://owasp.org/Top10/
 There is a nice mapping from CVE to CWE to OWASP Top 10 - you can use that for reporting

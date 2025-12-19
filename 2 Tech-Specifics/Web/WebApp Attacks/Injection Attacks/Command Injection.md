@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/execution/server-side 
+  - "#type/tech-specific" 
+  - "#attack/execution/server-side" 
 ---
 # Fundamentals
 execute shell commands on the webserver

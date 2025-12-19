@@ -1,9 +1,9 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/credential-access 
-  - attack/exfiltration 
-  - attack/discovery 
+  - "#type/tech-specific" 
+  - "#attack/credential-access" 
+  - "#attack/exfiltration" 
+  - "#attack/discovery" 
 ---
 # Fundamentals
 - read files the webserver should not have access to

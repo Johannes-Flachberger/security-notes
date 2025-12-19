@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/credential-access 
+  - "#type/tool" 
+  - "#attack/credential-access" 
 Link: https://pypi.org/project/hashID/
 Purpose: identify type of given hash
 ---

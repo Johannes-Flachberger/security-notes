@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tech-specific 
+  - "#type/tech-specific" 
 ---
 
 `fuser -m -v [path]`: find processes that use the specified file/folder

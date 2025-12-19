@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/note   
+  - "#type/note"   
 ---
 # Modbus
 - Protocol used in SCADA and industrial environments

@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool 
-  - attack/reconnaissance/active 
-  - attack/discovery
+  - "#type/tool" 
+  - "#attack/reconnaissance/active" 
+  - "#attack/discovery"
 Link: https://www.tenable.com/downloads/nessus
 Purpose: commercial vulnerability scanner
 ---

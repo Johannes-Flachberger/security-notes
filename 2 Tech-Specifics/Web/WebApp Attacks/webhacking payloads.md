@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool  #attack/ressource-development
+  - "#type/tool"  #attack/ressource-development
 ---
 
 Webhacking payloads

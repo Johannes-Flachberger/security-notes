@@ -1,8 +1,8 @@
 ---
 tags:
-  - type/tool 
-  - attack/credential-access 
-  - attack/collection 
+  - "#type/tool" 
+  - "#attack/credential-access" 
+  - "#attack/collection" 
 Link: https://www.kali.org/tools/responder/
 Purpose: perform NBT-NS, LLMNR and MDNS poisoning
 ---

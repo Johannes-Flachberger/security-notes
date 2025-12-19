@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool 
+  - "#type/tool" 
 Link: https://www.vim.org/
 Purpose: best commandline editor ever
 ---

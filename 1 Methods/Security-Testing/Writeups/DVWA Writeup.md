@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/note
+  - "#type/note"
 ---
 # DVWA - Damn vulnerable web application
 ## brute force

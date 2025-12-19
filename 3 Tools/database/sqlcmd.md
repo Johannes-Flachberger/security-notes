@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/tool
+  - "#type/tool"
 Link: https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility
 Purpose: manual connections to microsoft databases
 ---

@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tech-specific 
-  - attack/defense-evasion 
+  - "#type/tech-specific" 
+  - "#attack/defense-evasion" 
 ---
 # Pentesting
 ## Encoding

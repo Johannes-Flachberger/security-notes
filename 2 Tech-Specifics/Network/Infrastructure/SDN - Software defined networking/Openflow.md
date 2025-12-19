@@ -1,6 +1,6 @@
 ---
 tags:
-  - type/note 
+  - "#type/note" 
 ---
 Protocol used for software defined networking.
 The controller and switch talk to each other using openflow.

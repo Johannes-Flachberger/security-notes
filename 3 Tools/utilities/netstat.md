@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/discovery 
+  - "#type/tool" 
+  - "#attack/discovery" 
 Link: 
 Purpose: List active network connections of the local machine
 ---

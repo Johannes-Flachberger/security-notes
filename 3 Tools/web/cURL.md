@@ -1,7 +1,7 @@
 ---
 tags:
-  - type/tool 
-  - attack/exfiltration 
+  - "#type/tool" 
+  - "#attack/exfiltration" 
 Link: 
 Purpose: send HTTP requests manually
 ---
