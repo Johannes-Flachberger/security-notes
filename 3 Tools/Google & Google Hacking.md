@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
+  - attack/reconnaissance/passive 
 Link: https://www.google.com/advanced_search
 Purpose: advanced online search
 ---

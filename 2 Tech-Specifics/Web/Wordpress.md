@@ -1,8 +1,8 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/reconnaissance/active 
-  - tactic/privilege-escalation
+  - attack/reconnaissance/active 
+  - attack/privilege-escalation
 ---
 # Fundamentals
 Popular web application framework

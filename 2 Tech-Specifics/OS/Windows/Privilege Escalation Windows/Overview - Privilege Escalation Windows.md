@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/privilege-escalation 
+  - attack/privilege-escalation 
 ---
 
 ## Resources

@@ -56,20 +56,20 @@ Tool notes can contain sections about how the tool can be used to test a specifi
 For each technology and tool, tags are set to identify the [MITRE ATT@CK Enterprise tactics](https://attack.mitre.org/tactics/enterprise/) they are relevant for. Based on that, queries are used in method notes to identify all technologies that can are related to a specific tactic. 
 
 **Allowed Tags:**
-- tactic/reconnaissance
-- tactic/ressource-development
-- tactic/initial-access
-- tactic/execution
-- tactic/persistence
-- tactic/privilege-escalation
-- tactic/defense-evasion
-- tactic/credential-access
-- tactic/discovery
-- tactic/lateral-movement
-- tactic/collection
-- tactic/command-and-control
-- tactic/exfiltration
-- tactic/impact
+- attack/reconnaissance
+- attack/ressource-development
+- attack/initial-access
+- attack/execution
+- attack/persistence
+- attack/privilege-escalation
+- attack/defense-evasion
+- attack/credential-access
+- attack/discovery
+- attack/lateral-movement
+- attack/collection
+- attack/command-and-control
+- attack/exfiltration
+- attack/impact
 ### Interconnection of Tools and Tech-Specifics
 Tools are referenced in tech-specific notes, were they are useful.
 # Comparison to HackTricks Wiki

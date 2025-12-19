@@ -1,8 +1,8 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
-  - tactic/reconnaissance/active
+  - attack/reconnaissance/passive 
+  - attack/reconnaissance/active
 Link: https://www.maltego.com/
 Purpose: framework for passive recon/OSINT/scanning?
 ---

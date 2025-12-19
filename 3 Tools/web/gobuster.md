@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/active 
+  - attack/reconnaissance/active 
 Link: https://github.com/OJ/gobuster
 Purpose: enumaration of varios things - subdomains, directories, s3 buckets, etc
 ---

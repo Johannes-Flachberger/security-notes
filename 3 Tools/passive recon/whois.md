@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
+  - attack/reconnaissance/passive 
 Link: https://en.wikipedia.org/wiki/WHOIS
 Purpose: enumeration of domain registries
 ---

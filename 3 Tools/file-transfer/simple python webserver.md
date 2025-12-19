@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/exfiltration 
+  - attack/exfiltration 
 Link: 
 Purpose: transfer files using http
 ---

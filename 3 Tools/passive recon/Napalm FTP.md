@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
+  - attack/reconnaissance/passive 
 Link: https://www.searchftps.net/
 Purpose: search engine for online ftp servers/files
 ---

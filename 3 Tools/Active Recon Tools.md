@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/active 
+  - attack/reconnaissance/active 
 Link: 
 Purpose: Collection of tools used for active recon
 ---

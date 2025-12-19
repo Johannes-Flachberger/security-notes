@@ -1,7 +1,7 @@
 ---
 tags:
   - type/method 
-  - tactic/credential-access 
+  - attack/credential-access 
 ---
 # Fundamentals
 Two types:

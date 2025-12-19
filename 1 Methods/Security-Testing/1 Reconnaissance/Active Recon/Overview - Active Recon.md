@@ -1,7 +1,7 @@
 ---
 tags:
   - type/method 
-  - tactic/reconnaissance/active 
+  - attack/reconnaissance/active 
 ---
 Active recon makes contact with the target.
 Gather as detailed information as possible about exposed services - here are notes about some usually exposed services

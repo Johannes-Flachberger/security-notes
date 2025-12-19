@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/active  #tactic/discovery
+  - attack/reconnaissance/active  #tactic/discovery
 Link: 
 Purpose: 
 ---

@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/privilege-escalation 
+  - attack/privilege-escalation 
 Link: https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
 Purpose: auto privesc enum script for windows
 ---

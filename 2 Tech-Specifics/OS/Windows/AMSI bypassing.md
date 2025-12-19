@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/defense-evasion 
+  - attack/defense-evasion 
 ---
 
 AMSI =  signature based malware detection

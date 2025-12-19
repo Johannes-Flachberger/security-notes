@@ -1,7 +1,7 @@
 ---
 tags:
   - type/method 
-  - tactic/initial-access/client-side 
+  - attack/initial-access/client-side 
 ---
 # Introduction
 Two types:

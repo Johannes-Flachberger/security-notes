@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
+  - attack/reconnaissance/passive 
 Link: https://linux.die.net/man/1/dig
 Purpose: perfom DNS lookups 
 ---

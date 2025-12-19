@@ -1,7 +1,7 @@
 ---
 tags:
   - type/method
-  - tactic/reconnaissance/active 
+  - attack/reconnaissance/active 
 ---
 # Tips and Tricks
 - Be aware that portscans can trigger IDS/IPS or might overload network components or target devices. - especially in OT.

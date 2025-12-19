@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive
+  - attack/reconnaissance/passive
 Link: https://docs.github.com/en/search-github
 Purpose: find and search in repos of a target organization
 ---

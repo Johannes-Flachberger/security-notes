@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/execution 
+  - attack/execution 
 ---
 # Fundamentals
 

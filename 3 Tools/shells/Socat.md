@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/command-and-control 
+  - attack/command-and-control 
 Link: https://www.redhat.com/sysadmin/getting-started-socat
 Purpose: sophisticated reverse shell tool
 ---

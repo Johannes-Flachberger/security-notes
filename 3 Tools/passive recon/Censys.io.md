@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive
+  - attack/reconnaissance/passive
 Link: https://censys.io
 Purpose: IoT search engine
 ---

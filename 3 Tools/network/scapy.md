@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool
-  - tactic/reconnaissance/active
+  - attack/reconnaissance/active
 Link: https://scapy.readthedocs.io/en/latest/
 Purpose: python-based network packet crafting, sending, analysis, etc.
 ---

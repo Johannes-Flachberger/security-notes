@@ -1,10 +1,10 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/reconnaissance/active 
-  - tactic/lateral-movement 
-  - tactic/discovery 
-  - tactic/command-and-control 
+  - attack/reconnaissance/active 
+  - attack/lateral-movement 
+  - attack/discovery 
+  - attack/command-and-control 
 ---
 # Fundamentals
 Can directly execute encoded commands

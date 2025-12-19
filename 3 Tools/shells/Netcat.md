@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/command-and-control  #todo
+  - attack/command-and-control  #todo
 Link: 
 Purpose: simple tool for connect shell and listeners
 ---

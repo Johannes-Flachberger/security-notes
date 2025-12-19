@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/active 
+  - attack/reconnaissance/active 
 Link: https://www.zaproxy.org/
 Purpose: automatically scan web applications
 ---

@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/credential-access
+  - attack/credential-access
 Link: https://hashcat.net/hashcat/
 Purpose: hashcracking
 ---

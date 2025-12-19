@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool
-  - tactic/reconnaissance/passive
+  - attack/reconnaissance/passive
 Link:
   - 
 Purpose: get dns information

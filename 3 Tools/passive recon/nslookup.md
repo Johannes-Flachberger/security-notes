@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/passive 
+  - attack/reconnaissance/passive 
 Link: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup
 Purpose: perform dns lookups
 ---

@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/ressource-development 
+  - attack/ressource-development 
 Link: https://pyinstaller.org/en/stable/
 Purpose: package python script as standalone executable
 ---

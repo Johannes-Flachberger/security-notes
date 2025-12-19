@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/execution/server-side 
+  - attack/execution/server-side 
 ---
 # Fundamentals
 - inject data into a field that ends up in Logfiles

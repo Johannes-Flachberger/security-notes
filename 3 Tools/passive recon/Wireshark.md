@@ -1,8 +1,8 @@
 ---
 tags:
   - type/tool 
-  - tactic/credential-access 
-  - tactic/discovery 
+  - attack/credential-access 
+  - attack/discovery 
 Link: 
 Purpose: record and analyze network traffic
 ---

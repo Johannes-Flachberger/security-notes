@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/credential-access 
+  - attack/credential-access 
 Link: https://www.kali.org/tools/hydra/
 Purpose: brute force network protocol logins
 ---

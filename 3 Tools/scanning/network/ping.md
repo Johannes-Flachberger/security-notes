@@ -1,8 +1,8 @@
 ---
 tags:
   - type/tool 
-  - tactic/reconnaissance/active 
-  - tactic/discovery
+  - attack/reconnaissance/active 
+  - attack/discovery
 Link: 
 Purpose: test if host is up
 ---

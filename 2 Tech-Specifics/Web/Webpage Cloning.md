@@ -1,6 +1,7 @@
 ---
 tags:
-  - type/note 
+  - type/note
+  - attack/ressource-development
 ---
 # Useful tools:
 - [[3 Tools/web/htttrack|htttrack]]

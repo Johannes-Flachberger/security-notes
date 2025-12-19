@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/ressource-development
+  - attack/ressource-development
 Link: 
 Purpose: wordlist generator based on simple criteria
 ---

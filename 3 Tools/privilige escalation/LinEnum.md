@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/privilege-escalation 
+  - attack/privilege-escalation 
   - todo
 Link: https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
 Purpose: auto privesc enum on linux

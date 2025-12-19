@@ -1,8 +1,8 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/reconnaissance/active 
-  - tactic/exfiltration 
+  - attack/reconnaissance/active 
+  - attack/exfiltration 
 ---
 # Fundamentals
 default port: 445

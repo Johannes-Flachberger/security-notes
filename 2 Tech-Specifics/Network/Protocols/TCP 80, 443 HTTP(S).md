@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tech-specific 
-  - tactic/initial-access/server-side  #tactic/reconnaissance/active 
+  - attack/initial-access/server-side  #tactic/reconnaissance/active 
 ---
 # Fundamentals
 port 443

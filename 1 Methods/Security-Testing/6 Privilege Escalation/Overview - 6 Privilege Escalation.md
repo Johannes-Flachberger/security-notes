@@ -1,7 +1,7 @@
 ---
 tags:
   - type/method 
-  - tactic/privilege-escalation 
+  - attack/privilege-escalation 
 ---
 
 There are 2 types of privilege escalation:

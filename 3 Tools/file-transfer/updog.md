@@ -1,7 +1,7 @@
 ---
 tags:
   - type/tool 
-  - tactic/exfiltration
+  - attack/exfiltration
 Link: https://github.com/sc0tfree/updog
 Purpose: upload things to targets
 ---
