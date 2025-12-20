@@ -1,6 +1,8 @@
 ---
+tags:
+  - "#type/method"
 ---
-#todo 
+---
 When we already are inside the targeted infrastructure, we either have a good C2 framework running, or must use tools that are available on the machine we are on. This limits the available techniques.
 
 Very helpful ressource: "Living off the land binaries, scripts and libraries" (LOLBAS): https://lolbas-project.github.io/#

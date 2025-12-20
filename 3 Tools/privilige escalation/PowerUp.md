@@ -1,9 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
+  - "#type/tool"
   - "#attack/privilege-escalation"
 Link: https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1
-Purpose: automated privilege escalation enum on windows
+Purpose: auto privesc enum on windows
 ---
 # Info
 #todo 

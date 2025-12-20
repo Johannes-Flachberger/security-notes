@@ -1,7 +1,6 @@
 ---
 tags:
   - "#type/method"
-  - "#attack/reconnaissance"  
 ---
 # Objective
 Get as detailed information about the target as possible. Information gathering forms the basis of the whole pentest and is therefore crucial.

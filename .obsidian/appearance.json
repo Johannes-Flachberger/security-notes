@@ -12,7 +12,9 @@
     "tasks",
     "embeddedSearch",
     "embeds",
-    "properties"
+    "properties",
+    "text",
+    "normaliseViewModes"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 19,

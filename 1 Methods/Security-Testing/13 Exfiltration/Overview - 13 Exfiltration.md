@@ -1,7 +1,9 @@
 ---
+tags:
+  - "#type/method"
+  - "#todo"
 ---
-#todo 
-
+---
 # Tech-Specific Attack Vectors
 ```base
 filters:

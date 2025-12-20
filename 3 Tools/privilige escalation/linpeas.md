@@ -1,9 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
+  - "#type/tool"
   - "#attack/privilege-escalation"
 Link: https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
-Purpose: auto privesc enumeration on linux
+Purpose: auto privesc enum on linux
 ---
 # Info
 smart privesc enumeration script for linux targets

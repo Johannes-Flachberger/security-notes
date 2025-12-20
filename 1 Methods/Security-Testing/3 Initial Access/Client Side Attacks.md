@@ -1,7 +1,6 @@
 ---
 tags:
-  - "#type/note" 
-  - todo 
+  - "#type/note"
 ---
 # Fundamentals
 client side attacks target a pure client machine, e.g. a business notebook.

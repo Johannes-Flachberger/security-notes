@@ -26,9 +26,9 @@ Modern products rely on multiple detection methods:
 **Machine Learning based**
 - can detect unknown malware, or variations of known malware
 - based on samples and metadata 
-
-
 # Pentesting
-[[3 Tools/Malware analysis/VirusTotal|VirusTotal]]
+Useful tool to check if a malware is detected by antivirus products: [[3 Tools/Malware analysis/VirusTotal|VirusTotal]]
 
+See:
+- [[2 Tech-Specifics/OS/Antivirus Evasion|Antivirus Evasion]]
 # Hardening

@@ -1,5 +1,6 @@
 ---
 tags:
+  - "#type/method"
 ---
 # Wordlist generation
 Generate wordlists for [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]].

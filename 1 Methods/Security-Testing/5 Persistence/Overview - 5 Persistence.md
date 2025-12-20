@@ -1,7 +1,9 @@
 ---
+tags:
+  - "#type/method"
+  - "#todo"
 ---
-#todo 
-
+---
 # Attack Vectors
 ```base
 filters:
@@ -22,6 +24,6 @@ views:
   - type: table
     name: Table 
 	order:
-  - file.name
-  - Purpose
+	  - file.name
+	  - Purpose
 ```

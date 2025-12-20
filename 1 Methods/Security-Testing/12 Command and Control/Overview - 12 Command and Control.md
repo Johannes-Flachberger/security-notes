@@ -1,7 +1,9 @@
 ---
+tags:
+  - "#type/method"
+  - "#todo"
 ---
-#todo 
-
+---
 # Attack Vectors
 ```base
 filters:

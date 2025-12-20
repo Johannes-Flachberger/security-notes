@@ -1,10 +1,9 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#attack/reconnaissance/active" 
-  - "#attack/lateral-movement" 
-  - "#attack/discovery" 
-  - "#attack/command-and-control" 
+  - "#type/tech-specific"
+  - "#attack/reconnaissance/active"
+  - "#attack/discovery"
+  - "#attack/command-and-control"
 ---
 # Fundamentals
 Can directly execute encoded commands
@@ -18,12 +17,12 @@ check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 `-c`- execute string as command"
 # Pentesting
 ## Enumeration
-#### search the filesystem
+#### Search the Filesystem
 ```powershell
 Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Filter "myfile.txt" 
 ```
 **Hint:** use `*` as a wildcard
-#### print the current domain
+#### Print the current Domain
 ```powershell
 (Get-CimInstance Win32_ComputerSystem).Domain
 ```
@@ -31,8 +30,8 @@ Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Filter "myfile.t
 ```powershell
 $env:USERDOMAIN
 ```
-## Lateral Movement
-#### perform tcp port scan
+## Discovery
+#### Perform TCP Port Scan
 ```powershell
 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 ```
@@ -40,7 +39,6 @@ $env:USERDOMAIN
 ```powershell
 Test-NetConnection -Port 445 192.168.50.151
 ```
-
 ## Command and Control
 #### download file 
 ```powershell

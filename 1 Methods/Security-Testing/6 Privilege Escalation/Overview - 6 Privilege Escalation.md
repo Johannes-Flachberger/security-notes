@@ -10,12 +10,14 @@ vertical: gain additional privileges
 # Attack Vectors
 ```base
 filters:
-	and:
-	- file.tags.contains("#attack/privilege-escalation")
+  and:
+    - file.tags.contains("#attack/privilege-escalation")
     - '!file.tags.contains("#type/tool")'
 views:
-- type: table
-  name: Table
+  - type: table
+    name: Table
+    cardSize: 780
+
 ```
 # Tools
 ```base
