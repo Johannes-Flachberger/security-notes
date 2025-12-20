@@ -17,6 +17,11 @@ filters:
   and:
     - file.tags.contains("#attack/initial-access/client-side")
     - '!file.tags.contains("#type/tool")'
+formulas:
+  Domain: file.folder.split("/")[1]
+properties:
+  formula.Domain:
+    displayName: Domain
 views:
   - type: table
     name: Table

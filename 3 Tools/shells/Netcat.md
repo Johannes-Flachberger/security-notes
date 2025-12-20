@@ -1,8 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#attack/command-and-control"  #todo
-Link: 
+  - "#type/tool"
+  - "#attack/command-and-control"
+  - "#attack/discovery"
+Link:
 Purpose: simple tool for connect shell and listeners
 ---
 # Info

@@ -7,26 +7,30 @@ tags:
 ---
 # Fundamentals
 Can directly execute encoded commands
-
-check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Command Injection#Get environment info|Get environment Info]]
+Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Command Injection#Get environment info|Get environment Info]]
 ## Usage
-`-enc <base64string>` - execute base64 encoded command
-- **Hint:** When encoding a commant with [[3 Tools/utilities/Cyberchef|Cyberchef]], you first need to apply "Encode Text" to encode the input to "UTF-16LE" (this is “Unicode” in .NET) - then apply the base64 encoding. [Cyberchef Recipe](https://gchq.github.io/CyberChef/#recipe=Encode_text('UTF-16LE%20(1200%29'%29To_Base64('A-Za-z0-9%2B/%3D'%29)
-`-nop` - dont run customiztions of the user profile
-`-exec bypass` - bypass execution policies
-`-c`- execute string as command"
+| Option                | Purpose                                    |
+| --------------------- | ------------------------------------------ |
+| `-enc <base64string>` | execute base64 encoded command             |
+| `-nop`                | dont run customiztions of the user profile |
+| `-exec bypass`        | bypass execution policies                  |
+| `-c`                  | execute string as command                  |
+**Hint:** When encoding a commant with [[3 Tools/utilities/Cyberchef|Cyberchef]], you first need to apply "Encode Text" to encode the input to "UTF-16LE" (this is “Unicode” in .NET) - then apply the base64 encoding - see: [Cyberchef Recipe](https://gchq.github.io/CyberChef/#recipe=Encode_text('UTF-16LE%20(1200%29'%29To_Base64('A-Za-z0-9%2B/%3D'%29)
 # Pentesting
 ## Enumeration
 #### Search the Filesystem
 ```powershell
 Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Filter "myfile.txt" 
 ```
+
 **Hint:** use `*` as a wildcard
 #### Print the current Domain
 ```powershell
 (Get-CimInstance Win32_ComputerSystem).Domain
 ```
- or 
+ 
+ or
+  
 ```powershell
 $env:USERDOMAIN
 ```

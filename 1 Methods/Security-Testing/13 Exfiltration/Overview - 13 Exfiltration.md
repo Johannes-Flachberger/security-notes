@@ -7,12 +7,21 @@ tags:
 # Tech-Specific Attack Vectors
 ```base
 filters:
-	and:
-	- file.tags.contains("#attack/exfiltration")
+  and:
+    - file.tags.contains("#attack/exfiltration")
     - '!file.tags.contains("#type/tool")'
+formulas:
+  Domain: file.folder.split("/")[1]
+properties:
+  formula.Domain:
+    displayName: Domain
 views:
-- type: table
-  name: Table
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.Domain
+
 ```
 # Tools
 ```base

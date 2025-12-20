@@ -1,9 +1,10 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#attack/reconnaissance/active" 
-  - "#attack/exfiltration" 
-Link: 
+  - "#type/tool"
+  - "#attack/reconnaissance/active"
+  - "#attack/exfiltration"
+  - "#attack/discovery"
+Link:
 Purpose: Tool collection for SMB
 ---
 # Enumeration

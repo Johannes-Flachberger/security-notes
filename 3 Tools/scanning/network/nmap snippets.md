@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/note"
+  - "#type/tool"
   - "#attack/discovery"
 ---
 This note extends the [[3 Tools/scanning/network/nmap]] tool notes with technology specific snippets

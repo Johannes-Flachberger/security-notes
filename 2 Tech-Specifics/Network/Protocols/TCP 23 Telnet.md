@@ -1,8 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
-Link: 
-Purpose: 
+  - "#type/tool"
+  - "#attack/discovery"
+Link:
+Purpose:
 ---
 # Info
 default port: 23

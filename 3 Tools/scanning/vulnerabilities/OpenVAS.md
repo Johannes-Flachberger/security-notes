@@ -1,9 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#attack/reconnaissance/active"  #attack/discovery
-Link: 
-Purpose: 
+  - "#type/tool"
+  - "#attack/reconnaissance/active"
+Link:
+Purpose: free vulnerability scanner
 ---
 # Info
 

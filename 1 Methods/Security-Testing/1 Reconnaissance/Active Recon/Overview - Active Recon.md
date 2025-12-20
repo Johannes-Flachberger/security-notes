@@ -27,6 +27,28 @@ views:
     name: Table
 
 ```
+# Attack vectors
+```base
+filters:
+  and:
+    - file.tags.contains("#attack/reconnaissance/active")
+    - '!file.tags.contains("#type/tool")'
+formulas:
+  Domain: file.folder.split("/")[1]
+properties:
+  formula.Domain:
+    displayName: Domain
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.Domain
+    sort:
+      - property: formula.Domain
+        direction: ASC
+
+```
 # Tools
 ```base
 filters:
@@ -39,15 +61,12 @@ views:
     order:
       - file.name
       - Purpose
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: Purpose
+        direction: ASC
+    columnSize:
+      file.name: 162
 
-```
-# Attack vectors
-```base
-filters:
-  and:
-    - file.tags.contains("#attack/reconnaissance/active")
-    - '!file.tags.contains("#type/tool")'
-views:
-  - type: table
-    name: Table 
 ```

@@ -1,7 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#attack/execution" 
+  - "#type/tech-specific"
 ---
 # Fundamentals
 

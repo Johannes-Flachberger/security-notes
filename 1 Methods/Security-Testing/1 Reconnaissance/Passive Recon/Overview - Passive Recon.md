@@ -50,14 +50,36 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 - [[3 Tools/passive recon/Shodan|Shodan]]: find internet connect (iot) devices
 - [[3 Tools/passive recon/Censys.io|Censys]]: IoT search engine
 - [[3 Tools/passive recon/Napalm FTP|Napalm FTP]]: find FTP servers
+
 ## Document metadata
 Documents contain metadata that might reveal software versions, configurations, or timestamps.
 Find files online:
 - using [[3 Tools/web/gobuster|gobuster]] `-x`
 - using [[3 Tools/Google & Google Hacking|Google & Google Hacking]]
 - manually
+
 To extract metadata from a file:
 - [[3 Tools/utilities/exiftool|exiftool]] 
+
+# Attack vectors
+```base
+filters:
+  and:
+    - file.tags.contains("#attack/reconnaissance/passive")
+    - '!file.tags.contains("#type/tool")'
+formulas:
+  Domain: file.folder.split("/")[1]
+properties:
+  formula.Domain:
+    displayName: Domain
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.Domain
+
+```
 # Tools
 ```base
 filters:
@@ -71,14 +93,4 @@ views:
       - file.name
       - Purpose
 
-```
-# Attack vectors
-```base
-filters:
-  and:
-    - file.tags.contains("#attack/reconnaissance/passive")
-    - '!file.tags.contains("#type/tool")'
-views:
-  - type: table
-    name: Table 
 ```

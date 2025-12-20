@@ -8,12 +8,24 @@ In general, initial access can be achieved using
 # Attack Vectors
 ```base
 filters:
-	and:
-	- file.tags.contains("#attack/initial-access")
-	- '!file.tags.contains("#type/tool")'
+  and:
+    - file.tags.contains("#attack/initial-access")
+    - '!file.tags.contains("#type/tool")'
+formulas:
+  Domain: file.folder.split("/")[1]
+properties:
+  formula.Domain:
+    displayName: Domain
 views:
-- type: table
-  name: Table
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.Domain
+    sort: []
+    columnSize:
+      file.name: 237
+
 ```
 # Tools
 ```base
