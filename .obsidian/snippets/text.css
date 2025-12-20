@@ -1,11 +1,32 @@
+/*
+
+Table of Contents:
+
+1. CSS Variables
+
+2. Heading Styles
+
+3. Inline Text Styles
+
+4. Layout and Spacing Consistency
+
+5. Print Styles
+
+*/
+
 /*=================================================*/
-/* ================ Heading Styles =============== */
+/* ================ CSS Variables =============== */
 /*=================================================*/
 
 :root {
   --heading-hue: 215;   /* blue hue */
   --heading-sat: 90%;
+  --universal-margin: 5px 0 5px 0;
 }
+
+/*=================================================*/
+/* ================ Heading Styles =============== */
+/*=================================================*/
 
 /* H1–H6 with decreasing lightness */
 .cm-s-obsidian .HyperMD-header.HyperMD-header-1,
@@ -14,7 +35,7 @@
   color: hsl(var(--heading-hue), var(--heading-sat), 75%);
   padding: 25px 0 0px 0;
   border-bottom: 2px solid var(--divider-color);
-  margin: 0 0 5px 0 !important;
+  margin: var(--universal-margin) !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-2,
@@ -22,6 +43,7 @@
 .markdown-rendered h2 {
   color: hsl(var(--heading-hue), var(--heading-sat), 65%);
   padding: 20px 0 5px 0;
+  margin: var(--universal-margin) !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-3,
@@ -29,6 +51,7 @@
 .markdown-rendered h3 {
   color: hsl(var(--heading-hue), var(--heading-sat), 55%);
   padding: 15px 0 2px 0;
+  margin: var(--universal-margin) !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-4,
@@ -36,6 +59,7 @@
 .markdown-rendered h4 {
   color: hsl(var(--heading-hue), var(--heading-sat), 50%);
   padding: 10px 0 2px 0;
+  margin: var(--universal-margin) !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-5,
@@ -43,6 +67,7 @@
 .markdown-rendered h5 {
   color: hsl(var(--heading-hue), var(--heading-sat), 45%);
   padding: 5px 0 0px 0;
+  margin: var(--universal-margin) !important;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-6,
@@ -50,10 +75,11 @@
 .markdown-rendered h6 {
   color: hsl(var(--heading-hue), var(--heading-sat), 40%);
   padding: 5px 0 0px 0;
+  margin: 0 !important;
 }
 
 /*=================================================*/
-/* ============== Inline Text Styles ============= */
+/* ================ Inline Text Styles =============== */
 /*=================================================*/
 
 /* Bold text */
@@ -74,8 +100,62 @@
 	color: #da496d !important; /* reddish */
 }
 
+/* Paragraphs - remove default margins and padding */
+.markdown-preview-view p,
+.markdown-rendered p {
+  margin: 0!important;
+  padding: 0 !important;
+}
 
-/* === PDF Export (Print Styles) === */
+/* Lists - remove default margins and padding */
+.cm-editor ul, .cm-editor ol,
+.cm-s-obsidian ul, .cm-s-obsidian ol {
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 2em !important;
+}
+
+.markdown-preview-view ul, .markdown-preview-view ol,
+.markdown-rendered ul, .markdown-rendered ol {
+  margin: 0 0 1.6em 0 !important;
+  padding: 0 !important;
+  padding-left: 2em !important;
+}
+
+.markdown-preview-view li,
+.markdown-rendered li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Blockquotes - remove default margins and padding */
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 1em !important;
+  border-left: 4px solid var(--divider-color);
+}
+
+/* Codeblocks - apply universal margin */
+.cm-s-obsidian pre,
+.markdown-preview-view pre,
+.markdown-rendered pre {
+  margin: var(--universal-margin) !important;
+}
+
+/* Ensure consistent rendering between modes */
+.cm-s-obsidian,
+.cm-line,
+.markdown-preview-view,
+.markdown-rendered {
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
+}
+
+/*=================================================*/
+/* ================ Print Styles =============== */
+/*=================================================*/
 @media print {
 	h1 {
 		color: #64b5f6;

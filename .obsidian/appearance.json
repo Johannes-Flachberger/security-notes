@@ -9,16 +9,17 @@
     "cleanEmbeds",
     "collapseEmbeddedSearchResults",
     "colors",
-    "tasks",
-    "embeddedSearch",
     "embeds",
+    "normaliseViewModes",
+    "embeddedSearch",
     "properties",
-    "text",
-    "normaliseViewModes"
+    "tasks",
+    "text"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 19,
   "textFontFamily": "",
   "accentColor": "#0468b4",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSizeAction": false
 }

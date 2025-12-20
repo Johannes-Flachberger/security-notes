@@ -5,10 +5,10 @@ tags:
 ---
 # Fundamentals
 Also see [[2 Tech-Specifics/OS/Antivirus & EDR Fundamentals|Antivirus & EDR Fundamentals]]
-
 There are two categories:
 1. [[#On-Disk Evasion]]
 2. [[#In-Memory Evasion]]
+
 Modern malware often operates in memory only and thus focuses on In-memory evasion. To successfully evade modern antivirus, usually a combination of multiple advanced techniques is needed.
 ## On-Disk Evasion
 There are several techniques to evade antivirus on disk:
@@ -20,10 +20,11 @@ Various operations are performed to change the code signature
 - Inserting irrelevant instructions
 - splitting & reordering functions
 - modify the code in-memory
-Not very effectivy against modern antivirus.
+
+Not very effective against modern antivirus.
 ### Crypter
 Encrypts major part of the software - encryption is done in memory --> less traces on disk.
-## etc
+### etc.
 Further techniques:
 - anti reversing
 - anti debugging
@@ -48,14 +49,14 @@ Ressource: https://andreafortuna.org//2017/12/08/what-is-reflective-dll-injectio
 1. Create a benign process in suspended mode
 2. Replace the memory image with the payload
 3. Resume the process
-Ressorce: https://www.ired.team/offensive-security/code-injection-process-injection/process-hollowing-and-pe-image-relocations
+
+Ressource: https://www.ired.team/offensive-security/code-injection-process-injection/process-hollowing-and-pe-image-relocations
 ### Inline Hooking
 Attempt to redirect execution flow to the payload, and then back to legitimate code. This is often done by [[2 Tech-Specifics/OS/Rootkits|Rootkits]]
 # Pentesting
 
 > [!Warning] Warning
 > AV bypassing depends heavily on the used product and is a rapidly changing field. Finding a suitable bypass can be resource intensive & error prone.
-
 ## Testing Antivirus Evasion
 1. Know the targets antivirus product.
 	1. If you dont know the antivirus product, try harder.
@@ -63,13 +64,11 @@ Attempt to redirect execution flow to the payload, and then back to legitimate c
 2. If possible, deploy the antivirus product yourself and check the payload against it.
 	1. **Important:** Check if the antivirus sends samples of scanned artefacts - if possible disable it.
 	2. If the target as sample submission enabled, also enable it for further testing
-
 ## Tools
 Good commercial tool: [The Enigma Protector](https://www.enigmaprotector.com/en/home.html)
 ## amsi.fail (Obfuscation)
-1. get amsi bypass from
-https://amsi.fail/
-2. https://github.com/danielbohannon/Invoke-Obfuscation
+1. get amsi bypass from https://amsi.fail/
+2. use https://github.com/danielbohannon/Invoke-Obfuscation
 
 If the antivirus system is triggered --> analyse what part of the payload triggered it.
 Useful Ressources:
@@ -78,5 +77,4 @@ Useful Ressources:
 
 ## Thread Injection using PowerShell
 Basic approach: 
-
 # Hardening

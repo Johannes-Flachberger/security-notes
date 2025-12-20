@@ -16,5 +16,10 @@
   "userIgnoreFilters": [
     "9_meta/"
   ],
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "rightToLeft": false,
+  "showIndentGuide": false,
+  "tabSize": 4
 }
