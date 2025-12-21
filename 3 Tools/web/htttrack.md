@@ -11,11 +11,14 @@ nice tool to copy webpages
 httrack <URL> -O <output-directory>
 ```
 ## Essential Options
-- `-O <dir>`: Output directory
-- `-rN`: Recursion depth
-- `-cN`: Number of connections
-- `-n`: Get images and media
-- `-i`: Continue interrupted download
-- `-v`: Verbose output
-- `+<filter>` / `-<filter>`: Include/exclude URL patterns
+
+| Option | Purpose |
+|----------|--------------|
+| `-O <dir>` | Output directory |
+| `-rN` | Recursion depth |
+| `-cN` | Number of connections |
+| `-n` | Get images and media |
+| `-i` | Continue interrupted download |
+| `-v` | Verbose output |
+| `+<filter>` / `-<filter>` | Include/exclude URL patterns |
 

@@ -26,10 +26,14 @@ The MIB holds a lot of information about targets - e.g. on windows: user account
 - enumerates the whole MIB tree of an smb server
 - requires credentials / community string
 e.g. `snmpwalk -c public -v1 -t 10 192.168.50.151`
-`-c`: community string
-`-v`: snmp version
-`-t`: timeout
-`-Oa`: decode hex strings to ascii
+
+| Option | Purpose |
+|----------|--------------|
+| `-c` | community string |
+| `-v` | snmp version |
+| `-t` | timeout |
+| `-Oa` | decode hex strings to ascii |
+
 ## snmp-check
 - more readable/structured output than snmpwalk
 - automated enumeration of MiB
@@ -39,6 +43,9 @@ e.g. `snmp-check -c public 192.168.50.151`
 ## onesixtyone
 - bruteforces a list of snmp agents using the provided wordlist
 e.g. `onesixtyone -c community -i ips`
-`-c`: list of community strings
-`-i`: list of ips
+
+| Option | Purpose |
+|----------|--------------|
+| `-c` | list of community strings |
+| `-i` | list of ips |
 

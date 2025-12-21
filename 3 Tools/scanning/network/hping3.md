@@ -9,9 +9,12 @@ Purpose: forge packets, perform network and port scans
 # Info
 
 # Usage
-`-A`: set ACK flag
-`-p`: set port
-`--flood`: performs tcp flooding
+
+| Option | Purpose |
+|----------|--------------|
+| `-A` | set ACK flag |
+| `-p` | set port |
+| `--flood` | performs tcp flooding |
 
 ### Examples
 `hping3 -A [Target IP Address] -p 80 -c 5`

@@ -19,10 +19,12 @@ when using POST requests:
 `sqlmap -r post.txt -p item  --os-shell  --web-root "/var/www/html/tmp"`
 
 common options:
-`-u`: full url too test, including parameters
-`-r`: template request
-`-p`: parameter to test
-`--dump`: dump the database
-`--os-shell`: pop a system shell
-`--web-root`: web server document root
+| Option | Purpose |
+|----------|--------------|
+| `-u` | full url too test, including parameters |
+| `-r` | template request |
+| `-p` | parameter to test |
+| `--dump` | dump the database |
+| `--os-shell` | pop a system shell |
+| `--web-root` | web server document root |
 # Snippets

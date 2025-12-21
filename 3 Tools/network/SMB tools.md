@@ -20,11 +20,15 @@ if you want to enumerate multiple ips:
 smb enumeration on windows
 lists domains, resources, and computers belonging to a given host.
 e.g. `net view \\dc01 /all`
-`/all`: lists administrative shares too
-`/all`: Lists all shares, including administrative shares.
-`/domain`: Lists all domains/workgroups on the network.
-`/domain:<DomainName>`: Lists all computers in the specified domain.
-`net view \\SERVER1`: List all shares on the server
+
+| Option | Purpose |
+|----------|--------------|
+| `/all` | lists administrative shares too |
+| `/all` | Lists all shares, including administrative shares. |
+| `/domain` | Lists all domains/workgroups on the network. |
+| `/domain:<DomainName>` | Lists all computers in the specified domain. |
+| `net view \\SERVER1` | List all shares on the server |
+
 ### nbtscan
 e.g. `nbtscan -r 192.168.50.0/24`
 `-r` sets originating udp port to 137

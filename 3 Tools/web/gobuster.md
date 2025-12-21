@@ -10,14 +10,16 @@ enumerate website directories, subdomains, etc
 brute force, makes use of wordlist, in kali some are located in `/usr/share/wordlists/dirbuster`
 # Usage
 ## options:
-`-u`: target url
-`-e`: print full urls in console
-`-w`: path to wordlist
-`-U` and `-P`: username and password for basic authentications
-`-p <file>`: pattern file to use
-`-c <cookies>`: specify cookie 
-`-t`: number of threads
-`-x`: match files with extensions
+| Option | Purpose |
+|----------|--------------|
+| `-u` | target url |
+| `-e` | print full urls in console |
+| `-w` | path to wordlist |
+| `-U` and `-P` | username and password for basic authentications |
+| `-p <file>` | pattern file to use |
+| `-c <cookies>` | specify cookie |
+| `-t` | number of threads |
+| `-x` | match files with extensions |
 ## directory enum
 `gobuster dir -u http://<IP>:[port] -w <wordlist>`
 eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`

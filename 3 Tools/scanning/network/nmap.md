@@ -30,21 +30,26 @@ enter ip adress as domain names, ip adress, adress ranges `10.10.0-255.0-255` or
 - use multiple output formats at once
 - combine SYN and UDP scan
 ## general options:
-`-iL`: file input for list of hosts 
-`-v`: verbose mode
-`-T<0-5>`: time interval between probes - T4 often used in CTFs T1 used in real world (stealthier)
-`--max-parallelism <numprobes>` and `--min-parallelism <numprobes>`: control how much probes are sent in paralell
-`-f`: fragment packages for not beeing detected by firewalls or IDSs
-`--reason`: show the reason why nmap thinks what it thinks
-`--traceroute`: for inbuilt traceroute (many routers block that, so their IP adresses cant be discovered)
-`--open`: output only open ports
+
+| Option | Purpose |
+|----------|--------------|
+| `-iL` | file input for list of hosts |
+| `-v` | verbose mode |
+| `-T<0-5>` | time interval between probes - T4 often used in CTFs T1 used in real world (stealthier) |
+| `--max-parallelism <numprobes>` and `--min-parallelism <numprobes>` | control how much probes are sent in paralell |
+| `-f` | fragment packages for not beeing detected by firewalls or IDSs |
+| `--reason` | show the reason why nmap thinks what it thinks |
+| `--traceroute` | for inbuilt traceroute (many routers block that, so their IP adresses cant be discovered) |
+| `--open` | output only open ports |
+
 ## output options
-`-oN [path]`: write output to file, as it is written out
-`-oG [FILENAME]`: greppable output, not easy to read but nice to grep
-	see [[#^0d2a5c|nmap grepping cheat sheet]] 
-`-oX FILENAME`: xml output, for importing into other toolsexce0
-	zusätzlich ```--webxml``` gibt einen xml output den man im browser öffnen kann
-`-oA FILENAME`: all output options at once
+
+| Option | Purpose |
+|----------|--------------|
+| `-oN [path]` | write output to file, as it is written out |
+| `-oG [FILENAME]` | greppable output, not easy to read but nice to grep |
+| `-oX FILENAME` | xml output, for importing into other toolsexce0 |
+| `-oA FILENAME` | all output options at once |
 
 # Snippets
 [[3 Tools/scanning/network/nmap snippets|nmap snippets]]
@@ -55,30 +60,50 @@ if no options are provided for discovery scan:
 2. privileged user outside: ICMP echo, TCP ACK port 80, TCP SYN port 443, ICMP timestamp 
 3. unprivileged outside the local network: TCP 3-way handshake by sending SYN packets to ports 80 and 443
 **Useful options** 
-- `-sn`: no port scanning (however common tcp ports are used for discovery - this can be more accurate than ping)
-- `-n`: dont do reverse DNS lookup
-- `-R`: also do reverse DNS lookup for offline hosts 
-- `-sL` : show list of hosts that will be scanned without actually scanning them
-- `--top-ports: scans top 20 ports
-- `-O`: guess target OS - take with grain of salt, sometimes firewalls or proxies rewrite packet headers used for OS guessing
+
+| Option | Purpose |
+|----------|--------------|
+| `-sn` | no port scanning (however common tcp ports are used for discovery - this can be more accurate than ping) |
+| `-n` | dont do reverse DNS lookup |
+| `-R` | also do reverse DNS lookup for offline hosts |
+| `-sL` | show list of hosts that will be scanned without actually scanning them |
+| `--top-ports` | scans top 20 ports |
+| `-O` | guess target OS - take with grain of salt, sometimes firewalls or proxies rewrite packet headers used for OS guessing |
+
 #### ARP scan 
 `nmap -PR TARGET`
 only works if you are on the same subnet
 alternative tool: arp-scan
 #### ICMP scans
 try multiple scan types in case of one beeing blocked
-`-PE`: ICMP echo requests often are filtered/blocked!
-`-PP`: ICMP timestamp requests
-`-PM`: ICMP adress mask request
+
+| Option | Purpose |
+|----------|--------------|
+| `-PE` | ICMP echo requests often are filtered/blocked! |
+| `-PP` | ICMP timestamp requests |
+| `-PM` | ICMP adress mask request |
+
 #### TCP scan
-`-PS[port or port list]`: TCP SYN ping (better use priviliged user), reply if port opened
-`-PA[port or port list]`: TCP ACK ping, only possible with privileged user, reply if port opened
+
+| Option | Purpose |
+|----------|--------------|
+| `-PS[port or port list]` | TCP SYN ping (better use priviliged user), reply if port opened |
+| `-PA[port or port list]` | TCP ACK ping, only possible with privileged user, reply if port opened |
+
 #### UDP scan
-`-PU`: reply if port closed
+
+| Option | Purpose |
+|----------|--------------|
+| `-PU` | reply if port closed |
+
 ---
 # Port scans
-`-p`: specify ports to scan `-p<number>` to scan specified number of ports (supports range, list or - (all))
-`-Pn`: do not check if host is online by pinging it
+
+| Option | Purpose |
+|----------|--------------|
+| `-p` | specify ports to scan `-p<number>` to scan specified number of ports (supports range, list or - (all)) |
+| `-Pn` | do not check if host is online by pinging it |
+
 #### Tcp scan (`-ST`)
 - default when run without root privileges
 full handshake
@@ -112,20 +137,27 @@ info: closed, opened/filter
 - detect os: `-O` or use NSE script (less noisy!)
 - use NSE scripts to get more information about each service 
 
-`-A`: Enables OS and version detection, executes in-build scripts for further enumeration
-`-sC`: use default nmap scripts
-`-O`: guess target OS - take with grain of salt 
-`-sV`: determine the running services & versions, full TCP handshake is required -> not possible with SYN scan, `--version-intensity LEVEL` to adjust level, version detection is not a guess
+| Option | Purpose |
+|----------|--------------|
+| `-A` | Enables OS and version detection, executes in-build scripts for further enumeration |
+| `-sC` | use default nmap scripts |
+| `-O` | guess target OS - take with grain of salt |
+| `-sV` | determine the running services & versions, full TCP handshake is required -> not possible with SYN scan, `--version-intensity LEVEL` to adjust level, version detection is not a guess |
+
 ## Scripts
 
 > [!NOTE] Note: some nmap scripts are quite outdated 
 
 scripts path: `/usr/share/nmap/scripts`
 multple script catagories exist, eg. discorvery, default....
-`--script "SCRIPT-NAME"`: execute script
-`--script "SCRIPT-CATEGORY"`: execute scripts from category
-`--script-help=<script filename>`: show script information
-`-sC`: run script of the "default" category
+
+| Option | Purpose |
+|----------|--------------|
+| `--script "SCRIPT-NAME"` | execute script |
+| `--script "SCRIPT-CATEGORY"` | execute scripts from category |
+| `--script-help=<script filename>` | show script information |
+| `-sC` | run script of the "default" category |
+
 add further scripts:
 - put .nse file in `/usr/share/nmap/scripts/`
 - update nmap's script database: `sudo nmap --script-updatedb`
@@ -168,17 +200,25 @@ info: closed, open/filtered
 `--script http-waf-detect` this uses malicious payloads and checks the response code to detect if a waf blocks the requests
 # Firewall evasion
 ^eb4d21
-- `-f`: fragment packages for not beeing detected by firewalls or IDSs
-- `-g` or `--source-port` option to perform source port manipulation - set to common port
-- `-mtu`: set number of maximum transmission unit
-- `-D RND:10`: generate decoy packets using randomly generated IP adresses - makes it more difficult to know which of the source adresses was the actual one
-- `--spoof-mac 0`:randomise mac adress
+
+| Option | Purpose |
+|----------|--------------|
+| `-f` | fragment packages for not beeing detected by firewalls or IDSs |
+| `-g` or `--source-port` | option to perform source port manipulation - set to common port |
+| `-mtu` | set number of maximum transmission unit |
+| `-D RND:10` | generate decoy packets using randomly generated IP adresses - makes it more difficult to know which of the source adresses was the actual one |
+| `--spoof-mac 0` | randomise mac adress |
+
 ---
 ## Spoofing
 youre only able to both spoof and monitor network traffic in special situations
-`-S [spoofed IP adress]`: specify spoofed IP adress to send packets, often you cannot catch the responses --> monitor network traffic with wireshark
-`--spoof-mac SPOOFED_MAC`: speficy spoofed mac acress
-`-D [decoy adress list]`: makes the attack look as if its coming from multiple (random) adresses eg. `nmap -D 10.10.0.1,10.10.0.2,RND,RND,ME MACHINE_IP` RND = random, ME = my IP adress
+
+| Option | Purpose |
+|----------|--------------|
+| `-S [spoofed IP adress]` | specify spoofed IP adress to send packets, often you cannot catch the responses --> monitor network traffic with wireshark |
+| `--spoof-mac SPOOFED_MAC` | speficy spoofed mac acress |
+| `-D [decoy adress list]` | makes the attack look as if its coming from multiple (random) adresses eg. `nmap -D 10.10.0.1,10.10.0.2,RND,RND,ME MACHINE_IP` RND = random, ME = my IP adress |
+
 ## Zombie/idle scan
 `nmap -sI ZOMBIE_IP MACHINE_IP`
 - similar to spoofing, but is possible more often

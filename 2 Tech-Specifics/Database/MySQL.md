@@ -14,9 +14,12 @@ Hint: in the mysql shell, end statements with `;`
 - https://devhints.io/mysql
 - [[2 Tech-Specifics/Database/Standard SQL Cheat Sheet|Standard SQL Cheat Sheet]]
 
-`database()`: returns current database
-`group_concat()`: gets specified column from multiple rows and puts it in one string
-`LIMIT`: limit the number of results
+| Function | Purpose |
+|----------|--------------|
+| `database()` | returns current database |
+| `group_concat()` | gets specified column from multiple rows and puts it in one string |
+| `LIMIT` | limit the number of results |
+
 # Pentesting
 ### Basic enumeration
 Show dbms version: select version();

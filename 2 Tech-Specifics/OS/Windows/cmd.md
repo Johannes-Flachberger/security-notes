@@ -23,11 +23,13 @@ for help menu of each command: `/?`
 
 # Snippets
 
-`sc queryex type=service state=all`:show all available services
-`netsh firewall show state`: show firewall state
-`netsh firewall show config`: show firewall config
-`wmic /node:"" product get name,version,vendor`: show details of installed software
-`wmic useraccount get name,sid`: show login names and SIDs of users
+| Command | Purpose |
+|----------|--------------|
+| `sc queryex type=service state=all` | show all available services |
+| `netsh firewall show state` | show firewall state |
+| `netsh firewall show config` | show firewall config |
+| `wmic /node:"" product get name,version,vendor` | show details of installed software |
+| `wmic useraccount get name,sid` | show login names and SIDs of users |
 
 
 

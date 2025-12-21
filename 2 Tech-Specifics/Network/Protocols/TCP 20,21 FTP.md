@@ -18,9 +18,12 @@ operates on 2 channels/ports: control channel for commands & data channel for da
 output content of file:
 `get [filename] -` 
 `STAT` show some info
-`SYST`: show sytem type
-`TYPE A`: use ASCII for file transfer
-`TYPE I`: use binary for file transfer
+
+| Command | Purpose |
+|----------|--------------|
+| `SYST` | show sytem type |
+| `TYPE A` | use ASCII for file transfer |
+| `TYPE I` | use binary for file transfer |
 
 [https://www.exploit-db.com/exploits/20745](https://www.exploit-db.com/exploits/20745)
 
