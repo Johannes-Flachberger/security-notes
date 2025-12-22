@@ -76,7 +76,7 @@ Useful Ressources:
 - https://github.com/rasta-mouse/ThreatCheck
 ## Thread Injection using PowerShell
 **Workflow:**
-1. Create payload using [[3 Tools/exploitation-frameworks/Metasploit/msfvenom|msfvenom]] - using `-f psh-reflection`
+1. Create payload using [[3 Tools/exploitation frameworks/Metasploit/msfvenom|msfvenom]] - using `-f psh-reflection`
 2. add library imports to the script:
 
 ```powershell

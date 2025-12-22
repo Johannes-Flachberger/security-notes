@@ -12,6 +12,6 @@ tags:
 ## Enumeration
 - there is an [[3 Tools/scanning/network/nmap|nmap]] script for discovery
 ## Impact
-- search for modbus in [[3 Tools/exploitation-frameworks/Metasploit/Overview - Metasploit|Overview - Metasploit]]
+- search for modbus in [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Overview - Metasploit]]
 - there is a modbus cli tool
 # Hardening

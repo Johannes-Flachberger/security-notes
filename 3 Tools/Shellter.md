@@ -19,12 +19,11 @@ Analysis a target PE/exe file and injects shellcode into the file.
 Shellter is built for windows --> use wine on linux.
 ## Workflow
 1. Choose a target executable.
-2. Start shellter, e.g. using wine
+2. Start Shellter
 ## Options
-
-| Option         | Purpose                               |
-| -------------- | ------------------------------------- |
-| automatic mode | guides you through the process        |
-| manual mode    | gives low level, granular control     |
-| stealth mode   | attempt to restore the execution flow |
+| Option           | Purpose                               |
+| ---------------- | ------------------------------------- |
+| `automatic mode` | guides you through the process        |
+| `manual mode`    | gives low level, granular control     |
+| `stealth mode`   | attempt to restore the execution flow |
 # Snippets
