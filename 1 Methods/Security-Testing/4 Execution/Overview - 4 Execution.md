@@ -23,7 +23,7 @@ views:
       - formula.Domain
     sort:
       - property: formula.Domain
-        direction: DESC
+        direction: ASC
     columnSize:
       file.name: 240
 

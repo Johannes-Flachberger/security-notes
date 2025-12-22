@@ -19,12 +19,13 @@ output content of file:
 `get [filename] -` 
 `STAT` show some info
 
-| Command | Purpose |
-|----------|--------------|
-| `SYST` | show sytem type |
-| `TYPE A` | use ASCII for file transfer |
+| Command  | Purpose                      |
+| -------- | ---------------------------- |
+| `SYST`   | show sytem type              |
+| `TYPE A` | use ASCII for file transfer  |
 | `TYPE I` | use binary for file transfer |
+| `ls`     | list files                   |
+| `less`   | show start of file contents  |
 
-[https://www.exploit-db.com/exploits/20745](https://www.exploit-db.com/exploits/20745)
 
  

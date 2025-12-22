@@ -16,8 +16,8 @@ Example with good default options:
 xfreerdp3 /dynamic-resolution +clipboard /toggle-fullscreen /compression /network:auto +fonts /auto-reconnect /cert:ignore /size:1920x1080 /scale:180 /v:192.168.x.x /u:<user> /p:<password>
 ```
 
-| Option                                  | Purpose                                                                                                |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `/cert:ignore`                          | skip certificate validation                                                                            |
-| `/scale:<scaling>`                      | set scaling factor, 180 works well on hiDPI screens                                                    |
-| `+drive:<remote_folder>,<local_folder>` | make a local folder available on the target - remote folder will be available in `Network -> tsclient` |
+| Option                                  | Purpose                                                                                         |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `/cert:ignore`                          | skip certificate validation                                                                     |
+| `/scale:<scaling>`                      | set scaling factor, 180 works well on hiDPI screens                                             |
+| `+drive:<remote_folder>,<local_folder>` | share a folder with the target using - remote folder will be available in `Network -> tsclient` |

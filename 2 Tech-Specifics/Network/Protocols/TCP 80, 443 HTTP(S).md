@@ -1,8 +1,9 @@
 ---
 tags:
-  - "#type/tech-specific" 
+  - "#type/tech-specific"
   - "#attack/initial-access/server-side"
   - "#attack/reconnaissance/active"
+  - "#attack/exfiltration"
 ---
 # Fundamentals
 port 443
@@ -16,4 +17,8 @@ at least 3 steps:
 See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
 ## Exploitation
 See [[2 Tech-Specifics/Web/WebApp Attacks/Overview - WebApp Attacks|Overview - WebApp Attacks]]
+## Exfiltration
+E.g. using:
+- [[3 Tools/file-transfer/updog|updog]]
+- [[3 Tools/file-transfer/simple python webserver|simple python webserver]]
 # Hardening

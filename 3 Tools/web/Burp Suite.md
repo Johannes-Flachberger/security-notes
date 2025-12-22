@@ -3,7 +3,7 @@ tags:
   - "#type/tool" 
   - "#attack/reconnaissance/active" 
   - "#attack/initial-access/server-side"
-Link: [https://portswigger.net/burp/communitydownload](https://portswigger.net/burp/communitydownload) 
+Link: https://portswigger.net/burp/communitydownload
 Purpose: professional webhacking framework
 ---
 # Info

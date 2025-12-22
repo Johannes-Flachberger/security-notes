@@ -57,13 +57,13 @@ Attempt to redirect execution flow to the payload, and then back to legitimate c
 
 > [!Warning] Warning
 > AV bypassing depends heavily on the used product and is a rapidly changing field. Finding a suitable bypass can be resource intensive & error prone.
-## Testing Antivirus Evasion
+## Testing for Antivirus Evasion
 1. Know the targets antivirus product.
 	1. If you dont know the antivirus product, try harder.
 	2. As a last resort, use e.g. [[3 Tools/Malware analysis/KleenScan|KleenScan]] to check your payload against popular antivirus products.
 2. If possible, deploy the antivirus product yourself and check the payload against it.
 	1. **Important:** Check if the antivirus sends samples of scanned artefacts - if possible disable it.
-	2. If the target as sample submission enabled, also enable it for further testing
+	2. If the target as sample submission enabled, also enable it for further testing. (Sample submission needs internet connectivity, also on the target.)
 ## Tools
 Good commercial tool: [The Enigma Protector](https://www.enigmaprotector.com/en/home.html)
 ## amsi.fail (Obfuscation)
@@ -74,7 +74,22 @@ If the antivirus system is triggered --> analyse what part of the payload trigge
 Useful Ressources:
 - https://github.com/matterpreter/DefenderCheck
 - https://github.com/rasta-mouse/ThreatCheck
-
 ## Thread Injection using PowerShell
-Basic approach: 
+**Workflow:**
+1. Create payload using [[3 Tools/exploitation-frameworks/Metasploit/msfvenom|msfvenom]] - using `-f psh-reflection`
+2. add library imports to the script:
+
+```powershell
+$code = '
+[DllImport("kernel32.dll")]
+public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
+
+[DllImport("kernel32.dll")]
+public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+
+[DllImport("msvcrt.dll")]
+public static extern IntPtr memset(IntPtr dest, uint src, uint count);';
+```
+
+3. You might need to circumvent [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]] Execution Policies on the target
 # Hardening

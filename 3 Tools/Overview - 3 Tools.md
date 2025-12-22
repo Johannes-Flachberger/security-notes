@@ -31,7 +31,7 @@ views:
         direction: ASC
     columnSize:
       file.name: 216
-      formula.used by: 86
+      formula.used by: 85
   - type: table
     name: Reconnaissance
 

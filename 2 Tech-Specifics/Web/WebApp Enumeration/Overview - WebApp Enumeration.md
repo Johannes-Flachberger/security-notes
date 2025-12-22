@@ -1,7 +1,8 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#attack/reconnaissance" 
+  - "#type/tech-specific"
+  - "#attack/reconnaissance/active"
+  - "#attack/reconnaissance/passive"
 ---
 Here, both passive and active recon techniques are listed
 [[3 Tools/web/Netcraft|Netcraft]] gives a good overview of a website including its technologies, etc.

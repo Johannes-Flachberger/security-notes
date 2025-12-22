@@ -10,7 +10,7 @@ more advanced alternative: [[3 Tools/file-transfer/updog|updog]]
 sets up a 3 python webserver, then you can access files from remote machines that you are reachable from
 # Usage
 
-execute in directory to make files accessable via HTTP requests
+execute in directory to make files accessable via [[2 Tech-Specifics/Network/Protocols/TCP 80, 443 HTTP(S)|HTTP]] requests
 `python3 -m http.server 8000` - 8000 is the port
 
 on Linux target:

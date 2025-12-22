@@ -22,9 +22,11 @@ views:
     order:
       - file.name
       - formula.Domain
-    sort: []
+    sort:
+      - property: formula.Domain
+        direction: ASC
     columnSize:
-      file.name: 237
+      file.name: 245
 
 ```
 # Tools

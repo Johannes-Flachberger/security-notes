@@ -1,7 +1,8 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#attack/reconnaissance"
+  - "#type/tech-specific"
+  - "#attack/reconnaissance/active"
+  - "#attack/reconnaissance/passive"
 ---
 
 **Find online exposed PLCs with Google/shodan dorks**

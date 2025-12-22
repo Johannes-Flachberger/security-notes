@@ -12,11 +12,7 @@ In general: start to enumerate the attack surface broadly (network &  port scann
 then enumerate specific services
 ## 1. Port Scanning & Service Detection
 See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Port scanning|Port scanning]]
-## 2. Vulnerability Scanning
-See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
-##  3. Web enumeration
-See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
-## 4. Enumerate each discovered network service
+## 2. Enumerate each discovered network service
 ```base
 filters:
   and:
@@ -27,6 +23,11 @@ views:
     name: Table
 
 ```
+## 3. Vulnerability Scanning
+See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
+##  4. Web enumeration
+See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
+
 # Attack vectors
 ```base
 filters:

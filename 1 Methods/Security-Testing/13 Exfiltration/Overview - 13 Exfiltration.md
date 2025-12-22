@@ -4,7 +4,7 @@ tags:
   - "#todo"
 ---
 ---
-# Tech-Specific Attack Vectors
+# Attack Vectors
 ```base
 filters:
   and:
@@ -21,6 +21,9 @@ views:
     order:
       - file.name
       - formula.Domain
+    sort:
+      - property: formula.Domain
+        direction: ASC
 
 ```
 # Tools
