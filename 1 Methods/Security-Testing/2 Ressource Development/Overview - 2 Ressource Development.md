@@ -12,7 +12,7 @@ Tools:
 Some effective rules are listed in `/usr/share/hashcat/rules`
 - users add `1` to the password if numbers are required
 - users capitalize the first character if capitalized characters are required
-- users often rely on common special characters, such as `!`
+- users often rely on common special characters, such as `!`, `@`, `#`
 # Attack Vectors
 ```base
 filters:

@@ -24,7 +24,7 @@ end ping command with ; | or && and then enter another command
 
 usually you do a 1:1 copy of the webpage and insert this snippet with a hidden image
 3. in the hidden image src part you enter the request you want to be sent
-4. you present the malicous wite to some user the request will be sent using his session ID -> you might be able to change credentials, retrieve information,...
+4. you present the malicious site to some user - the request will be sent using his session ID -> you might be able to change credentials, retrieve information,...
 ## Insecure captcha
 doesnt work anymore
 ## File Inclusion

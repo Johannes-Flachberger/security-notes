@@ -6,7 +6,6 @@ Link:
 Purpose: Collection of tools used for active recon
 ---
 # Info
-#todo 
 
 # Usage
 

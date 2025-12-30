@@ -35,6 +35,7 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 - [[3 Tools/bruteforce/Hydra|Hydra]]
 - [[3 Tools/web/Burp Suite|Burp Suite]] Pro (for web applications)
 ## Local Attacks (Hash-cracking)
+**Fundamentals:** [[2 Tech-Specifics/_Other/Cryptography/Hashing fundamentals|Hashing fundamentals]]
 ### Workflow
 1. Extract hashes
 2. Format hashes

@@ -21,3 +21,6 @@ xfreerdp3 /dynamic-resolution +clipboard /toggle-fullscreen /compression /networ
 | `/cert:ignore`                          | skip certificate validation                                                                     |
 | `/scale:<scaling>`                      | set scaling factor, 180 works well on hiDPI screens                                             |
 | `+drive:<remote_folder>,<local_folder>` | share a folder with the target using - remote folder will be available in `Network -> tsclient` |
+
+> [!Hint] The error messages if authentication fails can be quite cryptic.
+
