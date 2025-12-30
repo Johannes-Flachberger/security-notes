@@ -1,7 +1,7 @@
 {
   "theme": "obsidian",
   "translucency": false,
-  "cssTheme": "",
+  "cssTheme": "Seamless View",
   "enabledCssSnippets": [
     "coloredHeadings",
     "niceHeadings",
@@ -14,7 +14,8 @@
     "embeddedSearch",
     "properties",
     "tasks",
-    "text"
+    "customFormats",
+    "consistentSpacing"
   ],
   "interfaceFontFamily": "",
   "baseFontSize": 16,
