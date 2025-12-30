@@ -48,18 +48,6 @@ e.g. `nbtscan -r 192.168.50.0/24`
 
 # Exfiltration
 
-## SMBClient
-
-for connecting to shares
-
-`smbclient //[IP]/[SHARE] -options`
-
-in smb client shell: `help` for available commands
-
-| Option                | Purpose                                                                                                                        |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `--pw-nt-hash <hash>` | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash\|Pass the Hash]] |
-
 ## Smbget
 
 download files from SMB shares

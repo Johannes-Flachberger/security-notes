@@ -15,8 +15,8 @@ operates on 2 channels/ports: control channel for commands & data channel for da
 
 ### 2 Modes:
 
-**active:** data is sent over a separate channel originating from the FTP server’s port 20
-**passive:** data is sent over a separate channel originating from an FTP client’s port above port number 1023
+1. **active:** data is sent over a separate channel originating from the FTP server’s port 20
+2. **passive:** data is sent over a separate channel originating from an FTP client’s port above port number 1023
 
 ## Usage
 

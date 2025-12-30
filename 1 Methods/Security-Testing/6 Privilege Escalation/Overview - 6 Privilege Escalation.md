@@ -6,9 +6,8 @@ tags:
 
 There are 2 types of privilege escalation:
 
-horizontal: move between users on one level of privilege
-
-vertical: gain additional privileges
+1. horizontal: move between users on one level of privilege
+2. vertical: gain additional privileges
 
 # Attack Vectors
 

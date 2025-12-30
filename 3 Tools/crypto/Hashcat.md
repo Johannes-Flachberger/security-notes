@@ -17,7 +17,7 @@ Purpose: hashcracking
 
 ## Command
 
-`hashcat -m [hash mode number] -a [attack mode] [hash file] [wordlist file]`
+`hashcat -m [hash mode number] [hash file] [wordlist file]`
 
 | Option             | Purpose                                                                                                                                                                                                                                |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,6 +28,8 @@ Purpose: hashcracking
 | `--stdout`         | print attempted passwords - used for debugging of rulesets                                                                                                                                                                             |
 | `--show`           | show cracked hash - also hashfile and mode are required<br>alternatively: show the whole potfile - default location on kali: `/root/.hashcat/hashcat.potfile`                                                                          |
 | `-hh`              | print all hash mode numbers - can be searched - e.g. using [[3 Tools/utilities/grep\|grep]]                                                                                                                                            |
+| `--identify`       | try to identify the right mode for a given hash                                                                                                                                                                                        |
+| `-a`               | attack mode                                                                                                                                                                                                                            |
 
 find hash mode numbers on: [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 

@@ -44,6 +44,8 @@ Tools:
 
 - [[3 Tools/scanning/network/nmap snippets#SMB Enumeration|nmap]]
 - [[3 Tools/network/SMB tools#Enumeration|SMB tools]]
+- [[3 Tools/network/smbclient|smbclient]]
+- [[3 Tools/network/impacket-scripts|impacket-scripts]]
 
 ## Exfiltration
 
@@ -52,3 +54,5 @@ Browse data on smb shares.
 Tools:
 
 - [[3 Tools/network/SMB tools#Exfiltration|SMB tools]]
+- [[3 Tools/network/smbclient|smbclient]]
+- [[2 Tech-Specifics/OS/Windows/cmd|cmd]]

@@ -1,17 +1,21 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#attack/credential-access" 
-  - "#attack/collection" 
+  - "#type/tool"
+  - "#attack/credential-access"
+  - "#attack/collection"
 Link: https://www.kali.org/tools/responder/
-Purpose: perform NBT-NS, LLMNR and MDNS poisoning
+Purpose: IPv6/IPv4 LLMNR/NBT-NS/mDNS Poisoner and NTLMv1/2 Relay.
 ---
 # Info
 
-python2 script in kali available as tool
+supports many different protocols, such as http, smb, smtp,...
 
 # Usage
 
-`-I` : specify interface
+E.g.: `sudo responder -I tun0`
 
-logs are in ~/responder/logs
+| Option | Purpose                     |
+| ------ | --------------------------- |
+| `-I`   | specify interface to run on |
+
+logs are written to `~/responder/logs`

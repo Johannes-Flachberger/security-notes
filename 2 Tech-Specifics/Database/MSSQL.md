@@ -14,7 +14,7 @@ Uses the tabular datastream (TDS) protocol: <https://learn.microsoft.com/en-us/o
 
 From windows use [[3 Tools/database/sqlcmd|sqlcmd]].
 
-From kali use [[3 Tools/network/impacket|impacket]]
+From kali use [[3 Tools/network/impacket-scripts|impacket-scripts]]
 
 ### Cheat Sheets
 

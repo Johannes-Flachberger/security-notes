@@ -10,7 +10,7 @@ better use on 10.0.1.11
 
 insert script tag for cross site scripting
 
-## XPAth Injection (logon)
+## XPath Injection (logon)
 
 Xpath is the query languag used for databases which use xml as file format
 
@@ -26,4 +26,4 @@ in URL parameter message ändern zu php info oder so
 
 ## Man in the Middle
 
-sniff credentials with wireshark
+sniff credentials with [[3 Tools/passive recon/Wireshark|Wireshark]]

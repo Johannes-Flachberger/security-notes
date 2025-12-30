@@ -19,11 +19,14 @@ tags:
 There are multiple possible attack vectors:
 
 - Can you execute an uploaded file? --> Upload a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|webshell]]
-- if uploaded files cannot be executed combine with [[2 Tech-Specifics/Web/WebApp Attacks/Directory Traversal|Directory Traversal]] to overwrite [[2 Tech-Specifics/OS/Sensitive Files|Sensitive Files]] or other config files - e.g. the `.ssh/authorized_keys` file -> then you can connect to the machine using ssh
+- if uploaded files cannot be executed combine with [[2 Tech-Specifics/Web/WebApp Attacks/Directory Traversal|Directory Traversal]] to overwrite [[2 Tech-Specifics/OS/Sensitive Files|Sensitive Files]] or other config files - e.g. the `.ssh/authorized_keys` file -> connect to the machine using ssh
 - If the webserver server indicates if a file was already uploaded before: Brute force files on the server.
 - Error messages might reveal information
+- Windows Web servers might allow file uploads using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] --> insert an [[2 Tech-Specifics/OS/Windows/Windows fundamentals#UNC Paths|UNC path]] into the upload form
 
 Often, uploaded files are filtered --> we need to bypass the filter:
+
+---
 
 ## Filter Bypassing
 

@@ -9,14 +9,14 @@ For cmd fundamentals see [[2 Tech-Specifics/OS/Windows/cmd|cmd]].
 
 # Enumerate Users
 
-| Command | Purpose |
-|----------|--------------|
-| `whoami /priv` | show current users privileges |
-| `net users` | list users |
-| `net user [username]` | list details of user |
-| `qwinsta` | other users logged in simultaneously |
-| `net localgroup` | show user groups defined on the local system |
-| `net localgroup [groupname]` | list groupmembers of group |
+| Command                      | Purpose                                      |
+| ---------------------------- | -------------------------------------------- |
+| `whoami /priv`               | show current users privileges                |
+| `net users`                  | list users                                   |
+| `net user [username]`        | list details & privileges of user            |
+| `qwinsta`                    | other users logged in simultaneously         |
+| `net localgroup`             | show user groups defined on the local system |
+| `net localgroup [groupname]` | list groupmembers of group                   |
 
 # System Information
 

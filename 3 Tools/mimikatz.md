@@ -42,5 +42,6 @@ Common commands:
 | `privilege::debug` | enable debugging privileges |
 | `token::elevate`   | elevate privileges          |
 | `lsadump::sam`     | dump credentials form SAM   |
+| `log <path>`       | write output too file       |
 
 # Snippets

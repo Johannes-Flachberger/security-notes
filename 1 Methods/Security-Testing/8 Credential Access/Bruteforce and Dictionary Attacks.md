@@ -36,7 +36,7 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 ## Remote Attacks
 
 > [!Warning]
-> Dictionary & Bruteforce Attacks generate a lot of noise - they are easily detected, and often blocked by modern applications
+> Dictionary & Bruteforce Attacks generate a lot of noise - they are easily detected, and often blocked by modern applications.
 
 ### Workflow
 
@@ -67,6 +67,7 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 - LLMs
 - [[3 Tools/crypto/hashID|hashID]]
 - [hash-identifier](https://www.kali.org/tools/hash-identifier/)
+- [[3 Tools/crypto/Hashcat|Hashcat]]: use`--identify` option
 
  **Hash cracking**
 - [[3 Tools/crypto/Hashcat|Hashcat]]: faster, but more complex
