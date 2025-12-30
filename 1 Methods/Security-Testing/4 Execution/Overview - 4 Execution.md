@@ -3,8 +3,11 @@ tags:
   - todo
   - "#type/method"
 ---
+
 Which techniques for executing code are possible very much depend on related technology and the type of [[1 Methods/Security-Testing/3 Initial Access/Overview - 3 Initial Access|Initial Access]] that has been achieved.
+
 # Attack Vectors - Server Side
+
 ```base
 filters:
   and:
@@ -28,7 +31,9 @@ views:
       file.name: 240
 
 ```
+
 # Attack Vectors - Client Side
+
 ```base
 filters:
   and:
@@ -50,7 +55,9 @@ views:
         direction: ASC
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

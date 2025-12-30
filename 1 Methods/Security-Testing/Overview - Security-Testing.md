@@ -1,7 +1,8 @@
 ---
 ---
-# Red Teaming vs Pentesting
-Pentesting can be considered a subform of redteaming, however there are real differences: 
+# Red Teaming Vs Pentesting
+
+Pentesting can be considered a subform of redteaming, however there are real differences:
 
 | **Aspect**       | **Red Teaming**                                                                                     | **Pentesting**                                                                  |
 | ---------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -9,9 +10,11 @@ Pentesting can be considered a subform of redteaming, however there are real dif
 | **Stealthyness** | Required                                                                                            | Not always required, sometimes just the defensive security measures are tested. |
 
 There are a lot of pentesting processes out there, including very detailed models.
+
 I decided to use [MITRE Att@ck](https://attack.mitre.org/ ) as a general framework for pentesting notes. Specificall, the tactics of MITRE Att@ck Enterprise Matrix are used as primary categorization. Inspired by the unified killchain, the tactics are grouped into three overall phases "In", "Through", and "Out". However, since MITRE Att@ck considers real-world cyber attacks, preparation and reporting phases need to be added to the structure.
 
 This leads to the following structure:
+
 - **Prep**
 - **In**
 	- 1 Reconnaissance
@@ -31,5 +34,3 @@ This leads to the following structure:
 	- 13 Exfiltration
 	- 14 Impact
 - **Reporting**
-
-

@@ -4,11 +4,11 @@ tags:
   - "#type/tool"  #attack/reconnaissance/active #attack/credential-access 
 ---
 # Fundamentals
+
 **Detailed Fundamentals: [[2 Tech-Specifics/Network/Protocols/Fundamentals/UDP 161,162 SNMP Fundamentals|UDP 161,162 SNMP Fundamentals]]**
 **Ports:**
 - UDP 161 for queries
 - 162 for traps
-
 - often not well understood by network engineers --> prone to misconfigurations
 - based on UDP, stateless, simple --> prone to spoofing & replay
 - SNMP 1,2 & 2c is unencrypted --> interception
@@ -17,12 +17,17 @@ tags:
 The MIB holds a lot of information about targets - e.g. on windows: user accounts, running programs, etc...
 
 # Pentesting
+
 ## Workflow
+
 1. port scan
 2. build list of community strings & brute force
 3. [[#Enumeration|enumerate]] the MIB
+
 ## Enumeration
-## snmpwalk
+
+## Snmpwalk
+
 - enumerates the whole MIB tree of an smb server
 - requires credentials / community string
 e.g. `snmpwalk -c public -v1 -t 10 192.168.50.151`
@@ -34,13 +39,17 @@ e.g. `snmpwalk -c public -v1 -t 10 192.168.50.151`
 | `-t` | timeout |
 | `-Oa` | decode hex strings to ascii |
 
-## snmp-check
+## Snmp-check
+
 - more readable/structured output than snmpwalk
 - automated enumeration of MiB
 - finishes enumeration before it provides an output --> needs some time
 e.g. `snmp-check -c public 192.168.50.151`
+
 ## Credential Access
-## onesixtyone
+
+## Onesixtyone
+
 - bruteforces a list of snmp agents using the provided wordlist
 e.g. `onesixtyone -c community -i ips`
 
@@ -48,4 +57,3 @@ e.g. `onesixtyone -c community -i ips`
 |----------|--------------|
 | `-c` | list of community strings |
 | `-i` | list of ips |
-

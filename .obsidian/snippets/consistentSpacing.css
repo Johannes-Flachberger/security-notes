@@ -8,49 +8,44 @@ body {
   --p-spacing: 0px;
   --checkbox-indent: calc(-1.5em);
   --checkbox-indent-editing: calc(1em);
+  --empty-line-height: 0.6em;
 }
 
-/* live preview text wraps in the same way and occupies the same space than read mode.
-The downside is that spaces at the end of the lines are lost from view */
+/* Live preview: text wraps and occupies the same space as read mode, but spaces at line ends are lost */
 .cm-sizer .cm-lineWrapping {
   white-space: normal;
 }
-
-/* read mode div's bottom-margin to match empty new lines between elements including paragraphs, codeblocks, lists, callouts, headings and the end of the file.
-*/
-
-div:has(> p):has(+ div > :is(p)),
-div:has(> pre:not(.frontmatter)):has(+ div > :is(pre, blockquote, .callout)),
-div:has(> :is(ul, ol)):has(+ div > :is(p, blockquote, .callout)),
-div:has(> :is(blockquote, .callout)):has(+ div > :is(p, blockquote, .callout):not(.admonition)),
-div:has(> :is( blockquote, .callout, div)):has(+ div > :is(h1, h2, h3, h4, h5, h6)),
-div:has(> :is(blockquote, .callout, table, div, h1, h2, h3, h4, h5, h6)):has(+ .mod-footer) {
-  margin-bottom: 1.5em;
+/* Live preview: set height of empty lines */
+.cm-line:has(br:only-child) {
+  line-height: var(--empty-line-height);
 }
 
-/* remove the bottom-margin of the first line in read mode if it's before a heading */
-
-div:has(> :is(h1, h2, h3, h4, h5, h6)):has(+ .mod-footer):is(.is-collapsed),
-div:has(> :is(.inline-title, .frontmatter)):has(+ div > :is(h1, h2, h3, h4, h5, h6)) {
-  margin-bottom: 0;
+/* Reading view: apply margins to match empty lines from live preview*/
+div:has(> :is(p, ul, ol, blockquote, .callout, table, pre:not(.frontmatter))) {
+  margin-top: var(--empty-line-height);
+  margin-bottom: var(--empty-line-height);
+}
+div:has(> :is(h1, h2, h3, h4, h5, h6)):not(:has(+ div > :is(p, ul, ol, blockquote, .callout, table, pre))) :is(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: calc(var(--empty-line-height) /4);
 }
 
-/* hr margins in read to match the height in live preview mode */
+/* Reading mode: hr margins match live preview height */
+
 hr, .markdown-rendered hr {
   margin: calc((var(--font-text-size) * var(--line-height-normal) - 0.125em) / 2) 0;
 }
 
-/* align read mode heading collapse indicator */
+/* Reading mode: align heading collapse indicator */
 .markdown-preview-view .heading-collapse-indicator {
   margin-inline-start: -20px;
 }
 
-/* move live preview header collapse indicator to match read mode */
+/* Live preview: move header collapse indicator to match read mode */
 .markdown-source-view.mod-cm6 .HyperMD-header .collapse-indicator {
   padding-inline-end: 4px;
 }
 
-/* align inline codeblocks inside headings in both modes */
+/* Both modes: align inline codeblocks inside headings */
 .cm-s-obsidian .HyperMD-header .cm-inline-code,
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) > code {
   transform: translateY(3px);
@@ -60,20 +55,20 @@ hr, .markdown-rendered hr {
   padding: 0;
 }
 
-/* read mode tag paddings inside headings */
+/* Reading mode: tag paddings inside headings */
 .heading-collapse-indicator ~ a.tag {
   --tag-padding-x: 0.5em;
   --tag-padding-y: 0;
 }
 
-/* live preview tag paddings and position inside headings to match read mode */
+/* Live preview: tag paddings and position inside headings to match read mode */
 .HyperMD-header .cm-hashtag {
   --tag-padding-x: 0.5em;
   --tag-padding-y: 0;
   display: inline-block;
 }
 
-/* match live preview number list with read mode */
+/* Live preview: match number list with read mode */
 .cm-formatting-list-ol {
   display: inline-block;
   text-align: right;
@@ -81,41 +76,41 @@ hr, .markdown-rendered hr {
   margin-inline-start: calc(0.5em + 3px);
 }
 
-/* center numbered list markers in read mode */
+/* Reading mode: center numbered list markers */
 .markdown-rendered ol > li::marker {
   margin-inline-start: calc(-0.5em - 1px);
 }
 
-/* center bullet point in read mode */
+/* Reading mode: center bullet point */
 .markdown-rendered .list-bullet {
   margin-inline-start: calc(-0.5em - 1px);
 }
 
-/* center bullet point in live preview */
+/* Live preview: center bullet point */
 .markdown-source-view .list-bullet {
   margin-inline-start: calc(1em + 1px);
 }
 
-/* center checkbox in read mode */
+/* Reading mode: center checkbox */
 ul > li.task-list-item .task-list-item-checkbox {
   vertical-align: middle;
   top: -1px;
   margin-inline-start: var(--checkbox-indent);
 }
 
-/* match live preview checkbox with read mode */
+/* Live preview: match checkbox with read mode */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox {
   top: var(--checkbox-vertical-align);
   margin-inline-start: var(--checkbox-indent-editing);
   margin-inline-end: var(--checkbox-end-margin-editing);
 }
 
-/* align read mode list collapse indicator */
+/* Reading mode: align list collapse indicator */
 .markdown-rendered .list-collapse-indicator {
   margin-inline-start: calc(-14px - var(--list-indent));
 }
 
-/* align live preview list collapse indicator */
+/* Live preview: align list collapse indicator */
 .markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-list-line .cm-fold-indicator .collapse-indicator {
   inset-inline-end: 4px;
 }
@@ -123,18 +118,18 @@ ul > li.task-list-item .task-list-item-checkbox {
   inset-inline-end: calc(4px - var(--list-bullet-end-padding));
 }
 
-/* live preview blockquote's padding to see the cursor and match with --list-indent */
+/* Live preview: blockquote padding to see cursor and match list indent */
 .cm-s-obsidian span.cm-formatting-quote:first-child {
   padding-inline-start: calc(0.04em + 2.03px);
 }
 
-/* read mode blockquote margin and padding to match live preview */
+/* Reading mode: blockquote margin and padding to match live preview */
 .markdown-preview-view blockquote {
   padding-inline-start: calc(var(--list-indent) - 1.6px);
   margin: 0;
 }
 
-/* callout wrap break words and hide scrollbar to match read mode */
+/* Both modes: callout wrap break words and hide scrollbar */
 .callout {
   overflow-wrap: break-word;
   margin: 0;
@@ -143,13 +138,13 @@ ul > li.task-list-item .task-list-item-checkbox {
   overflow: hidden;
 }
 
-/* remove callout margins inside callouts in both modes */
+/* Both modes: remove callout margins inside callouts */
 .markdown-preview-view .callout-content .callout,
 .markdown-source-view.mod-cm6 .callout-content .callout {
   margin: 0;
 }
 
-/* live preview lists inside callouts to match read mode */
+/* Live preview: lists inside callouts to match read mode */
 .markdown-source-view .callout ul > li::marker {
   color: transparent;
 }
@@ -170,12 +165,12 @@ ul > li.task-list-item .task-list-item-checkbox {
   --checkbox-end-margin-editing: calc(0.125em - 0.5px);
 }
 
-/* increase number list indent inside callouts to see numbers with 2 digits */
+/* Reading mode: increase number list indent inside callouts */
 .markdown-rendered .callout ol > li {
   --list-indent: calc(1em + 9px);
 }
 
-/* codeblocks rendered inside callouts */
+/* Reading mode: codeblocks rendered inside callouts */
 .markdown-rendered .callout:has(pre) {
   padding-bottom: 13px;
 }
@@ -183,7 +178,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   padding: 0 0 0 1px;
 }
 
-/* change read mode codeblock sizes to match live preview */
+/* Reading mode: codeblock sizes to match live preview */
 .markdown-rendered pre {
   padding: 1.3125em var(--size-4-3) 1.3125em 18px;
   min-height: fit-content;
@@ -194,7 +189,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   display: block;
 }
 
-/* live preview codeblock inline end padding to match read mode */
+/* Live preview: codeblock inline end padding to match read mode */
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
   padding-inline-start: 18px;
   padding-inline-end: 12px;
@@ -203,20 +198,20 @@ ul > li.task-list-item .task-list-item-checkbox {
   padding-inline-end: 3px;
 }
 
-/* read mode codeblock copy button */
+/* Reading mode: codeblock copy button */
 .markdown-rendered button.copy-code-button {
   padding: 2.5px 6px;
   margin: 0 4px;
 }
 
-/* live preview codeblock copy button */
+/* Live preview: codeblock copy button */
 .markdown-source-view.mod-cm6 .code-block-flair {
   padding: var(--size-4-1) var(--size-4-1) 0;
   top: 0;
   right: 1px;
 }
 
-/* move mathjax to left and remove extra space in both modes */
+/* Both modes: move mathjax to left and remove extra space */
 .math-block mjx-container[jax=CHTML][display=true] {
   display: inline-block;
   line-height: normal;
@@ -225,34 +220,34 @@ ul > li.task-list-item .task-list-item-checkbox {
   margin: 0;
 }
 
-/* reduce size of mathjax edit button */
+/* Live preview: reduce size of mathjax edit button */
 .markdown-source-view.mod-cm6 .math-block .edit-block-button {
   padding: var(--size-2-1) var(--size-2-2);
   right: 0;
   top: 0;
 }
 
-/* hide automatic empty line above tables in live preview */
+/* Live preview: hide automatic empty line above tables */
 .cm-line:has(> br:only-child):has(+ :is(.cm-table-widget)) {
   display: none;
 }
 
-/* remove live preview bottom border inside tables */
+/* Live preview: remove bottom border inside tables */
 .table-wrapper > .table-editor .table-cell-wrapper .cm-active {
   border-bottom: none;
 }
 
-/* read mode empty cells height to match live preview */
+/* Reading mode: empty cells height to match live preview */
 .markdown-rendered :is(th, td) {
   height: calc(var(--table-text-size) * var(--table-line-height) + 8px);
 }
 
-/* read mode table margins to match live preview except inside callouts */
+/* Reading mode: table margins to match live preview except inside callouts */
 .markdown-preview-view :not(.callout-content, span) > table {
   margin: var(--size-4-4) 0;
 }
 
-/* match list bullet points inside tables in both modes */
+/* Both modes: match list bullet points inside tables */
 .markdown-rendered .table-cell-wrapper .list-bullet {
   margin-inline-start: 0;
   padding-right: 0;
@@ -262,7 +257,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   padding-inline-start: 0;
 }
 
-/* center embed images in both modes, needs to be !important for external images in live preview */
+/* Both modes: center embed images */
 .markdown-source-view.mod-cm6 img[alt*=center],
 .markdown-reading-view img[alt*=center] {
   margin-right: auto !important;
@@ -270,13 +265,13 @@ ul > li.task-list-item .task-list-item-checkbox {
   display: block;
 }
 
-/* match live preview dataview line height with read mode */
+/* Live preview: match dataview line height with read mode */
 .is-live-preview .block-language-dataviewjs > p,
 .is-live-preview .block-language-dataviewjs > span {
   line-height: var(--line-height-normal);
 }
 
-/* change bullet points style */
+/* Both modes: change bullet points style */
 .block-language-dataview ul > li::marker, .block-language-dataviewjs ul > li::marker {
   color: transparent;
 }
@@ -293,18 +288,18 @@ ul > li.task-list-item .task-list-item-checkbox {
   will-change: transform;
 }
 
-/* remove admonition callouts extra margin */
+/* Live preview: remove admonition callouts extra margin */
 .is-live-preview .admonition-content:last-child,
 .is-live-preview .admonition-content p {
   margin: 0;
 }
 
-/* limit the height of admonition icons to match native callouts */
+/* Both modes: limit height of admonition icons */
 .admonition-title-icon {
   max-height: 20.8px;
 }
 
-/* remove admonition button extra margin */
+/* Both modes: remove admonition button extra margin */
 .admonition-content-copy {
   margin: 0;
 }

@@ -3,8 +3,11 @@ tags:
   - "#type/method"
   - "#todo"
 ---
+
 ---
+
 # Attack Vectors
+
 ```base
 filters:
   and:
@@ -23,7 +26,9 @@ views:
       - formula.Domain
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

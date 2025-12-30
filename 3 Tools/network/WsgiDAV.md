@@ -7,10 +7,13 @@ Purpose: A generic and extendable WebDAV server written in Python and based on [
 # Info
 
 # Usage
+
 Example:
+
 ```bash
 wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root .
 ```
 
 confirm server status by opening `http://127.0.0.1:<port>/`in the webbrowser
+
 # Snippets

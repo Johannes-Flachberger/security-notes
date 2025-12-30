@@ -7,7 +7,9 @@ Purpose: find files on linux
 # Info
 
 # Usage
+
 `find <directory> [arguments]`
+
 e.g. `find / -type f -name "myfile*"
 
 | Argument      | Purpose                                                             |
@@ -30,4 +32,5 @@ e.g. `find / -type f -name "myfile*"
 | `-path`       | Match based on full path pattern                                    |
 | `-prune`      | Exclude directories from the search                                 |
 | `-printf`     | Custom output formatting (GNU find only)                            |
+
 # Snippets

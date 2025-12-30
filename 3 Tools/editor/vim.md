@@ -7,11 +7,15 @@ Purpose: best commandline editor ever
 # Info
 
 # Usage
+
 show line number: `:set nu`
+
 write-with-sudo trick: `:w !sudo tee %`
+
 # 🧠 Vim Cheat Sheet
 
 ## 📍 Moving
+
 | Command | Description |
 |----------|--------------|
 | `h` | Move left |
@@ -26,9 +30,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `$` | Jump to end of line |
 | `^` | Jump to first non-blank character |
 | `#G / #gg / :#` | Go to specific line |
+
 ---
 
 ## 🧩 Moving by Screens
+
 | Command | Description |
 |----------|--------------|
 | `Ctrl+b` | Move back one full screen |
@@ -40,9 +46,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `H` | Move to top of screen |
 | `M` | Move to middle of screen |
 | `L` | Move to bottom of screen |
+
 ---
 
 ## ✍️ Inserting
+
 | Command | Description |
 |----------|--------------|
 | `i` | Insert before cursor |
@@ -53,9 +61,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `O` | Open new line above |
 | `ea` | Insert at end of word |
 | `Esc` | Exit insert mode |
+
 ---
 
 ## ✂️ Editing
+
 | Command | Description |
 |----------|--------------|
 | `r` | Replace one character |
@@ -66,9 +76,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `J` | Join line below with space |
 | `gJ` | Join line below without space |
 | `.` | Repeat last command |
+
 ---
 
 ## ↩️ Undo / Redo
+
 | Command | Description |
 |----------|--------------|
 | `u / :u / :undo` | Undo last change |
@@ -76,9 +88,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `U` | Undo all changes on line |
 | `Ctrl+r` | Redo last undone change |
 | `:undolist` | Show undo branches |
+
 ---
 
 ## 🧮 Copying (Yanking)
+
 | Command | Description |
 |----------|--------------|
 | `yy` | Copy line |
@@ -89,9 +103,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `y^` | Copy left of cursor |
 | `ytx` | Copy until character x |
 | `yfx` | Copy including character x |
+
 ---
 
 ## ✂️ Cutting (Deleting)
+
 | Command | Description |
 |----------|--------------|
 | `dd` | Cut current line |
@@ -105,16 +121,20 @@ write-with-sudo trick: `:w !sudo tee %`
 | `:g/pattern/d` | Cut matching lines |
 | `:g!/pattern/d` | Cut non-matching lines |
 | `:g/^$/d` | Cut blank lines |
+
 ---
 
 ## 📋 Pasting
+
 | Command | Description |
 |----------|--------------|
 | `p` | Paste after cursor |
 | `P` | Paste before cursor |
+
 ---
 
 ## 🔠 Visual Mode
+
 | Command | Description |
 |----------|--------------|
 | `v` | Visual (character) mode |
@@ -124,9 +144,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `aw` | Select word |
 | `ab / aB / at` | Select block (), {}, <> |
 | `ib / iB / it` | Inner block (), {}, <> |
+
 ---
 
 ## 🏷️ Marks and Jumps
+
 | Command | Description |
 |----------|--------------|
 | `m[a-z]` | Set mark |
@@ -136,9 +158,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `:changes` | List changes |
 | `Ctrl+i / Ctrl+o` | Move forward/backward in jump list |
 | `g, / g;` | Move in change list |
+
 ---
 
 ## 📂 Multiple Files & Windows
+
 | Command | Description |
 |----------|--------------|
 | `:e file` | Open file |
@@ -153,9 +177,11 @@ write-with-sudo trick: `:w !sudo tee %`
 | `Ctrl+wq` | Quit split |
 | `Ctrl+wx` | Exchange splits |
 | `Ctrl+=` | Equalize split sizes |
+
 ---
 
 ## 🔍 Searching
+
 | Command | Description |
 |----------|--------------|
 | `/pattern` | Search forward |
@@ -164,21 +190,23 @@ write-with-sudo trick: `:w !sudo tee %`
 | `N` | Repeat search opposite direction |
 | `*` | Search next word under cursor |
 | `#` | Search previous word under cursor |
+
 ---
 
 ## ⚙️ Macros
+
 | Command | Description |
 |----------|--------------|
 | `qa` | Record macro into register a |
 | `q` | Stop recording |
 | `@a` | Execute macro a |
 | `@@` | Repeat last macro |
+
 ---
 
 ## 🎨 Color Schemes
+
 | Command | Description |
 |----------|--------------|
 | `:colorscheme [name]` | Apply color scheme |
 | `:colorscheme [space]+Ctrl+d` | List available schemes |
-
-

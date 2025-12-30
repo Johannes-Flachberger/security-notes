@@ -2,10 +2,14 @@
 tags:
   - "#type/method"
 ---
+
 In general, initial access can be achieved using
+
 - [[1 Methods/Security-Testing/3 Initial Access/Server Side Attacks|Server Side Attacks]]
 - [[1 Methods/Security-Testing/3 Initial Access/Client Side Attacks|Client Side Attacks]]
+
 # Attack Vectors
+
 ```base
 filters:
   and:
@@ -29,7 +33,9 @@ views:
       file.name: 245
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

@@ -4,11 +4,16 @@ tags:
   - attack/command-and-control
 ---
 # Fundamentals
--  used for: server access, data transfer, channeling of other protocols
+
+- used for: server access, data transfer, channeling of other protocols
 - port 22
+
 # Pentesting
-## Command and control
+
+## Command and Control
+
 ## SSH Usage
+
 `ssh [username]@[IP]`
 
 | Option | Purpose                                                                                                                                        |

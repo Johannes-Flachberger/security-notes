@@ -18,9 +18,12 @@ useful commands for manual enumeration for privesc
 | `/etc/passwd` | info on users, groups,... eg. grep for "home" to fin real users, not just service users |
 | `ifconfig` | info about network interfaces |
 
-## netstat
+## Netstat
+
 See [[3 Tools/utilities/netstat|netstat]]
-## find files
+
+## Find Files
+
 See [[3 Tools/utilities/find|find]]
 
 | Command | Purpose |
@@ -44,4 +47,3 @@ See [[3 Tools/utilities/find|find]]
 | `find / -writable 2>/dev/null` | search for writeable folders |
 | `find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u` | search for subdirectories of writeable folders |
 | `find / -perm -o x -type d 2>/dev/null` | find world-executabe folders |
-  

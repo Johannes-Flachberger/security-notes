@@ -6,10 +6,15 @@ Link: https://github.com/OJ/gobuster
 Purpose: enumeration of various things - subdomains, directories, s3 buckets, etc
 ---
 # Info
+
 enumerate website directories, subdomains, etc
+
 brute force, makes use of wordlist, in kali some are located in `/usr/share/wordlists/dirbuster`
+
 # Usage
-## options:
+
+## Options:
+
 | Option | Purpose |
 |----------|--------------|
 | `-u` | target url |
@@ -20,26 +25,36 @@ brute force, makes use of wordlist, in kali some are located in `/usr/share/word
 | `-c <cookies>` | specify cookie |
 | `-t` | number of threads |
 | `-x` | match files with extensions |
-## directory enum
+
+## Directory Enum
+
 `gobuster dir -u http://<IP>:[port] -w <wordlist>`
+
 eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
 
 > [!NOTE]
 > If a server returns a redirect code when a page is not found, you need to
 > - add the HTTP status code to the "negative" codes in gobuster: `-b, --status-codes-blacklist` e.g. `-b 301`
 > - or match the response lenght: `--exclude-length 0`
-> 
-## subdomain enum
+
+## Subdomain Enum
+
 `gobuster dns -d example.com -w wordlist.txt -t 10`
+
 ## Patterns
+
 gobuster can mutate each entry in a wordlist with one or more patterns
+
 1. create a pattern file - e.g:
+
 ```
 {GOBUSTER}/v1
 {GOBUSTER}/v2
 ```
+
 {gobuster} matches each entry in the wordfile
-2. use the pattern file using the `-p <pattern-file>` option. 
+
+1. use the pattern file using the `-p <pattern-file>` option.
 
 **alternatives**
 - ffuf

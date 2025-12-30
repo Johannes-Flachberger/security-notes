@@ -1,4 +1,6 @@
 ---
 ---
+
 Google Secure AI Framework
-https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/
+
+<https://blog.google/technology/safety-security/introducing-googles-secure-ai-framework/>

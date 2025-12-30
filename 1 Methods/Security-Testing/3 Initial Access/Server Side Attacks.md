@@ -1,8 +1,11 @@
 ---
 ---
 ## Server Side Attacks
+
 target a server, i.e a machine that exposes a service
+
 e.g. attacking network services:
+
 ```base
 filters:
 	and:

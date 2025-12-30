@@ -3,12 +3,18 @@ tags:
   - "#type/method" 
 ---
 # Overview
+
 1. The purpose of the report.
 2. How we can deliver the information we've collected in a way that the audience can understand.
-# The purpose of a pentest report
+
+# The Purpose of a Pentest Report
+
 The ultimate objective is to provide the client with a clear roadmap that identifies all existing weaknesses within the assessed systems, recommends immediate corrective actions, and defines long-term strategies to prevent similar vulnerabilities from arising in the future.
-# How to deliver
+
+# How to Deliver
+
 ## Principles
+
 **Respect the preferences of the client**
 Dont go into too much detail about parts where no vulnerabilities were found - unless the client explicitely wishes so.
 
@@ -21,8 +27,11 @@ E.g. PCI DSS certified companies are not allowed to use TLS 1.0, but it might be
 
 **Respect the skill of the readers**
 Provide both executive summaries and in-depth technical information for security professionals.
+
 ## Structure
+
 # Tools
+
 ```base
 filters:
   and:
@@ -35,4 +44,3 @@ views:
       - file.name
       - Purpose
 ```
-

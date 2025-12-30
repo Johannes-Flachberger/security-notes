@@ -1,14 +1,18 @@
 ---
 tags:
   - "#type/tool"
-Link: 
-Purpose: 
+Link:
+Purpose:
 ---
 # Info
+
 Also see [[2 Tech-Specifics/OS/Windows/Enumeration/cmd Enumeration Cheat Sheet|cmd Enumeration Cheat Sheet]]
+
 # Usage
+
 for help menu of each command: `/?`
-## Useful commands
+
+## Useful Commands
 
 | Command                                 | Purpose                                                                                |
 | --------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -23,6 +27,7 @@ for help menu of each command: `/?`
 | `ver`                                   | show windows version                                                                   |
 | `systeminfo`                            | show detailed system info                                                              |
 | `reg`                                   | interact with the registry                                                             |
+
 # Snippets
 
 | Command | Purpose |
@@ -32,9 +37,3 @@ for help menu of each command: `/?`
 | `netsh firewall show config` | show firewall config |
 | `wmic /node:"" product get name,version,vendor` | show details of installed software |
 | `wmic useraccount get name,sid` | show login names and SIDs of users |
-
-
-
-
-
-

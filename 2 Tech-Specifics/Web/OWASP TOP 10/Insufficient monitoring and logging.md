@@ -9,9 +9,12 @@ tags:
 - penetration tests which cause a ot of noise do not cause an alarm
 
 ### Impact
+
 - You dont even notice that you are attacked
 - if you notice an attack ou can react - if an attacker notices this they will stop most probably
+
 ### Defense
+
 - log all relevant events with ** all relevant information**
 - store log messages in format which ccan be scanned automatically
 - use automatic scanning for suspicous behavior

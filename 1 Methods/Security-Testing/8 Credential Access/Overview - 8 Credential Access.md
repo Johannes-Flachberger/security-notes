@@ -3,10 +3,15 @@ tags:
   - "#type/method"
   - "#todo"
 ---
+
 ---
+
 # Ressources
-https://scatteredsecrets.com/ is a service that monitors the web for password breaches - if you are the owner you can list your breached passwords.
+
+<https://scatteredsecrets.com/> is a service that monitors the web for password breaches - if you are the owner you can list your breached passwords.
+
 # Attack Vectors
+
 ```base
 filters:
   and:
@@ -28,7 +33,9 @@ views:
         direction: ASC
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

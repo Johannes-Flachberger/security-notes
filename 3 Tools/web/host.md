@@ -7,9 +7,11 @@ Purpose: manually send DNS queries, DNS enumeration
 ---
 # Info
 
-# Usage 
+# Usage
+
 `host <domain name>
-`-t` specify type of DNS request 
+
+`-t` specify type of DNS request
 
 for reverse lookup: `host <IP address>
 

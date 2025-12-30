@@ -3,16 +3,27 @@ tags:
   - "#type/method"
   - attack/reconnaissance/active
 ---
+
 Active recon makes contact with the target.
+
 Gather as detailed information as possible about exposed services - here are notes about some usually exposed services
+
 # Objective
+
 Expand, enrich and deepen the knowledge gathered during passive recon.
+
 # Workflow
-In general: start to enumerate the attack surface broadly (network &  port scanning)
+
+In general: start to enumerate the attack surface broadly (network & port scanning)
+
 then enumerate specific services
+
 ## 1. Port Scanning & Service Detection
+
 See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Port scanning|Port scanning]]
-## 2. Enumerate each discovered network service
+
+## 2. Enumerate Each Discovered Network Service
+
 ```base
 filters:
   and:
@@ -23,12 +34,17 @@ views:
     name: Table
 
 ```
+
 ## 3. Vulnerability Scanning
+
 See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
-##  4. Web enumeration
+
+## 4. Web Enumeration
+
 See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
 
-# Attack vectors
+# Attack Vectors
+
 ```base
 filters:
   and:
@@ -50,7 +66,9 @@ views:
         direction: ASC
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

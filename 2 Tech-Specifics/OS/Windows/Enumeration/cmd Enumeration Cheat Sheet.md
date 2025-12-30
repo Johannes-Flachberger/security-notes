@@ -4,8 +4,10 @@ tags:
   - "#attack/collection"
   - "#attack/discovery"
 ---
+
 For cmd fundamentals see [[2 Tech-Specifics/OS/Windows/cmd|cmd]].
-# enumerate users
+
+# Enumerate Users
 
 | Command | Purpose |
 |----------|--------------|
@@ -15,14 +17,18 @@ For cmd fundamentals see [[2 Tech-Specifics/OS/Windows/cmd|cmd]].
 | `qwinsta` | other users logged in simultaneously |
 | `net localgroup` | show user groups defined on the local system |
 | `net localgroup [groupname]` | list groupmembers of group |
-# system information
+
+# System Information
 
 | Command | Purpose |
 |----------|--------------|
 | `systeminfo` | overview of system, output might be overwhelming -> grep with `systeminfo | findstr /B /C:"OS Name" /C:"OS Version"` |
 | `hostname` | show computers name, might reveal info on its purpose |
-# searching files
+
+# Searching Files
+
 interesting info might be in configuration files of software
+
 `findstr`: eg `findstr /si [keyword] *.txt`
 
 | Option | Purpose |
@@ -30,9 +36,13 @@ interesting info might be in configuration files of software
 | `/s` | searches in current dir & subdirs |
 | `/i` | search not case-sensitive |
 | `*.txt` | cover only txt files useful extensitons: ".txt", ".xml", ".ini", "*.config", and ".xls" |
-# check update history
+
+# Check Update History
+
 `wmic qfe get Caption,Description,HotFixID,InstalledOn`: list updates
-# Antivirus enum
+
+# Antivirus Enum
+
 2 options: search for antivirus explicitely or list all running services and checking for antivirus
 
 | Command                                                | Purpose                                                   |
@@ -40,7 +50,8 @@ interesting info might be in configuration files of software
 | `sc query windefend`                                   | search for "windefend" service                            |
 | `sc queryex type=service`                              | list all active services                                  |
 | `wmic service get name,displayname,pathname,startmode` | view running services (filter with `findstr "[keyword]"`) |
-# installed software
+
+# Installed Software
 
 | Command                                | Purpose                                                                                                                 |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -50,8 +61,11 @@ interesting info might be in configuration files of software
 | `sc qc`                                | show detailed info of service                                                                                           |
 
 -> search online for exploits for the installed software
-# Unattend files
-file name: Unattend.xml
-helps sysadmins to set up the windows system, sometimes is left on teh system
-may contain valuable info
 
+# Unattend Files
+
+file name: Unattend.xml
+
+helps sysadmins to set up the windows system, sometimes is left on teh system
+
+may contain valuable info

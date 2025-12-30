@@ -9,5 +9,6 @@ Purpose: auto privesc enum on linux
 
 # Usage
 
-https://github.com/diego-treitos/linux-smart-enumeration
+<https://github.com/diego-treitos/linux-smart-enumeration>
+
 #todo

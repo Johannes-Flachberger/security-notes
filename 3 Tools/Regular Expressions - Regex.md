@@ -4,11 +4,12 @@ tags:
 Purpose: Advanced search & replace accross text files
 ---
 
-Nice regex builder: https://regex101.com/
+Nice regex builder: <https://regex101.com/>
 
 # RegexCheat Sheet
 
 ## Anchors
+
 | Symbol | Meaning |
 |---------|----------|
 | `^` | Start of string (or line in multiline mode) |
@@ -23,6 +24,7 @@ Nice regex builder: https://regex101.com/
 ---
 
 ## Character Classes
+
 | Symbol | Meaning |
 |---------|----------|
 | `\c` | Control character |
@@ -38,6 +40,7 @@ Nice regex builder: https://regex101.com/
 ---
 
 ## POSIX Character Classes
+
 | Class | Description |
 |--------|-------------|
 | `[:upper:]` | Uppercase letters |
@@ -57,6 +60,7 @@ Nice regex builder: https://regex101.com/
 ---
 
 ## Assertions
+
 | Symbol         | Meaning                 |
 | -------------- | ----------------------- |
 | `?=`           | Lookahead               |
@@ -70,6 +74,7 @@ Nice regex builder: https://regex101.com/
 ---
 
 ## Quantifiers
+
 | Symbol | Meaning |
 |---------|----------|
 | `*` | 0 or more |
@@ -78,27 +83,35 @@ Nice regex builder: https://regex101.com/
 | `{3}` | Exactly 3 |
 | `{3,}` | 3 or more |
 | `{3,5}` | Between 3 and 5 |
+
 > Add `?` after a quantifier to make it **ungreedy**.
+
 ---
 
 ## Escape Sequences
+
 | Symbol | Meaning |
 |---------|----------|
 | `\` | Escape next character |
 | `\Q` | Begin literal sequence |
 | `\E` | End literal sequence |
+
 Escaping treats special characters literally.
 
 ---
 
 ## Common Metacharacters
+
 ```
 ^ [ . $ { * ( \ + ) | ? < >
 ```
+
 Use `\` to escape them.
 
 ---
+
 ## Special Characters
+
 | Symbol | Meaning |
 |---------|----------|
 | `\n` | Newline |
@@ -110,7 +123,9 @@ Use `\` to escape them.
 | `\xhh` | Hex character |
 
 ---
+
 ## Groups and Ranges
+
 | Pattern   | Meaning                      |
 | --------- | ---------------------------- |
 | `.`       | Any character except newline |
@@ -128,6 +143,7 @@ Use `\` to escape them.
 ---
 
 ## Pattern Modifiers
+
 | Modifier | Meaning |
 |-----------|----------|
 | `g` | Global |
@@ -137,11 +153,13 @@ Use `\` to escape them.
 | `x` | Allow comments and whitespace |
 | `e` | Evaluate replacement |
 | `U` | Ungreedy pattern |
+
 *Modifiers marked with `*` are PCRE-specific.*
 
 ---
 
 ## String Replacement
+
 | Symbol | Meaning |
 |---------|----------|
 | `$n` | nth captured group |
@@ -150,4 +168,5 @@ Use `\` to escape them.
 | `$'` | Text after match |
 | `$+` | Last captured string |
 | `$&` | Entire match |
+
 > Some implementations use `\` instead of `$`.

@@ -8,17 +8,28 @@ Link:
 Purpose: Tool collection for SMB
 ---
 # Enumeration
+
 ## enum4linux
+
 enumerate smb infos, eg. different shares
+
 `enum4linux <options> [ip]`
-eg: `enum4linux -a [IP] | tee enum4linux.log` 
+
+eg: `enum4linux -a [IP] | tee enum4linux.log`
+
 `-a` to enumerate all infos
+
 if you want to enumerate multiple ips:
+
 - put ips into a file, one each line
 - `xargs -n 1 enum4linux -a < targets.txt`
-## net view
+
+## Net view
+
 smb enumeration on windows
+
 lists domains, resources, and computers belonging to a given host.
+
 e.g. `net view \\dc01 /all`
 
 | Option | Purpose |
@@ -28,19 +39,29 @@ e.g. `net view \\dc01 /all`
 | `/domain` | Lists all domains/workgroups on the network. |
 | `/domain:<DomainName>` | Lists all computers in the specified domain. |
 | `net view \\SERVER1` | List all shares on the server |
-### nbtscan
+
+### Nbtscan
+
 e.g. `nbtscan -r 192.168.50.0/24`
+
 `-r` sets originating udp port to 137
+
 # Exfiltration
+
 ## SMBClient
+
 for connecting to shares
-`smbclient //[IP]/[SHARE] -options` 
-in smb client shell: `help` for available commands 
+
+`smbclient //[IP]/[SHARE] -options`
+
+in smb client shell: `help` for available commands
 
 | Option                | Purpose                                                                                                                        |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `--pw-nt-hash <hash>` | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash\|Pass the Hash]] |
-## smbget
-download files from SMB shares
-recursively download whole share: `smbget -R smb://<ip>/<sharename>`
 
+## Smbget
+
+download files from SMB shares
+
+recursively download whole share: `smbget -R smb://<ip>/<sharename>`

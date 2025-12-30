@@ -7,6 +7,7 @@ Link: https://www.maltego.com/
 Purpose: framework for passive recon/OSINT/scanning?
 ---
 # Info
-#todo 
+
+#todo
 
 # Usage

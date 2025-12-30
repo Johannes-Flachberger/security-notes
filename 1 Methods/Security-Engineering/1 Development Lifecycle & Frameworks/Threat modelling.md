@@ -3,7 +3,9 @@ tags:
   - "#type/method"
 ---
 # STRIDE Model
+
 Threat categorization model
+
 - Spoofing: malicious party falsely identifying itself as legitimate party
 - Tampering: data is modified in unauthorized way
 - Repudiation: logging an activity or system data

@@ -6,8 +6,11 @@ Link:
 Purpose: send HTTP requests manually
 ---
 # Info
+
 send HTTP requests manually from the commandline
+
 # Usage
+
 eg. `curl -X GET http://127.0.0.1:5984/`
 
 | Argument           | Purpose                                                                                                                                                            |

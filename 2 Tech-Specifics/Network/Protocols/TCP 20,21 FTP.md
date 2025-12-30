@@ -3,21 +3,28 @@ tags:
   - "#type/tech-specific"
 ---
 # FTP
+
 file transfer protocol
-default ports: 20 - data, 21 control 
+
+default ports: 20 - data, 21 control
+
 operates on 2 channels/ports: control channel for commands & data channel for data
--  very efficient
+
+- very efficient
 - credentials and commands are sent in cleartext!
-### 2 modes:
+
+### 2 Modes:
+
 **active:** data is sent over a separate channel originating from the FTP server’s port 20
 **passive:** data is sent over a separate channel originating from an FTP client’s port above port number 1023
+
 ## Usage
+
 `ftp <user>@<ip>`
 
 | Option | Purpose         |
 | ------ | --------------- |
 | `-A`   | use active mode |
-
 
 **In FTP shell:**
 
@@ -31,6 +38,3 @@ operates on 2 channels/ports: control channel for commands & data channel for da
 | `less`             | show start of file contents  |
 | `get <filename> -` | show file content            |
 | `put <path>`       | send file                    |
-
-
- 

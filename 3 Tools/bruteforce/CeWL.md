@@ -6,11 +6,15 @@ Link:
 Purpose: wordlist generator based on websites
 ---
 # Info
+
 can crawl websites etc. and create wordlists from it
+
 # Usage
-e.g. ```cewl http://10.10.17.32 -w output.txt``` 
+
+e.g. ```cewl http://10.10.17.32 -w output.txt```
 
 #### How To Customise the Output for Specific Tasks
+
 CeWL provides a lot of options that allow you to tailor the wordlist to your needs:
 
 1. **Specify spidering depth:** The `-d` option allows you to set how deep CeWL should spider. For example, to spider two links deep: `cewl http://10.10.17.32 -d 2 -w output1.txt`

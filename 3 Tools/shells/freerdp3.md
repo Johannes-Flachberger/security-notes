@@ -7,9 +7,13 @@ Link: https://www.kali.org/tools/freerdp3/
 Purpose: remote desktop protocol (RDP) client for X11 environments
 ---
 # Info
+
 open source remote desktop client
+
 apart from `xfreerdp3`, also check out the other clients
+
 # Usage
+
 Example with good default options:
 
 ```sh
@@ -23,4 +27,3 @@ xfreerdp3 /dynamic-resolution +clipboard /toggle-fullscreen /compression /networ
 | `+drive:<remote_folder>,<local_folder>` | share a folder with the target using - remote folder will be available in `Network -> tsclient` |
 
 > [!Hint] The error messages if authentication fails can be quite cryptic.
-

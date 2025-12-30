@@ -3,8 +3,11 @@ tags:
   - "#type/method"
   - "#todo"
 ---
+
 ---
+
 # Attack Vectors
+
 ```base
 filters:
   and:
@@ -26,7 +29,9 @@ views:
         direction: ASC
 
 ```
+
 # Tools
+
 ```base
 filters:
   and:

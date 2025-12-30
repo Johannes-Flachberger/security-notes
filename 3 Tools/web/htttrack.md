@@ -5,11 +5,15 @@ Link: https://www.httrack.com/html/fcguide.html
 Purpose: copy web pages
 ---
 # Info
+
 nice tool to copy webpages
+
 # Usage
+
 ``` bash
 httrack <URL> -O <output-directory>
 ```
+
 ## Essential Options
 
 | Option | Purpose |
@@ -21,4 +25,3 @@ httrack <URL> -O <output-directory>
 | `-i` | Continue interrupted download |
 | `-v` | Verbose output |
 | `+<filter>` / `-<filter>` | Include/exclude URL patterns |
-

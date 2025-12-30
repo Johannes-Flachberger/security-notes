@@ -6,6 +6,9 @@ Link: https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp
 Purpose: auto privesc enum on windows
 ---
 # Info
-#todo 
+
+#todo
+
 # Usage
+
 (run with `Invoke-AllChecks` to check everything)

@@ -8,21 +8,30 @@ tags:
 - Usually outperforms traditional recon tools - still it is best to use traditional tools for fact-checking
 - Always consider that your prompts & the LLMs response may be analysed by the LLM provider.
 - A lot of LLMs provide dedicated research modes.
+
 # Tools:
+
 - ChatGPT
 - Perplexity - much faster than ChatGPT deep research
+
 # Use Cases & Prompts
 
 > [!TIP] Hint: Use the [[1 Methods/Security-Testing/1 Reconnaissance/Overview - 1 Reconnaissance#Big Checklist|Big Reconnaissance Checklist]] in Prompts
-## Get employee info
+
+## Get Employee Info
+
 ```
 Can you print out all the public information about company structure and employees of <company>?
 ```
-## Retrieve technology stack about the website
+
+## Retrieve Technology Stack about the Website
+
 ```
 Retrieve the technology stack of the example.com website
 ```
-## Generate wordlists
+
+## Generate Wordlists
+
 ```
 Using only publicly available information from <company>’s official web presence and other open sources, and based on reasonable inferences about its organizational structure, services, and product names, produce a categorized set of candidate subdomain naming **patterns** and conventions.
 - Include common naming patterns used for infrastructure and environments (for example: api, dev, test, staging).

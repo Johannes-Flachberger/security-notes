@@ -3,9 +3,13 @@ tags:
   - "#type/tech-specific"
 ---
 # Fundamentals
-Since client-side applications are not network-reachable, more often than not you have to rely on user action to execute a payload.  
+
+Since client-side applications are not network-reachable, more often than not you have to rely on user action to execute a payload.
+
 # Pentesting
+
 See subpages:
+
 ```base
 and:
 filters:
@@ -16,5 +20,5 @@ views:
     name: Table
 
 ````
-# Hardening
 
+# Hardening

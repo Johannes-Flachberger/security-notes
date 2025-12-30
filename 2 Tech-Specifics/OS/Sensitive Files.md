@@ -3,9 +3,13 @@ tags:
   - "#type/tech-specific" 
   - todo 
 ---
+
 These files are expecially sensitive, since they can provide critical information to an attacker. Depending on your current privileges & configuration (issues) they may be accessible or not
-## OS independent
+
+## OS Independent
+
 - SQLite Databases
+
 ## Webservers
 
 | File | Description |
@@ -16,6 +20,7 @@ These files are expecially sensitive, since they can provide critical informatio
 - on linux: `/var/log/apache2/access.log`
 **XAMPP logs**
 - xampp apache on windows: `C:\xampp\apache\logs\`
+
 ## Linux
 
 | File | Description |
@@ -37,8 +42,5 @@ These files are expecially sensitive, since they can provide critical informatio
 | `C:\boot.ini` | contains the boot options for computers with BIOS firmware |
 | `C:\inetpub\logs\LogFiles\W3SVC1\` | Logs of IIS webserver |
 | `C:\inetpub\wwwroot\web.config` | configs of an IIS webserver |
+
 - `C:\Users\Public\Documents\`: read & writable by all users
-
-
-
-

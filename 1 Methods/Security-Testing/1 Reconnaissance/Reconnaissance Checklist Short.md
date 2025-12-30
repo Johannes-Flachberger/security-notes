@@ -1,14 +1,13 @@
 ---
 ---
-- [ ]   **Organization Information**
+- [ ] **Organization Information**
 	- [ ] Employee details
 	- [ ] addresses and contact details
 	- [ ] partner details
 	- [ ] weblinks
 	- [ ] web technologies
 	- [ ] patents, trademarks, etc.
-
-- [ ]   **Network Information**
+- [ ] **Network Information**
 	- [ ] Domains, sub-domains
 	- [ ] network blocks
 	- [ ] network topologies
@@ -18,8 +17,7 @@
 	- [ ] the Whois record
 	- [ ] DNS records
 	- [ ] and other related information
-
-- [ ]   **System Information**
+- [ ] **System Information**
 	- [ ] Operating systems
 	- [ ] web server OS
 	- [ ] location of web servers

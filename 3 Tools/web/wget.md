@@ -5,8 +5,11 @@ Link: https://www.geeksforgeeks.org/linux-unix/wget-command-in-linux-unix/
 Purpose: Download files using http(s)
 ---
 # Info
+
 Download files using http(s)
-# Usage  
+
+# Usage
+
 `wget [options] [URL]`
 
 | Option | Purpose |
@@ -21,8 +24,9 @@ Download files using http(s)
 | `-nd` | Save all files in a flat directory (no folders) |
 
 # Snippets
-###### Copy a webpage with all its files
+
+###### Copy a Webpage with All Its Files
+
 ``` bash
 wget -E -k -K -p -e robots=off -H -Dexample.com -nd "https://example.com/signin"
 ```
-

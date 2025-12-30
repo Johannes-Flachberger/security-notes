@@ -17,7 +17,7 @@
     "9_meta/"
   ],
   "showInlineTitle": true,
-  "strictLineBreaks": false,
+  "strictLineBreaks": true,
   "showLineNumber": false,
   "rightToLeft": false,
   "showIndentGuide": false,
