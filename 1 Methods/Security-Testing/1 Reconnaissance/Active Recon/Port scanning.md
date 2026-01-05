@@ -11,7 +11,7 @@ tags:
 
 # Tools
 
-- **main tool:** [[3 Tools/scanning/network/nmap|nmap]]
+- **main tool:** [[3 Tools/network/scanning/nmap|nmap]]
 - portscanner modules from [[3 Tools/exploitation frameworks/Metasploit/msfconsole|msfconsole]]
 	- Metaspoit also supports db_nmap
 - [[3 Tools/shells/Netcat|Netcat]] can also be used for port scanning
@@ -21,7 +21,7 @@ tags:
 
 # Theory
 
-> [!tip] See [[3 Tools/scanning/network/nmap|nmap]] for more theory
+> [!tip] See [[3 Tools/network/scanning/nmap|nmap]] for more theory
 
 ## Live Host Discovery
 

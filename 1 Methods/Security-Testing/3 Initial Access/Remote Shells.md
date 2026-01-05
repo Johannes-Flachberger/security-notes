@@ -10,7 +10,7 @@ tags:
 # Reverse Shell Receivers
 
 - [[3 Tools/shells/Netcat|Netcat]]: simple, by default very unstable
-- [[3 Tools/shells/powercat|powercat]]: basically Netcat for [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]]
+- [[3 Tools/shells/powercat|powercat]]: basically Netcat for [[3 Tools/shells/PowerShell|PowerShell]]
 - [[3 Tools/shells/Socat|Socat]]: powerful, but difficult to use
 - [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Metasploit - multi/handler module]]: very stable
 - [[3 Tools/exploitation frameworks/Metasploit/meterpreter|meterpreter]]: powerfull listener & client
@@ -18,7 +18,7 @@ tags:
 # Payloads
 
 **Note:** When using a payload inside a webshell, [[2 Tech-Specifics/Web/encodings#URL|URL encode]] the payload properly.
-- [[2 Tech-Specifics/OS/Windows/PowerShell#Reverse Shell Payloads|PowerShell]]
+- [[3 Tools/shells/PowerShell#Reverse Shell Payloads|PowerShell]]
 - [[3 Tools/shells/bash#Simple Reverse Shell|bash]]
 
 # Payload Sources

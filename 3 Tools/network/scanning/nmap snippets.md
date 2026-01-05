@@ -4,7 +4,7 @@ tags:
   - "#attack/discovery"
 ---
 
-This note extends the [[3 Tools/scanning/network/nmap]] tool notes with technology specific snippets
+This note extends the [[3 Tools/network/scanning/nmap]] tool notes with technology specific snippets
 
 ### SMB Enumeration
 

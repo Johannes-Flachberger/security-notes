@@ -63,7 +63,7 @@ enter ip adress as domain names, ip adress, adress ranges `10.10.0-255.0-255` or
 
 # Snippets
 
-[[3 Tools/scanning/network/nmap snippets|nmap snippets]]
+[[3 Tools/network/scanning/nmap snippets|nmap snippets]]
 ---
 
 # Discovery Scans

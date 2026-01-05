@@ -57,7 +57,7 @@ Process injection is a common technique for in memory evasion. Multiple sub-tech
 
 ### Remote Process Memory Injection
 
-Inject a payload into another benign process memory and run it in a new thread. This is usually performed using [Windows APIs](https://en.wikipedia.org/wiki/Windows_API), e.g. through [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]].
+Inject a payload into another benign process memory and run it in a new thread. This is usually performed using [Windows APIs](https://en.wikipedia.org/wiki/Windows_API), e.g. through [[3 Tools/shells/PowerShell|PowerShell]].
 
 1. Get a process handle using `Open Proces`
 2. Allocate Memory using `VirtualAllocEx`
@@ -134,6 +134,6 @@ public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStack
 public static extern IntPtr memset(IntPtr dest, uint src, uint count);';
 ```
 
-1. You might need to circumvent [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]] Execution Policies on the target
+1. You might need to circumvent [[3 Tools/shells/PowerShell|PowerShell]] Execution Policies on the target
 
 # Hardening

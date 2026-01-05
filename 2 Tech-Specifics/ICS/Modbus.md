@@ -14,7 +14,7 @@ tags:
 
 ## Enumeration
 
-- there is an [[3 Tools/scanning/network/nmap|nmap]] script for discovery
+- there is an [[3 Tools/network/scanning/nmap|nmap]] script for discovery
 
 ## Impact
 

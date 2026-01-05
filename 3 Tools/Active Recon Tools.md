@@ -17,7 +17,7 @@ Purpose: Collection of tools used for active recon
 
 ## Ping
 
-[[3 Tools/scanning/network/ping]]
+[[3 Tools/network/scanning/ping]]
 
 ## Traceroute
 

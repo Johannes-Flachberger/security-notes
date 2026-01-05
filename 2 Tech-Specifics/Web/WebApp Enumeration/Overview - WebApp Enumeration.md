@@ -36,7 +36,7 @@ Here, both passive and active recon techniques are listed
 Can find hidden directories, but is not as efficient as crawling.
 wordlists: `/usr/share/wordlists/dirb/`
 - [[3 Tools/web/gobuster|gobuster]] - active
-- [[3 Tools/scanning/network/nmap|nmap]] - script `http-enum`
+- [[3 Tools/network/scanning/nmap|nmap]] - script `http-enum`
 - dirb - active
 - dirbuster - active
 **Crawler**

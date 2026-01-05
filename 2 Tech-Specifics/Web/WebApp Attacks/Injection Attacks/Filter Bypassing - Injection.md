@@ -8,7 +8,7 @@ tags:
 ## Encoding
 
 - base64
-	- e.g. [[2 Tech-Specifics/OS/Windows/PowerShell|PowerShell]] can directly execute base64 encoded commands
+	- e.g. [[3 Tools/shells/PowerShell|PowerShell]] can directly execute base64 encoded commands
 - URL encoding
 
 # Hardening

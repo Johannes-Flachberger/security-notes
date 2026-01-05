@@ -5,18 +5,18 @@ tags:
 ---
 # Fundamentals
 
-Windows uses NTLM hashes - also see [[2 Tech-Specifics/_Other/Cryptography/Hashing fundamentals|Hashing fundamentals]]
-
-## Hash Sources
-
-- Hashes are stored in the Security Account Manager (SAM) at `C:\Windows\system32\config\sam`. Several protections are applied on the database file.
-- The Local Security Authority Subsystem (LSASS) is the windows process that handles everything related to authentication. Hashes of both local users and logged-in domain users can be extracted from its memory (privileges required!)
+See [[2 Tech-Specifics/OS/Windows/Fundamentals Windows|Fundamentals Windows]]
 
 # Pentesting
 
 ## Local Credential Access
 
-Extract password hashes from local [[#Hash Sources]]. **Requires Administrator privileges.**
+Extract password hashes from local [[#Hash Sources]].
+
+**Prerquisites:**
+
+- Administrator privileges
+- SeDebugPrivilege
 
 Tools:
 
@@ -41,7 +41,7 @@ Further reading: [Wikipedia](https://en.wikipedia.org/wiki/Pass_the_hash)
 
 ## NTLMv2 Response Cracking
 
-During the [[2 Tech-Specifics/OS/Windows/Windows fundamentals#NTLMv2|NTLMv2 handshake]], the client response can be captured and the included hash can be cracked to obtain the cleartext password.
+During the [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#NTLMv2|NTLMv2 handshake]], the client response can be captured and the included hash can be cracked to obtain the cleartext password.
 
 The response has the following format: `username::domain:server_challenge:client_response:blob`
 
@@ -49,8 +49,22 @@ The response has the following format: `username::domain:server_challenge:client
 
 1. Capture a client response - e.g. by:
 	- sniffing, e.g. using [[3 Tools/passive recon/Wireshark|Wireshark]]
-	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - see [[2 Tech-Specifics/OS/Windows/Windows fundamentals#UNC Paths|UNC Paths]]
+	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - see [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#UNC Paths|UNC Paths]]
 - Crack the included "Net-NTLMv2 hash" - see [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
+
+## NTLMv2 Relay Attack
+
+If you can capture an NTLMv2 client response but cannot crack it - you can relay the authentication request to a legitimate server to execute commands on it.
+
+**Prerequisites:**
+
+- (Unprivileged) access to a windows client.
+- User whose request is relayed must be a local admin or UAC must be turned off on the server
+
+**Workflow:**
+
+1. Set up a tool to relay the requests
+2. from the windows client, send a request (e.g. SMB or HTTP) to the relay tool
 
 # Hardening
 

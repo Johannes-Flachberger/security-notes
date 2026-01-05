@@ -9,6 +9,8 @@ There are 2 types of privilege escalation:
 1. horizontal: move between users on one level of privilege
 2. vertical: gain additional privileges
 
+Before enumeration & attempting privilege escalation, evaluate if elevated privileges would enable further impacts in the given scenario. This is not always the case.
+
 # Attack Vectors
 
 ```base

@@ -37,11 +37,12 @@ Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
 Common commands:
 
-| Command            | Purpose                     |
-| ------------------ | --------------------------- |
-| `privilege::debug` | enable debugging privileges |
-| `token::elevate`   | elevate privileges          |
-| `lsadump::sam`     | dump credentials form SAM   |
-| `log <path>`       | write output too file       |
+| Command                    | Purpose                        |
+| -------------------------- | ------------------------------ |
+| `privilege::debug`         | enable debugging privileges    |
+| `token::elevate`           | elevate privileges             |
+| `lsadump::sam`             | dump credentials form SAM      |
+| `sekurlsa::logonpasswords` | dump all available credentials |
+| `log <path>`               | write output too file          |
 
 # Snippets

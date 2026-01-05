@@ -26,7 +26,7 @@ End Sub
 
 # Pentesting
 
-From the macro, e.g. pop a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shell]] or a e.g. using [[3 Tools/shells/powercat|powercat]] or [[2 Tech-Specifics/OS/Windows/PowerShell#Reverse Shell Payloads|PowerShell]]
+From the macro, e.g. pop a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shell]] or a e.g. using [[3 Tools/shells/powercat|powercat]] or [[3 Tools/shells/PowerShell#Reverse Shell Payloads|PowerShell]]
 
 ## Snippets
 

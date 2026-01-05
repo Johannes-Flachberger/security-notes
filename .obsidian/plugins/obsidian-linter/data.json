@@ -82,7 +82,7 @@
       "alias-helper-key": "linter-yaml-title-alias"
     },
     "capitalize-headings": {
-      "enabled": true,
+      "enabled": false,
       "style": "Title Case",
       "ignore-case-words": true,
       "ignore-words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript, I",
@@ -133,12 +133,12 @@
       "style": "consistent"
     },
     "no-bare-urls": {
-      "enabled": true,
-      "no-bare-uris": true
+      "enabled": false,
+      "no-bare-uris": false
     },
     "ordered-list-style": {
       "enabled": true,
-      "number-style": "ascending",
+      "number-style": "preserve",
       "list-end-style": "."
     },
     "proper-ellipsis": {
