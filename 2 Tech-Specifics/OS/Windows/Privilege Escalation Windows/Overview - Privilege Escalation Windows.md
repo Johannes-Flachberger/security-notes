@@ -12,16 +12,14 @@ During enumeration, never forget to cross-connect information to gather value. E
 # Pentesting
 
 If possible use [[#Tool-Based Enumeration]] (be aware of [[2 Tech-Specifics/OS/Antivirus Evasion|Antivirus Evasion]]).  
-If automated enumeration is not possible, use [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Manual Enumeration|Manual Enumeration]].
+If automated enumeration is not possible, use [[#Manual Enumeration]].
 
 ## Workflow
 
-1. Get an overiew of the current system
+1. Get an overview of the current system
 2. Perform in-depth enumeration & carry out attacks
 
-## Enumeration for Privilege Escalation
-
-### Tool-Based Enumeration
+## Tool-Based Enumeration
 
 > [!Warning] Warning
 > Privilege escalation tools sometimes tend to miss stuff that can be revealed by in-depth manual enumeration, or to fail on attack vectors that are manually exploitable.
@@ -41,21 +39,13 @@ See:
 
 #### Overview
 
-The following information forms the essentials to be enumerated for privilege escalation:
+Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]
 
-- [ ] Username and hostname
-- [ ] Group memberships of the current user
-- [ ] Existing users and groups
-- [ ] Operating system, version and architecture
-- [ ] Network information
-- [ ] Installed applications
-- [ ] Running processes
-
-Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration Windows|Manual Enumeration Windows]]
+Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
 
 #### In-depth
 
-Start with: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration Windows|Manual Enumeration Windows]]
+Start with: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
 
 Then:
 

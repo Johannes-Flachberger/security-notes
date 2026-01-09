@@ -28,7 +28,7 @@ Modify the executable that is used by a scheduled task
 
 Use public exploits for privilege escalation.
 
-Enumerate using [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration Windows|Manual Enumeration Windows]]:
+Enumerate using [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]:
 
 - Installed applications
 - OS version: **Kernel exploits might make the system unusable** --> test them beforehand

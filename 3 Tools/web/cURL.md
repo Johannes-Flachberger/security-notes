@@ -24,3 +24,5 @@ eg. `curl -X GET http://127.0.0.1:5984/`
 | `-i`                       | show respnse headers in output                                                                                                                                     |
 | `--path-as-is`             | usually, curl follows RFC 3986 rules for URI path normalization (removing `/../` and `/./` segments) - with this option, paths are interpreted exactly as supplied |
 | `--upload-file <filepath>` | upload a file - use with POST                                                                                                                                      |
+| `-O`                       | save downloaded file using original filename                                                                                                                       |
+| `-o <path>`                | save file at path                                                                                                                                                  |

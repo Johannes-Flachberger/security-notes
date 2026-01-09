@@ -2,7 +2,7 @@
 tags:
   - "#type/"
 Link: https://www.mingw-w64.org/
-Purpose: multi platform cross compiler
+Purpose: multi platform cross compiler for windows applications
 ---
 # Info
 

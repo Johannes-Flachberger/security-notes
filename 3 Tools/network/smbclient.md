@@ -16,17 +16,21 @@ connect to smb shares
 > [!HINT] smbclient´s options can be finicky
 > Make sure to use the right format & options in the right order
 
-`smbclient [options] //<IP>/[SHARE] <password>`
+`smbclient [options] //<IP>/[SHARE] -U <user> --password <password>`
 
-in smb client shell: `help` for available commands
-
-| Option                | Purpose                                                                                                                        |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `--pw-nt-hash <hash>` | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash\|Pass the Hash]] |
-| `-U`                  | User                                                                                                                           |
-| `-L`                  | list shares                                                                                                                    |
+| Option                  | Purpose                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `--pw-nt-hash <hash>`   | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash\|Pass the Hash]] |
+| `-U <user>`             | User                                                                                                                           |
+| `--password <password>` | password                                                                                                                       |
+| `-L`                    | list shares                                                                                                                    |
+| `-p <port>`             | port                                                                                                                           |
 
 # Snippets
+
+## List shares
+
+`smbclient [-p <port>] -L //<ip>/ -U <user> --password <password>`
 
 ## Pass the Hash
 

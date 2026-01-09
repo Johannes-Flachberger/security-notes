@@ -36,10 +36,10 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Useful Commands
 
-| Command                  | Purpose                                                                                                                                                      |
+| Command                  | Purpose                                                                                                                                                     |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Select-String` or `sls` | equivilant to `grep`on lin                                                                                                                                   |
-| `icacls <path>`         show permissions of file or folder<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) ce  |
+| `Select-String` or `sls` | equivilant to `grep`on linux                                                                                                                                |
+| `icacls <path>`          | show permissions of file or folder<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) |
 
 ### Service Management
 
@@ -58,7 +58,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Enumeration
 
-See [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration Windows|Manual Enumeration Windows]]
+See [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
 
 ## Discovery
 

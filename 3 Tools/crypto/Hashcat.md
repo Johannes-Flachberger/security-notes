@@ -13,7 +13,7 @@ Purpose: hashcracking
 
 1. put hashes to be cracked in file
 2. run hashcat
-3. show results
+3. show results using `hashcat -m <mode> <hashfile>`
 
 ## Command
 
@@ -30,6 +30,7 @@ Purpose: hashcracking
 | `-hh`              | print all hash mode numbers - can be searched - e.g. using [[3 Tools/utilities/grep\|grep]]                                                                                                                                            |
 | `--identify`       | try to identify the right mode for a given hash                                                                                                                                                                                        |
 | `-a`               | attack mode                                                                                                                                                                                                                            |
+| `--username`       | tell hashcat that usernames are included in hash file in format `<username>:<hash>`                                                                                                                                                    |
 
 find hash mode numbers on: [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 

@@ -23,8 +23,8 @@ access right can be set for each share
 ## Workflow
 
 1. get credentials - see [[#Credential Access]]
-2. Enumerate Workgroup, Shares, Permissions,...
-3. Access files - see [[#Exfiltration]]
+2. Enumerate Workgroup, Shares, Permissions,... - see [[#Enumeration]]
+3. Access files - see [[#Exfiltration]] and [[#SMB Commands Cheat Sheet]]
 
 ## Credential Access
 
@@ -56,3 +56,22 @@ Tools:
 - [[3 Tools/network/SMB tools#Exfiltration|SMB tools]]
 - [[3 Tools/network/smbclient|smbclient]]
 - [[3 Tools/shells/cmd|cmd]]
+
+## SMB Commands Cheat Sheet
+
+| Command          | Purpose                        |
+| ---------------- | ------------------------------ |
+| `ls`             | List files and directories     |
+| `cd <dir>`       | Change remote directory        |
+| `pwd`            | Show current remote directory  |
+| `lcd <dir>`      | Change local working directory |
+| `get <file>`     | Download a single file         |
+| `get <file> - `  | print file contents            |
+| `put <file>`     | Upload a single file           |
+| `mget <pattern>` | Download multiple files        |
+| `mput <pattern>` | Upload multiple files          |
+| `rm <file>`      | Delete a remote file           |
+| `mkdir <dir>`    | Create a remote directory      |
+| `rmdir <dir>`    | Remove a remote directory      |
+| `print <file>`   | Send a file to a printer share |
+| `exit`           | Close the connection           |

@@ -50,7 +50,7 @@ To achieve a DLL hijack, insert a malicious DLL in a higher position in the sear
 	- Typically [ProcMon](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon) is used to analyse an executable. - Since it requires admin privileges, mirror the target setup for preparation. ProcMon can be overwhelming. Filter for the target process name, the DLL name, take actions & relate the events to the actions.
 2. Prepare a malicious DLL
 	- See [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#DLLs|DLL Template]]
-	- compile e.g. with [[3 Tools/mingw-w64|mingw-w64]]
+	- compile e.g. with [[3 Tools/compiler/mingw-w64|mingw-w64]]
 3. Place DLL at the right location
 
 #### DLL search order

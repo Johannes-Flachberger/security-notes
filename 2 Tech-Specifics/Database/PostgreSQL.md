@@ -6,19 +6,17 @@ tags:
 
 ## Manual Connection
 
-The tool `psql`can be used.
+**Tool:** `psql`
 
-connect to database: `psql -h 192.168.x.x -p 5432 -U user -d database`
-
-list databases: `psql -h 192.168.x.x -p 5432 -U user -l`
+- connect to database: `psql -h 192.168.x.x -p 5432 -U user -d database`
+- list databases: `psql -h 192.168.x.x -p 5432 -U user -l`
 
 In the psql session:
 
-show roles of current user: `\du`
-
-list privileges on tables: `\dp`
-
-show databases: `\l`
+- show roles of current user: `\du`
+- list privileges on tables: `\dp`
+- show databases: `\l`
+- connect to database: `\c <database>`
 
 # Pentesting
 

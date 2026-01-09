@@ -17,4 +17,10 @@ more advanced alternative:
 
 Accepts uploads using the POST method.
 
+## Upload file using [[3 Tools/web/cURL|cURL]]
+
+```powershell
+curl.exe -X POST -F "file=@<filepath>" http://<ip>:<port>/
+```
+
 # Snippets

@@ -17,15 +17,11 @@ for help menu of each command: `/?`
 | Command                                 | Purpose                                                                                         |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `type`                                  | print file content - for large files use `more`                                                 |
-| `hostname`                              | show hostname                                                                                   |
-| `ipconfig`                              | show network adress settings                                                                    |
-| `netstat`                               | display protocol statistics                                                                     |
 | `cls`                                   | clear command prompt                                                                            |
 | `net`                                   | manage network resources; help menu: `net help`                                                 |
 | `icacls`                                | show permissions of a file or folder                                                            |
 | `where [options] <directory> <pattern>` | find files<br>use option `/r` for recursive search<br>e.g. `where /r C:\ report.*`              |
-| `ver`                                   | show windows version                                                                            |
-| `systeminfo`                            | show detailed system info                                                                       |
+| `where <command>`                       | check if a command is available, and show its executable location                               |
 | `reg`                                   | interact with the registry                                                                      |
 | `runas /user:<user> <command> `         | run with command as another user<br>**Note:** Does not grant admin privileges if UAC is active. |
 | `shutdown /r /t 0`                      | reboot the machine immediately                                                                  |
@@ -41,7 +37,7 @@ for help menu of each command: `/?`
 
 ## Enumeration
 
-Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration Windows|Manual Enumeration Windows]]
+Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
 
 | Command                                         | Purpose                                                                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |

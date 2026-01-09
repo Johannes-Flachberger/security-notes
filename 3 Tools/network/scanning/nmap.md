@@ -75,14 +75,14 @@ if no options are provided for discovery scan:
 3. unprivileged outside the local network: TCP 3-way handshake by sending SYN packets to ports 80 and 443
 **Useful options**
 
-| Option | Purpose |
-|----------|--------------|
-| `-sn` | no port scanning (however common tcp ports are used for discovery - this can be more accurate than ping) |
-| `-n` | dont do reverse DNS lookup |
-| `-R` | also do reverse DNS lookup for offline hosts |
-| `-sL` | show list of hosts that will be scanned without actually scanning them |
-| `--top-ports` | scans top 20 ports |
-| `-O` | guess target OS - take with grain of salt, sometimes firewalls or proxies rewrite packet headers used for OS guessing |
+| Option            | Purpose                                                                                                               |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `-sn`             | no port scanning (however common tcp ports are used for discovery - this can be more accurate than ping)              |
+| `-n`              | dont do reverse DNS lookup                                                                                            |
+| `-R`              | also do reverse DNS lookup for offline hosts                                                                          |
+| `-sL`             | show list of hosts that will be scanned without actually scanning them                                                |
+| `--top-ports=<n>` | scans top `<n>` ports                                                                                                 |
+| `-O`              | guess target OS - take with grain of salt, sometimes firewalls or proxies rewrite packet headers used for OS guessing |
 
 #### ARP Scan
 
@@ -119,10 +119,10 @@ try multiple scan types in case of one beeing blocked
 
 # Port Scans
 
-| Option | Purpose |
-|----------|--------------|
-| `-p` | specify ports to scan `-p<number>` to scan specified number of ports (supports range, list or - (all)) |
-| `-Pn` | do not check if host is online by pinging it |
+| Option | Purpose                                                                                                |
+| ------ | ------------------------------------------------------------------------------------------------------ |
+| `-p`   | specify ports to scan `-p<number>` to scan specified number of ports (supports range, list or - (all)) |
+| `-Pn`  | do not check if host is online by pinging it                                                           |
 
 #### Tcp Scan (`-ST`)
 

@@ -23,16 +23,16 @@ These files are expecially sensitive, since they can provide critical informatio
 
 ## Linux
 
-| File | Description |
-|----------|--------------|
-| `/etc/passwd` | user accounts, login shells - **readable by all users** |
-| `/etc/shadow` | password hashes |
-| `/home/<user>/.ssh/` | ssh keys, known hosts, authorized_keys |
-| `/etc/issue` | contains a message or system identification to be printed before the login prompt. |
-| `/etc/profile` | controls system-wide default variables, such as Export variables, File creation mask (umask), Terminal types, Mail messages to indicate when new mail has arrived |
-| `/proc/version` | specifies the version of the Linux kernel |
-| `/root/.bash_history` | contains the history commands for root user |
-| `/var/log/dmessage` | contains global system messages, including the messages that are logged during system startup |
+| File                  | Description                                                                                                                                                       |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/etc/passwd`         | user accounts, login shells - **readable by all users**<br>if writable, a user can be added                                                                       |
+| `/etc/shadow`         | password hashes                                                                                                                                                   |
+| `/home/<user>/.ssh/`  | ssh keys, known hosts, authorized_keys                                                                                                                            |
+| `/etc/issue`          | contains a message or system identification to be printed before the login prompt.                                                                                |
+| `/etc/profile`        | controls system-wide default variables, such as Export variables, File creation mask (umask), Terminal types, Mail messages to indicate when new mail has arrived |
+| `/proc/version`       | specifies the version of the Linux kernel                                                                                                                         |
+| `/root/.bash_history` | contains the history commands for root user                                                                                                                       |
+| `/var/log/dmessage`   | contains global system messages, including the messages that are logged during system startup                                                                     |
 
 ## Windows
 

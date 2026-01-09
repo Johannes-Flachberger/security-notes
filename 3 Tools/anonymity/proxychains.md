@@ -1,29 +1,34 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#defend/harden" 
-Purpose: route traffic of a command through a chain of proxies
+  - "#type/tool"
+  - "#defend/harden"
+Purpose: route traffic of a command through one or multiple proxies
+Link: https://github.com/rofl0r/proxychains-ng
 ---
 # Info
 
-route traffic of a command through a chain of proxies
+route traffic of a command through one or multiple
 
 # Usage
 
-config file in `/etc/proxychains4.conf`
+put `proxychains` in front of command you want to use
 
-put `proxychains` in front of command you want to use, eg `proxychains nmap -sS ....`
+E.g.: `proxychains nmap -sS ...`
 
-configure proxylist, mode,... in config file
+## Configuration
 
-google online for free proxy servers
+The proxy addresses, port & mode must be set in the config file at `/etc/proxychains4.conf`
 
-to check if it works
+**Note:** http proxies are faster than socks proxies
 
-eg. `proxychains firefox google.com`
+## Port-scanning over proxychains
 
-> [!tip] http proxies are faster than socks
+- The values `tcp_read_time_out` and `tcp_connect_time_out` specify the timeouts proxychains uses. By default, they are very high --> reduce to speed up port scans.
+- Must be run with root privileges.
+- skip icmp discovery
 
-## Tor Service
+```bash
+sudo proxychains nmap -Pn -sT ...
+```
 
-`service tor stert/restart/status/stop`
+# Snippets

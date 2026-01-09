@@ -34,7 +34,7 @@ Table of Contents:
  {
   color: hsl(var(--heading-hue), var(--heading-sat), 75%);
   border-bottom: 2px solid var(--divider-color);
-  padding-top:5px;
+  padding-top:0.7em;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-2,
@@ -42,7 +42,7 @@ Table of Contents:
 .markdown-rendered h2
 {
   color: hsl(var(--heading-hue), var(--heading-sat), 65%);
-  padding-top:5px;
+  padding-top:0.6em;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-3,
@@ -50,7 +50,7 @@ Table of Contents:
 .markdown-rendered h3
 {
   color: hsl(var(--heading-hue), var(--heading-sat), 55%);
-  padding-top:5px;
+  padding-top:0.5em;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-4,
@@ -58,7 +58,7 @@ Table of Contents:
 .markdown-rendered h4
  {
   color: hsl(var(--heading-hue), var(--heading-sat), 50%);
-  padding-top:5px;
+  padding-top:0.4em;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-5,
@@ -66,7 +66,7 @@ Table of Contents:
 .markdown-rendered h5
  {
   color: hsl(var(--heading-hue), var(--heading-sat), 45%);
-  padding-top:5px;
+  padding-top:0.3em;
 }
 
 .cm-s-obsidian .HyperMD-header.HyperMD-header-6,
@@ -74,7 +74,7 @@ Table of Contents:
 .markdown-preview-view h6 
  {
   color: hsl(var(--heading-hue), var(--heading-sat), 40%);
-  padding-top:5px;
+  padding-top:0.2em;
 }
 
 /*=================================================*/
