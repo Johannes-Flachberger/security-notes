@@ -19,6 +19,8 @@ Analysis a target PE/exe file and injects shellcode into the file.
 - Supports both 32bit and 64 bit targets.
 - Advanced evasion techniques
 
+On kali available at: `/usr/share/windows-resources/`
+
 # Usage
 
 Shellter is built for windows --> use wine on linux.

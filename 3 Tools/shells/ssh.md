@@ -91,6 +91,8 @@ Similar to [[#Dynamic Port Forwarding]].
 
 The ssh client connects to a server and opens a SOCKS proxy listening port on the server. Packets are tunneled from the server to the client and then forwarded to their destination host.
 
+**Prerequisite:** SSH client version higher than 7.6 (ssh server version is irrelevant)
+
 **Command:**
 
 ```sh

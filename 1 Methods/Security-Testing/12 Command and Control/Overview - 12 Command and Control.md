@@ -6,6 +6,10 @@ tags:
 
 ---
 
+# Useful Tricks
+
+Use [[1 Methods/Security-Testing/10 Lateral Movement/Port forwarding and Tunneling|Remote Port Forwarding]] to achieve access to services running on localhost of a target or behind a firewall, e.g. [[2 Tech-Specifics/Network/Protocols/TCP 3389 RDP|RDP]]
+
 # Attack Vectors
 
 ```base

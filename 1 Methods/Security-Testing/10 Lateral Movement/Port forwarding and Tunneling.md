@@ -27,14 +27,14 @@ flowchart LR
 ```
 
 **Tools:**
-- [[3 Tools/shells/Socat|Socat]]: basic port fowarding
+- [[3 Tools/shells/Socat|Socat]]: basic port forwarding
 - [rinetd](https://github.com/samhocevar/rinetd): runs as daemon --> good for long-term usage
 - [[3 Tools/shells/Netcat|Netcat]]: combine with FIFO
-- if on linux & root privileges present: iptables
+- if on Linux & root privileges present: iptables
 
 ## SSH Tunneling
 
-**Note:** ssh is preinstalled on modern windows versions and many linux installs.
+**Note:** ssh is preinstalled on modern windows versions and many Linux installs.
 
 There are several types of [[3 Tools/shells/ssh|ssh]] tunneling:
 
@@ -66,4 +66,8 @@ flowchart LR
 
 **Alternative tool:** [[3 Tools/shells/sshuttle|sshuttle]]
 
-# Windows
+# Windows Specifics
+
+- [[3 Tools/shells/Plink|Plink]]: alternative ssh client
+- Putty: alternative GUI ssh client
+- [[2 Tech-Specifics/OS/Windows/netsh|netsh]]: firewall config tool, requires admin privileges

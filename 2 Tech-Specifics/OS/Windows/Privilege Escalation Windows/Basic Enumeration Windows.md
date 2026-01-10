@@ -35,7 +35,7 @@ See:
 
 - Administrators:
 - Backup Operators: can read & write also files the don't own
-- Remote Desktop Users: can log in via remote desktop
+- Remote Desktop Users: can log in via [[2 Tech-Specifics/Network/Protocols/TCP 3389 RDP|RDP]]
 - Remote Management Users: can log via [WinRM](https://learn.microsoft.com/en-us/windows/win32/winrm/portal)
 
 ## System Information
