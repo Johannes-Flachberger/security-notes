@@ -100,3 +100,11 @@ ssh -N -R [listening_ip]:<listening_port> <server_user>@<server_ip>
 ```
 
 You can omit `[listening_ip]` to bind to localhost of the server.
+
+## SSH through a SOCKS proxy
+
+SSH provides the [Proxy Command](https://man.openbsd.org/ssh_config#ProxyCommand). The proxy command is used to set up the proxy connection first. - Then ssh is started through that connection.
+
+**Hint:** The default `nc` on kali does not support proxying --> install & use `ncat` made by nmap as an alternative.
+
+**Example:** `ssh -o ProxyCommand='ncat --proxy-type socks5 --proxy <proxy_ip>:<proxy_port> %h %p' <user>@<ssh_server_ip>`

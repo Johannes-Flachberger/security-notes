@@ -66,8 +66,22 @@ flowchart LR
 
 **Alternative tool:** [[3 Tools/shells/sshuttle|sshuttle]]
 
-# Windows Specifics
+## HTTP Tunneling
+
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80, 443 HTTP(S)|HTTP(S)]]
+
+**Tools:**
+
+- [[3 Tools/network/tunneling/Chisel|Chisel]]
+
+## DNS Tunneling
+
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|DNS]]
+
+**Tools:**
+
+## Windows Specifics
 
 - [[3 Tools/shells/Plink|Plink]]: alternative ssh client
-- Putty: alternative GUI ssh client
+- Putty: alternative GUI ssh clientaaa
 - [[2 Tech-Specifics/OS/Windows/netsh|netsh]]: firewall config tool, requires admin privileges

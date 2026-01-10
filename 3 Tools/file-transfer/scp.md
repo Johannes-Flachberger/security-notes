@@ -12,7 +12,7 @@ transfer files between two machines using an ssh connection
 
 # Usage
 
-run on attacker: `scp [local file] [user]@[ip]:[path]
+`scp <source> <target>`
 
 eg: `scp ./linpeas.sh jan@10.10.100.180:/tmp/`
 

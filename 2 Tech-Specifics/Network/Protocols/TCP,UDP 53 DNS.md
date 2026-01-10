@@ -37,3 +37,11 @@ Each domain can use different types of DNS records. Some of the most common type
 - txt records might reveal information
 - zone transfers can leak internal data if misconfigured
 - tools: [[3 Tools/passive recon/DNS enumeration Tools|DNS enumeration Tools]]
+
+## Command and Control
+
+Can be used to "smuggle" data into a network
+
+1. set up a dns server
+2. configure txt entries for a domain
+3. query the dns server from a target --> txt entries are transferred to the target

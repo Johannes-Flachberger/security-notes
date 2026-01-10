@@ -14,6 +14,7 @@ tags:
 - [[3 Tools/shells/Socat|Socat]]: powerful, but difficult to use
 - [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Metasploit - multi/handler module]]: very stable
 - [[3 Tools/exploitation frameworks/Metasploit/meterpreter|meterpreter]]: powerfull listener & client
+- [[3 Tools/network/tunneling/dnscat2|dnscat2]]: remote shell using dns (requires dnscat2 client)
 
 # Payloads
 
