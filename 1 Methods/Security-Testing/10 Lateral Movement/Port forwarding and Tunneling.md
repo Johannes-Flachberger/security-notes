@@ -79,6 +79,7 @@ Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80, 443 HTT
 Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|DNS]]
 
 **Tools:**
+- [[3 Tools/network/tunneling/dnscat2|dnscat2]]
 
 ## Windows Specifics
 
