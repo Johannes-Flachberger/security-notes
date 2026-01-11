@@ -57,6 +57,19 @@ Tools:
 - [[3 Tools/network/smbclient|smbclient]]
 - [[3 Tools/shells/cmd|cmd]]
 
+## Execution
+
+### PsExec
+
+**Prerequisites:**
+- Windows target
+- Admin username and NTLM hash or password available
+Use, or emulate the behaviour of [PsExeec](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) - a [windows sysinternals tool](https://learn.microsoft.com/en-us/sysinternals/) to execute commands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
+
+**Tools:**
+- [[3 Tools/network/impacket-scripts#Impacket-psexec|impacket-psexec]]
+- [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Metasploit]]: `exploit/windows/smb/psexec`
+
 ## SMB Commands Cheat Sheet
 
 | Command          | Purpose                        |

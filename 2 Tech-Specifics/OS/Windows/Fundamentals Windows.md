@@ -122,7 +122,7 @@ Check integrity levels of users with `whoami`and of files with `icacls`.
 
 ## UAC
 
-Processes run with standard privileges by default, also if started by an admin user. To run with admin privileges, the user must explicitly request that.
+Processes run with standard privileges (MIC level Medium) by default, also if started by an admin user. To run with admin privileges, the user must explicitly request that, and handle the password prompt (typically requires a GUI). Then the process is elevated to MIC level high.
 
 See: [Microsoft Learn](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/)
 
