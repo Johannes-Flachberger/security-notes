@@ -20,16 +20,16 @@ See:
 - infer further purpose, characteristics & possible privileges of the user
 - e.g. help desk staff, admins, developers, accounting,...
 
-| Purpose                                     | Command                                                                                      |
-| ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| list users                                  | cmd: `net user`<br>PowerShell: `Get-LocalUser`                                               |
-| list details & privileges of specified user | `net user <username>`                                                                        |
-| show current users privileges               | `whoami /priv`                                                                               |
-| list groups of the current user             | `whoami /groups`                                                                             |
-| list other logged in users                  | `qwinsta`                                                                                    |
-| show local groups                           | cmd: `net localgroup`<br>PowerShell: `Get-LocalGroup` (also shows group descriptions)        |
-| list members of group                       | cmd: `net localgroup <groupname>`<br>PowerShell: `Get-LocalGroupMember <groupname>`          |
-| show domain                                 | PowerShell: `powershell (Get-CimInstance Win32_ComputerSystem).Domain` and `$env:USERDOMAIN` |
+| Purpose                             | Command                                                                                      |
+| ----------------------------------- | -------------------------------------------------------------------------------------------- |
+| list users                          | cmd: `net user`<br>PowerShell: `Get-LocalUser`                                               |
+| list details & privileges of a user | `net user <username>`                                                                        |
+| show current users privileges       | `whoami /priv`                                                                               |
+| list groups of the current user     | `whoami /groups`                                                                             |
+| list other logged in users          | `qwinsta`                                                                                    |
+| show local groups                   | cmd: `net localgroup`<br>PowerShell: `Get-LocalGroup` (also shows group descriptions)        |
+| list members of group               | cmd: `net localgroup <groupname>`<br>PowerShell: `Get-LocalGroupMember <groupname>`          |
+| show domain                         | PowerShell: `powershell (Get-CimInstance Win32_ComputerSystem).Domain` and `$env:USERDOMAIN` |
 
 ### Relevant Built-In Groups
 
