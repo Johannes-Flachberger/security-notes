@@ -5,7 +5,7 @@ tags:
 ---
 # Fundamentals
 
-See [[2 Tech-Specifics/OS/Windows/Fundamentals Windows|Fundamentals Windows]]
+See [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]]
 
 # Pentesting
 
@@ -41,7 +41,7 @@ Further reading: [Wikipedia](https://en.wikipedia.org/wiki/Pass_the_hash)
 
 ## NTLMv2 Response Cracking
 
-During the [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#NTLMv2|NTLMv2 handshake]], the client response can be captured and the included hash can be cracked to obtain the cleartext password.
+During the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#NTLMv2|NTLMv2 handshake]], the client response can be captured and the included hash can be cracked to obtain the cleartext password.
 
 The response has the following format: `username::domain:server_challenge:client_response:blob`
 
@@ -49,7 +49,7 @@ The response has the following format: `username::domain:server_challenge:client
 
 1. Capture a client response - e.g. by:
 	- sniffing, e.g. using [[3 Tools/passive recon/Wireshark|Wireshark]]
-	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - see [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#UNC Paths|UNC Paths]]
+	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - see [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UNC Paths|UNC Paths]]
 - Crack the included "Net-NTLMv2 hash" - see [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
 
 ## NTLMv2 Relay Attack

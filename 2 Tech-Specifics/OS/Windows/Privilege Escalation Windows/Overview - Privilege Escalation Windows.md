@@ -5,7 +5,7 @@ tags:
 ---
 # Fundamentals
 
-For windows privilege levels see [[2 Tech-Specifics/OS/Windows/Fundamentals Windows|Fundamentals Windows]].
+For windows privilege levels see [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]].
 
 During enumeration, never forget to cross-connect information to gather value. E.g. a running process that binds to port 443, that has an executable, configuration files, a specific software version, etc.
 
@@ -35,31 +35,25 @@ See:
 - [BeRoot](https://github.com/AlessandroZ/BeRoot)
 - [JAWS](https://github.com/411Hall/JAWS)
 
-### Manual Enumeration
+## Manual Enumeration
 
 #### Overview
 
-Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]
-
-Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
+- Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]
+- Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 #### In-depth
 
-Start with: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
+Start with: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 Then:
 
-- [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Privilege Escalation Vectors Windows|Privilege Escalation Vectors Windows]]
+- [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Privilege Escalation Vectors - Windows|Privilege Escalation Vectors - Windows]]
 - [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Service Hijacking|Service Hijacking]]
 
 External Checklists & Ressources:
 
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md)
 - [HackTricks](https://book.hacktricks.wiki/en/windows-hardening/checklist-windows-privilege-escalation.html)
-
-Further reading:
-
-- <https://github.com/sagishahar/lpeworkshop>
-- [HackTricks](https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/index.html)
 
 # Hardening

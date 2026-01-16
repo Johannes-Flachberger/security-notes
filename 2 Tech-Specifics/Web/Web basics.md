@@ -10,7 +10,7 @@ Major Webservers:
 - Appache
 - Nginx
 - Microsoft IIS
-	- Privilege escalation vector: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Privilege Escalation Vectors Windows#SeImpersonatePrivilege|SeImpersonatePrivilege]]
+	- Privilege escalation vector: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Privilege Escalation Vectors - Windows#SeImpersonatePrivilege|SeImpersonatePrivilege]]
 
 # HTTP
 

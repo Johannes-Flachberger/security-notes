@@ -16,9 +16,7 @@ impacket is a python module that supports networking tasks
 
 **impacket-scripts** contains many for various purposes
 
-# Usage
-
-## Impacket-mssqlclient
+# Impacket-mssqlclient
 
 **Purpose:** connect to a [[2 Tech-Specifics/Database/MSSQL|MSSQL]] database.
 
@@ -26,9 +24,9 @@ impacket is a python module that supports networking tasks
 
 Use NTLM auth instead of kerberos: `-windows-auth`
 
-## Impacket-psexec
+# Impacket-psexec
 
-Emulates the behaviour of [PsExeec](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) - a [windows sysinternals tool](https://learn.microsoft.com/en-us/sysinternals/) to execute commands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
+Emulates the behaviour of [[3 Tools/windows/Sysinternals#PsExec|PsExec]].
 
 **Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]] - (provides a shell with **SYSTEM** privileges.)
 
@@ -36,7 +34,7 @@ Emulates the behaviour of [PsExeec](https://learn.microsoft.com/en-us/sysinterna
 
 **Note:** If no LM hash is available, fill it with 32 zeros: `00000000000000000000000000000000`
 
-## Impacket-wmiexec
+# Impacket-wmiexec
 
 Uses [Windows Management Instrumentation (WMI)](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page) to execute commands on a remote system.
 
@@ -46,12 +44,10 @@ Uses [Windows Management Instrumentation (WMI)](https://learn.microsoft.com/en-u
 
 **Note:** If no LM hash is available, fill it with 32 zeros.
 
-## Impacket-ntlmrelayx
+# Impacket-ntlmrelayx
 
 Relays NTLM authentication to another machine.
 
 **Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#NTLMv2 Relay Attack|NTLMv2 Relay Attack]]
 
 **Example Usage:** `impacket-ntlmrelayx --no-http-server -smb2support -t <target-ip> -c "<command_to_execute>"`
-
-# Snippets

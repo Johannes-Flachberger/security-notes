@@ -20,12 +20,12 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Useful Options
 
-| Option                | Purpose                                    |
-| --------------------- | ------------------------------------------ |
-| `-enc <base64string>` | execute base64 encoded command             |
-| `-nop`                | dont run customiztions of the user profile |
-| `-exec bypass`        | bypass execution policies                  |
-| `-c`                  | execute string as command                  |
+| Option                            | Purpose                                    |
+| --------------------------------- | ------------------------------------------ |
+| `-enc <base64string>`             | execute base64 encoded command             |
+| `-nop`                            | dont run customiztions of the user profile |
+| `-exec bypass`<br>or `-ep bypass` | bypass execution policies                  |
+| `-c`                              | execute string as command                  |
 
 > [!HINT]
 > When encoding a command with [[3 Tools/utilities/Cyberchef|Cyberchef]]:
@@ -36,10 +36,19 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Useful Commands
 
+### Filesystem
+
 | Command                  | Purpose                                                                                                                                                     |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Select-String` or `sls` | equivilant to `grep`on linux                                                                                                                                |
 | `icacls <path>`          | show permissions of file or folder<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) |
+
+### Filter command output
+
+| Command                               | Purpose                                                                                                                                                               |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Where-Object <property> -eq <value>` | Filter results<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-7.5#-match) |
+| `select <property>`                   | Filter properties to show in results                                                                                                                                  |
 
 ### Service Management
 
@@ -48,7 +57,13 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 | `Start-Service <servicename>` | start service |
 | `Stop-Service <servicename`   | stop service  |
 
-## Run commands as another user using built-in tools
+### Network
+
+| Command                         | Purpose                                                                     |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| `Resolve-DnsName <domain name>` | perform a [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS\|DNS]] lookup |
+
+### Run commands as another user
 
 - if you have GUI access: use `runas \user:<user> <command>`
 	- does not grant administrator privileges when UAC is enabled
@@ -58,7 +73,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Enumeration
 
-See [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
+See [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 ## Discovery
 

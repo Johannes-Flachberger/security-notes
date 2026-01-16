@@ -64,7 +64,7 @@ Tools:
 **Prerequisites:**
 - Windows target
 - Admin username and NTLM hash or password available
-Use, or emulate the behaviour of [PsExeec](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) - a [windows sysinternals tool](https://learn.microsoft.com/en-us/sysinternals/) to execute commands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
+Use, or emulate the behaviour of [[3 Tools/windows/Sysinternals#PsExec|Psexec]], a tool to executecommands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
 
 **Tools:**
 - [[3 Tools/network/impacket-scripts#Impacket-psexec|impacket-psexec]]

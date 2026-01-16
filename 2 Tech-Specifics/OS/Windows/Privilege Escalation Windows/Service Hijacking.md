@@ -31,7 +31,7 @@ Services with atypical / user-defined executables might be vulnerable.
 3. Show privileges on executables `icacls "<path>"` or `Get-ACL`. Look for write (W) or full (F) privileges.
 4. If required privileges are present, replace the service with another executable, e.g.
 	- [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
-	- [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#AddUser Snippet|add a user]]
+	- [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#AddUser Snippet|add a user]]
 5. If possible, manually restart the service, or reboot the machine if service StartMode is set to "auto" (requires `SeShutdownPrivilege`)
 
 ## DLL Hijacking
@@ -47,9 +47,9 @@ To achieve a DLL hijack, insert a malicious DLL in a higher position in the sear
 #### Workflow
 
 1. Enumerate DLLs and their position in the search order.
-	- Typically [ProcMon](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon) is used to analyse an executable. - Since it requires admin privileges, mirror the target setup for preparation. ProcMon can be overwhelming. Filter for the target process name, the DLL name, take actions & relate the events to the actions.
+	- Typically [[3 Tools/windows/Sysinternals#ProcMon|ProcMon]] used to analyse an executable. - Since it requires admin privileges, mirror the target setup for preparation. ProcMon can be overwhelming. Filter for the target process name, the DLL name, take actions & relate the events to the actions.
 2. Prepare a malicious DLL
-	- See [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#DLLs|DLL Template]]
+	- See [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#DLLs|DLL Template]]
 	- compile e.g. with [[3 Tools/compiler/mingw-w64|mingw-w64]]
 3. Place DLL at the right location
 
@@ -101,7 +101,7 @@ You can put a malicious executable in a place where windows tries to call it bef
 	- eg. `icacls "<path>"`
 3. insert a malicious executable
 	- [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
-	- [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#AddUser Snippet|add a user]]
+	- [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#AddUser Snippet|add a user]]
 4. start/restart service
 	- `sc start [service name]`
 

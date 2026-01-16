@@ -8,7 +8,7 @@ tags:
 See:
 
 - [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Overview - Privilege Escalation Windows|Overview - Privilege Escalation Windows]]
-- [[2 Tech-Specifics/OS/Windows/Fundamentals Windows|Fundamentals Windows]]
+- [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]]
 
 # Pentesting
 
@@ -28,7 +28,7 @@ Modify the executable that is used by a scheduled task
 
 Use public exploits for privilege escalation.
 
-Enumerate using [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]:
+Enumerate using [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]:
 
 - Installed applications
 - OS version: **Kernel exploits might make the system unusable** --> test them beforehand
@@ -59,7 +59,7 @@ This is usually not granted to normal users, but to many service users such as L
 
 Often possible when escalating privileges from an [[2 Tech-Specifics/Web/Web basics|IIS Web Server]]
 
-If a user has the `SeImpersonatePrivilege` privilege set, [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#Named Pipes|Named Pipes]] can be used to impersonate another user. Open a named pipe and coerce a user to connect to it --> then it can be impersonated.
+If a user has the `SeImpersonatePrivilege` privilege set, [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#Named Pipes|Named Pipes]] can be used to impersonate another user. Open a named pipe and coerce a user to connect to it --> then it can be impersonated.
 
 **Tools:**
 

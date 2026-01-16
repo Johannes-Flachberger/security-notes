@@ -7,7 +7,7 @@ tags:
 See:
 
 - [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Overview - Privilege Escalation Linux|Overview - Privilege Escalation Linux]]
-- [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Basic Enumeration Linux|Basic Enumeration Linux]]
+- [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Manual Enumeration - Linux|Manual Enumeration - Linux]]
 
 **Kompendium of useful executables: [https://gtfobins.github.io/](https://gtfobins.github.io/)**
 
@@ -64,7 +64,7 @@ Credentials can be leaked in multiple ways:
 	- `sudo tcpdump -i lo -A`
 	- then, e.g. grep for "pass"
 - command-line arguments of processes
-	- see [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Basic Enumeration Linux#Processes & Services|Basic Enumeration Linux]]
+	- see [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Manual Enumeration - Linux#Processes & Services|Basic Enumeration Linux]]
 
 ## Writable /etc/passwd
 
@@ -75,7 +75,7 @@ If `/etc/passwd` is writable, you can
 	- group
 	- override the password specified in `/etc/shadow`
 
-Also see [[2 Tech-Specifics/OS/Linux/Fundamentals Linux#/etc/passwd|Fundamentals Linux]].
+Also see [[2 Tech-Specifics/OS/Linux/Fundamentals - Linux#/etc/passwd|Fundamentals Linux]].
 
 1. check privileges: `ls -l /etc/passwd`
 2. generate a password using [[3 Tools/crypto/openssl|openssl]]
@@ -91,7 +91,7 @@ If the file the cronjob is running is writeable by other users, we can hijack th
 
 **Workflow**
 
-1. Enumerate using [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Basic Enumeration Linux#Scheduled Tasks|Basic Enumeration Linux]]
+1. Enumerate using [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Manual Enumeration - Linux#Scheduled Tasks|Basic Enumeration Linux]]
 2. Check privileges on the cronjobs file (`ls -l`)
 3. edit or replace the file, e.g. to add a user or run a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
 
@@ -104,7 +104,7 @@ If the file the cronjob is running is writeable by other users, we can hijack th
 
 ## Kernel Exploits
 
-1. Identify the kernel version - see [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Basic Enumeration Linux#System Info|Basic Enumeration Linux]]
+1. Identify the kernel version - see [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Manual Enumeration - Linux#System Info|Basic Enumeration Linux]]
 2. Search and find an exploit code for the kernel version of the target system
 	- try to match the kernel version & OS flavour as closely as possible
 	- see [[1 Methods/Security-Testing/4 Execution/Using Public Exploits|Using Public Exploits]]

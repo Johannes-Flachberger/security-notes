@@ -4,7 +4,7 @@ tags:
 ---
 # Fundamentals
 
-See [[2 Tech-Specifics/OS/Windows/Fundamentals Windows|Fundamentals Windows]]
+See [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]]
 
 # Pentesting
 

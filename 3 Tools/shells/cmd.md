@@ -37,7 +37,7 @@ for help menu of each command: `/?`
 
 ## Enumeration
 
-Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumeration Windows|Basic Enumeration Windows]]
+Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 | Command                                         | Purpose                                                                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -46,7 +46,7 @@ Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Basic Enumer
 | `netsh firewall show config`                    | show firewall config                                                                                                    |
 | `wmic /node:"" product get name,version,vendor` | show details of installed software                                                                                      |
 | `wmic useraccount get name,sid`                 | show login names and SIDs of users                                                                                      |
-| `dir \\<ip>\<share>`                            | list files on smb share - also see [[2 Tech-Specifics/OS/Windows/Fundamentals Windows#UNC Paths\|Windows fundamentals]] |
+| `dir \\<ip>\<share>`                            | list files on smb share - also see [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UNC Paths\|Windows fundamentals]] |
 
 ## Automate command prompt responses
 
