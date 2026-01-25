@@ -7,7 +7,7 @@ tags:
 
 See:
 
-- [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Overview - Privilege Escalation Windows|Overview - Privilege Escalation Windows]]
+- [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Overview - Enumeration - Windows|Overview - Enumeration - Windows]]
 - [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]]
 
 # Pentesting
@@ -28,7 +28,7 @@ Modify the executable that is used by a scheduled task
 
 Use public exploits for privilege escalation.
 
-Enumerate using [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]:
+Enumerate using [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]:
 
 - Installed applications
 - OS version: **Kernel exploits might make the system unusable** --> test them beforehand
@@ -78,4 +78,4 @@ These privileges can lead to privilege escalation:
 - SeBackupPrivilege: see [Github](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeBackupPrivilege.md)
 - SeAssignPrimaryToken
 - SeLoadDriver
-- SeDebug
+- SeDebugPrivilege: allows to debug (i.e. manipulate) processes of other users

@@ -28,7 +28,7 @@ See:
 
 - [[3 Tools/privilige escalation/winPEAS|winPEAS]]: on kali, available as `peass`
 - [[3 Tools/privilige escalation/PowerUp|PowerUp]]: includes an "AbuseFunction" for most vectors that can be run by the tool
-- [[3 Tools/windows/Windows Exploit Suggester - Next Generation (WESNG)|Windows Exploit Suggester - Next Generation (WESNG)]]
+- [[3 Tools/microsoft/Windows Exploit Suggester - Next Generation (WESNG)|Windows Exploit Suggester - Next Generation (WESNG)]]
 - if you have a [[3 Tools/exploitation frameworks/Metasploit/meterpreter|meterpreter]] shell:
 	- use `multi/recon/local_exploit_suggester`
 - [Seatbelt](https://github.com/GhostPack/Seatbelt)
@@ -40,16 +40,16 @@ See:
 #### Overview
 
 - Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]
-- Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+- Cheat Sheet: [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 #### In-depth
 
-Start with: [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+Start with: [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 Then:
 
-- [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Privilege Escalation Vectors - Windows|Privilege Escalation Vectors - Windows]]
-- [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Service Hijacking|Service Hijacking]]
+- [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Privilege Escalation Vectors - Windows|Privilege Escalation Vectors - Windows]]
+- [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Service Hijacking|Service Hijacking]]
 
 External Checklists & Ressources:
 

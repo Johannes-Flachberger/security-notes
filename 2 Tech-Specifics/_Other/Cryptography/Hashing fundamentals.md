@@ -13,7 +13,7 @@ Hash structure:
 
 ### Hash Types
 
-- **Windows:** NT hashes (also called NTLM hashes) - look identical to md4 & md5 - NT hashes are **not salted** --> weak!
+- **Windows:** NT hashes (also called NTLM hashes) - look identical and are similar to md4 & md5 - NT hashes are **not salted** --> weak!
 - **Linux:** password hashes are stored in /etc/shadow file
 - `$1$`: md5crypt, used in Cisco stuff and older Linux/Unix systems
 - `$2$, $2a$, $2b$, $2x$, $2y$`: Bcrypt (Popular for web applications)

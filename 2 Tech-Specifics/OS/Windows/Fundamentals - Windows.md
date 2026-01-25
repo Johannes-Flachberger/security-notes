@@ -70,11 +70,13 @@ See [Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-st
 
 ## SIDs
 
-SIDs are the primary identifier of users & groups of users on windows. It encodes various pieces of information, such as the domain, if the user is local or a domain user, etc. Example SID: `S-1-0-0`
+SIDs are the primary identifier of users & user groups on windows. It encodes various pieces of information, such as the domain, if the user is local or a domain user, etc. Example SID: `S-1-0-0`
 
 In depth explanation: [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers)
 
-For local users, the last part starts with 1000 --> `S-1-5-21-948155058-1001` would be the second local user.
+For local users, the last part (called "Relative Identifier" (RID))starts with 1000 --> `S-1-5-21-948153058-1001` would be the second local user.
+
+The SID without the RID essentially identifies the domain - also called "Domain Identifier" or "Domain SID" - e.g. `S-1-5-21-948153058`
 
 Useful SIDs for privilege escalation:
 
@@ -151,21 +153,37 @@ VTL1 is used for various security functions, e.g. the [[#Windows Credential Guar
 
 # Authentication Protocols
 
+## WDigest
+
+legacy authentication method - see [Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc778868(v=ws.10)?redirectedfrom=MSDN)
+
+[[3 Tools/mimikatz|mimikatz]] can dump WDigest passwords in cleartext
+
 ## NTLMv1
 
-Challenge - response based authentication protocol. Uses the NT hash as long-term secret. It is prone to multiple attacks, such as:
+Challenge - response based authentication protocol. The server sends a nonce (challenge), the client encryptes the nonce with its NT hash (response). It is prone to multiple attacks, such as:
 
 - [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
 - replay
 - spoofing, etc.
+- Hash Cracking (NTLM "fast hashing algorithm" and short passwords can be cracked)
+
+**Steps:**
+1. Server sends nonce
+2. Client response with username + nonce encrypted with NTLM hash
+3. Server forwards to domain controller for verification
+4. Domain controller responds to server with verification result
+5. Server responds to clinet
 
 ## NTLMv2
 
 Improvement of NTLMv1. Adds a client challenge to prevent server spoofing. Also has protection against replay attacks. [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]] is still possible.
 
+Still used a lot by applications & as fallback authentication mechanism.
+
 ## Kerberos
 
-#todo
+See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]]
 
 # DLLs
 

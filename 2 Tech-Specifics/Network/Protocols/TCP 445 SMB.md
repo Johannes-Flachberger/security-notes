@@ -35,6 +35,10 @@ Legacy systems or misconfigured systems might support "guest access" without aut
 
 Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Dictionary Attack]].
 
+**Tools:**
+- [[3 Tools/bruteforce/netexec|netexec]] (for windows/AD environments)
+- [[3 Tools/bruteforce/Hydra|Hydra]]
+
 ## Enumeration
 
 > [!NOTE] Note
@@ -46,6 +50,7 @@ Tools:
 - [[3 Tools/network/SMB tools#Enumeration|SMB tools]]
 - [[3 Tools/network/smbclient|smbclient]]
 - [[3 Tools/network/impacket-scripts|impacket-scripts]]
+- [[3 Tools/bruteforce/netexec|netexec]]
 
 ## Exfiltration
 
@@ -63,8 +68,9 @@ Tools:
 
 **Prerequisites:**
 - Windows target
-- Admin username and NTLM hash or password available
-Use, or emulate the behaviour of [[3 Tools/windows/Sysinternals#PsExec|Psexec]], a tool to executecommands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
+- username of localadmin on the target
+- NTLM hash or password of the target user
+Use, or emulate the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|Psexec]], a tool to executecommands on remote machines using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]].
 
 **Tools:**
 - [[3 Tools/network/impacket-scripts#Impacket-psexec|impacket-psexec]]

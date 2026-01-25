@@ -9,20 +9,9 @@ Purpose: get dns information
 ---
 # Manual Enumeration
 
-## Host
-
-straightforward & simple
-
-[[3 Tools/web/host|host]]
-
-## Dig
-
-**shows the most info**
-[[3 Tools/web/dig|details]]
-
-## Nslookup
-
-[[3 Tools/passive recon/nslookup|nslookup]]
+- [[3 Tools/web/host|host]]: straightforward & simple
+- [[3 Tools/web/dig|dig]]: shows the most info
+- [[3 Tools/passive recon/nslookup|nslookup]]: per default available on windows
 
 # Automated Enumaration
 

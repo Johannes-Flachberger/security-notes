@@ -1,6 +1,7 @@
 ---
 tags:
   - "#type/method"
+  - "#attack/reconnaissance"
 ---
 # Objective
 

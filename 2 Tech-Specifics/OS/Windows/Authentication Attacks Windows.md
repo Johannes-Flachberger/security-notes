@@ -11,16 +11,17 @@ See [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows|Fundamentals - Windows]
 
 ## Local Credential Access
 
-Extract password hashes from local [[#Hash Sources]].
+Extract password hashes from local [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#Hash Sources|Hash Sources]].
 
 **Prerquisites:**
 
 - Administrator privileges
-- SeDebugPrivilege
+- SeDebugPrivilege: allows to debug (i.e. manipulate) processes of other users
 
 Tools:
 
 - [[3 Tools/mimikatz|mimikatz]]
+- [built-in tools to dump LSASS memory](https://blog.cyberadvisors.com/technical-blog/attacks-defenses-dumping-lsass-no-mimikatz/)
 
 ## Pass the Hash
 
@@ -49,7 +50,7 @@ The response has the following format: `username::domain:server_challenge:client
 
 1. Capture a client response - e.g. by:
 	- sniffing, e.g. using [[3 Tools/passive recon/Wireshark|Wireshark]]
-	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - see [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UNC Paths|UNC Paths]]
+	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - e.g. see [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UNC Paths|UNC Paths]]
 - Crack the included "Net-NTLMv2 hash" - see [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
 
 ## NTLMv2 Relay Attack
@@ -65,6 +66,9 @@ If you can capture an NTLMv2 client response but cannot crack it - you can relay
 
 1. Set up a tool to relay the requests
 2. from the windows client, send a request (e.g. SMB or HTTP) to the relay tool
+
+**Tools:**
+- [[3 Tools/network/impacket-scripts#Impacket-ntlmrelayx|Impacket-ntlmrelayx]]
 
 # Hardening
 

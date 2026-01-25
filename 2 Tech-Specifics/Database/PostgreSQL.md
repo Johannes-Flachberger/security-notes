@@ -16,7 +16,9 @@ In the psql session:
 - show roles of current user: `\du`
 - list privileges on tables: `\dp`
 - show databases: `\l`
-- connect to database: `\c <database>`
+- connect to database: `\c <database`
+
+**Hint:** For the local postgresql service on kali, use `sudo -u postgres psql` to connect.
 
 # Pentesting
 

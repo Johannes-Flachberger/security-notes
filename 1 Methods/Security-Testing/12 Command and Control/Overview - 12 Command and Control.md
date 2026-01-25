@@ -2,6 +2,7 @@
 tags:
   - "#type/method"
   - "#todo"
+  - "#attack/command-and-control"
 ---
 
 ---

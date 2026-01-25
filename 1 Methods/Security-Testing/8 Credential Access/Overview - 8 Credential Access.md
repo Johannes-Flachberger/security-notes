@@ -2,6 +2,7 @@
 tags:
   - "#type/method"
   - "#todo"
+  - "#attack/credential-access"
 ---
 
 ---
@@ -31,6 +32,8 @@ views:
     sort:
       - property: formula.Domain
         direction: ASC
+    columnSize:
+      file.name: 235
 
 ```
 

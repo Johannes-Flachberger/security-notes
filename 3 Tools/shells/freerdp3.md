@@ -10,13 +10,13 @@ Purpose: remote desktop protocol (RDP) client for X11 environments
 
 open source remote desktop client
 
-apart from `xfreerdp3`, also check out the other clients
+apart from `xfreerdp3`, also check out the other clients: SDL, shadowing, proxy (MITM)
 
 # Usage
 
 Example with good default options:
 
-```sh
+```powershell
 xfreerdp3 /dynamic-resolution +clipboard /toggle-fullscreen /compression /network:auto +fonts /auto-reconnect /cert:ignore /size:1920x1080 /scale:180 /kbd:lang:de /v:192.168.x.x /u:<user> /p:<password>
 ```
 

@@ -1,6 +1,7 @@
 ---
 tags:
   - "#type/method"
+  - "#attack/initial-access"
 ---
 
 In general, initial access can be achieved using

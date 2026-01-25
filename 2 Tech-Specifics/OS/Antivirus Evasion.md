@@ -70,9 +70,11 @@ Load a malicous DLL from disk using `LoadLibrary`
 
 ### Reflective DLL Injection
 
-Load malicous DLL from **memory**.
+Load malicous DLL from **memory**, so without touching the disk.
 
 Ressource: <https://andreafortuna.org//2017/12/08/what-is-reflective-dll-injection-and-how-can-be-detected/>
+
+**Tool:** [PowerSploit](https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1)
 
 ### Process Hollowing
 

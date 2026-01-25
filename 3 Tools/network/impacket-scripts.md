@@ -26,7 +26,7 @@ Use NTLM auth instead of kerberos: `-windows-auth`
 
 # Impacket-psexec
 
-Emulates the behaviour of [[3 Tools/windows/Sysinternals#PsExec|PsExec]].
+Emulates the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]].
 
 **Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]] - (provides a shell with **SYSTEM** privileges.)
 
@@ -38,9 +38,13 @@ Emulates the behaviour of [[3 Tools/windows/Sysinternals#PsExec|PsExec]].
 
 Uses [Windows Management Instrumentation (WMI)](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page) to execute commands on a remote system.
 
-**Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
+**Purpose:**
+- [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
+- [[2 Tech-Specifics/Network/Protocols/Fundamentals/TCP 135 msrpc|Initial Access]]
 
-**Example Usage:** `impacket-psexec -hashes <LM_hash>:<NTLM_hash> <user>@<IP>`
+**Pass the hash:** `impacket-wmiexec -hashes <LM_hash>:<NTLM_hash> <user>@<IP>`
+
+**Password Authentication:** `impacket-wmiexec [[domain/]username[:password]@]<targetName or address>`
 
 **Note:** If no LM hash is available, fill it with 32 zeros.
 
@@ -51,3 +55,33 @@ Relays NTLM authentication to another machine.
 **Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#NTLMv2 Relay Attack|NTLMv2 Relay Attack]]
 
 **Example Usage:** `impacket-ntlmrelayx --no-http-server -smb2support -t <target-ip> -c "<command_to_execute>"`
+
+# Impacket-GetNPUsers
+
+typically used from kali, uses valid credentials to automatically identify vulnerable users and get TGTs for them
+
+**Purpose:**
+- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#AS-REP Roasting|Kerberos AS-REP Roasting]]
+
+**Example Usage:**`impacket-GetNPUsers -dc-ip <domain_controller_ip>  -request -outputfile <outfile> <domain>/<user>:<password>`
+
+# Impacket-GetUserSPNs
+
+typically used from kali, uses valid credentials to automatically identify vulnerable SPNs and get service tickets for them
+
+**Purpose:**
+- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Kerberoasting|Kerberoasting]]
+
+**Example Usage:**`impacket-GetUserSPNs -request -dc-ip <domain_controller_ip> -outputfile <outfile> <domain>/<user>:<password>`
+
+If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the local machines clock with the domain controller - e.g. use: [ntpdate](https://en.wikipedia.org/wiki/Ntpdate) or [rdate](https://en.wikipedia.org/wiki/Rdate)
+
+# Impacket-secretsdump
+
+**Purpose:** [[2 Tech-Specifics/Active Directory/Authentication Attacks/dcsync Attack|dcsync Attack]]
+
+Example: `impacket-secretsdump -just-dc-user <target_user> <domain>/<user>:<password>@<ip>`
+
+Output format of impacket-secresdump:
+
+`<Username>:<RID>:<LM_hash>:<NT_hash>:...`

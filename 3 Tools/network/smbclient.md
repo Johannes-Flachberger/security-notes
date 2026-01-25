@@ -14,7 +14,7 @@ connect to smb shares
 # Usage
 
 > [!HINT] smbclient´s options can be finicky
-> Make sure to use the right format & options in the right order
+> Make sure to use the right format & options in the right order. Sometimes it helps to double the `\`characters
 
 `smbclient [options] //<IP>/[SHARE] -U <user> --password <password>`
 
@@ -25,12 +25,13 @@ connect to smb shares
 | `--password <password>` | password                                                                                                                       |
 | `-L`                    | list shares                                                                                                                    |
 | `-p <port>`             | port                                                                                                                           |
+|                         |                                                                                                                                |
 
 # Snippets
 
 ## List shares
 
-`smbclient [-p <port>] -L //<ip>/ -U <user> --password <password>`
+`smbclient [-p <port>] -L //<ip> -U <user> --password <password>`
 
 ## Pass the Hash
 

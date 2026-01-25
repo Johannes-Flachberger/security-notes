@@ -36,6 +36,10 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Useful Commands
 
+| Command              | Purpose                         |
+| -------------------- | ------------------------------- |
+| `Get-Help <command>` | Get Information about a command |
+
 ### Filesystem
 
 | Command                  | Purpose                                                                                                                                                     |
@@ -45,10 +49,10 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ### Filter command output
 
-| Command                               | Purpose                                                                                                                                                               |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Where-Object <property> -eq <value>` | Filter results<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-7.5#-match) |
-| `select <property>`                   | Filter properties to show in results                                                                                                                                  |
+| Command                                                                         | Purpose                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Where-Object <property> -eq <value>`<br>or: `\| ? {$_.property -eq "<value>"}` | Filter results<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-7.5#-match)<br>also check other operators, e.g. `-contains` |
+| `select <property>`                                                             | Filter properties to show in results                                                                                                                                                                                  |
 
 ### Service Management
 
@@ -73,7 +77,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Enumeration
 
-See [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+See [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 ## Discovery
 
@@ -121,7 +125,9 @@ using Invoke-WebRequest (short form: `iwr`):
 Invoke-WebRequest -uri <url> -Outfile <path>
 ```
 
-## Upload a File:
+Add `-UseDefaultCredentials` to authenticate to the web service as the active user. This also makes use of cached [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]] tickets.
+
+## Upload a File
 
 using System.Net.WebClient:
 

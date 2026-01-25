@@ -30,6 +30,7 @@ See:
 | show local groups                   | cmd: `net localgroup`<br>PowerShell: `Get-LocalGroup` (also shows group descriptions)        |
 | list members of group               | cmd: `net localgroup <groupname>`<br>PowerShell: `Get-LocalGroupMember <groupname>`          |
 | show domain                         | PowerShell: `powershell (Get-CimInstance Win32_ComputerSystem).Domain` and `$env:USERDOMAIN` |
+| list cached kerberos tickets        | `klist`                                                                                      |
 
 ### Relevant Built-In Groups
 
@@ -49,7 +50,7 @@ See:
 | list services whose credentials are stored in Windows credential manager (might reveal external services & usernames)                                                   | `cmdkey /list`                                                                                                                                                                                                                          |
 | List installed security updates                                                                                                                                         | `Get-CimInstance -Class win32_quickfixengineering \| Where-Object { $_.Description -eq "Security Update" }`                                                                                                                             |
 | List installed updates                                                                                                                                                  | `wmic qfe get Caption,Description,HotFixID,InstalledOn`                                                                                                                                                                                 |
-| Get integrity level of current process                                                                                                                                  | use [[3 Tools/windows/Sysinternals#Process Explorer\|Process Explorer]]<br>use third party powershell modules: [NtObjectManager](https://www.powershellgallery.com/packages/NtObjectManager/1.1.33) --> `Get-NtTokenIntegrityLevel`<br> |
+| Get integrity level of current process                                                                                                                                  | use [[3 Tools/microsoft/Sysinternals#Process Explorer\|Process Explorer]]<br>use third party powershell modules: [NtObjectManager](https://www.powershellgallery.com/packages/NtObjectManager/1.1.33) --> `Get-NtTokenIntegrityLevel`<br> |
 
 ## Network
 

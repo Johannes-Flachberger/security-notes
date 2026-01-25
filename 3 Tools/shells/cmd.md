@@ -37,7 +37,7 @@ for help menu of each command: `/?`
 
 ## Enumeration
 
-Also see [[2 Tech-Specifics/OS/Windows/Privilege Escalation Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+Also see [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 | Command                                         | Purpose                                                                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |

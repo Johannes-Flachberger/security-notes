@@ -38,15 +38,18 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 > [!Warning]
 > Dictionary & Bruteforce Attacks generate a lot of noise - they are easily detected, and often blocked by modern applications.
 
+Also see: [[2 Tech-Specifics/Active Directory/Authentication Attacks/Active Directory Wordlist & Brute Force Attacks|Active Directory Wordlist & Brute Force Attacks]]
+
 ### Workflow
 
 1. Prepare [[#Wordlists]]
-2. Either perform a remote or local attack
+2. Try logging in with all entries in the Wordlist
 
 ### Tools:
 
 - [[3 Tools/bruteforce/Hydra|Hydra]]
 - [[3 Tools/web/Burp Suite|Burp Suite]] Pro (for web applications)
+- See full list in [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Overview - 8 Credential Access]]
 
 ## Local Attacks (Hash-cracking)
 
