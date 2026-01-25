@@ -155,7 +155,7 @@ If a program which is running as root ( e.g. with SUID privileges) calls a syste
 
 ## NFS
 
-[[2 Tech-Specifics/Network/Protocols/TCP 111, 2049 NFS]]
+[[2 Tech-Specifics/Network/Protocols/TCP 111,2049 NFS]]
 
 critical option for privesc: rw, no_root_sqash
 

@@ -68,7 +68,7 @@ flowchart LR
 
 ## HTTP Tunneling
 
-Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80, 443 HTTP(S)|HTTP(S)]]
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80,443 HTTP(S)|HTTP(S)]]
 
 **Tools:**
 

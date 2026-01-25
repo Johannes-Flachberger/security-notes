@@ -40,7 +40,7 @@ Uses [Windows Management Instrumentation (WMI)](https://learn.microsoft.com/en-u
 
 **Purpose:**
 - [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
-- [[2 Tech-Specifics/Network/Protocols/Fundamentals/TCP 135 msrpc|Initial Access]]
+- [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|Initial Access]]
 
 **Pass the hash:** `impacket-wmiexec -hashes <LM_hash>:<NTLM_hash> <user>@<IP>`
 
