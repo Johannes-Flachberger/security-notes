@@ -9,7 +9,7 @@ Purpose: smb client
 ---
 # Info
 
-connect to smb shares
+connect to [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] shares
 
 # Usage
 

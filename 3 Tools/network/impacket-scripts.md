@@ -36,7 +36,7 @@ Emulates the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]].
 
 # Impacket-wmiexec
 
-Uses [Windows Management Instrumentation (WMI)](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page) to execute commands on a remote system.
+Uses [[2 Tech-Specifics/OS/Windows/WMI|WMI]] to execute commands on a remote system.
 
 **Purpose:**
 - [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]

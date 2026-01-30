@@ -2,6 +2,7 @@
 tags:
   - "#type/tech-specific"
   - "#attack/initial-access"
+  - "#attack/lateral-movement"
 ---
 # Fundamentals
 

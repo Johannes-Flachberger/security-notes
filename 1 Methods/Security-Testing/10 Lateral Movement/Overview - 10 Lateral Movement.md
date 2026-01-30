@@ -25,6 +25,9 @@ views:
     order:
       - file.name
       - formula.Domain
+    sort:
+      - property: formula.Domain
+        direction: ASC
 
 ```
 

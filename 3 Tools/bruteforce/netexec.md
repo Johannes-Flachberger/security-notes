@@ -14,16 +14,16 @@ Check the wiki for features: https://www.netexec.wiki/
 
 supports various popular protocols:
 
-- [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|TCP 445 SMB]]
+- [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]]
 - [[3 Tools/shells/ssh|ssh]]
-- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 389 LDAP|TCP,UDP 389 LDAP]]
-- [[2 Tech-Specifics/Network/Protocols/TCP 20,21 FTP|TCP 20,21 FTP]]
-- wmi
+- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 389 LDAP|LDAP]]
+- [[2 Tech-Specifics/Network/Protocols/TCP 20,21 FTP|FTP]]
+- [[2 Tech-Specifics/OS/Windows/WMI|WMI]]
 - [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|winrm]]
-- [[2 Tech-Specifics/Network/Protocols/TCP 3389 RDP|TCP 3389 RDP]]
+- [[2 Tech-Specifics/Network/Protocols/TCP 3389 RDP|RDP]]
 - vnc
 - [[2 Tech-Specifics/Database/MSSQL|MSSQL]]
-- [[2 Tech-Specifics/Network/Protocols/TCP 111,2049 NFS|TCP 111,2049 NFS]]
+- [[2 Tech-Specifics/Network/Protocols/TCP 111,2049 NFS|NFS]]
 
 # Usage
 

@@ -39,6 +39,8 @@ Further reading: [Wikipedia](https://en.wikipedia.org/wiki/Pass_the_hash)
 - [[3 Tools/network/impacket-scripts#Impacket-psexec|impacket-psexec]]
 - [[3 Tools/network/impacket-scripts#Impacket-wmiexec|impacket-wmiexec]]
 - [[3 Tools/network/smbclient|smbclient]]
+- [pth-tooklit](https://github.com/byt3bl33d3r/pth-toolkit): binaries for various protocols
+- Many other tool support pass the hash
 
 ## NTLMv2 Response Cracking
 
