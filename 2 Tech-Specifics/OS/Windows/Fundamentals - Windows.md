@@ -29,7 +29,7 @@ Universal naming convention (UNC) paths are used to access network ressources us
 
 Further reading: [https://www.netspi.com/blog/technical-blog/network-pentesting/10-places-to-stick-your-unc-path/](https://www.netspi.com/blog/technical-blog/network-pentesting/10-places-to-stick-your-unc-path/)
 
-# Hash Sources
+# Local Credential Sources
 
 Windows uses NTLM hashes - also see [[2 Tech-Specifics/_Other/Cryptography/Hashing fundamentals|Hashing fundamentals]]
 
@@ -76,7 +76,7 @@ In depth explanation: [Microsoft Learn](https://learn.microsoft.com/en-us/window
 
 For local users, the last part (called "Relative Identifier" (RID))starts with 1000 --> `S-1-5-21-948153058-1001` would be the second local user.
 
-The SID without the RID essentially identifies the domain - also called "Domain Identifier" or "Domain SID" - e.g. `S-1-5-21-948153058`
+The SID without the RID essentially identifies the domain - also called "Domain Identifier" or "**Domain SID**" - e.g. `S-1-5-21-948153058`
 
 Useful SIDs for privilege escalation:
 
@@ -165,7 +165,7 @@ legacy authentication method - see [Microsoft Learn](https://learn.microsoft.com
 
 Challenge - response based authentication protocol. The server sends a nonce (challenge), the client encryptes the nonce with its NT hash (response). It is prone to multiple attacks, such as:
 
-- [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
+- [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]]
 - replay
 - spoofing, etc.
 - Hash Cracking (NTLM "fast hashing algorithm" and short passwords can be cracked)
@@ -179,7 +179,7 @@ Challenge - response based authentication protocol. The server sends a nonce (ch
 
 ## NTLMv2
 
-Improvement of NTLMv1. Adds a client challenge to prevent server spoofing. Also has protection against replay attacks. [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]] is still possible.
+Improvement of NTLMv1. Adds a client challenge to prevent server spoofing. Also has protection against replay attacks. [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]] is still possible.
 
 Still used a lot by applications & as fallback authentication mechanism.
 
@@ -228,7 +228,7 @@ LPVOID lpReserved ) // Reserved
 
 # AddUser Snippet
 
-c code snippet to add a user in windows:
+c code snippet to add a user on windows, using the "net" tool:
 
 ```c
 #include <stdlib.h>

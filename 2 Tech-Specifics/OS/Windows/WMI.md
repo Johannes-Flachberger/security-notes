@@ -20,7 +20,7 @@ Using valid credentials, or pass-the-hash, WMI can be used for remote access.
 **Prerequisites:**
 
 - Port 135 (RPC Endpoint Mapper)
-- Port 445 (SMB) - for the underlying DCOM transport
+- Port 445 (SMB) - for the underlying [[DCOM]] transport
 - Dynamic RPC ports (often 49152-65535)
 - local "Administrator" user or Domain user with local admin rights on server
 - WMI service running on the target

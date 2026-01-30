@@ -28,7 +28,7 @@ Use NTLM auth instead of kerberos: `-windows-auth`
 
 Emulates the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]].
 
-**Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]] - (provides a shell with **SYSTEM** privileges.)
+**Purpose:** [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]] - (provides a shell with **SYSTEM** privileges.)
 
 **Usage:** `impacket-psexec -hashes <LM_hash>:<NTLM_hash> <user>@<IP>`
 
@@ -39,7 +39,7 @@ Emulates the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]].
 Uses [[2 Tech-Specifics/OS/Windows/WMI|WMI]] to execute commands on a remote system.
 
 **Purpose:**
-- [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash|Pass the Hash]]
+- [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]]
 - [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|Initial Access]]
 
 **Pass the hash:** `impacket-wmiexec -hashes <LM_hash>:<NTLM_hash> <user>@<IP>`
@@ -52,7 +52,7 @@ Uses [[2 Tech-Specifics/OS/Windows/WMI|WMI]] to execute commands on a remote sys
 
 Relays NTLM authentication to another machine.
 
-**Purpose:** [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#NTLMv2 Relay Attack|NTLMv2 Relay Attack]]
+**Purpose:** [[2 Tech-Specifics/OS/Windows/Lateral Movement/NTLMv2 Relay Attack|NTLMv2 Relay Attack]]
 
 **Example Usage:** `impacket-ntlmrelayx --no-http-server -smb2support -t <target-ip> -c "<command_to_execute>"`
 
@@ -78,7 +78,7 @@ If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the 
 
 # Impacket-secretsdump
 
-**Purpose:** [[2 Tech-Specifics/Active Directory/Authentication Attacks/dcsync Attack|dcsync Attack]]
+**Purpose:** [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack|dcsync Attack]]
 
 Example: `impacket-secretsdump -just-dc-user <target_user> <domain>/<user>:<password>@<ip>`
 

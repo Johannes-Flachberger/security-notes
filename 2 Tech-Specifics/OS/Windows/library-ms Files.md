@@ -60,7 +60,7 @@ Further details: [Library Description Schema](https://learn.microsoft.com/en-us/
 
 - Stage 1: Send a `.library-ms` that includes to a remote location.
 	- Stage 2: On the attackers machine, host a webdav server that provides a malicious file that enables client side [[1 Methods/Security-Testing/4 Execution/Overview - 4 Execution|Execution]].
-	- OR: When using smb, it might be possible to [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#NTLMv2 Response Cracking|capture the targets NTLM hash]].
+	- OR: When using smb, it might be possible to [[2 Tech-Specifics/OS/Windows/Credential Access/NTLMv2 Response Capture|capture the targets NTLM hash]].
 
 #### 1. Set up a Local Webdav Server
 

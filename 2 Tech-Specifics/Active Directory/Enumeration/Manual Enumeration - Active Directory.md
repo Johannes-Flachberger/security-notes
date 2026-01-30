@@ -2,6 +2,7 @@
 tags:
   - "#type/tech-specific"
   - "#attack/discovery"
+  - "#attack/credential-access"
 ---
 # Fundamentals
 
@@ -11,9 +12,9 @@ See [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory|Fundamen
 
 There are multiple tools for manual enumeration:
 
+- [[#Enumeration with PowerView]]: **most powerful option** - third party script, provides useful functions for manual
 - [[#Enumeration with net.exe]]: built-in, only for very quick & basic user and group enumeration
-- [[#Enumeration with PowerShell]]: uses built-in .Net Classes - more advanced
-- [[#Enumeration with PowerView]]: third party script, provides useful functions for manual enumeration
+- [[#Enumeration with PowerShell]]: uses built-in .Net Classes - more advanced enumeration
 
 ## Enumeration Checklist
 
@@ -58,75 +59,6 @@ There are multiple tools for manual enumeration:
 | list cached kerberos tickets                                                                                                                                        | `klist`                         |
 
 Alternatively, use the [Get-ADUser](https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-aduser?view=windowsserver2022-ps) Cmdlet (not preinstalled per default)
-
-## Enumeration with PowerShell
-
-Useful .Net classes for AD enumeration:
-
-- [Domain Class](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.activedirectory.domain?view=windowsdesktop-7.0): get basic domain info
-- [DirectoryEntry](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directoryentry?view=dotnet-plat-ext-6.0): searching
-	- can be passed credentials for authentication
-- [DirectorySearcher](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher?view=dotnet-plat-ext-6.0): searching
-
-The [Active Directory Service Interfaces (ADSI)](https://learn.microsoft.com/en-us/windows/win32/adsi/active-directory-service-interfaces-adsi) provide access to active directo
-
-ry from [[3 Tools/shells/PowerShell|PowerShell]].
-
-### Get LDAP path of domain controller
-
-You can use the following snippet to build the LDAP path to the domain controller for the current domain:
-
-```powershell
-# Get PDC host name for current domain
-$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
-
-# Get distinguished name of of the domain  
-$DN = ([adsi]'').distinguishedName 
-
-# Build & print the LDAP path
-$LDAP = "LDAP://$PDC/$DN"
-$LDAP
-```
-
-### Search objects within the AD
-
-The argument to `DirectoryEntry` defines the object where the search is started.
-
-```powershell
-$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
-$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
-$dirsearcher.filter="<search filter>"
-$searchResult = $dirsearcher.FindAll()
-$searchResult
-```
-
-The search filter can match any property of the search results and uses [LDAP format](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher.filter?view=windowsdesktop-10.0#system-directoryservices-directorysearcher-filter). For example:
-
-- `name=testuser`
-- `samAccountType=0x30000000`: specifies the type of the object, see [Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/adschema/a-samaccounttype)
-- `objectclass=group`: all groups
-- `(&(objectCategory=group)(cn=<name>))`: groups with a specific name
-
-Remove the filter to list all objects.
-
-### List properties of all search results
-
-```powershell
-
-Foreach($obj in $searchResult)
-{
-    Foreach($prop in $obj.Properties)
-    {
-        $prop
-    }
-
-    Write-Host "---------------------------------------------------"
-}
-```
-
-**Interesting properties:**
-- `memberof`: groups the user is a memberof
-- `member`: members of a group
 
 ## Enumeration with PowerView
 
@@ -208,6 +140,75 @@ Use e.g. `| Format-List` if names are cut off.
 > - E.g: `\\dc1.mydomain.com\sysvol\mydomain.com\`
 > 
 > Sometimes, passwords are stored in policies, those are encrypted with AES-256 and a [known key from microsoft](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gppref/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be?redirectedfrom=MSDN#endNote2). Decrypt them on kali with `gpp-decrypt <encrypted_password>`
+
+## Enumeration with PowerShell
+
+Useful .Net classes for AD enumeration:
+
+- [Domain Class](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.activedirectory.domain?view=windowsdesktop-7.0): get basic domain info
+- [DirectoryEntry](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directoryentry?view=dotnet-plat-ext-6.0): searching
+	- can be passed credentials for authentication
+- [DirectorySearcher](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher?view=dotnet-plat-ext-6.0): searching
+
+The [Active Directory Service Interfaces (ADSI)](https://learn.microsoft.com/en-us/windows/win32/adsi/active-directory-service-interfaces-adsi) provide access to active directo
+
+ry from [[3 Tools/shells/PowerShell|PowerShell]].
+
+### Get LDAP path of domain controller
+
+You can use the following snippet to build the LDAP path to the domain controller for the current domain:
+
+```powershell
+# Get PDC host name for current domain
+$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
+
+# Get distinguished name of of the domain  
+$DN = ([adsi]'').distinguishedName 
+
+# Build & print the LDAP path
+$LDAP = "LDAP://$PDC/$DN"
+$LDAP
+```
+
+### Search objects within the AD
+
+The argument to `DirectoryEntry` defines the object where the search is started.
+
+```powershell
+$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
+$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+$dirsearcher.filter="<search filter>"
+$searchResult = $dirsearcher.FindAll()
+$searchResult
+```
+
+The search filter can match any property of the search results and uses [LDAP format](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher.filter?view=windowsdesktop-10.0#system-directoryservices-directorysearcher-filter). For example:
+
+- `name=testuser`
+- `samAccountType=0x30000000`: specifies the type of the object, see [Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/adschema/a-samaccounttype)
+- `objectclass=group`: all groups
+- `(&(objectCategory=group)(cn=<name>))`: groups with a specific name
+
+Remove the filter to list all objects.
+
+### List properties of all search results
+
+```powershell
+
+Foreach($obj in $searchResult)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop
+    }
+
+    Write-Host "---------------------------------------------------"
+}
+```
+
+**Interesting properties:**
+- `memberof`: groups the user is a memberof
+- `member`: members of a group
 
 ## Other Tools
 

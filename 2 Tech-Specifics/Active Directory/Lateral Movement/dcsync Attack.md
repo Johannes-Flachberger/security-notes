@@ -1,13 +1,14 @@
 ---
 tags:
   - "#type/tech-specific"
-  - attack/credential-access
+  - "#attack/exfiltration"
+  - "#attack/lateral-movement"
 ---
 # Fundamentals
 
 See [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory|Fundamentals - Active Directory]]
 
-Exploiting the [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Directory Replication|Directory Replication]] feature of active directory, a high-privileged attacker can impersonate a domain controller and dump password hashes of ANY user in the domain.
+Exploiting the [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Directory Replication|Directory Replication]] feature of active directory, a high-privileged attacker can impersonate a domain controller. Then, e.g. dump password hashes of any user in the domain.
 
 **Further Reading:** [adsecurity](https://adsecurity.org/?p=2398#MimikatzDCSync)
 
@@ -26,7 +27,8 @@ By default, these groups have the necessary right:
 - Administrators
 
 **Workflow:**
-1. perform dcsync attack to obtain password hashes
+1. perform dcsync attack
+	1. e.g. extract password hashes
 2. try to [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|crack the obtained hashes]]
 	- [[3 Tools/crypto/Hashcat|Hashcat]] mode 1000 "NTLM"
 

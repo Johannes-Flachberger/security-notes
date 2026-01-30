@@ -18,14 +18,14 @@ connect to [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] shares
 
 `smbclient [options] //<IP>/[SHARE] -U <user> --password <password>`
 
-| Option                  | Purpose                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `--pw-nt-hash <hash>`   | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows#Pass the Hash\|Pass the Hash]] |
-| `-U <user>`             | User                                                                                                                           |
-| `--password <password>` | password                                                                                                                       |
-| `-L`                    | list shares                                                                                                                    |
-| `-p <port>`             | port                                                                                                                           |
-|                         |                                                                                                                                |
+| Option                  | Purpose                                                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `--pw-nt-hash <hash>`   | authenticate using NLTM hash - see [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash\|Pass the Hash]] |
+| `-U <user>`             | User                                                                                                             |
+| `--password <password>` | password                                                                                                         |
+| `-L`                    | list shares                                                                                                      |
+| `-p <port>`             | port                                                                                                             |
+|                         |                                                                                                                  |
 
 # Snippets
 

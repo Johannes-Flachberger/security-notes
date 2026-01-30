@@ -2,6 +2,7 @@
 tags:
   - "#type/tech-specific"
   - "#attack/privilege-escalation"
+  - "#attack/credential-access"
 ---
 # Fundamentals
 

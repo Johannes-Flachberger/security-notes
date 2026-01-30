@@ -19,7 +19,9 @@ A suite of windows systemadmin utilities, that can be used for various purposes
 
 **Usage:**
 
-`.\PsExec64.exe -i  \\<hostname/ip> -u <domain>\<userY -p <password> <command_to_execute>`
+User & Password Authentication: `.\PsExec64.exe -i  \\<hostname/ip> -u <domain>\<user> -p <password> <command_to_execute>`
+
+Kerberos Authentication (assumes that a TGT is already cached): `PsExec64.exe \\ <hostname/ip> <command_to_execute>`
 
 e.g. use `cmd` or `powershell` as command to spawn a shell
 

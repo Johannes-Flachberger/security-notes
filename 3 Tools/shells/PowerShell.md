@@ -26,6 +26,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 | `-nop`                            | dont run customiztions of the user profile |
 | `-exec bypass`<br>or `-ep bypass` | bypass execution policies                  |
 | `-c`                              | execute string as command                  |
+| `-w hidden`                       | hide the powershell window                 |
 
 > [!HINT]
 > When encoding a command with [[3 Tools/utilities/Cyberchef|Cyberchef]]:

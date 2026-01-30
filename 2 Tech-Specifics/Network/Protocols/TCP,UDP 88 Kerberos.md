@@ -49,6 +49,10 @@ Detailed explanations:
 
 **Note:** TGTs and Service Tickets are cached by LSASS on client machines for further use. --> It might be possible to extract them with [[3 Tools/mimikatz|mimikatz]].
 
+> [!Hint] Capabilities of TGT & TGS
+> - A TGT is bound to the host it was issued for, but can be used to authenticate against any SPN in the network.
+> - A TGS is bound to the SPN of the target service, but is NOT bound to a specific client / host. --> It can be exported and reused from another client - see [[2 Tech-Specifics/Active Directory/Lateral Movement/Pass the Ticket|Pass the Ticket]]
+
 # Pentesting
 
 ## Credential Access
@@ -62,7 +66,7 @@ AS-REQ queries can be used against a domain controller to check if a set of cred
 
 **See also:**
 
-- [[2 Tech-Specifics/Active Directory/Authentication Attacks/Active Directory Wordlist & Brute Force Attacks|Active Directory Wordlist & Brute Force Attacks]]
+- [[2 Tech-Specifics/Active Directory/Credential Access/Active Directory Wordlist & Brute Force Attacks|Active Directory Wordlist & Brute Force Attacks]]
 - [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
 
 ### AS-REP Roasting
@@ -132,9 +136,21 @@ If you have the password or NTLM hash of a service account, you can forge a serv
 - Local admin (for mimikatz)
 
 **Workflow:**
-1. Use [[3 Tools/mimikatz#Forging Kerberos Tickets|mimikatz]] to forge a ticket.
+1. Use [[3 Tools/mimikatz#Forging Kerberos Tickets|mimikatz]] to forge a silver ticket.
 2. Connect to the service with the forged ticket
 	1. e.g. using [[3 Tools/shells/PowerShell#Download a File|Invoke-WebRequest]] for webservices
+
+### Golden Tickets
+
+In the [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]] authentication flow, each TGT issued by the KDC is encrypted using the `krbtgt` users password hash. --> If you can somehow obtain the password hash, you can forge custom TGTs, granting the user any group memberships and permissions. It is not uncommon that the `krbtgt` password is only changed rarely and to find very old krbtgt passwords.
+
+**Prerequisites:**
+- access to the password hash of the `krbtgt` account
+**Workflow:**
+1. Use [[3 Tools/mimikatz#Golden Tickets|mimikatz]] to forge a golden ticket.
+2. Use the TGT to connect to any resource on the domain - see [[2 Tech-Specifics/Active Directory/Lateral Movement/Overview - Lateral Movement|Active Directory Lateral Movement]]
+
+**Note:** Once the password hash is obtained TGTs can be created at ANY machine (also non-domain joined machines)
 
 # Hardening
 
