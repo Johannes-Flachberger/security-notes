@@ -14,7 +14,7 @@ Lateral Movement Techniques:
 - [[2 Tech-Specifics/OS/Windows/WMI|WMI]]
 - [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|WinRM]]
 - [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]]
-- [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack|dcsync Attack]]: high privileged user needed
+- [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]: high privileged user needed
 
 Authentication mechanisms
 

@@ -66,7 +66,3 @@ Foreach($host in $computers)
 Might also list the user issuing the PsLoggedOn command, since it needs to create a session to work.
 
 Uses [NetSessionEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmshare/nf-lmshare-netsessionenum).
-
-## Usage
-
-## Snippets

@@ -25,7 +25,6 @@ connect to [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] shares
 | `--password <password>` | password                                                                                                         |
 | `-L`                    | list shares                                                                                                      |
 | `-p <port>`             | port                                                                                                             |
-|                         |                                                                                                                  |
 
 # Snippets
 

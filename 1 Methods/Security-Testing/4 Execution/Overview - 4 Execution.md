@@ -15,7 +15,7 @@ filters:
     - file.tags.contains("#attack/execution/server-side")
     - '!file.tags.contains("#type/tool")'
 formulas:
-  Domain: file.folder.split("/")[1]
+  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2])
 properties:
   formula.Domain:
     displayName: Domain
@@ -41,7 +41,7 @@ filters:
     - '!file.tags.contains("#type/tool")'
     - file.tags.contains("#attack/execution/client-side")
 formulas:
-  Domain: file.folder.split("/")[1]
+  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2])
 properties:
   formula.Domain:
     displayName: Technology

@@ -78,10 +78,18 @@ If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the 
 
 # Impacket-secretsdump
 
-**Purpose:** [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack|dcsync Attack]]
+**Purpose:**
+- [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]
+- [[2 Tech-Specifics/OS/Windows/Shadow Copies#Credential Access & Persistence|Shadow Copies]]
 
-Example: `impacket-secretsdump -just-dc-user <target_user> <domain>/<user>:<password>@<ip>`
+**Example - dcsync attack:**
 
-Output format of impacket-secresdump:
+`impacket-secretsdump -just-dc-user <target_user> <domain>/<user>:<password>@<ip>`
+
+**Example - extract secrets from shadow copy:**
+
+`impacket-secretsdump -ntds <ntds_backup> -system <system_hive_backup> LOCAL`
+
+Output format of impacket-secretsdump:
 
 `<Username>:<RID>:<LM_hash>:<NT_hash>:...`

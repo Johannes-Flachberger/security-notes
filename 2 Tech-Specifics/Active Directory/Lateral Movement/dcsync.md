@@ -2,7 +2,8 @@
 tags:
   - "#type/tech-specific"
   - "#attack/exfiltration"
-  - "#attack/lateral-movement"
+  - "#attack/credential-access"
+  - "#attack/persistence"
 ---
 # Fundamentals
 
@@ -13,6 +14,8 @@ Exploiting the [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directo
 **Further Reading:** [adsecurity](https://adsecurity.org/?p=2398#MimikatzDCSync)
 
 # Pentesting
+
+# Exfiltration & Credential Access
 
 **Prerequisites:**
 The following rights are necessary:
@@ -27,13 +30,10 @@ By default, these groups have the necessary right:
 - Administrators
 
 **Workflow:**
-1. perform dcsync attack
-	1. e.g. extract password hashes
+1. perform dcsync attack - e.g. extract password hashes
+	- [[3 Tools/mimikatz#DCSync Attack|mimikatz]]: from domain-joined windows machine
+	- [[3 Tools/network/impacket-scripts#Impacket-secretsdump|impacket-secretsdump]]: from non-domain joined machine (e.g. kali)
 2. try to [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|crack the obtained hashes]]
 	- [[3 Tools/crypto/Hashcat|Hashcat]] mode 1000 "NTLM"
-
-**Tools:**
-- [[3 Tools/mimikatz|mimikatz]]: from domain-joined windows machine
-- [[3 Tools/network/impacket-scripts#Impacket-secretsdump|impacket-secretsdump]]: from non-domain joined machine (e.g. kali)
 
 # Hardening

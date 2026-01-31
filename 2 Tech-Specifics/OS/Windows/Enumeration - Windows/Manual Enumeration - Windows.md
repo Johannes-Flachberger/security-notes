@@ -70,7 +70,7 @@ See:
 
 ## Installed Applications
 
-32 bit softwarebased on registry:
+32 bit software - based on registry:
 
 ```powershell
 Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"

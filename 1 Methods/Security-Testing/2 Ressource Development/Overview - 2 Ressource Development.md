@@ -25,17 +25,21 @@ Some effective rules are listed in `/usr/share/hashcat/rules`
 
 ```base
 filters:
-	and:
-	- file.tags.contains("#attack/ressource-development")
-	- '!file.tags.contains("#type/tool")'
+  and:
+    - file.tags.contains("#attack/ressource-development")
+    - '!file.tags.contains("#type/tool")'
 formulas:
-  Domain: file.folder.split("/")[1]
+  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2])
 properties:
   formula.Domain:
     displayName: Domain
 views:
-- type: table
-  name: Table
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - formula.Domain
+
 ```
 
 # Tools

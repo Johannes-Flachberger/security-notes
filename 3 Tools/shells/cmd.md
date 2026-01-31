@@ -14,17 +14,17 @@ for help menu of each command: `/?`
 
 ## Useful Commands
 
-| Command                                 | Purpose                                                                                         |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `type`                                  | print file content - for large files use `more`                                                 |
-| `cls`                                   | clear command prompt                                                                            |
-| `net`                                   | manage network resources; help menu: `net help`                                                 |
-| `icacls`                                | show permissions of a file or folder                                                            |
-| `where [options] <directory> <pattern>` | find files<br>use option `/r` for recursive search<br>e.g. `where /r C:\ report.*`              |
-| `where <command>`                       | check if a command is available, and show its executable location                               |
-| `reg`                                   | interact with the registry                                                                      |
-| `runas /user:<user> <command> `         | run with command as another user<br>**Note:** Does not grant admin privileges if UAC is active. |
-| `shutdown /r /t 0`                      | reboot the machine immediately                                                                  |
+| Command                                 | Purpose                                                                                    |
+| --------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `type`                                  | print file content - for large files use `more`                                            |
+| `cls`                                   | clear command prompt                                                                       |
+| `net`                                   | manage network resources; help menu: `net help`                                            |
+| `icacls`                                | show permissions of a file or folder                                                       |
+| `where [options] <directory> <pattern>` | find files<br>use option `/r` for recursive search<br>e.g. `where /r C:\ report.*`         |
+| `where <command>`                       | check if a command is available, and show its executable location                          |
+| `reg`                                   | interact with the registry                                                                 |
+| `runas /user:<user> <command> `         | run command as another user<br>**Note:** Does not grant admin privileges if UAC is active. |
+| `shutdown /r /t 0`                      | reboot the machine immediately                                                             |
 
 ## Service Management
 

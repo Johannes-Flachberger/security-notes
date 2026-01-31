@@ -17,10 +17,14 @@ more advanced alternative:
 
 Accepts uploads using the POST method.
 
-## Upload file using [[3 Tools/web/cURL|cURL]]
+**Upload file using [[3 Tools/web/cURL|cURL]]:**
 
 ```powershell
 curl.exe -X POST -F "file=@<filepath>" http://<ip>:<port>/
 ```
+
+**Upload fiels using powershell:**
+
+Use the [[3 Tools/shells/PowerShell|PowerShell]] function provided by raven: [github](https://github.com/gh0x0st/raven)
 
 # Snippets

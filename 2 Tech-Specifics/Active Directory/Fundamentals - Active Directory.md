@@ -58,4 +58,4 @@ See:
 
 Any object with the right privileges in the SID can request an update of directory data.
 
-Using this feature, a domain controller can be "impersonated" and credentials can be accessed - see [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync Attack|dcsync Attack]]
+Using this feature, a domain controller can be "impersonated" and credentials can be accessed - see [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]

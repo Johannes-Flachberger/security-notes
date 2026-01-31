@@ -26,7 +26,7 @@ filters:
     - file.tags.contains("#attack/discovery")
     - '!file.tags.contains("#type/tool")'
 formulas:
-  Domain: file.folder.split("/")[1]
+  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2])
 properties:
   formula.Domain:
     displayName: Domain
