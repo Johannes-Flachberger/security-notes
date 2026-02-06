@@ -133,7 +133,7 @@ If you have the password or NTLM hash of a service account, you can forge a serv
 
 **Prerequisite:**
 - Access to the Password, or NTLM hash of the targeted service account.
-- Local admin (for mimikatz)
+- Local admin (for [[3 Tools/mimikatz|mimikatz]])
 
 **Workflow:**
 1. Use [[3 Tools/mimikatz#Forging Kerberos Tickets|mimikatz]] to forge a silver ticket.

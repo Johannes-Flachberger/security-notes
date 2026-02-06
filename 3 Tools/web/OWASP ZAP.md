@@ -1,9 +1,9 @@
 ---
 tags:
-  - "#type/tool" 
-  - "#attack/reconnaissance/active" 
+  - "#type/tool"
+  - "#attack/reconnaissance/active"
 Link: https://www.zaproxy.org/
-Purpose: automatically scan web applications
+Purpose: web application vulnerability scanner
 ---
 # Info
 

@@ -1,8 +1,8 @@
 ---
 tags:
-  - "#type/tool" 
+  - "#type/tool"
 Link: https://www.vim.org/
-Purpose: best commandline editor ever
+Purpose: the best command line editor, of course
 ---
 # Info
 

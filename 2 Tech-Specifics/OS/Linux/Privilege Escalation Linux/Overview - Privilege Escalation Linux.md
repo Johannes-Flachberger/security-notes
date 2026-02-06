@@ -11,6 +11,11 @@ If possible, use [[#Automated Enumeration]]. If not use [[#Manual Enumeration]].
 
 ## Automated Enumeration
 
+**Tools:**
+- [[3 Tools/privilige escalation/lse|lse]]
+- [[3 Tools/privilige escalation/LinEnum|LinEnum]]
+- [[3 Tools/privilige escalation/linpeas|linpeas]]
+
 ## Manual Enumeration
 
 - Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]

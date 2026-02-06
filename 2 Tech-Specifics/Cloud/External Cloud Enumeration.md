@@ -23,16 +23,12 @@ Cloud Services intended for public accessibility typically use specific base dom
 
 **Workflow:**
 
-- Try [[#Tools Based Enumeration]]
-- Use [[#Generic Enumeration Techniques]] and [[#Service-Specific Techniques]]
+1. [[#Enumerate public cloud ressources|Find publicly accessible cloud resources]] of the target  
+2. [[#Enumerate resources for attack vectors]]
 
-## Tools Based Enumeration
+## Enumerate public cloud resources
 
-**Tools:**
-- [[3 Tools/cloud/cloud-enum|cloud-enum]]
-- [cloudbrute](https://www.kali.org/tools/cloudbrute/)
-
-## Generic Enumeration Techniques
+### Generic Enumeration Techniques
 
 These generic enumeration techniques are relevant for cloud services.
 
@@ -45,9 +41,24 @@ These generic enumeration techniques are relevant for cloud services.
 - [ ] For web-pages: [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration#Debugging Page Content|Overview - WebApp Enumeration]]
 	- [ ] Cloud-hosted webpages often load ressources from another cloud service, e.g. Amazon S3 - this helps to identify other cloud services in use
 
-## Service-Specific Techniques
+### Automated Enumeration
+
+**Tools:**
+- [[3 Tools/cloud/cloud-enum|cloud-enum]]
+- [cloudbrute](https://www.kali.org/tools/cloudbrute/)
+
+### Service specific techniques
 
 **See:**
-- [[2 Tech-Specifics/Cloud/AWS/AWS S3 Buckets#Enumeration|AWS S3 Buckets]]
+- [[2 Tech-Specifics/Cloud/AWS/AWS Enumeration#Find public cloud ressources|AWS Enumeration]]
+
+## Enumerate resources for attack vectors
+
+**See:**
+- [[2 Tech-Specifics/Cloud/AWS/AWS Enumeration|AWS Enumeration]]
+
+### Condition Based Enumeration
+
+Often, properties such as account IDs can be enumerated based on specifically crafted conditions that, e.g. matches on a specific digit within the account ID. The concrete implementation depends on the context. For example see [[2 Tech-Specifics/Cloud/AWS/AWS S3 Buckets#Enumerate Account ID|AWS S3 Bucket Account ID Enumeration]]
 
 # Hardening
