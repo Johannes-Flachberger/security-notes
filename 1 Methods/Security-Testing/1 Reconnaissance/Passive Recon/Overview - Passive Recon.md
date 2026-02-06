@@ -67,7 +67,7 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 ## Corporate Websites
 
 - general info about a company
-- startpoint for subdomain enumeration
+- startpoint for [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]]
 
 ## Job Boards
 

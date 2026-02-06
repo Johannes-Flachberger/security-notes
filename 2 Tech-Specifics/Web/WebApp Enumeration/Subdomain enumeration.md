@@ -27,7 +27,9 @@ Databases exist that contain every actual and historical certificate for a domai
 ## DNS Bruteforce
 
 - bruteforce possible subdomains per DNS requests
-- tool: [[3 Tools/web/gobuster|gobuster]]
+- **Tools:**
+	- [[3 Tools/web/gobuster|gobuster]]
+	- [[3 Tools/passive recon/DnsEnum|DnsEnum]]
 
 ## Sublister
 

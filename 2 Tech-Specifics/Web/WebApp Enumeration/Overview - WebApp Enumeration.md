@@ -28,7 +28,7 @@ Here, both passive and active recon techniques are listed
 
 ## Subdomain Enumeration
 
-- [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain enumeration|Subdomain enumeration]]
+- [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]]
 
 ## Directory Enumeration
 
@@ -91,9 +91,11 @@ use browser developer tools
 - File extension might reveal programming language
 	- become less common, because web applications use the "route" concept
 - Source code can reveal libraries & their versions, e.g. in comments
-	- prettyfy javascript in developer settings
+	- prettify javascript in developer settings
 - Use "Inspect" function to check specific page elements
 	- e.g inpect forms to find hidden additional form fields
+- Use the "network tab" to check the domains ressources are loaded from.
+	- e.g. from cloud storage? --> this might be another target.
 
 ## Analyse Website Content
 

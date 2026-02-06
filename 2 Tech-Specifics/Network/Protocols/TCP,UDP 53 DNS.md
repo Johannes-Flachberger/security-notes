@@ -42,14 +42,15 @@ Zone transfers replicate data between DNS servers - they can leak internal data 
 - Use reverse lookups to identify alternate domain names for an IP
 	- e.g. AWS assigns a service-specific domain name to each public IP
 - Since public IPs are organised in blocks, performing reverse lookups of ip addresses in the same IP block might reveal related domains.
+- also perform [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]]
 
 **Tools - Automated Enum**
-- **[Dnsenum](https://github.com/SparrowOchon/dnsenum2): IMO the best automated enum tool to use locally**
+- **[[3 Tools/passive recon/DnsEnum|DnsEnum]]: IMO the best automated enum tool to use locally**
 	- `dnsenum <DOMAIN> [--threads <num>]`
 - [DNS Dumpster](https://dnsdumpster.com/)
 	- online service
 	- freemium
-	- helps with subdomain enumeration
+	- helps with [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]]
 	- gives a lot of info in easy to read format
 
 **Tools - Manual Enum**

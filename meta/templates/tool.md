@@ -8,4 +8,10 @@ Purpose:
 
 # Usage
 
+**Example:** ``
+
+| Option | Purpose |
+| ------ | ------- |
+|        |         |
+
 # Snippets
