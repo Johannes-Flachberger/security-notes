@@ -9,11 +9,15 @@ Purpose: manually send DNS queries, DNS enumeration
 
 # Usage
 
-`host <domain name>
+**"Normal" Lookup:**`host <domain name>
 
-`-t` specify type of DNS request
+**Reverse Lookup:**`host <IP address>
 
-for reverse lookup: `host <IP address>
+| Option      | Purpose                                                                            |
+| ----------- | ---------------------------------------------------------------------------------- |
+| `-t <type>` | specify type of DNS request<br>`ns` - get authoritative name server for the domain |
+
+# Snippets
 
 **brute-force subdomains script:**
 `for domain in $(cat list.txt); do host $domain.example.com; done`
@@ -23,4 +27,4 @@ remove negative results from output
 **reverse lookup ip block:**
 `for domain in $(seq 200 254); do host 51.222.169.$ip; done | grep -v "not found"`
 
-#todo idea: Write a script that first performes subdomain enumeration and then does a reverse lookup of all the ip blocks found and checks if there are more subdomains
+#todo idea: Write a script that first performss subdomain enumeration and then does a reverse lookup of all the ip blocks found and checks if there are more subdomains

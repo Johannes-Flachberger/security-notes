@@ -12,7 +12,7 @@ Very helpful ressource: "Living off the land binaries, scripts and libraries" (L
 
 # Shortlist of Tools
 
-- DNS lookup with [[3 Tools/passive recon/DNS enumeration Tools|nslookup]]
+- DNS lookup with [[3 Tools/passive recon/nslookup|nslookup]]
 - Port scan with [[3 Tools/shells/Netcat|Netcat]]
 - Manual SMTP enumeration with [[2 Tech-Specifics/Network/Protocols/TCP 23 Telnet|TCP 23 Telnet]]
 - Port scan with [[3 Tools/shells/PowerShell|PowerShell]]

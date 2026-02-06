@@ -3,12 +3,11 @@ tags:
   - "#type/tech-specific" 
   - "#attack/reconnaissance/passive"   
 ---
-
-Distributed database that translates domain names to IP addresses.
-
 # Fundamentals
 
-Each domain can use different types of DNS records. Some of the most common types of DNS records include:
+Distributed database that translates domain names to IP addresses. Each domain can use different types of DNS records.
+
+## DNS Record Types
 
 - **NS**: Nameserver records contain the name of the authoritative servers hosting the DNS records for a domain.
 - **A**: Also known as a host record, the "_a record_" contains the IPv4 address of a hostname (such as <www.example.com>).
@@ -18,25 +17,45 @@ Each domain can use different types of DNS records. Some of the most common type
 - **CNAME**: Canonical Name Records are used to create aliases for other host records.
 - **TXT**: Text records can contain any arbitrary data and be used for various purposes, such as domain ownership verification.
 
-**Zone Transfers** replicate data between DNS servers - they can leak internal data if misconfigurationa are present
+## Zone Transfers
+
+Zone transfers replicate data between DNS servers - they can leak internal data if misconfigurations are present
 
 ## DNSSEC
 
 (Domain Name System security Extensions)
 
-- suite of specification for securing indormation provided by DNS
-- maintains backwords compatibility
+- suite of specification for securing information provided by DNS
+- maintains backwards compatibility
 - data origin authentication & data integrity protection
 
 # Pentesting
 
 ## Enumeration
 
-- provides web & mail server addresses based on domains
-- it is also worth checking the whole IP block of of the found ips with reverse enumeration
-- txt records might reveal information
-- zone transfers can leak internal data if misconfigured
-- tools: [[3 Tools/passive recon/DNS enumeration Tools|DNS enumeration Tools]]
+**Look for:**
+
+- registered web & mail servers and their addresses
+- txt records might reveal descriptive information
+- lookup name servers & to deduce who the domain is managed by - use [[3 Tools/passive recon/whois|whois]] for identifying the registrar
+- [[#Zone Transfers]] can leak internal data if misconfigured
+- Use reverse lookups to identify alternate domain names for an IP
+	- e.g. AWS assigns a service-specific domain name to each public IP
+- Since public IPs are organised in blocks, performing reverse lookups of ip addresses in the same IP block might reveal related domains.
+
+**Tools - Automated Enum**
+- **[Dnsenum](https://github.com/SparrowOchon/dnsenum2): IMO the best automated enum tool to use locally**
+	- `dnsenum <DOMAIN> [--threads <num>]`
+- [DNS Dumpster](https://dnsdumpster.com/)
+	- online service
+	- freemium
+	- helps with subdomain enumeration
+	- gives a lot of info in easy to read format
+
+**Tools - Manual Enum**
+- [[3 Tools/web/host|host]]: straightforward & simple
+- [[3 Tools/web/dig|dig]]: shows the most info
+- [[3 Tools/passive recon/nslookup|nslookup]]: per default available on windows
 
 ## Command and Control
 

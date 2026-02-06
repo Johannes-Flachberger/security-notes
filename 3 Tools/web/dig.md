@@ -13,23 +13,10 @@ alternative tool: `host` command in kali
 
 # Usage
 
-`dig <@SERVER> DOMAIN_NAME <TYPE>`
+`dig [@SERVER] <DOMAIN_NAME> <TYPE>`
 
-- SERVER is the DNS server that you want to query.
-- DOMAIN_NAME is the domain name you are looking up.
-- TYPE contains the DNS record type
-eg. `dig tryhackme.com MX`
-
-types:
-
-A=IPv4 adsresses
-
-AAAA=IPv6 addresses
-
-CNAME= Canonical Name
-
-MX= Mail Servers
-
-SOA= Start if Authority
-
-TXT= TXT Records
+| Option        | Command                  |
+| ------------- | ------------------------ |
+| `TYPE`        | DNS record type to quers |
+| `DOMAIN_NAME` | domain                   |
+| `SERVER`      | DNS server to use        |
