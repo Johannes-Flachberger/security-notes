@@ -6,6 +6,9 @@ tags:
 
 ---
 
+> [!Hint] Comparison to [[1 Methods/Security-Testing/1 Reconnaissance/Overview - 1 Reconnaissance|Reconnaissance]] and [[1 Methods/Security-Testing/11 Collection/Overview - 11 Collection|Collection]].
+> Discovery is typically **performed after an initial compromise to get some orientation within the target environment**. Collection is typically performed to enable a final impact. Reconnaissance is always performed from the outside of a target.
+
 When we already are inside the targeted infrastructure, we either have a good C2 framework running, or must use tools that are available on the machine we are on. This limits the available techniques.
 
 Very helpful ressource: "Living off the land binaries, scripts and libraries" (LOLBAS): <https://lolbas-project.github.io/>

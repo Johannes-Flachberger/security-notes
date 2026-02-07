@@ -3,7 +3,6 @@ tags:
   - "#type/tech-specific"
   - "#attack/reconnaissance/active"
   - "#attack/reconnaissance/passive"
-  - attack/command-and-control
 ---
 # Fundamentals
 
@@ -13,10 +12,13 @@ While some enumeration techniques are specific to one service in AWS, many techn
 - Large organisations might deliberately share resources between AWS accounts or even publicly.
 - Sometimes, resources are shared by accident
 
+> [!NOTE] This is "External Enumeration".
+> While most techniques listed here require an AWS account, this can be any AWS account set up by the attacker. No initial compromise has been achieved yet.
+
 # Pentesting
 
 **Workflow:**
-- See [[2 Tech-Specifics/Cloud/External Cloud Enumeration|Generic Cloud Enumeration]]
+- See [[2 Tech-Specifics/Cloud/Cloud Reconnaissance|Cloud Reconnaissance]]
 
 ## Find public cloud ressources
 

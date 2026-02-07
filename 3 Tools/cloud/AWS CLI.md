@@ -1,16 +1,19 @@
 ---
 tags:
   - "#type/tool"
-Link: 
-Purpose: 
+Link: https://docs.aws.amazon.com/cli/latest/
+Purpose: remote management for AWS cloud resources
 ---
 # Info
 
-Uses the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] to manage AWS ressources
+Uses the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] to manage AWS resources
+
+**Hint:** Profiles and credentials are stored in `~/.aws/` per default.
 
 # Usage
 
-**Official Reference:** https://docs.aws.amazon.com/cli/latest/
+> [!Hint] Official Reference: https://docs.aws.amazon.com/cli/latest/
+> The official reference of AWS CLI is very good - this cheat sheet only lists the most used snippets.
 
 #### Generic Options
 
@@ -19,15 +22,18 @@ Uses the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] to manage AWS ressources
 | `--profile <name>`                                                  | run command with a profile                                                                                 |
 | option: `--filters "Name=<attribute>,Values=<value1>,[value2],..."` | filter results by attribute<br>e.g. filter by keywords in `description` or `name` using `*` as wildcard    |
 | `--output <format>`                                                 | output format - see [Reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-output-format.html) |
+| `aws <command> help` or<br>`aws <command> <sub-command> help`       | show help for a command or sub-command.                                                                    |
 
 #### Work with named profiles
 
-When creating a profile, you need to provide credentials, a default region and a default output format.
+When creating a profile, you need to provide credentials, a default region and a default output format. If in doubt, just choose `us-east-1` as the default region.
 
-| Command / Option                               | Purpose                                                                        |
-| ---------------------------------------------- | ------------------------------------------------------------------------------ |
-| `aws configure --profile <name>`               | create new named profile within the CLI. It corresponds with a user in AWS IAM |
-| `aws --profile <name> sts get-caller-identity` | verify the AWS user set in a profile                                           |
+**Hint:** You can also set a default profile in `~/.aws/config` or use `set AWS_DEFAULT_PROFILE=<profile_name>` to set a named profile as default
+
+| Command                          | Purpose                                                                                       |
+| -------------------------------- | --------------------------------------------------------------------------------------------- |
+| `aws configure --profile <name>` | create new named profile within the CLI. It corresponds with a user in AWS IAM                |
+| `aws sts get-caller-identity`    | get UserId, AccountId and ARN of the present<br>add `--profile <name>` to check a profile<br> |
 
 #### Manage users and Policies
 

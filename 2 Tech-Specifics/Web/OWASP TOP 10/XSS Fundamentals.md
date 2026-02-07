@@ -8,7 +8,7 @@ Injection attack - vulnerable when website uses unsanitized user input and inter
 
 A payload is injected and executed by a users browser. --> the payload always runs in the users context - e.g. if an admin user runs the payload, privilege escalation is performed
 
-**General entry points**
+**Attack Surface - generic:**
 - Whenever data is entered to the website
 
 ## Possible Impacts
@@ -41,7 +41,7 @@ Malicious Payload is injected and stored in a cache or database of the webserver
 
 **Example:** a blog website: the payload is written in a comment field -> everybody who loads that comment loads the payload
 
-Points of entry:
+**Attack Surface:**
 
 - In general: Whenever data is entered and viewed later by users
 - Comments on a blog
@@ -58,7 +58,7 @@ Points of entry:
 
 Payload is inserted n the HTTP request to the website, eg some input to a search field. The request with the XSS is sent to the webserver and then sent back (reflected) to you. - only affects persion that visits the link/submits the request
 
-Points of entry:
+**Attack Surface:**
 
 - Parameters in the URL Query String
 - URL File Path
@@ -70,7 +70,7 @@ vulnerability is in the client side code.
 
 DOM is a programming interface for HTML and XML documents. It represents the page (i.e. stays in sync with the HTML code) so that programs can change the document structure, style and content. - e.g. every time you use `document.` in javascript you access the DOM. --> since javascript can manipulate the DOM, XSS can manipulate the DOM.
 
-Points of entry:
+**Attack Surface:**
 
 1. look for parts of the code in javascript that access certain variables that an attacker can have control over, such as `window.location.x` parameters
 2. check if those variables are written to the Dom or handled by unsafe javascript functions

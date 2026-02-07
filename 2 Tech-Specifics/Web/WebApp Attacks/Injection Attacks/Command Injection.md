@@ -9,13 +9,10 @@ execute shell commands on the webserver
 
 -> you can try to steal information, open a reverse shell,...
 
-## Entrypoints
+**Attack Surface:**
 
-Every time when a web application needs to interact with the operating system and commands are used without proper sanitation.
-
-For example:
-
-- File uploads
+- Every time when a web application needs to interact with the operating system and commands are used without proper sanitation.
+- E.g. File uploads
 
 ## Two Types: Blind & Verbose
 

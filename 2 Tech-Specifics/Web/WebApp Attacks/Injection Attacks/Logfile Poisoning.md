@@ -8,7 +8,7 @@ tags:
 - inject data into a field that ends up in Logfiles
 - e.g. inject a [[2 Tech-Specifics/Web/PHP|php webshell]]
 
-## Entrypoints
+**Attack Surface:**
 
 - HTTP request metadata, such as the user agent string
 

@@ -13,7 +13,7 @@ There are 3 basic types of SQL injection:
 - **blind:** the results are not reflected back to the user, but some other hint (e.g. time delays) can be used as indicator
 - **out of band:** the medium to send queries and to receive information are not the same
 
-### Entrypoint:
+**Attack Surface:**
 
 - every user-controlled input, that is then used in a database query
 

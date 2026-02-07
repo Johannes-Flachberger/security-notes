@@ -8,7 +8,7 @@ tags:
 - Simplest form: upload a .php file to a webserver, which then gets executed by the server.
 - Often, malicious file uploads can be combined with other vulnerabilities, e.g. [[2 Tech-Specifics/Web/OWASP TOP 10/xml external entity (XXE)|XXE]] or [[2 Tech-Specifics/Web/WebApp Attacks/XSS Exploitation|XSS]]
 
-## Entrypoints
+**Attack Surface:**
 
 - upload functionality of websites
 	- attachments to blog posts, etc.

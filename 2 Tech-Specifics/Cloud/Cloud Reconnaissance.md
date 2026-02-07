@@ -50,12 +50,12 @@ These generic enumeration techniques are relevant for cloud services.
 ### Service specific techniques
 
 **See:**
-- [[2 Tech-Specifics/Cloud/AWS/AWS Enumeration#Find public cloud ressources|AWS Enumeration]]
+- [[2 Tech-Specifics/Cloud/AWS/AWS Reconnaissance#Find public cloud ressources|AWS Enumeration]]
 
 ## Enumerate resources for attack vectors
 
 **See:**
-- [[2 Tech-Specifics/Cloud/AWS/AWS Enumeration|AWS Enumeration]]
+- [[2 Tech-Specifics/Cloud/AWS/AWS Reconnaissance|AWS Reconnaissance]]
 
 ### Condition Based Enumeration
 

@@ -7,6 +7,9 @@ tags:
 
 Get as detailed information about the target as possible. Information gathering forms the basis of the whole pentest and is therefore crucial.
 
+> [!Hint] Comparison to [[1 Methods/Security-Testing/9 Discovery/Overview - 9 Discovery|Discovery]] and [[1 Methods/Security-Testing/11 Collection/Overview - 11 Collection|Collection]].
+> Reconnaissance is always **performed from the outside** of a target. Discovery is typically performed after an initial compromise to get some orientation within the target environment, and Collection is performed to enable a final impact.
+
 # Workflow
 
 ## 1. Start With [[1 Methods/Security-Testing/1 Reconnaissance/Passive Recon/Overview - Passive Recon|Passive Recon/OSINT]]

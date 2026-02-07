@@ -7,6 +7,9 @@ tags:
 
 ---
 
+> [!Hint] Comparison to [[1 Methods/Security-Testing/1 Reconnaissance/Overview - 1 Reconnaissance|Reconnaissance]] and [[1 Methods/Security-Testing/9 Discovery/Overview - 9 Discovery|Discovery]].
+> Collection is typically **performed to enable a final impact**. Discovery is typically performed after an initial compromise to get some orientation within the target environment. Reconnaissance is always performed from the outside of a target.
+
 # Attack Vectors
 
 ```base
