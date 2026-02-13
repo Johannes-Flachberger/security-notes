@@ -17,12 +17,13 @@ Uses the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] to manage AWS resources
 
 #### Generic Options
 
-| Option                                                              | Purpose                                                                                                    |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `--profile <name>`                                                  | run command with a profile                                                                                 |
-| option: `--filters "Name=<attribute>,Values=<value1>,[value2],..."` | filter results by attribute<br>e.g. filter by keywords in `description` or `name` using `*` as wildcard    |
-| `--output <format>`                                                 | output format - see [Reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-output-format.html) |
-| `aws <command> help` or<br>`aws <command> <sub-command> help`       | show help for a command or sub-command.                                                                    |
+| Option                                                              | Purpose                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--profile <name>`                                                  | run command with a profile                                                                                                                                                                                                             |
+| option: `--filters "Name=<attribute>,Values=<value1>,[value2],..."` | filter results by attribute<br>e.g. filter by keywords in `description` or `name` using `*` as wildcard<br>**Note:** filters are evaluated server-side                                                                                 |
+| `--query "<JMESPath_expression"`                                    | query the output using [[3 Tools/utilities/JMESPath and JP\|JMESPath]]<br>**Note:** queries are evaluated client-side<br>**See:** [AWS Docs](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html#cli-usage-filter-client-side) |
+| `--output <format>`                                                 | output format - see [Reference](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-output-format.html)                                                                                                                             |
+| `aws <command> help` or<br>`aws <command> <sub-command> help`       | show help for a command or sub-command.                                                                                                                                                                                                |
 
 #### Work with named profiles
 

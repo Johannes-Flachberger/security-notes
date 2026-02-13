@@ -32,15 +32,25 @@ Here, both passive and active recon techniques are listed
 
 ## Directory Enumeration
 
-**Wordlist Based**
+### Wordlist Based
+
 Can find hidden directories, but is not as efficient as crawling.
-wordlists: `/usr/share/wordlists/dirb/`
-- [[3 Tools/web/gobuster|gobuster]] - active
+
+**Wordlists:**
+
+- `/usr/share/wordlists/dirb/`
+- `/usr/share/wordlists/dirbuster/`
+
+**Tools:**
+- [[3 Tools/web/gobuster|gobuster]] - active (fastest, most versatile)
 - [[3 Tools/network/scanning/nmap|nmap]] - script `http-enum`
-- dirb - active
 - dirbuster - active
-**Crawler**
-More efficient than wordlist based but cannot find hidden directories (i.e. where not site links to)
+- dirb - active (old, single threaded)
+
+### Crawlers
+
+More efficient than wordlist based but cannot find hidden directories (i.e. where no site links to)
+
 - [[3 Tools/web/Photon|photon]]
 
 ## API Enumeration

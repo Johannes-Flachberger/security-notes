@@ -65,6 +65,18 @@ Two options:
 
 **See:**
 - Get Account Overview using [[2 Tech-Specifics/Cloud/AWS/AWS IAM#Get Account Overview|AWS IAM]]
-- Use [[2 Tech-Specifics/Cloud/AWS/AWS IAM|AWS IAM]] to enumerate policies for other users.
+- Use [[2 Tech-Specifics/Cloud/AWS/AWS IAM#Enumerate Identity Policies|AWS IAM]] to enumerate policies for other users.
+
+## Analyse the gathered data
+
+Enumeration can yield very large amounts of information. Manual analysis e.g. involves listing admin users, their groups, checking who has which access to these groups, etc.
+
+Various Tools can help with analysis:
+
+- [CloudMapper](https://github.com/duo-labs/cloudmapper): automated auditing
+- [awspx](https://github.com/ReversecLabs/awspx): visual analysis and automated attack path identification
+- [[3 Tools/microsoft/BloodHound|BloodHound]] using the [IAMhounddog](https://bloodhound.specterops.io/opengraph/library#iamhounddog) ingestor.
+	- Requires an AWS principal with either SecurityAudit or ReadOnlyAccess.
+- [[3 Tools/utilities/JMESPath and JP|JMESPath and JP]]: for analyzing large json files
 
 # Hardening

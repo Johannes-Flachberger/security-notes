@@ -46,10 +46,10 @@ Requires some setup. You need:
 - A string to identify a failed login (`<condition_string>`)
 	- Hydra searches for the string, and if found it is considered a failed login.
 	- Avoid keywords such as "username" and "password" in the condition string.
-Mark the password field in the request with `^PASS^`
+Use `^USER^` and `^PASS^` as placeholder for wordlist values.
 
 ### POST Forms
 
 Syntax: `http-post-form "<path>:<request_body>:<condition_string>"
 
-Example: `http-post-form "/login.php:&user=user&pass=^PASS^:Login failed."`
+Example: `http-post-form "/login.php:&user=^USER^&pass=^PASS^:Login failed."`

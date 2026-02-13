@@ -19,7 +19,8 @@ tags:
 
 ### Enumerate Identity Policies
 
-[[3 Tools/exploitation frameworks/pacu|pacu]] module: module `iam__enum_permissions`
+**Automated tools:**
+- [[3 Tools/exploitation frameworks/pacu|pacu]] module: module `iam__enum_permissions`
 
 #### List Policies and group memberships of a user
 
@@ -46,7 +47,15 @@ tags:
 
 ### Get Account Overview
 
-**Hint:** Also consider [[3 Tools/microsoft/BloodHound|BloodHound]] using the [IAMhounddog](https://bloodhound.specterops.io/opengraph/library#iamhounddog) ingestor.
+Get an overview of the target account - its users, groups, policies etc. E.g. look for users with high privileges in order to impersonate them later.
+
+**Automated Tools:**
+- [[3 Tools/microsoft/BloodHound|BloodHound]] using the [IAMhounddog](https://bloodhound.specterops.io/opengraph/library#iamhounddog) ingestor.
+	- Requires an AWS principal with either SecurityAudit or ReadOnlyAccess.
+- [[3 Tools/exploitation frameworks/pacu|pacu]] modules: `iam__enum_users_roles_policies_groups`
+
+> [!Hint] Stealthy enumeration
+> To be stealthy, best collect as much information as possible with few commands and then analyse it offline. e.g. use `aws iam get-account-authorization-details` and then use [[3 Tools/utilities/JMESPath and JP|jp]].
 
 | Command                                                               | Purpose                                                                                                                                                                                                                                                                                                                                           |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

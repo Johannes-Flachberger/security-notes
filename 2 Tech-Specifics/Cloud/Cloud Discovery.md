@@ -18,9 +18,9 @@ While implementation of techniques is specific to a cloud service, the overarchi
 **Worklow:**
 1. Examine the obtained credentials
 	- Which account & entity (e.g. user) do they belong to?
-2. Enumerate Privileges / Permissions of the obtained entity
+2. Enumerate Permissions of the obtained entity
 	- Permissions
 	- Group memberships & the groups permissions
-3. Enumerate further resources that can be accessed by the entity
+3. Enumerate further resources accessible to the entity
 
 # Hardening
