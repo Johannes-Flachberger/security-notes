@@ -29,20 +29,22 @@ Uses the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] to manage AWS resources
 
 When creating a profile, you need to provide credentials, a default region and a default output format. If in doubt, just choose `us-east-1` as the default region.
 
-**Hint:** You can also set a default profile in `~/.aws/config` or use `set AWS_DEFAULT_PROFILE=<profile_name>` to set a named profile as default
+**Note:** All configs are stored at `~/.aws/config`
 
-| Command                          | Purpose                                                                                       |
-| -------------------------------- | --------------------------------------------------------------------------------------------- |
-| `aws configure --profile <name>` | create new named profile within the CLI. It corresponds with a user in AWS IAM                |
-| `aws sts get-caller-identity`    | get UserId, AccountId and ARN of the present<br>add `--profile <name>` to check a profile<br> |
+| Command                             | Purpose                                                                                       |
+| ----------------------------------- | --------------------------------------------------------------------------------------------- |
+| `aws configure --profile <name>`    | create new named profile within the CLI. It corresponds with a user in AWS IAM                |
+| `aws sts get-caller-identity`       | get UserId, AccountId and ARN of the present<br>add `--profile <name>` to check a profile<br> |
+| `export AWS_PROFILE=<profile_name>` | set a default named profile                                                                   |
 
-#### Manage users and Policies
+#### Manage Users and Policies
 
-| Command                                                                                                  | Purpose                                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `aws iam create-user --user-name <name>`                                                                 | create new IAM user identity                                                                                                                                                                   |
-| `aws iam create-access-key --user-name <name>`                                                           | create credentials for an IAM user identity                                                                                                                                                    |
-| `aws iam put-user-policy --user-name <target_user> --policy-name <name> --policy-document file://<path>` | apply inline-policy to an IAM user<br>no output = sucess<br>See: [Reference](https://docs.aws.amazon.com/cli/latest/reference/iam/put-user-policy.html)<br>`--policy-document` must be a valid |
+| Command                                                                                                  | Purpose                                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `aws iam create-user --user-name <name>`                                                                 | create new IAM user identity                                                                                                                                                                    |
+| `aws iam create-access-key --user-name <name>`                                                           | create access key for an IAM user identity                                                                                                                                                      |
+| `aws iam put-user-policy --user-name <target_user> --policy-name <name> --policy-document file://<path>` | attach inline-policy to an IAM user<br>no output = sucess<br>See: [Reference](https://docs.aws.amazon.com/cli/latest/reference/iam/put-user-policy.html)<br>`--policy-document` must be a valid |
+| `aws iam attach-user-policy --user-name <username> --policy-arn <arn>`                                   | attach managed policy to an IAM user<br>e.g. ARN of the "admin" policy: `arn:aws:iam::aws:policy/AdministratorAccess`                                                                           |
 
 #### Work with S3 buckets
 
@@ -50,28 +52,29 @@ When creating a profile, you need to provide credentials, a default region and a
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | e.g. `aws s3 mb s3://<bucket_name>-$RANDOM-$RANDOM-$RANDOM`                 | create an s3 bucket with the specified name and random integer values to ensure uniqueness                               |
 | `aws s3api put-bucket-policy --bucket <bucket_name> --policy file://<path>` | attach a [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals#IAM Policies\|IAM Policy]] to an S3 bucket<br>no output = success |
+| `aws s3 ls`                                                                 | list S3 buckets                                                                                                          |
 | `aws s3 ls <bucket_name>`                                                   | list contents of bucket                                                                                                  |
-|                                                                             |                                                                                                                          |
+| `aws s3 cp s3://<bucket_name>/<file_name> <local_dir>`                      | download files from bucket                                                                                               |
+| `aws s3 sync s3://<bucket_name> <local_dir>`                                | copy all contents of a bucket to another location                                                                        |
 
-#### Enumerate AMIs
+#### Work with EC2 instances
 
-**Command:** `aws ec2 describe-images`
+| Command                      | Purpose                                                                                                                                                                  |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `aws ec2 describe-instances` | list EC2 instances                                                                                                                                                       |
+| `aws ec2 describe-snapshots` | list EBS snapshots<br>`--owner-ids <id>`: filter by owner account id                                                                                                     |
+| `aws ec2 desrcribe-images`   | list AMIs<br>`--owners <account_id>`: filter by owner account id, or use e.g. `amazon` for AWS provided AMIs<br>`--executable-users all`: filter for all public AMIs<br> |
 
-| Option                   | Purpose                                                                |
-| ------------------------ | ---------------------------------------------------------------------- |
-| `--owners <owner_alias>` | filter by owner account id, or use e.g. `amazon` for AWS provided AMIs |
-| `--executable-users all` | filter for all public AMIs                                             |
+#### Work with RDS Databases
 
-#### Enumerate EBS snapshots
+| Command                         | Purpose            |
+| ------------------------------- | ------------------ |
+| `aws rds describe-db-snapshots` | list RDS snapshots |
 
-**Command:** `aws ec2 describe-snapshots`
+#### Work with Lambda Functions
 
-| Option             | Purpose                    |
-| ------------------ | -------------------------- |
-| `--owner-ids <id>` | filter by owner account id |
-
-#### Enumerate RDS snapshots
-
-**Command:** `aws rds describe-db-snapshots`
+| Command                     | Purpose               |
+| --------------------------- | --------------------- |
+| `aws lambda list-functions` | list lambda functions |
 
 # Snippets

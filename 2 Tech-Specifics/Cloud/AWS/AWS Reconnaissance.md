@@ -29,7 +29,7 @@ While some enumeration techniques are specific to one service in AWS, many techn
 **Checklist:**
 - [ ] Ressources that should be private to an organization, but are public
 	- [ ] [Amazon Machine Images](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) (AMIs)
-		- [ ] There AMIs provided by amazon, but organisations can have their custom prebuilt AMIs too, potentially revealing sensitive information
+		- [ ] There are AMIs provided by amazon, but organisations can have their custom prebuilt AMIs too, potentially revealing sensitive information
 	- [ ] [Elastic Block Storage](https://aws.amazon.com/ebs/) (EBS) snapshots
 	- [ ] [Relational Databases](https://aws.amazon.com/rds/) (RDS) snapshots
 

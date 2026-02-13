@@ -13,6 +13,8 @@ brute force, makes use of wordlist, in kali some are located in `/usr/share/word
 
 # Usage
 
+**Hint:** For quick (but loud) scans, use a high thread count, e.g. 200-400.
+
 ## Options:
 
 | Option | Purpose |
@@ -32,10 +34,10 @@ brute force, makes use of wordlist, in kali some are located in `/usr/share/word
 
 eg: `gobuster dir -u http://<IP>:[port] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
 
-> [!NOTE]
-> If a server returns a redirect code when a page is not found, you need to
-> - add the HTTP status code to the "negative" codes in gobuster: `-b, --status-codes-blacklist` e.g. `-b 301`
-> - or match the response lenght: `--exclude-length 0`
+If a server returns a redirect code when a page is not found, you need to
+
+- add the HTTP status code to the "negative" codes in gobuster: `-b, --status-codes-blacklist` e.g. `-b 301`
+- or match the response length: `--exclude-length 0`
 
 ## Subdomain Enum
 

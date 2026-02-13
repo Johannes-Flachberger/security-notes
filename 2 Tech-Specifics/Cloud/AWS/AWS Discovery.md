@@ -66,6 +66,7 @@ Two options:
 **See:**
 - Get Account Overview using [[2 Tech-Specifics/Cloud/AWS/AWS IAM#Get Account Overview|AWS IAM]]
 - Use [[2 Tech-Specifics/Cloud/AWS/AWS IAM#Enumerate Identity Policies|AWS IAM]] to enumerate policies for other users.
+- Check Sections of [[3 Tools/cloud/AWS CLI|AWS CLI]] to list various types of resources
 
 ## Analyse the gathered data
 

@@ -41,7 +41,7 @@ There are two types of policies:
 		- Their ARN has the following schema: `arn:aws:iam::aws:policy/<PolicyName>`
 - **Inline Policies:** Directly assigned to a single identity, not re-usable.
 
-Policies can be inherited, e.g. based on the ARN path or the group of an identity.
+Policies can be attached either directly to a user, or to a group and is then inherited by the user.
 
 ### Inline Policies
 
@@ -73,8 +73,8 @@ A role is an entity that grants a set of privileges to a user. Users dont "hold"
 
 When assuming a role the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]] / [[3 Tools/cloud/AWS CLI|AWS CLI]] returns a set of temorarily valid credentials that, when used provide the privileges specified by the role.
 
-
 ## Presigned URLs
+
 **See:** [Reference](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
 
 A presigned URL is a short-lived credential, that grants access to an object in AWS - e.g. an image in an S3 bucket. It acts as a bearer token --> whoever has it can access the object.

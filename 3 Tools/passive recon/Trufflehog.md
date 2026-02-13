@@ -7,15 +7,21 @@ Purpose: search for sensitive information in git repos
 ---
 # Info
 
-Guide: <https://trufflesecurity.com/blog/scanning-git-for-secrets-the-2024-comprehensive-guide>
+Search for sensitive information in remote or local git repos. It can also verify discovered credentials by trying to use them (e.g. trying a found [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals|AWS]] access key)
 
 # Usage
 
-scanning a git repo - all git platforms are supported
+**Guide:** [Trufflehog Blog](https://trufflesecurity.com/blog/scanning-git-for-secrets-the-2024-comprehensive-guide)
+
+scan a remote git repo - all git platforms are supported:
 
 `trufflehog git <REPO_URL>`
 
-scanning a github org
+scan a local git repo:
+
+`trufflehog git file://<repo_path>`
+
+scan a github org:
 
 `trufflehog github --org=trufflesecurity --results=verified,unknown`
 

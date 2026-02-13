@@ -18,11 +18,25 @@ tags:
 	- often bucket names follow a naming convention
 	- often bucket names include a short random part, since they must be unique accross a region - maybe organisations share the same random part accross all their buckets?
 
-### List bucket contents
+### Check access to the bucket
 
-- List bucket contents (if allowed)
-	- browse the bucket root
-	- e.g. `http://domain/bucket_name`
+#### Using the S3 RestAPI
+
+**Using the S3 REST API:**
+- browse the bucket root
+- e.g. `http://domain/bucket_name`
+
+**Using [[3 Tools/cloud/AWS CLI|AWS CLI]]:**
+- use a set of valid credentials to authenticate to an AWS account
+	- e.g. of captured credentials or of any other AWS account
+- list bucket contents - see [[3 Tools/cloud/AWS CLI#Work with S3 buckets|AWS CLI - Work with S3 buckets]]
+
+> [!Hint] Hint
+> Sometimes, private buckets have the "AuthenticatedUsers" policy set, which grants access to any authenticated user with ANY AWS account. --> Using [[3 Tools/cloud/AWS CLI|AWS CLI]], even private buckets might be accessible.
+
+### Enumerate Bucket Contents
+
+If you don't have full read access to a bucket, you can try to enumerate its contents using [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration#Directory Enumeration|Directory Enumeration]]
 
 ### Enumerate OwnerId using readable S3 bucket
 
@@ -38,7 +52,7 @@ Obtain the Account ID of the bucket owner.
 
 **Workflow:**
 1. Create new IAM user identity in the attacker account (by default it does not have any permissions)
-	- See [[3 Tools/cloud/AWS CLI#Manage users and Policies|Manage users with AWS CLI]]
+	- See [[3 Tools/cloud/AWS CLI#Manage Users and Policies|Manage users with AWS CLI]]
 2. Add a policy, to grant permissions to list buckets & read objects if the `OwnerId` starts with digit `x`.
 3. Test access to the bucket with digits 0-9 --> first digit of the `OwnerId` obtained
 4. Perform the steps for all digits within the `OwnerId`
@@ -66,5 +80,11 @@ Obtain the Account ID of the bucket owner.
     ]
 }
 ```
+
+## Exfiltration
+
+Download data to local machine using [[3 Tools/cloud/AWS CLI#Work with S3 buckets|AWS CLI - Work with S3 buckets]]
+
+It might be more stealthy to transfer data to another S3 bucket than to download it to a local machine (i.e. to the outside of the cloud environment).
 
 # Hardening

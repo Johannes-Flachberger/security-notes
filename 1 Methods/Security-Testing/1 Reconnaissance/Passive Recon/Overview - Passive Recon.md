@@ -48,10 +48,10 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 ## Code Repositories
 
 - eg. [[3 Tools/web/Github search|Github search]], Gitlab, Github Gist, Source Forge
-- Search for open repositories belonging to the target
-	- then search through the files for valuable information
-	- identify used technologies, architectural patterns, errors, etc.
-- Automated Tools: [[3 Tools/passive recon/Trufflehog|Trufflehog]], Gitleaks
+- Find accessible repos belonging to the target
+	- then search through the repos for valuable information
+		- identify used technologies, architectural patterns, errors, etc.
+		- scan for credentials - see [[2 Tech-Specifics/Dev_Tools/git|git]]
 
 ## S3 Buckets
 

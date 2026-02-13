@@ -15,6 +15,12 @@ at least 3 steps:
 2. **Establish SSL/TLS connection**
 3. Send HTTP requests to the webserver
 
+## HTTP Authorization
+
+### Basic authorization
+
+Username & password are transmitted base64 encoded in a HTTP header in `<username>:<password>` format
+
 # Pentesting
 
 ## Enumeration

@@ -2,6 +2,8 @@
 tags:
   - "#type/tech-specific"
   - "#attack/privilege-escalation"
+  - "#attack/discovery"
+  - "#attack/collection"
 ---
 # Fundamentals
 
@@ -11,12 +13,12 @@ See [[2 Tech-Specifics/OS/Linux/Privilege Escalation Linux/Overview - Privilege 
 
 ## Users & Groups
 
-| Command       | Purpose                                                                                 |
-| ------------- | --------------------------------------------------------------------------------------- |
-| `id [user]`   | show user & group info                                                                  |
-| `/etc/passwd` | info on users, groups,... eg. grep for "home" to fin real users, not just service users |
-| `env`         | show environment variables<br>- eg PATH may contain useful compiler/scripting language  |
-| `sudo -l`     | list sudo privileges of current user<br>**Prerequisite:** user password                 |
+| Command       | Purpose                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------------- |
+| `id [user]`   | show user & group info                                                                         |
+| `/etc/passwd` | info on users, groups,... eg. grep for "home" to fin real users, not just service users        |
+| `env`         | show all set environment variables<br>- eg PATH may contain useful compiler/scripting language |
+| `sudo -l`     | list sudo privileges of current user<br>**Prerequisite:** user password                        |
 
 ## System Info
 
