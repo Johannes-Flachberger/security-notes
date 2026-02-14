@@ -51,7 +51,7 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 - Find accessible repos belonging to the target
 	- then search through the repos for valuable information
 		- identify used technologies, architectural patterns, errors, etc.
-		- scan for credentials - see [[2 Tech-Specifics/Dev_Tools/git|git]]
+		- scan for credentials - see [[2 Tech-Specifics/Dev/git|git]]
 
 ## S3 Buckets
 

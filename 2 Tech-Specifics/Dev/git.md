@@ -19,7 +19,7 @@ Very popular version control system.
 
 Usually CI/CD Pipeline definitions are included in a git repo, if any exist. Their format depends on the automation server used. For example:
 
-- [[2 Tech-Specifics/Dev_Tools/Jenkins|Jenkins]]
+- [[2 Tech-Specifics/Dev/Jenkins|Jenkins]]
 - Github Actions
 - etc.
 If you can modify a pipeline definition, you can try to poison it to e.g. exfiltrate credentials or gain a reverse shell on the runner the pipeline is executed by.

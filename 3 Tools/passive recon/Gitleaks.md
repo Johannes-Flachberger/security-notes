@@ -7,7 +7,7 @@ Purpose: Scan local git repos for credentials
 ---
 # Info
 
-Scan a local [[2 Tech-Specifics/Dev_Tools/git|git]] repo for credentials
+Scan a local [[2 Tech-Specifics/Dev/git|git]] repo for credentials
 
 Cannot scan remote repos - only local ones --> first clone then scan
 
