@@ -2,7 +2,7 @@
 tags:
   - "#type/tool"
 Link: https://github.com/jpillora/chisel#usage
-Purpose: http tunneling tool
+Purpose: encrypted http tunneling tool
 ---
 # Info
 

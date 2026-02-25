@@ -14,7 +14,7 @@ See:
 
 ## Scheduled Tasks Executable Hijacking
 
-Modify the executable that is used by a scheduled task
+Modify the executable that is used by a scheduled task - if the task is run by a higher privileged user, this is a privilege escalation vector.
 
 1. enumerate scheduled tasks: `schtasks /query /fo LIST /v`
 	- **Note:** the command output is very long

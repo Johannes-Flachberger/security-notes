@@ -56,10 +56,11 @@ Further details: [Library Description Schema](https://learn.microsoft.com/en-us/
 
 ## Initial Access
 
-**Possible attack paths:**
+**Workflow:**
 
-- Stage 1: Send a `.library-ms` that includes to a remote location.
-	- Stage 2: On the attackers machine, host a webdav server that provides a malicious file that enables client side [[1 Methods/Security-Testing/4 Execution/Overview - 4 Execution|Execution]].
+1. Send a `.library-ms` that includes to a remote location.
+2. One of the following options:
+	- On the attacker machine, host a webdav server that provides a malicious file that enables client side [[1 Methods/Security-Testing/4 Execution/Overview - 4 Execution|Execution]]. - E.g. this could be a scirpt, installer or malicious shortcut file - also see [[2 Tech-Specifics/OS/Windows/Client-side Execution|Client-side Execution]]
 	- OR: When using smb, it might be possible to [[2 Tech-Specifics/OS/Windows/Credential Access/NTLMv2 Response Capture|capture the targets NTLM hash]].
 
 #### 1. Set up a Local Webdav Server
@@ -70,7 +71,7 @@ Tools:
 
 #### 2. Create Library File
 
-Good default snippet:
+Good default snippet - just change the IP address:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

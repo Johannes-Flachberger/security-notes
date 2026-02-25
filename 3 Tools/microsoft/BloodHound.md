@@ -38,6 +38,11 @@ When using PowerShell:
 1. `Import-Module .\Sharphound.ps1`
 2. E.g.: `Invoke-BloodHound -CollectionMethod All -OutputDirectory <directory> -OutputPrefix "<filename_prefix>" -ZipPassword <password>`
 
+|     |     |
+| --- | --- |
+|     |     |
+
+
 ## AzureHound
 
 Data Collector for Azure Environments.
@@ -65,6 +70,25 @@ After starting the containers, Bloodhound should be available at `http://localho
 3. Use queries to analyse data.
 
 **Hints:**
+
 In menu at top left:
 
 - "Cypher" provides access to queries. Especially useful is the "shortest path" category of the saved queries:
+
+### Cypher Queries
+
+See: [Quick Start Guide](https://bloodhound.specterops.io/analyze-data/explore/cypher-search)
+
+Most relevant queries are already available as saved queries.
+
+List objects within the domain - e.g. `Computer`, `User`, `Group`:
+
+```cypher
+ MATCH (m:<object_type>) RETURN m
+```
+
+List active sessions:
+
+```cypher
+MATCH p = (c:Computer)-[:HasSession]->(m:User) RETURN p
+```

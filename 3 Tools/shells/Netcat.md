@@ -38,6 +38,9 @@ Combine nc with named FIFO Pipe.
 
 See: https://gist.github.com/holly/6d52dd9addd3e58b2fd5
 
+> [!NOTE] Limitations
+> netcat or powercat dont allocate a full tty/pty. Therefore, tools that require one (e.g. [[3 Tools/shells/ssh|ssh]]) won't work.
+
 # Snippets
 
 ## Port Scanning

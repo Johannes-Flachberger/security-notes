@@ -28,6 +28,7 @@ If automated enumeration is not possible, use [[#Manual Enumeration]].
 See:
 
 - [[3 Tools/privilige escalation/winPEAS|winPEAS]]: on kali, available as `peass`
+	- winPEAS may not distinguish between Windows 10 and 11 correctly
 - [[3 Tools/privilige escalation/PowerUp|PowerUp]]: includes an "AbuseFunction" for most vectors that can be run by the tool
 - [[3 Tools/microsoft/Windows Exploit Suggester - Next Generation (WESNG)|Windows Exploit Suggester - Next Generation (WESNG)]]
 - if you have a [[3 Tools/exploitation frameworks/Metasploit/meterpreter|meterpreter]] shell:

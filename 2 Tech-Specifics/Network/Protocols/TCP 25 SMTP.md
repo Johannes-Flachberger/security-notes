@@ -35,3 +35,13 @@ connect to port 25 and send [commands](https://mailtrap.io/blog/smtp-commands-an
 - [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Overview - Metasploit]]
 	- Module `smtp_version` - for getting information about the smtp server
 	- Module `smtp_enum` - for bruteforcing passwords
+
+## Send Email using cli
+
+Send commands manually - see [[#Manual Enumeration]] or e.g. use [swaks](https://www.jetmore.org/john/code/swaks/).
+
+For example:
+
+```bash
+swaks -t <recipient> --from <sender> [--attach @<filepath>] --server <ip> --body @<filepath> --header "Subject: <subject>" --suppress-data -ap
+```

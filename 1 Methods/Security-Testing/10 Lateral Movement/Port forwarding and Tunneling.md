@@ -81,6 +81,10 @@ Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|
 **Tools:**
 - [[3 Tools/network/tunneling/dnscat2|dnscat2]]
 
+## Metasploit Tunneling
+
+See [[3 Tools/exploitation frameworks/Metasploit/Pivoting with Metasploit|Pivoting with Metasploit]]
+
 ## Windows Specifics
 
 - [[3 Tools/shells/Plink|Plink]]: alternative ssh client

@@ -15,15 +15,15 @@ See [[2 Tech-Specifics/Network/Protocols/TCP 22 SSH|TCP 22 SSH]]
 
 `ssh [username]@[IP]`
 
-| Option                                                     | Purpose                                                                                                                                        |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-v`                                                       | to show more info (response headers,...)                                                                                                       |
-| `-i`                                                       | specify private key file to use<br>required permissions on private key file:`600`<br>**Note:** ssh private keyfiles must end with a blank line |
-| `-N`                                                       | dont send commands, only forwarded packets                                                                                                     |
-| `-L [LOCAL_IP:]LOCAL_PORT:DEST_IP:DEST_PORT`               | local port forwarding<br>set `LOCAL_IP` to `0.0.0.0` to listen on all interfaces                                                               |
-| `-D [LOCAL_IP:]LOCAL_PORT`                                 | dynamic port forwarding<br>set `LOCAL_IP` to `0.0.0.0` to listen on all interfaces                                                             |
-| `-R <listening_ip>:<listening_port>:<dest_ip>:<dest_port>` | remote port forwarding                                                                                                                         |
-| `-R [listening_ip]:<listening_port>`                       | dynamic remote port forwarding                                                                                                                 |
+| Option                                                                                                                                                                                                                                                     | Purpose                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `-v`                                                                                                                                                                                                                                                       | to show more info (response headers,..                                       |
+| `-i`                                                      specify private key file to use<br>required permissions on private key file:`600`<br>**Note:** ssh private keyfiles must end with a trailing newline, else you might get `error in libcrypto` an |                                                                              |
+| `-N`                                                                                                                                                                                                                                                       | dont send commands, only forwarded pac                                       |
+| `-L [LOCAL_IP:]LOCAL_PORT:DEST_IP:DEST_PORT`                                                                                                                                                                                                               | local port forwarding<br>set `LOCAL_IP` to `0.0.0.0` to listen on all inter  |
+| `-D [LOCAL_IP:]LOCAL_PORT`                                                                                                                                                                                                                                 | dynamic port forwarding<br>set `LOCAL_IP` to `0.0.0.0` to listen on all inte |
+| `-R <listening_ip>:<listening_port>:<dest_ip>:<dest_port>`                                                                                                                                                                                                 | remote port forward                                                          |
+| `-R [listening_ip]:<listening_port>`                                                                                                                                                                                                                       | dynamic remote port forward                                                  |
 
 # Snippets
 
@@ -96,10 +96,10 @@ The ssh client connects to a server and opens a SOCKS proxy listening port on th
 **Command:**
 
 ```sh
-ssh -N -R [listening_ip]:<listening_port> <server_user>@<server_ip>
+ssh -N -R [server_ip]:<SOCKS_listening_port> <server_user>@<server_ip>
 ```
 
-You can omit `[listening_ip]` to bind to localhost of the server.
+You can omit `[server_ip]` to bind to localhost of the server.
 
 ## SSH through a SOCKS proxy
 

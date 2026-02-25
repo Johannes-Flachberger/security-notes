@@ -12,7 +12,11 @@ Popular web application framework
 
 ## Enumeration
 
-A very useful tool is "wpscan" - see: <https://www.kali.org/tools/wpscan/>
+**Tools:**
+- wpscan: very useful
+	- e.g. `wpscan --url <url> --enumerate p --plugins-detection aggressive -o <output file>`
+	- can scan for vulnerabilities if API token is given (requires free registration)
+	- see: <https://www.kali.org/tools/wpscan/>
 
 ## Privilege Escalation
 

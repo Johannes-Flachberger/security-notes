@@ -16,12 +16,11 @@ Discover the technology stack in use:
 
 # Techniques:
 
-## Wappalyzer
+## Automated Profilers
 
-- passive & active
-- browser extension that analyses websites, used frameworks,..
-- reveals the whole technology stack: OS, UI frameworks, webservers, databases, javascript libraries,...
-- [[3 Tools/web/Wappalyzer]]
+**Tools:**
+- [[3 Tools/web/Wappalyzer|Wappalyzer]]: Browser extension
+- [WhatWeb](https://www.kali.org/tools/whatweb/): CLI-based
 
 ## Nmap
 

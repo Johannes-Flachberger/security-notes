@@ -17,16 +17,17 @@ brute force, makes use of wordlist, in kali some are located in `/usr/share/word
 
 ## Options:
 
-| Option | Purpose |
-|----------|--------------|
-| `-u` | target url |
-| `-e` | print full urls in console |
-| `-w` | path to wordlist |
-| `-U` and `-P` | username and password for basic authentications |
-| `-p <file>` | pattern file to use |
-| `-c <cookies>` | specify cookie |
-| `-t` | number of threads |
-| `-x` | match files with extensions |
+| Option           | Purpose                                         |
+| ---------------- | ----------------------------------------------- |
+| `-u`             | target url                                      |
+| `-e`             | print full urls in console                      |
+| `-w`             | path to wordlist                                |
+| `-U` and `-P`    | username and password for basic authentications |
+| `-p <file>`      | pattern file to use                             |
+| `-c <cookies>`   | specify cookie                                  |
+| `-t`             | number of threads                               |
+| `-x`             | match files with extensions                     |
+| `--nc -o <path>` | write output to file without ANSI color codes   |
 
 ## Directory Enum
 

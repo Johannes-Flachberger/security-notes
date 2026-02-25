@@ -95,11 +95,11 @@ If you "Do not require Kerberos preauthentication" is disabled, but you have the
 
 ### Kerberoasting
 
-**Goal:** Obtain a service ticket for any service within the domain and attempt a brute-force attack on the service account.
+**Goal:** Obtain a service ticket for any service within the domain and attempt a brute-force attack on the service accounts password.
 
 Two characteristics make Kerberoasting relevant:
 
-- When a client requests a TGS for a specific service (identified by an [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Service Principal Names (SPN)|SPN]]), ithe KDC does not check if the client is allowed to access the application. --> A TGS can be requested for any application within the domain.
+- When a client requests a TGS for a specific service (identified by an [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Service Principal Names (SPN)|SPN]]), the KDC does not check if the client is allowed to access the application. --> A TGS can be requested for any application within the domain.
 - The service ticket / ticket-granting-service is encrypted with the service user's hash.
 
 --> Any client having a TGT can make a TGS-REQ for any service on the domain and will receive the corresponding TGS-REP. The TGS-REP can be [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|brute-forced locally]], to extract the service users password e.g. using [[3 Tools/crypto/Hashcat|Hashcat]] (search modes for "Kerberos").

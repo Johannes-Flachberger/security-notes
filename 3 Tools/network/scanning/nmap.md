@@ -8,8 +8,6 @@ Purpose: network scanner
 ---
 # Info
 
-**GUI tool for building -sn nmap queries: zenmap (preinstalled on kali)**
-
 ## General Execution Steps
 
 1. Enumerate targets
@@ -38,6 +36,9 @@ enter ip adress as domain names, ip adress, adress ranges `10.10.0-255.0-255` or
 
 - use multiple output formats at once
 - combine SYN and UDP scan
+
+> [!Hint] Limitation: Proxies
+> Performing nmap scans through SOCKS proxies is either very slow or sometimes just fails. Better use another tool, such as [[3 Tools/exploitation frameworks/Metasploit/Overview - Metasploit|Metasploit]]
 
 ## General Options:
 

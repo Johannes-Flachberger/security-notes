@@ -37,9 +37,10 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 ## Useful Commands
 
-| Command              | Purpose                         |
-| -------------------- | ------------------------------- |
-| `Get-Help <command>` | Get Information about a command |
+| Command                                                                           | Purpose                          |
+| --------------------------------------------------------------------------------- | -------------------------------- |
+| `Get-Help <command>`                                                              | Get Information about a command  |
+| `Start-Process <executable/command> -ArgumentList '<argument1>'[, '<argument2>']` | Run command/process in backround |
 
 ### Filesystem
 
