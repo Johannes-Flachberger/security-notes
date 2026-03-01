@@ -37,6 +37,9 @@ e.g. `crypto::certificates /systemstore:local_machine`
 
 Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
+> [!Hint] Filter output using [[3 Tools/utilities/grep|grep]] & `uniq` to get an overview of the collected data
+> Contents `grep -i "username" mimikatz2.log | uniq`
+
 ## Common commands:
 
 | Command                            | Purpose                                                                              |

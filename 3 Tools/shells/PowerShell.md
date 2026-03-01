@@ -178,7 +178,7 @@ $session = New-Cimsession -ComputerName $target -Credential $credential -Session
 Invoke-CimMethod -CimSession $session -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine =$command};
 ```
 
-### PowerShell Remoting
+### PowerShell Remoting (PSRemote)
 
 See [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/08-powershell-remoting)
 

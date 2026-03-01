@@ -27,6 +27,8 @@ supports various popular protocols:
 
 # Usage
 
+The nxc wiki is pretty good: https://www.netexec.wiki/
+
 Example: `nxc smb <ip> -u <user> -p '<password>' -d <domain> --continue-on-success`
 
 - specify a range of IPs: e.g.`192.168.0.100-200`

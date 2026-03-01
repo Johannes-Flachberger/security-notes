@@ -42,7 +42,6 @@ When using PowerShell:
 | --- | --- |
 |     |     |
 
-
 ## AzureHound
 
 Data Collector for Azure Environments.
