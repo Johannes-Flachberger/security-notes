@@ -10,6 +10,7 @@ tags:
 # Fundamentals
 
 **Port forwarding:** Blindly forward TCP/UDP packets between two ports.
+
 **Proxying:** Proxies can also interpret, manage & analyse connections.
 
 # Pentesting
@@ -27,6 +28,7 @@ flowchart LR
 ```
 
 **Tools:**
+
 - [[3 Tools/shells/Socat|Socat]]: basic port forwarding
 - [rinetd](https://github.com/samhocevar/rinetd): runs as daemon --> good for long-term usage
 - [[3 Tools/shells/Netcat|Netcat]]: combine with FIFO
@@ -79,6 +81,7 @@ Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80,443 HTTP
 Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|DNS]]
 
 **Tools:**
+
 - [[3 Tools/network/tunneling/dnscat2|dnscat2]]
 
 ## Metasploit Tunneling

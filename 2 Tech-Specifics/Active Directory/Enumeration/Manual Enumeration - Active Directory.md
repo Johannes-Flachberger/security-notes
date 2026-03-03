@@ -12,7 +12,7 @@ See [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory|Fundamen
 
 There are multiple tools for manual enumeration:
 
-- [[#Enumeration with PowerView]]: **most powerful option** - third party script, provides useful functions for manual
+- [[#Enumeration with PowerView / SharpView]]: **most powerful option** - third party script, provides useful functions for manual
 - [[#Enumeration with net.exe]]: built-in, only for very quick & basic user and group enumeration
 - [[#Enumeration with PowerShell]]: uses built-in .Net Classes - more advanced enumeration
 
@@ -60,82 +60,12 @@ There are multiple tools for manual enumeration:
 
 Alternatively, use the [Get-ADUser](https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-aduser?view=windowsserver2022-ps) Cmdlet (not preinstalled per default)
 
-## Enumeration with PowerView
+## Enumeration with PowerView / SharpView
 
-A script that provides useful functions for manual enumeration.
-
-**Usage:**
-1. Import script into scope: `Import-Module .\PowerView.ps1`
-2. Run Powerview Commands
-
-- Filter results with `| Where-Object { $_.<property> -eq <value>}`
-- Filter properties to show in results: `| select <property>`.
-
-**Function Reference:** [PowerView Docs](https://powersploit.readthedocs.io/en/latest/Recon/)
-
-### Basic Enumeration
-
-| Command                                                             | Purpose                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Get-Domain`                                                        | show basic information about the current domain                                                                                                                                                                                                                                                                                                                              |
-| `Get-DomainUser`                                                    | list all users                                                                                                                                                                                                                                                                                                                                                               |
-| `Get-DomainGroup`                                                   | list all groups                                                                                                                                                                                                                                                                                                                                                              |
-| `Get-DomainComputer`                                                | list details of computers<br>e.g. filter for `operatingsystem, operatingsystemversion, dnshostname`                                                                                                                                                                                                                                                                          |
-| `Find-LocalAdminAccess`                                             | list hosts where the current user has local admin privileges<br>based on the [OpenServiceW function](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/nf-winsvc-openservicew)                                                                                                                                                                                      |
-| `Get-NetSession -ComputerName <hostname> -Verbose`                  | list currently logged on users on remote machine<br>based on [NetWkstaUserEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmwksta/nf-lmwksta-netwkstauserenum) (requires local admin privileges) and [NetSessionEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmshare/nf-lmshare-netsessionenum)<br>**Note:** Does not work on modern windows systems. |
-| `Get-DomainUser -SPN \| select samaccountname,serviceprincipalname` | list all SPNs - see [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory\|Fundamentals - Active Directory]]                                                                                                                                                                                                                                                   |
-
-**Note:** [NetSessionEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmshare/nf-lmshare-netsessionenum) relies on the `HKLM:SYSTEM\CurrentControlSet\Services\LanmanServer\DefaultSecurity\SrvsvcSessionInfo` registry key work (permissions on this key could also be set to a non-default value)
-
-### Enumerate Object permissions
-
-Relevant access rights & fundamentals: [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Object permissions|Fundamentals - Object Permissions]]
-
-List permissions for a specific object:
-
-- `Get-ObjectAcl -Identity <samaccountname>`
-
-Filter for the most important properties:
-
-- `| select SecurityIdentifier,ActiveDirectoryRights`
-
-**List all access rights of a certain type that one object has on another:**
-
-**Hint:** Remove the identity filter to show all objects that have a certain right on any other object.
-
-```powershell
-Get-ObjectAcl -Identity "<samaccountname>" | ? {$_.ActiveDirectoryRights -eq "<access_right>"} | select SecurityIdentifier,ActiveDirectoryRights
-```
-
-**Hint:** The `GenericAll` permission should be reserved for domain admins only.
-
-Use `Convert-SidToName` to make [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|SID]]s readable.
-
-**Print all Security Identifiers in readable format:**
-
-```powershell
-Foreach($ACE in $ACEs)
-    {
-        $ACE.ObjectSID | Convert-SidToName -ErrorAction SilentlyContinue
-        $ACE.ActiveDirectoryRights
-        $ACE.SecurityIdentifier | Convert-SidToName
-        Write-Host "---------------------------------------------------"
-    }
-
-```
-
-### Enumerate File Shares
-
-| Command                   | Purpose                                                                                  |
-| ------------------------- | ---------------------------------------------------------------------------------------- |
-| `Find-DomainShare`        | List file shares<br>`-CheckShareAccess` to only list shares readable be the current user |
-| `ls \\<hostname>\<share>` | Access file shares                                                                       |
-| `Invoke-FileFinder`       | To search for sensitive files                                                            |
-
-Use e.g. `| Format-List` if names are cut off.
+See [[3 Tools/microsoft/PowerView & SharpView|PowerView & SharpView]]
 
 > [!Hint] SYSVOL
-> The [SYSVOL](https://learn.microsoft.com/en-us/archive/technet-wiki/24160.active-directory-back-to-basics-sysvol) share usually contains domain policies and scripts and is accessible by all domain users.
+> The [SYSVOL](https://learn.microsoft.com/en-us/archive/technet-wiki/24160.active-directory-back-to-basics-sysvol) share usually contains the domains group policies and scripts and is accessible by all domain users.
 > - It is mapped to: `%SystemRoot%\SYSVOL\Sysvol\domain-name`
 > - E.g: `\\dc1.mydomain.com\sysvol\mydomain.com\`
 > 
@@ -207,6 +137,7 @@ Foreach($obj in $searchResult)
 ```
 
 **Interesting properties:**
+
 - `memberof`: groups the user is a memberof
 - `member`: members of a group
 

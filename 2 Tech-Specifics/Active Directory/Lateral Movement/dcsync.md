@@ -18,7 +18,9 @@ Exploiting the [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directo
 # Exfiltration & Credential Access
 
 **Prerequisites:**
+
 The following rights are necessary:
+
 - Replicating Directory Changes
 - Replicating Directory Changes All
 - Replicating Directory Changes in Filtered Set
@@ -30,6 +32,7 @@ By default, these groups have the necessary right:
 - Administrators
 
 **Workflow:**
+
 1. perform dcsync attack - e.g. extract password hashes
 	- [[3 Tools/mimikatz#DCSync Attack|mimikatz]]: from domain-joined windows machine
 	- [[3 Tools/network/impacket-scripts#Impacket-secretsdump|impacket-secretsdump]]: from non-domain joined machine (e.g. kali)
