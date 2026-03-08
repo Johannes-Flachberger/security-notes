@@ -41,7 +41,7 @@ Get table metadata: `DESCRIBE TABLE;`
 
 ### Injection
 
-- Methodology: [[2 Tech-Specifics/Database/SQL Injection|SQL Injection]]
+- Methodology: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL Injection]]
 - [MySQL injection cheat sheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
 
 ### Code Execution

@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 [[2 Tech-Specifics/_Other/File Formats/XML|xml basics]]
@@ -10,6 +10,7 @@ app uses untrusted xml-documents - e.g. provided by the user
 xml files are generated based on user input without input validation
 
 **2 Types:**
+
 1. in-band XXE: attacker receives immediate response to payload
 2. out-of-band XXE: no immediate respone, output has to be reflected to some file or server
 

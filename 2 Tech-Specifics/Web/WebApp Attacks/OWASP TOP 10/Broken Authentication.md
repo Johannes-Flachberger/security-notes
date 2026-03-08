@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 authentication methods are not secure.

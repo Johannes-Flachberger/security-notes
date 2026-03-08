@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 - important actions are not logged, e.g. successful logins, unsuccessful logins, database errors,...

@@ -76,7 +76,10 @@ In menu at top left:
 
 ### Cypher Queries
 
-See: [Quick Start Guide](https://bloodhound.specterops.io/analyze-data/explore/cypher-search)
+**See:**
+
+- [Quick Start Guide](https://bloodhound.specterops.io/analyze-data/explore/cypher-search)
+- [Community driven query library](https://queries.specterops.io/)
 
 Most relevant queries are already available as saved queries.
 

@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 Security misconfigurations include:

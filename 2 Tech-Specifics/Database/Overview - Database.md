@@ -9,9 +9,9 @@ most databases are relational databases:
 - there are many tables, each has rows (each representing a specific item) and columns (each representing a certain property)
 - each item has a primary key which it can be found with in all tables
 
-### Implementation Specifics
+## Implementation Specifics
 
-SQL flavour and dbms queries differ depending on the database management system:
+SQL flavor and DBMS queries differ depending on the database management system:
 
 - [[2 Tech-Specifics/Database/MySQL|MySQL]]
 - [[2 Tech-Specifics/Database/MSSQL|MSSQL]]
@@ -22,9 +22,9 @@ A set of fundamental queries is supported by most databases, often referred to a
 
 ## Generic DB Enumeration
 
-`information_schema` database: holds metadata for all databases on the dbms - Reference: <https://dev.mysql.com/doc/refman/8.4/en/information-schema.htmlhttps>:<//dev.mysql.com/doc/refman/8.4/en/information-schema.html>
+`information_schema` database: holds metadata for all databases on the dbms - Reference: <https://dev.mysql.com/doc/refman/8.4/en/information-schema.html>
 
-	**Workflow:**
+**Workflow:**
 
 1. enumerate the available databases
 	- this is specific to the database management system

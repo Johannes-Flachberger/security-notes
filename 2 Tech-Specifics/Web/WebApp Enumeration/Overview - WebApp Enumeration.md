@@ -42,6 +42,7 @@ Can find hidden directories, but is not as efficient as crawling.
 - `/usr/share/wordlists/dirbuster/`
 
 **Tools:**
+
 - [[3 Tools/web/gobuster|gobuster]] - active (fastest, most versatile)
 - [[3 Tools/network/scanning/nmap|nmap]] - script `http-enum`
 - dirbuster - active
@@ -82,11 +83,12 @@ analyses TLS configuration and compares against best practices - it can also det
 ## Virtual Hosts (vhost)
 
 - [[3 Tools/web/gobuster|gobuster]]
-- ffuf
+- [[3 Tools/web/ffuf|ffuf]]
 
 ## Check Metadata Files
 
 **Robots.txt**
+
 - file that tells search engines which pages should not be shown
 - may contain administration portals, hidden pages,....
 - location: `http://<IP>/robots.txt`

@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 a great variety of vulnerabilities is possible

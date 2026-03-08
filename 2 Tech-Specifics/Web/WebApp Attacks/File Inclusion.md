@@ -35,7 +35,7 @@ Two types exist:
 - to achieve code execution, combine with
 	- [[2 Tech-Specifics/Web/WebApp Attacks/Web Upload Vulnerabilities|Web Upload Vulnerabilities]]
 	- [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Logfile Poisoning|Logfile Poisoning]]
-	- [[2 Tech-Specifics/Database/SQL Injection|SQL Injection]]
+	- [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL Injection]]
 - example of an exploited url: `http://example.com/example/index.php?page=../../../../../var/log/apache2/access.log`
 
 ## Remote File Inclusion (RFI)

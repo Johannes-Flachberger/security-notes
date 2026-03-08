@@ -60,6 +60,7 @@ gobuster can mutate each entry in a wordlist with one or more patterns
 1. use the pattern file using the `-p <pattern-file>` option.
 
 **alternatives**
-- ffuf
+
+- [[ffuf]]
 - dirb
 - dirbuster

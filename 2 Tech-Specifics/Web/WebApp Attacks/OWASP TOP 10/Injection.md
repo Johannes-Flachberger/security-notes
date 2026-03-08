@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 
 data entered by the user is not filtered or validated
@@ -15,7 +15,7 @@ multiple scenarios are possible:
 - HTML
 - Javascript
 - XML
-- [[2 Tech-Specifics/Database/SQL Injection|SQL injection]]
+- [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL injection]]
 
 ### Impact:
 

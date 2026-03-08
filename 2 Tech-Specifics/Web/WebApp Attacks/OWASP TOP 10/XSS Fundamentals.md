@@ -1,6 +1,6 @@
 ---
 tags:
-  - "#type/tech-specific"
+  - "#type/note"
 ---
 # Overview
 
@@ -9,6 +9,7 @@ Injection attack - vulnerable when website uses unsanitized user input and inter
 A payload is injected and executed by a users browser. --> the payload always runs in the users context - e.g. if an admin user runs the payload, privilege escalation is performed
 
 **Attack Surface - generic:**
+
 - Whenever data is entered to the website
 
 ## Possible Impacts

@@ -12,9 +12,9 @@ wildcard: `%` ...matches everything in queries
 
 retrieve data
 
-Syntax: `select [argument] from [table name];
+**Syntax:** `select [argument] from [table name];
 
-Example:
+**Example:**
 
 ```sql
 select * from users;
@@ -68,9 +68,9 @@ select * from users where username like 'a%';
 
 ### UNION
 
-combine two or more select statements, the specified columns have to be in the same order, have the same datatype
+combine two or more select statements, the specified columns have to be in the same order + have the same datatype
 
-eg.
+**Example:**
 
 ```sql
 SELECT name,address,city,postcode from customers UNION SELECT company,address,city,postcode from suppliers;
@@ -80,13 +80,13 @@ SELECT name,address,city,postcode from customers UNION SELECT company,address,ci
 
 insert new row to database
 
-Syntax:
+**Syntax:**
 
 ```sql
 insert into table_name ([column1, column2, ...]) values (value1, value2, ...);
 ```
 
-Example:
+**Example:**
 
 ```sql
 insert into users (username,password) values ('bob','password123');
@@ -96,13 +96,13 @@ insert into users (username,password) values ('bob','password123');
 
 update one or more rows in the table
 
-Syntax:
+**Syntax:**
 
 ```sql
 update [table] SET column1='[value1]',<column2>='<value2>' <filtering (chose what rows to set);
 ```
 
-Example:
+**Example:**
 
 ```sql
 update users SET username='root',password='pass123' where username='admin';
@@ -112,19 +112,19 @@ update users SET username='root',password='pass123' where username='admin';
 
 delete rows
 
-Syntax:
+**Syntax:**
 
 ```sql
 delete from [table] [filtering];
 ```
 
-Example - use "where" to specify which rows to delete:
+**Example** - use "where" to specify which rows to delete:
 
 ```sql
 delete from users where username='martin';
 ```
 
-R.g. to delete everything:
+E.g. to delete everything:
 
 ```sql
 delete from users;
