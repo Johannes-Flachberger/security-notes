@@ -106,6 +106,8 @@ Occurs when error messages are directly returned to the user
 - e.g. `' OR 1=1 in (SELECT * FROM users) -- //` to dump the whole user table
 	- if that does not work, query one column at a time - e.g. ` or 1=1 in (SELECT id FROM users) -- //`
 
+**Discovery Payloads:**
+
 ##### Union-Based
 
 - See [[2 Tech-Specifics/Database/Standard SQL Cheat Sheet#UNION|Standard SQL Cheat Sheet]]
