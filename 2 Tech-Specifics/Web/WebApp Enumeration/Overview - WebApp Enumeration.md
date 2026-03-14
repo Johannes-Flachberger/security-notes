@@ -82,6 +82,8 @@ analyses TLS configuration and compares against best practices - it can also det
 
 ## Virtual Hosts (vhost)
 
+vhost = serving multiple websites on one webserver - the websites are either distinguished by IP address or by domain name. See [Apache Docs](https://httpd.apache.org/docs/2.4/vhosts/).
+
 - [[3 Tools/web/gobuster|gobuster]]
 - [[3 Tools/web/ffuf|ffuf]]
 

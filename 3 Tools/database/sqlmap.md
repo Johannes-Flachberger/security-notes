@@ -26,13 +26,14 @@ when using POST requests:
 
 common options:
 
-| Option | Purpose |
-|----------|--------------|
-| `-u` | full url too test, including parameters |
-| `-r` | template request |
-| `-p` | parameter to test |
-| `--dump` | dump the database |
-| `--os-shell` | pop a system shell |
-| `--web-root` | web server document root |
+| Option       | Purpose                                         |
+| ------------ | ----------------------------------------------- |
+| `-u`         | full url too test, including parameters         |
+| `-r`         | template request                                |
+| `-p`         | parameter to test                               |
+| `--dump`     | dump the database                               |
+| `--os-shell` | pop a system shell                              |
+| `--web-root` | web server document root                        |
+| `--batch`    | dont ask questions, always use default behavior |
 
 # Snippets

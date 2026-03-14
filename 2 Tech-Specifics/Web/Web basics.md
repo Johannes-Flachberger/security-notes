@@ -2,7 +2,9 @@
 tags:
   - "#type/tech-specific"
 ---
+
 **3 major languages of the internet:**
+
 1. HTML: gives structure to websites
 2. CSS: Stylesheets, make it look fancy
 3. [[2 Tech-Specifics/Web/Javascript|Javascript]]: Extra functionality

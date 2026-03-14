@@ -12,6 +12,6 @@ check link for supportd databases
 
 # Usage
 
-when issuing sql commands, you need to and the commands with `;` add `GO` on a separate line
+when issuing sql commands, you need to end the commands with `;` add `GO` on a separate line
 
 # Snippets

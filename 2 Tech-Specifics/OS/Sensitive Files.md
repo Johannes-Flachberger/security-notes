@@ -17,6 +17,7 @@ These files are expecially sensitive, since they can provide critical informatio
 | `/phpmyadmin.php` | gives info about database, system, etc... |
 
 **Apache logs**
+
 - on linux: `/var/log/apache2/access.log`
 **XAMPP logs**
 - xampp apache on windows: `C:\xampp\apache\logs\`
@@ -36,11 +37,11 @@ These files are expecially sensitive, since they can provide critical informatio
 
 ## Windows
 
-| File | Description |
-|----------|--------------|
+| File                                  | Description                                                 |
+| ------------------------------------- | ----------------------------------------------------------- |
 | `\Windows\System32\drivers\etc\hosts` | readable by all users, good for testing directory traversal |
-| `C:\boot.ini` | contains the boot options for computers with BIOS firmware |
-| `C:\inetpub\logs\LogFiles\W3SVC1\` | Logs of IIS webserver |
-| `C:\inetpub\wwwroot\web.config` | configs of an IIS webserver |
+| `C:\boot.ini`                         | contains the boot options for computers with BIOS firmware  |
+| `C:\inetpub\logs\LogFiles\W3SVC1\`    | Logs of IIS webserver                                       |
+| `C:\inetpub\wwwroot\web.config`       | configs of an IIS webserver                                 |
 
 - `C:\Users\Public\Documents\`: read & writable by all users

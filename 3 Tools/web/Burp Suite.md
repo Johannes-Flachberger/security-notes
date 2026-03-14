@@ -13,6 +13,7 @@ very common webapp testing framework
 Burp always works a proxy between your browser (or the built in browser) and the target --> you can perform manual requests and then edit, mutate, etc. them with Burps Modules
 
 **Tipps:**
+
 - has keyboard shortcuts - see global options
 - has also a darkmode
 - if the webpage hangs, while loading, "intercept" might be enabled in burpsuites proxy settings
@@ -43,6 +44,8 @@ scope: specify the scope (target) of the tests
 
 modify and repeat requests manually
 
+**Hint:** In the response field search for a unique term and check "Autoscroll to match when text changes", to always keep a certain section of a response visible across multiple requests.
+
 ## Intruder
 
 carry out automated attacks (fuzzing), eg. bruteforcing sql injections
@@ -54,14 +57,23 @@ Payload: set wordlists, e.g. [[3 Tools/bruteforce/SecLists|SecLists]]
 ### Attack Modes
 
 **Sniper**
+
 tries every word of a word list --> good for single position attacks
+
 with multiple positions: tries everything on 1st position, then on 2nd position,...
+
 **Battering ram**
+
 like sniper, bit with multiple positions puts the same parameter in each position
+
 **Pitchfork**
+
 takes multiple payload sets (1 for each position) and iterates through them all at once (1 request will use 1st item of all the lists, 2nd request 2nd item,...)
+
 **Cluster bomb**
+
 multiple positions, multiple payload sets - tries every possible combination
+
 eg. Bruteforcing user & password combinations
 
 ### Result Analysis

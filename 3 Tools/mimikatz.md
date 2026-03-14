@@ -17,6 +17,7 @@ For fundamentals see [[2 Tech-Specifics/OS/Windows/Credential Access/Local Crede
 Good reference guide: [adsecurity](https://adsecurity.org/?page_id=1821)
 
 **Required privileges:**
+
 - Administrator
 - SeDebugPrivilege: allows to debug (i.e. manipulate) processes of other users
 
@@ -106,11 +107,13 @@ kerberos::golden /sid:<domain_SID> /domain:<domain_name> /ptt /target:<SPN> /ser
 See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Golden Tickets|Kerberos - Forging Golden Tickets]]
 
 **Required information:**
+
 - NTLM password hash of the `krbtgt` account
 - Domain SID
 	- use `whoami /user` and only use the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|Domain SID]]
 
 **Workflow:**
+
 1. Create a golden ticket with `kerberos::golden`:
 
 ```
@@ -124,6 +127,7 @@ kerberos::golden /user:<user> /domain:<domain_name> /sid:<domain_sid> /krbtgt:<n
 ## Spawn Process with cached Credentials
 
 **Purpose:**
+
 - [[2 Tech-Specifics/Active Directory/Credential Access/Overpass the Hash|Overpass the Hash]]
 - [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Overview - Privilege Escalation - Windows|Windows Privilege Escalation]]?
 

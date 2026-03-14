@@ -6,13 +6,16 @@ Purpose: '"meta-automation" of active recon'
 ---
 # Info
 
-Automation tool for active recon. It triggers other automated tools such as nmap, nikto, directory fuzzing, etc. and stores the results in a structured way.
+Automation tool for active recon. It triggers other automated tools such as nmap, nikto, directory fuzzing, etc. and stores the results in directory structure.
 
 # Usage
 
-**Example:** `autorecon --exclude-tags="long" --only-scans-dir <ip/cidr_range> [ip2] [ip3]`
+**Example:** `autorecon --only-scans-dir --dirbuster.threads 100 --dirbuster.wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt <ip/cidr_range> [ip2] [ip3]`
 
 While running, adjust verbosity with `up/down keys` - use high verbosity to print plugin output. Press `s` for status.
+
+> [!NOTE]
+> Apart from the options below, autorecon lets you configure many aspects of the tools used, such as number of threads, wordlists, etc.
 
 | Option                                | Purpose                                                                                              |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -20,9 +23,16 @@ While running, adjust verbosity with `up/down keys` - use high verbosity to prin
 | `--tags="<tags/plugin-slug>"`         | only run plugins with tags                                                                           |
 | `--exclude-tags="<tags/plugin-slug>"` | exclude plugin with tags<br>exclude single plugin by specifying its "slug", e.g. `default-port-scan` |
 | `--only-scans-dir`                    | only create "scans" directory for each host, but no "exploit", "notes" and "loot" directories        |
+| `-o <path>`                           | output directory - useful if you want to give some context, e.g. "DMZ"                               |
+| `--dirbuster.wordlist <path>`         | wordlist to use for directory busting                                                                |
+| `--dirbuster.threads <num>`           | number of threads for directory busting                                                              |
 
 Typically, long scan durations are caused by the `portscan-all-tcp-ports` and the `dirbuster` plugins. Consider disabling those specifically, or all plugins tagged `long`.
 
 To understand what a plugin is doing and which tags it has, best check in the plugins directory at `~/.config/AutoRecon/plugins` or `~/.local/share/AutoRecon/plugins`.
+
+> [!Hint] Personal preferences
+> - The markdown report and additional directories dont provide much value for me --> run with `--only-scans-dir`.
+> - If the network & targets can handle parallel scans, it does not hurt to run with plugins tagged `long` and to start manual work in the meantime. Otherwise, run with `--exclude-tags="long"`.
 
 # Snippets

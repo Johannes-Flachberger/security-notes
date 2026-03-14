@@ -66,14 +66,14 @@ Also see: [[2 Tech-Specifics/Active Directory/Credential Access/Active Directory
 
 ### Tools
 
-**Hash identification**
+#### Hash identification
 
 - LLMs
 - [[3 Tools/crypto/hashID|hashID]]
 - [hash-identifier](https://www.kali.org/tools/hash-identifier/)
 - [[3 Tools/crypto/Hashcat|Hashcat]]: use`--identify` option
 
- **Hash cracking**
+#### Hash cracking
 
 - [[3 Tools/crypto/Hashcat|Hashcat]]: faster, but more complex
 	- Primarily GPU-based, also supports CPU

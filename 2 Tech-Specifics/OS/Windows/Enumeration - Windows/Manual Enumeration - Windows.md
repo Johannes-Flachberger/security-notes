@@ -87,6 +87,7 @@ Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
 Also check Program Files in Downloads and root folder by [[#Searching Files]]
 
 **Then:**
+
 - search [[1 Methods/Security-Testing/4 Execution/Using Public Exploits|Public Exploits]] for the installed software
 - check for password managers to perform [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]]
 

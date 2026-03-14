@@ -39,6 +39,7 @@ Emulates the behaviour of [[3 Tools/microsoft/Sysinternals#PsExec|PsExec]].
 Uses [[2 Tech-Specifics/OS/Windows/WMI|WMI]] to execute commands on a remote system.
 
 **Purpose:**
+
 - [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]]
 - [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|Initial Access]]
 
@@ -61,6 +62,7 @@ Relays NTLM authentication to another machine.
 typically used from kali, uses valid credentials to automatically identify vulnerable users and get TGTs for them
 
 **Purpose:**
+
 - [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#AS-REP Roasting|Kerberos AS-REP Roasting]]
 
 **Example Usage:**`impacket-GetNPUsers -dc-ip <domain_controller_ip>  -request -outputfile <outfile> <domain>/<user>:<password>`
@@ -70,6 +72,7 @@ typically used from kali, uses valid credentials to automatically identify vulne
 typically used from kali, uses valid credentials to automatically identify vulnerable SPNs and get service tickets for them
 
 **Purpose:**
+
 - [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Kerberoasting|Kerberoasting]]
 
 **Example Usage:**`impacket-GetUserSPNs -request -dc-ip <domain_controller_ip> -outputfile <outfile> <domain>/<user>:<password>`
@@ -79,6 +82,7 @@ If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the 
 # Impacket-secretsdump
 
 **Purpose:**
+
 - [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]
 - [[2 Tech-Specifics/OS/Windows/Shadow Copies#Credential Access & Persistence|Shadow Copies]]
 

