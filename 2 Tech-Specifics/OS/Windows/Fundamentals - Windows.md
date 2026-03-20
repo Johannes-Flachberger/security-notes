@@ -21,11 +21,11 @@ tags:
 
 See: [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths)
 
-Universal naming convention (UNC) paths are used to access network ressources using [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]]. They can be used and exploited at many different places. E.g.:
+Universal naming convention (UNC) paths are used to access network ressources using [[2 Tech-Specifics/Network/Protocols/SMB|SMB]]. They can be used and exploited at many different places. E.g.:
 
 - [[3 Tools/shells/cmd|cmd]]
-- [[2 Tech-Specifics/Web/WebApp Attacks/Web Upload Vulnerabilities|Web Upload Vulnerabilities]]
-- [[2 Tech-Specifics/Web/WebApp Attacks/Directory Traversal|Directory Traversal]]
+- [[2 Tech-Specifics/Web/Attacks - Web/Web Upload Vulnerabilities|Web Upload Vulnerabilities]]
+- [[2 Tech-Specifics/Web/Attacks - Web/Directory Traversal|Directory Traversal]]
 
 Further reading: [https://www.netspi.com/blog/technical-blog/network-pentesting/10-places-to-stick-your-unc-path/](https://www.netspi.com/blog/technical-blog/network-pentesting/10-places-to-stick-your-unc-path/)
 
@@ -165,12 +165,13 @@ legacy authentication method - see [Microsoft Learn](https://learn.microsoft.com
 
 Challenge - response based authentication protocol. The server sends a nonce (challenge), the client encryptes the nonce with its NT hash (response). It is prone to multiple attacks, such as:
 
-- [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]]
+- [[2 Tech-Specifics/OS/Windows/Lateral Movement - Windows/Pass the Hash|Pass the Hash]]
 - replay
 - spoofing, etc.
 - Hash Cracking (NTLM "fast hashing algorithm" and short passwords can be cracked)
 
 **Steps:**
+
 1. Server sends nonce
 2. Client response with username + nonce encrypted with NTLM hash
 3. Server forwards to domain controller for verification
@@ -179,13 +180,13 @@ Challenge - response based authentication protocol. The server sends a nonce (ch
 
 ## NTLMv2
 
-Improvement of NTLMv1. Adds a client challenge to prevent server spoofing. Also has protection against replay attacks. [[2 Tech-Specifics/OS/Windows/Lateral Movement/Pass the Hash|Pass the Hash]] is still possible.
+Improvement of NTLMv1. Adds a client challenge to prevent server spoofing. Also has protection against replay attacks. [[2 Tech-Specifics/OS/Windows/Lateral Movement - Windows/Pass the Hash|Pass the Hash]] is still possible.
 
 Still used a lot by applications & as fallback authentication mechanism.
 
 ## Kerberos
 
-See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]]
+See [[2 Tech-Specifics/Network/Protocols/Kerberos|Kerberos]]
 
 # DLLs
 

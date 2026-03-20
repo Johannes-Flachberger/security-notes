@@ -39,13 +39,13 @@ Both implementations are not longer supported, but still useful today.
 | `Get-DomainComputer`                                                | list details of computers<br>e.g. filter for `operatingsystem, operatingsystemversion, dnshostname`                                                                                                                                                                                                                                                                          |
 | `Find-LocalAdminAccess`                                             | list hosts where the current user has local admin privileges<br>based on the [OpenServiceW function](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/nf-winsvc-openservicew)                                                                                                                                                                                      |
 | `Get-NetSession -ComputerName <hostname> -Verbose`                  | list currently logged on users on remote machine<br>based on [NetWkstaUserEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmwksta/nf-lmwksta-netwkstauserenum) (requires local admin privileges) and [NetSessionEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmshare/nf-lmshare-netsessionenum)<br>**Note:** Does not work on modern windows systems. |
-| `Get-DomainUser -SPN \| select samaccountname,serviceprincipalname` | list all SPNs - see [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory\|Fundamentals - Active Directory]]                                                                                                                                                                                                                                                   |
+| `Get-DomainUser -SPN \| select samaccountname,serviceprincipalname` | list all SPNs - see [[2 Tech-Specifics/Active Directory/Fundamentals - AD\|Fundamentals - Active Directory]]                                                                                                                                                                                                                                                   |
 
 **Note:** [NetSessionEnum](https://learn.microsoft.com/en-us/windows/win32/api/lmshare/nf-lmshare-netsessionenum) relies on the `HKLM:SYSTEM\CurrentControlSet\Services\LanmanServer\DefaultSecurity\SrvsvcSessionInfo` registry key work (permissions on this key could also be set to a non-default value)
 
 ### Enumerate Object permissions
 
-Relevant access rights & fundamentals: [[2 Tech-Specifics/Active Directory/Fundamentals - Active Directory#Object permissions|Fundamentals - Object Permissions]]
+Relevant access rights & fundamentals: [[2 Tech-Specifics/Active Directory/Fundamentals - AD#Object permissions|Fundamentals - Object Permissions]]
 
 List permissions for a specific object:
 

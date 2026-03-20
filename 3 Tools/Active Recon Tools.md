@@ -27,7 +27,7 @@ Purpose: Collection of tools used for active recon
 ## Telnet
 
 - can be used to get info about running server
-1. connect with[[2 Tech-Specifics/Network/Protocols/TCP 23 Telnet]]
+1. connect with[[2 Tech-Specifics/Network/Protocols/Telnet]]
 2. send request, type depending on server, eg. `GET / HTTP/1.1` or specify other page
 alternative: [[3 Tools/web/cURL]]
 

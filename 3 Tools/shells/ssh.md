@@ -9,7 +9,7 @@ Purpose: remote shells & tunneling
 ---
 # Info
 
-See [[2 Tech-Specifics/Network/Protocols/TCP 22 SSH|TCP 22 SSH]]
+See [[2 Tech-Specifics/Network/Protocols/SSH|SSH]]
 
 # Usage
 
@@ -35,7 +35,7 @@ Further reading:
 - [iximiuz](https://iximiuz.com/en/posts/ssh-tunnels/)
 
 > [!NOTE] Note
-> Invoking ssh through a standard [[3 Tools/shells/Netcat|Netcat]] shell does not work. Try [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation|Reverse Shell Stabalisation Linux]] or [[2 Tech-Specifics/OS/Windows/Reverse Shell Stabilisation|Reverse Shell Stabilisation Windows]].
+> Invoking ssh through a standard [[3 Tools/shells/Netcat|Netcat]] shell does not work. Try [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation - Linux|Reverse Shell Stabalisation Linux]] or [[2 Tech-Specifics/OS/Windows/Reverse Shell Stabilisation|Reverse Shell Stabilisation Windows]].
 
 ### Client --> Server
 

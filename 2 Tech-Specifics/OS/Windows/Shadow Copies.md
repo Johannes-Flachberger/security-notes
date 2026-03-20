@@ -17,7 +17,7 @@ Microsoft Backup Tool: [VShadow](https://learn.microsoft.com/en-us/windows/win32
 ## Credential Access & Persistence
 
 > [!Hint] Not quite stealthy
-> This techniques is not quite stealthy - a local [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]] is stealthier.
+> This techniques is not quite stealthy - a local [[2 Tech-Specifics/Active Directory/Lateral Movement - AD/dcsync|dcsync]] is stealthier.
 
 As a domain admin, you can make a backup of the Active Directory Database (`ntds.dit`) and extract password hashes of every domain user offline.
 

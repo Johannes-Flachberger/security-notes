@@ -101,7 +101,7 @@ To enhance credibility, use HTTPs - if possible with a valid certificate
 
 a forged webpage can be used to exploit vulnerabilities in adjecient systems:
 
-- perform [[2 Tech-Specifics/Web/WebApp Attacks/Cross Site Request Forgery (CSRF)|Cross Site Request Forgery (CSRF)]]
+- perform [[2 Tech-Specifics/Web/Attacks - Web/Cross Site Request Forgery (CSRF)|Cross Site Request Forgery (CSRF)]]
 - orce NTLM authentication to steal the password hash
 - link to an SMB server to steal the NTLM password hash
 Also see [[2 Tech-Specifics/People/MFA bypass|MFA bypass]]

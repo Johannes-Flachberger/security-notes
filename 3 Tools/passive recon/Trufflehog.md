@@ -7,7 +7,7 @@ Purpose: search for sensitive information in git repos
 ---
 # Info
 
-Search for sensitive information in remote or local git repos. It can also verify discovered credentials by trying to use them (e.g. trying a found [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals|AWS]] access key)
+Search for sensitive information in remote or local git repos. It can also verify discovered credentials by trying to use them (e.g. trying a found [[2 Tech-Specifics/Cloud/AWS/Fundamentals - AWS|AWS]] access key)
 
 # Usage
 

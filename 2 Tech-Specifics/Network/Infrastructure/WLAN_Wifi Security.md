@@ -17,7 +17,7 @@ Also called network access control (NAC) or port-based network access control (P
 
 the goal is to enforce authentication on the network - if a client connect to a physical (ethernet) port, WLAN or VLAN, authentication is required before a connection to the network is permitted.
 
-uses [[2 Tech-Specifics/Network/Protocols/UDP 1812 RADIUS|UDP 1812 RADIUS]] and [[2 Tech-Specifics/Network/Protocols/Fundamentals/EAP Fundamentals|EAP]] (Extensible Authentication Protocol)
+uses [[2 Tech-Specifics/Network/Protocols/RADIUS|RADIUS]] and [[2 Tech-Specifics/Network/Protocols/Fundamentals/EAP Fundamentals|EAP]] (Extensible Authentication Protocol)
 
 3 main components:
 

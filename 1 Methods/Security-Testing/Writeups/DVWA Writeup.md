@@ -46,7 +46,7 @@ can you include a remote file?
 
 ## SQL Injection
 
-[[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection]]
+[[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/SQL Injection]]
 
 ## Upload Vulns
 

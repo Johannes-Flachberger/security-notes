@@ -12,7 +12,7 @@ Jenkins uses files called `Jenkinsfile` to define workflows. If a Jenkinsfile is
 
 Jenkins heavily relies on plugins to extend its functionality. For example:
 
-- [AWS Steps](https://plugins.jenkins.io/pipeline-aws/): for performing actions on [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals|AWS]]
+- [AWS Steps](https://plugins.jenkins.io/pipeline-aws/): for performing actions on [[2 Tech-Specifics/Cloud/AWS/Fundamentals - AWS|AWS]]
 - [Nodes and Processes](https://plugins.jenkins.io/workflow-durable-task-step/): run shell scripts on the builder - developed by Jenkins, very popular
 - Further Plugins: https://plugins.jenkins.io/
 

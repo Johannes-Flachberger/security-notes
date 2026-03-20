@@ -6,6 +6,7 @@ tags:
 # Fundamentals
 
 **See:**
+
 - [Access Methods](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html)
 
 # Pentesting
@@ -23,10 +24,12 @@ tags:
 #### Using the S3 RestAPI
 
 **Using the S3 REST API:**
+
 - browse the bucket root
 - e.g. `http://domain/bucket_name`
 
 **Using [[3 Tools/cloud/AWS CLI|AWS CLI]]:**
+
 - use a set of valid credentials to authenticate to an AWS account
 	- e.g. of captured credentials or of any other AWS account
 - list bucket contents - see [[3 Tools/cloud/AWS CLI#Work with S3 buckets|AWS CLI - Work with S3 buckets]]
@@ -36,21 +39,24 @@ tags:
 
 ### Enumerate Bucket Contents
 
-If you don't have full read access to a bucket, you can try to enumerate its contents using [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration#Directory Enumeration|Directory Enumeration]]
+If you don't have full read access to a bucket, you can try to enumerate its contents using [[2 Tech-Specifics/Web/Enumeration - Web/Overview - Enumeration - Web#Directory Enumeration|Directory Enumeration]]
 
 ### Enumerate OwnerId using readable S3 bucket
 
 Obtain the Account ID of the bucket owner.
 
 **Prerequisites:**
+
 - Permission to read on object within a bucket (`s3:getObject`) or to list the buckets contents (`s3:ListBucket`)
 - any AWS account to interact with the [[2 Tech-Specifics/Cloud/AWS/AWS API|AWS API]]
 
 **Tool:** [s3-account-search](https://github.com/WeAreCloudar/s3-account-search)
+
 - Automates the whole workflow.
 - Uses IAM role identities instead of IAM user identities for the condition based enumeration.
 
 **Workflow:**
+
 1. Create new IAM user identity in the attacker account (by default it does not have any permissions)
 	- See [[3 Tools/cloud/AWS CLI#Manage Users and Policies|Manage users with AWS CLI]]
 2. Add a policy, to grant permissions to list buckets & read objects if the `OwnerId` starts with digit `x`.

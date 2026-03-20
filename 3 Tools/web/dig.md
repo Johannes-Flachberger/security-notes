@@ -7,7 +7,7 @@ Purpose: perfom DNS lookups
 ---
 # Info
 
-DNS fundamentals: [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|TCP,UDP 53 DNS]]
+DNS fundamentals: [[2 Tech-Specifics/Network/Protocols/DNS|DNS]]
 
 alternative tool: `host` command in kali
 

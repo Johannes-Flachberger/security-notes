@@ -47,4 +47,4 @@ and
 # Stabilisation
 
 - [[2 Tech-Specifics/OS/Windows/Reverse Shell Stabilisation|Reverse Shell Stabilisation - Windows]]
-- [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation|Reverse Shell Stabalisation - Linux]]
+- [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation - Linux|Reverse Shell Stabalisation - Linux]]

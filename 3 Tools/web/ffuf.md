@@ -6,7 +6,7 @@ Purpose: directory discovery, vhost discovery and HTTP parameter fuzzing
 ---
 # Info
 
-fuzzing tool, e.g. used for [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL Injection]], directory discovery, vhost discovery, etc.
+fuzzing tool, e.g. used for [[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/SQL Injection|SQL Injection]], directory discovery, vhost discovery, etc.
 
 # Usage
 

@@ -51,7 +51,7 @@ When creating a profile, you need to provide credentials, a default region and a
 | Command                                                                     | Purpose                                                                                                                  |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | e.g. `aws s3 mb s3://<bucket_name>-$RANDOM-$RANDOM-$RANDOM`                 | create an s3 bucket with the specified name and random integer values to ensure uniqueness                               |
-| `aws s3api put-bucket-policy --bucket <bucket_name> --policy file://<path>` | attach a [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals#IAM Policies\|IAM Policy]] to an S3 bucket<br>no output = success |
+| `aws s3api put-bucket-policy --bucket <bucket_name> --policy file://<path>` | attach a [[2 Tech-Specifics/Cloud/AWS/Fundamentals - AWS#IAM Policies\|IAM Policy]] to an S3 bucket<br>no output = success |
 | `aws s3 ls`                                                                 | list S3 buckets                                                                                                          |
 | `aws s3 ls <bucket_name>`                                                   | list contents of bucket                                                                                                  |
 | `aws s3 cp s3://<bucket_name>/<file_name> <local_dir>`                      | download files from bucket                                                                                               |

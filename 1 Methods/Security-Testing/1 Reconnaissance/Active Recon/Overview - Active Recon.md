@@ -12,38 +12,16 @@ Gather as detailed information as possible about exposed services - here are not
 
 Expand, enrich and deepen the knowledge gathered during passive recon.
 
-# Workflow
+**Workflow:**
 
-In general: start to enumerate the attack surface broadly (network & port scanning)
+1. Broadly enumerate the attack surface - this depends on the broad context and typically is one of the following:
+	- [[2 Tech-Specifics/Network/Network Scanning|Network Scanning]]: most usual scenario
+	- [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration - AD|Active Directory Enumeration]]
+	- [[2 Tech-Specifics/Cloud/Reconnaissance - Cloud|Reconnaissance - Cloud]]
+2. Enumerate each discovered service - see [[#Service Specific Enumeration]]
+3. Perform [[2 Tech-Specifics/Network/Network-Based Vulnerability Scanning|Network-Based Vulnerability Scanning]]
 
-then enumerate specific services
-
-## 1. Port Scanning & Service Detection
-
-See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Port scanning|Port scanning]]
-
-## 2. Enumerate Each Discovered Network Service
-
-```base
-filters:
-  and:
-    - file.tags.contains("#attack/reconnaissance/active")
-    - file.path.contains("2 Tech-Specifics/Network")
-views:
-  - type: table
-    name: Table
-
-```
-
-## 3. Vulnerability Scanning
-
-See [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
-
-## 4. Web Enumeration
-
-See [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
-
-# Attack Vectors
+# Service Specific Enumeration
 
 ```base
 filters:

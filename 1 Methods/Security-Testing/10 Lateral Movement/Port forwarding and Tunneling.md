@@ -70,7 +70,7 @@ flowchart LR
 
 ## HTTP Tunneling
 
-Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80,443 HTTP(S)|HTTP(S)]]
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/HTTP(S)|HTTP(S)]]
 
 **Tools:**
 
@@ -78,7 +78,7 @@ Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP 80,443 HTTP
 
 ## DNS Tunneling
 
-Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|DNS]]
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/DNS|DNS]]
 
 **Tools:**
 
@@ -91,5 +91,5 @@ See [[3 Tools/exploitation frameworks/Metasploit/Pivoting with Metasploit|Pivoti
 ## Windows Specifics
 
 - [[3 Tools/shells/Plink|Plink]]: alternative ssh client
-- Putty: alternative GUI ssh clientaaa
+- Putty: alternative GUI ssh client
 - [[2 Tech-Specifics/OS/Windows/netsh|netsh]]: firewall config tool, requires admin privileges

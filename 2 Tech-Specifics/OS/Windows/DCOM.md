@@ -6,7 +6,7 @@ tags:
 
 See: [Microsoft Learn](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dcom/4a893f3d-bd29-48cd-9f43-d9777a4415b0?redirectedfrom=MSDN)
 
-The Distributed Component Object Model (DCOM) is a very old technology to allow processes to interact with each other across multiple computers. Uses [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|TCP 135 msrpc]] to create a session and the performs [RPCs](https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-start-page) to provide access to objects on a remote machine.
+The Distributed Component Object Model (DCOM) is a very old technology to allow processes to interact with each other across multiple computers. Uses [[2 Tech-Specifics/Network/Protocols/msrpc|msrpc]] to create a session and the performs [RPCs](https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-start-page) to provide access to objects on a remote machine.
 
 # DCOM
 
@@ -16,7 +16,7 @@ Further techniques: https://www.cybereason.com/blog/dcom-lateral-movement-techni
 
 **Prerequisites:**
 - local "Administrator" user or Domain user with local admin rights on the target machine
-- [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|TCP 135 msrpc]] running on target
+- [[2 Tech-Specifics/Network/Protocols/msrpc|msrpc]] running on target
 - DCOM remote access enabled on target
 
 ### Microsoft Management Console (MMC)

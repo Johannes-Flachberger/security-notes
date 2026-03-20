@@ -27,4 +27,4 @@ remove negative results from output
 **reverse lookup ip block:**
 `for domain in $(seq 200 254); do host 51.222.169.$ip; done | grep -v "not found"`
 
-#todo idea: Write a script that first performss [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]] and then does a reverse lookup of all the ip blocks found and checks if there are more subdomains
+#todo idea: Write a script that first performss [[2 Tech-Specifics/Web/Enumeration - Web/Subdomain Enumeration|Subdomain Enumeration]] and then does a reverse lookup of all the ip blocks found and checks if there are more subdomains

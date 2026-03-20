@@ -38,7 +38,7 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 > [!Warning]
 > Dictionary & Bruteforce Attacks generate a lot of noise - they are easily detected, and often blocked by modern applications.
 
-Also see: [[2 Tech-Specifics/Active Directory/Credential Access/Active Directory Wordlist & Brute Force Attacks|Active Directory Wordlist & Brute Force Attacks]]
+Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & Brute Force Attacks - AD Specifics|Wordlist & Brute Force Attacks - AD Specifics]]
 
 ### Workflow
 

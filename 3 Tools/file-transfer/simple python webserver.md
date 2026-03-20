@@ -16,6 +16,6 @@ more advanced alternatives:
 
 # Usage
 
-execute in directory to make files accessable via [[2 Tech-Specifics/Network/Protocols/TCP 80,443 HTTP(S)|HTTP]] requests
+execute in directory to make files accessable via [[2 Tech-Specifics/Network/Protocols/HTTP(S)|HTTP]] requests
 
 `python3 -m http.server [port]`

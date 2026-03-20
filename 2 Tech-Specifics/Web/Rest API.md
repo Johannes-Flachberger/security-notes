@@ -15,7 +15,7 @@ emumerate the available paths step by step
 - start with enumerating everything below `.../api/`
 - if you find `.../api/users/` continue with that level
 APIs URL paths often contain version information - e.g. `.../api/users/v1`
---> we can use [[3 Tools/web/gobuster#Patterns|gobuster]] to enumerate paths using such patterns
+--> we can use [[3 Tools/web/ffuf|ffuf]], [[3 Tools/web/gobuster|gobuster]] or [[3 Tools/web/feroxbuster|feroxbuster]]to enumerate paths using such patterns
 --> then use [[3 Tools/web/cURL|cURL]] to query the API
 
 ### Tips

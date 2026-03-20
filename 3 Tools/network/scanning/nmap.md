@@ -201,7 +201,7 @@ add further scripts:
 
 ^eee943
 
-Also see [[1 Methods/Security-Testing/1 Reconnaissance/Active Recon/Vulnerability Scanning|Vulnerability Scanning]]
+Also see [[2 Tech-Specifics/Network/Network-Based Vulnerability Scanning|Network-Based Vulnerability Scanning]]
 
 Use scripts for vulnerability scanning - script category `vuln`
 

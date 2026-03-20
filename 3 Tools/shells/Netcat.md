@@ -15,7 +15,7 @@ windows executables: <https://github.com/int0x33/nc.exe/>
 
 more sophisticated alternative: [[3 Tools/shells/Socat]]
 
-For stabilisation see [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation|Reverse Shell Stabalisation Linux]] and [[2 Tech-Specifics/OS/Windows/Reverse Shell Stabilisation|Reverse Shell Stabilisation Windows]].
+For stabilisation see [[2 Tech-Specifics/OS/Linux/Reverse Shell Stabalisation - Linux|Reverse Shell Stabalisation Linux]] and [[2 Tech-Specifics/OS/Windows/Reverse Shell Stabilisation|Reverse Shell Stabilisation Windows]].
 
 # Usage
 
@@ -69,7 +69,7 @@ UDP Scan: same as tcp scan, use `-u` additionally
 
 ## Manual SMTP Connection
 
-connect to port 25, send [[2 Tech-Specifics/Network/Protocols/TCP 25 SMTP|SMTP]] commands manually
+connect to port 25, send [[2 Tech-Specifics/Network/Protocols/SMTP|SMTP]] commands manually
 
 ``` shell
 nc -nv 192.168.50.8 25

@@ -10,11 +10,11 @@ A suite of windows systemadmin utilities, that can be used for various purposes
 
 # PsExec
 
-**Purpose:** execute commands on remote machines using SMB. Further information: [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB#PsExec|SMB]]
+**Purpose:** execute commands on remote machines using SMB. Further information: [[2 Tech-Specifics/Network/Protocols/SMB#PsExec|SMB]]
 
 **Prerequitsites:**
 1. the authentication user must be in the local "Administrators" group on the target
-2. the target must have an [[2 Tech-Specifics/Network/Protocols/TCP 445 SMB|SMB]] service enabled (default on Windows Server)
+2. the target must have an [[2 Tech-Specifics/Network/Protocols/SMB|SMB]] service enabled (default on Windows Server)
 3. the `ADMIN$`smb share must be available (default on Windows Server)
 
 **Usage:**

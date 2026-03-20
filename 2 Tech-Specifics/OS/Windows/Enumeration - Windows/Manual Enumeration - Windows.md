@@ -36,7 +36,7 @@ See:
 
 - Administrators:
 - Backup Operators: can read & write also files the don't own
-- Remote Desktop Users: can log in via [[2 Tech-Specifics/Network/Protocols/TCP 3389 RDP|RDP]]
+- Remote Desktop Users: can log in via [[2 Tech-Specifics/Network/Protocols/RDP|RDP]]
 - Remote Management Users: can log via [WinRM](https://learn.microsoft.com/en-us/windows/win32/winrm/portal)
 
 ## System Information
@@ -84,32 +84,57 @@ Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
 
 **Hint:** To get only an overview, filter the output with `| select displayname`.
 
-Also check Program Files in Downloads and root folder by [[#Searching Files]]
+Also check Program Files in Downloads and root folder by [[#Search Files]]
 
 **Then:**
 
 - search [[1 Methods/Security-Testing/4 Execution/Using Public Exploits|Public Exploits]] for the installed software
 - check for password managers to perform [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]]
 
-## Searching Files
+## Search Files
+
+### Based on Name
+
+**Quick Reference:**
+
+| Goal                       | PowerShell                   | CMD                   |
+| -------------------------- | ---------------------------- | --------------------- |
+| Filter by extension        | `gci -Recurse -Filter *.txt` | `dir /si *.txt`       |
+| Files only (no dirs)       | `gci -Recurse -File`         | `dir /si /a-d`        |
+| Start from a specific path | `gci C:\MyFolder -Recurse`   | `dir C:\MyFolder /si` |
 
 The following files might include sensitive information:
 
+- [[2 Tech-Specifics/OS/Sensitive Files|Sensitive Files]]
 - configuration files of installed software: (weak) configurations, credentials
 - .txt files: credentials, spontaneous notes of users
 - password safe databases
 - relevant filetypes: `*.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx,*.ini`
 
-**cmd**
+### Based on Content
 
-eg. `findstr /si [keyword] *.txt`
+**Quick Reference:**
+
+| Goal                | PowerShell                                                 | CMD                                   |
+| ------------------- | ---------------------------------------------------------- | ------------------------------------- |
+| Search all files    | `gci -Recurse -File \| Select-String "searchterm"`         | `findstr /s /i "searchterm" *.*`      |
+| Filter by extension | `gci -Recurse -Filter *.log \| Select-String "searchterm"` | `findstr /s /i "searchterm" *.log`    |
+| Case-sensitive      | `Select-String "searchterm" -CaseSensitive`                | `findstr /s "term" *.*` (default)     |
+| Show only filenames | `... \| Select-Object -ExpandProperty Path`                | `findstr /s /i /m "searchterm" *.*`   |
+| Regex search        | `Select-String "searchterm\d+"`                            | `findstr /s /r "searchterm[0-9]" *.*` |
+
+### cmd
+
+eg. `dir /si [keyword] *.txt`
 
 | Purpose                               | Option |
 | ------------------------------------- | ------ |
 | search current directories & sub-dirs | `/s`   |
 | case in-sensitive search              | `/i`   |
 
-**PowerShell**
+### PowerShell
+
+use `Get-ChildItem` or the short form `gci`
 
 ```powershell
 Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Include "myfile.txt"

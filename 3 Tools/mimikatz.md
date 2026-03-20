@@ -12,7 +12,7 @@ Extracts password, hashes, etc. from various sources on windows:
 - SAM
 - Memory of the LSASS
 
-For fundamentals see [[2 Tech-Specifics/OS/Windows/Credential Access/Local Credential Access|Windows Local Credential Access]]
+For fundamentals see [[2 Tech-Specifics/OS/Windows/Credential Access - Windows/Local Credential Access - Windows|Windows Local Credential Access]]
 
 Good reference guide: [adsecurity](https://adsecurity.org/?page_id=1821)
 
@@ -28,7 +28,7 @@ Alternatively, use the [Token Module](https://github.com/gentilkiwi/mimikatz/wik
 1. start mimikatz with `mimikatz.exe`
 2. Use commands
 
-**Hint:** Commands can also be supplied as arguments to the mimikatz command prompt
+**Hint:** Commands can also be supplied as arguments to the mimikatz command prompt - e.g: `.\mimikatz.exe "log" "privilege::debug" "token::elevate"  "lsadump::sam" "sekurlsa::logonpasswords" "sekurlsa::tickets" "exit"`
 
 Commands within the mimikatz shell have the following format:
 
@@ -77,12 +77,12 @@ Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
 ### Silver Tickets
 
-See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Silver Tickets|Kerberos - Forging Silver Tickets]]
+See [[2 Tech-Specifics/Network/Protocols/Kerberos#Silver Tickets|Kerberos - Forging Silver Tickets]]
 
 **Required information:**
 
 - NTLM password hash of the target service account
-	- see [[2 Tech-Specifics/OS/Windows/Credential Access/Overview - Credential Access|Windows  Credential Access]]
+	- see [[2 Tech-Specifics/OS/Windows/Credential Access - Windows/Overview - Credential Access - Windows|Windows  Credential Access]]
 - Domain SID
 	- use `whoami /user` and only use the [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#SIDs|Domain SID]]
 - SPN of the target service
@@ -104,7 +104,7 @@ kerberos::golden /sid:<domain_SID> /domain:<domain_name> /ptt /target:<SPN> /ser
 
 ### Golden Tickets
 
-See [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos#Golden Tickets|Kerberos - Forging Golden Tickets]]
+See [[2 Tech-Specifics/Network/Protocols/Kerberos#Golden Tickets|Kerberos - Forging Golden Tickets]]
 
 **Required information:**
 
@@ -128,7 +128,7 @@ kerberos::golden /user:<user> /domain:<domain_name> /sid:<domain_sid> /krbtgt:<n
 
 **Purpose:**
 
-- [[2 Tech-Specifics/Active Directory/Credential Access/Overpass the Hash|Overpass the Hash]]
+- [[2 Tech-Specifics/Active Directory/Credential Access - AD/Overpass the Hash|Overpass the Hash]]
 - [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Overview - Privilege Escalation - Windows|Windows Privilege Escalation]]?
 
 ```
@@ -139,7 +139,7 @@ E.g. run `powershell` as command. Note: When running `whoami` from the new power
 
 ## DCSync Attack
 
-See: [[2 Tech-Specifics/Active Directory/Lateral Movement/dcsync|dcsync]]
+See: [[2 Tech-Specifics/Active Directory/Lateral Movement - AD/dcsync|dcsync]]
 
 Extract credentials of a target user:
 

@@ -8,7 +8,7 @@ Purpose: dns remote shell & tunneling tool
 ---
 # Info
 
-Uses a dedicated client & server to create an encrypted session using [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS|DNS]].
+Uses a dedicated client & server to create an encrypted session using [[2 Tech-Specifics/Network/Protocols/DNS|DNS]].
 
 Uses _CNAME_, _TXT_, and _MX_ queries and responses for tunneling data.
 

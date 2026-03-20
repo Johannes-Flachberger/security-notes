@@ -36,11 +36,7 @@ Available in different formats:
 When using PowerShell:
 
 1. `Import-Module .\Sharphound.ps1`
-2. E.g.: `Invoke-BloodHound -CollectionMethod All -OutputDirectory <directory> -OutputPrefix "<filename_prefix>" -ZipPassword <password>`
-
-|     |     |
-| --- | --- |
-|     |     |
+2. E.g.: `Invoke-BloodHound -c All -OutputDirectory <directory> -OutputPrefix "<filename_prefix>" -ZipPassword <password>`
 
 ## AzureHound
 

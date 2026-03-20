@@ -6,7 +6,7 @@ tags:
 ---
 # Fundamentals
 
-**See:** [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals|AWS Fundamentals]]
+**See:** [[2 Tech-Specifics/Cloud/AWS/Fundamentals - AWS|Fundamentals - AWS]]
 
 # Pentesting
 
@@ -16,7 +16,7 @@ tags:
 - Manual Enumeration: [[3 Tools/cloud/AWS CLI|AWS CLI]]
 - Automated Enumeration: [[3 Tools/exploitation frameworks/pacu|pacu]]
 
-**Hint:** Especially check for [[2 Tech-Specifics/Cloud/AWS/AWS Fundamentals#IAM Policies|AWS Managed Policies]] as they might pose a security risk.
+**Hint:** Especially check for [[2 Tech-Specifics/Cloud/AWS/Fundamentals - AWS#IAM Policies|AWS Managed Policies]] as they might pose a security risk.
 
 ### Get Account Overview
 

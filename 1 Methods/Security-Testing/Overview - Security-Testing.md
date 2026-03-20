@@ -4,7 +4,7 @@
 
 Pentesting can be considered a subform of redteaming, however there are real differences:
 
-| **Aspect**       | **Red Teaming**                                                                                     | **Pentesting**                                                                  |
+| Aspect       | Red Teaming                                                                                     | Pentesting                                                                  |
 | ---------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | **Scope**        | Wide - tests a whole organisation including its processes, and ability to detect and react attacks. | Narrow - typically focused on a technical system, a range of IPs, etc.          |
 | **Stealthyness** | Required                                                                                            | Not always required, sometimes just the defensive security measures are tested. |

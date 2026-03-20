@@ -16,7 +16,7 @@ Useful features:
 
 # Usage
 
-Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/Command Injection#Get environment info|Get environment Info]]
+Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/Command Injection#Get environment info|Get environment Info]]
 
 ## Useful Options
 
@@ -67,7 +67,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/WebApp Attack
 
 | Command                         | Purpose                                                                     |
 | ------------------------------- | --------------------------------------------------------------------------- |
-| `Resolve-DnsName <domain name>` | perform a [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS\|DNS]] lookup |
+| `Resolve-DnsName <domain name>` | perform a [[2 Tech-Specifics/Network/Protocols/DNS\|DNS]] lookup |
 
 ### Run commands as another user
 
@@ -100,19 +100,42 @@ $secureString = ConvertTo-SecureString $password -AsPlaintext -Force;
 $credential = New-Object System.Management.Automation.PSCredential $username, $secureString;
 ```
 
+## Administration tasks
+
+### Enable RDP service
+
+```powershell
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
+
+
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+```
+
+### Enable SSH
+
+```powershell
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+```
+
 ## Enumeration
 
 See [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
 
 ## Discovery
 
-#### Perform TCP Port Scan
+### Perform ping sweep
+
+```powershell
+1..255 | % {"192.168.0.$($_): $(Test-Connection -count 1 -comp 192.168.0.$($_) -quiet)"}
+```
+
+### Perform TCP Port Scan
 
 ```powershell
 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 ```
 
-#### Test Connection on One Tcp Port
+### Test Connection on One Tcp Port
 
 ```powershell
 Test-NetConnection -Port 445 192.168.50.151
@@ -140,7 +163,7 @@ using Invoke-WebRequest (short form: `iwr`):
 Invoke-WebRequest -uri <url> -Outfile <path>
 ```
 
-Add `-UseDefaultCredentials` to authenticate to the web service as the active user. This also makes use of cached [[2 Tech-Specifics/Network/Protocols/TCP,UDP 88 Kerberos|Kerberos]] tickets.
+Add `-UseDefaultCredentials` to authenticate to the web service as the active user. This also makes use of cached [[2 Tech-Specifics/Network/Protocols/Kerberos|Kerberos]] tickets.
 
 ### Upload a File
 
@@ -184,12 +207,12 @@ See [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/scripting/lea
 
  Various protocols can be used to issue PowerShell commands on a remote machine:
 
- - [[2 Tech-Specifics/Network/Protocols/TCP 22 SSH|SSH]]
- - [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|WinRM]]
+ - [[2 Tech-Specifics/Network/Protocols/SSH|SSH]]
+ - [[2 Tech-Specifics/Network/Protocols/WinRM|WinRM]]
 
 #### New-PSSession
 
-Uses [[2 Tech-Specifics/Network/Protocols/TCP 5985,5986 WinRM|WinRM]] for remoting.
+Uses [[2 Tech-Specifics/Network/Protocols/WinRM|WinRM]] for remoting.
 
 To create the `$credential` object see [[#Create a PSCredential object]].
 

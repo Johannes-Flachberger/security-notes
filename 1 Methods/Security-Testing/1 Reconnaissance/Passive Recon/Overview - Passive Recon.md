@@ -15,7 +15,7 @@ Less strict interpretation: We can also make contact, but only like a normal use
 
 This file describes general recon techniques that can be used for organizations, individuals, etc. Also check technology specific recon notes:
 
-- [[2 Tech-Specifics/Web/WebApp Enumeration/Overview - WebApp Enumeration|Overview - WebApp Enumeration]]
+- [[2 Tech-Specifics/Web/Enumeration - Web/Overview - Enumeration - Web|Overview - Enumeration - Web]]
 
 # OSINT Framework
 
@@ -43,7 +43,7 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 
 ## DNS Enumeration
 
-- [[2 Tech-Specifics/Network/Protocols/TCP,UDP 53 DNS#Enumeration|DNS Enumeration]]
+- [[2 Tech-Specifics/Network/Protocols/DNS#Enumeration|DNS Enumeration]]
 
 ## Code Repositories
 
@@ -67,7 +67,7 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 ## Corporate Websites
 
 - general info about a company
-- startpoint for [[2 Tech-Specifics/Web/WebApp Enumeration/Subdomain Enumeration|Subdomain Enumeration]]
+- startpoint for [[2 Tech-Specifics/Web/Enumeration - Web/Subdomain Enumeration|Subdomain Enumeration]]
 
 ## Job Boards
 
@@ -76,7 +76,9 @@ Tool: [[3 Tools/passive recon/whois|whois]]
 ## Advanced Search
 
 **Advanced search features for many patforms:** <https://github.com/cipher387/Advanced-search-operators-list>
+
 **Advanced search engines**
+
 - [[3 Tools/passive recon/Shodan|Shodan]]: find internet connect (iot) devices
 - [[3 Tools/passive recon/Censys.io|Censys]]: IoT search engine
 - [[3 Tools/passive recon/Napalm FTP|Napalm FTP]]: find FTP servers

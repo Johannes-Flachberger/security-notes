@@ -34,7 +34,7 @@ MSSQL provides metadata in form of "[system catalog views](https://learn.microso
 
 ### Injection
 
-- Methodology: [[2 Tech-Specifics/Web/WebApp Attacks/Injection Attacks/SQL Injection|SQL Injection]]
+- Methodology: [[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/SQL Injection|SQL Injection]]
 
 ### Code Execution
 

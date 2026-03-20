@@ -9,7 +9,7 @@ tags:
 
 See [Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page)
 
-Uses [[2 Tech-Specifics/Network/Protocols/TCP 135 msrpc|TCP 135 msrpc]] to create a session and the performs [RPCs](https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-start-page) to perform tasks on a remote machine.
+Uses [[2 Tech-Specifics/Network/Protocols/msrpc|msrpc]] to create a session and the performs [RPCs](https://learn.microsoft.com/en-us/windows/win32/rpc/rpc-start-page) to perform tasks on a remote machine.
 
 # Pentesting
 
