@@ -93,15 +93,7 @@ Also check Program Files in Downloads and root folder by [[#Search Files]]
 
 ## Search Files
 
-### Based on Name
-
-**Quick Reference:**
-
-| Goal                       | PowerShell                   | CMD                   |
-| -------------------------- | ---------------------------- | --------------------- |
-| Filter by extension        | `gci -Recurse -Filter *.txt` | `dir /si *.txt`       |
-| Files only (no dirs)       | `gci -Recurse -File`         | `dir /si /a-d`        |
-| Start from a specific path | `gci C:\MyFolder -Recurse`   | `dir C:\MyFolder /si` |
+**Note:** the `-Recurse` flag in PowerShell and `/s` in cmd enable recursive searching
 
 The following files might include sensitive information:
 
@@ -111,7 +103,15 @@ The following files might include sensitive information:
 - password safe databases
 - relevant filetypes: `*.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx,*.ini`
 
-### Based on Content
+### Name-based - Quick Reference
+
+| Goal                       | PowerShell                   | CMD                   |
+| -------------------------- | ---------------------------- | --------------------- |
+| Filter by extension        | `gci -Recurse -Filter *.txt` | `dir /si *.txt`       |
+| Files only (no dirs)       | `gci -Recurse -File`         | `dir /si /a-d`        |
+| Start from a specific path | `gci C:\MyFolder -Recurse`   | `dir C:\MyFolder /si` |
+
+### Content-based - Quick Reference
 
 **Quick Reference:**
 
@@ -141,6 +141,14 @@ Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Include "myfile.
 ```
 
 Use `?`and `*`as wildcards.
+
+#### User files listing snippet
+
+This snippet lists all directories in a users home folder, as well as their files in Document, Desktop and Downloads
+
+```powershell
+& { $ErrorActionPreference = 'SilentlyContinue'; Get-ChildItem "C:\Users" -Directory | ForEach-Object { $u = $_.FullName; Write-Host "`n=== $($_.Name) ===" -ForegroundColor Cyan; Write-Host "`n-- Home Folders --" -ForegroundColor Yellow; Get-ChildItem $u -Directory | ForEach-Object { Write-Host "  $($_.Name)" }; @("Documents","Desktop","Downloads") | ForEach-Object { $p = Join-Path $u $_; if (Test-Path $p -ErrorAction SilentlyContinue) { Write-Host "`n-- $_ --" -ForegroundColor Yellow; Get-ChildItem $p -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" } } } } }
+```
 
 ## Antivirus Enum
 
