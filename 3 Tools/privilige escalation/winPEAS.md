@@ -14,3 +14,8 @@ used to scan windows machines automatically for privesc opportunities
 # Usage
 
 best write output to file (winpeas > outfile.txt)
+
+| Option       | Purpose                              |
+| ------------ | ------------------------------------ |
+| `-h`         | show help                            |
+| `log=<path>` | log to file - e.g. `log=winPEAS.log` |

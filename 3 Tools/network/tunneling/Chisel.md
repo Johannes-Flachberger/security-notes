@@ -24,12 +24,12 @@ When a connection is received, the socks proxy listens on port 1080 per default.
 
 **Start chisel client:**
 
-`/tmp/chisel client 192.168.118.4:8080 R:socks`
+`/tmp/chisel client <ip>:<port> R:socks`
 
-| Option      | Purpose                                                 |
-| ----------- | ------------------------------------------------------- |
-| `--reverse` | connect to a server and start SOCKS proxy on the server |
-| `R:socks`   | open reverse socks proxy connection                     |
+| Option      | Purpose                                              |
+| ----------- | ---------------------------------------------------- |
+| `--reverse` | tell the chisel server to await a reverse connection |
+| `R:socks`   | open reverse socks proxy connection                  |
 
 > [!Hint] Force chisel to run in background
 > use `> /dev/null 2>&1 &`

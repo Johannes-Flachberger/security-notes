@@ -39,7 +39,9 @@ e.g. `crypto::certificates /systemstore:local_machine`
 Available modules: <https://github.com/gentilkiwi/mimikatz/wiki#modules>
 
 > [!Hint] Filter output using [[3 Tools/utilities/grep|grep]] & `uniq` to get an overview of the collected data
-> Contents `grep -i "username" mimikatz2.log | uniq`
+> Unique list of users: `grep -i 'user' mimikatz2.log | uniq`
+> User per command: `grep -i -e 'user' -e 'mimikatz' mimikatz.log`
+> Show domain users: `grep -i -B 1 '<domain>' mimikatz.log`
 
 ## Common commands:
 

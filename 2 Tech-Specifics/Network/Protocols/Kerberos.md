@@ -70,7 +70,8 @@ AS-REQ queries can be used against a domain controller to check if a set of cred
 
 **Tools:**
 
-- [[3 Tools/microsoft/Kerbrute|Kerbrute]]
+- [[3 Tools/bruteforce/netexec|netexec]]: multiple protocols possible, best use ldap
+- [[3 Tools/microsoft/Kerbrute|Kerbrute]]: from windows
 
 **See also:**
 

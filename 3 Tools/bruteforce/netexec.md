@@ -16,7 +16,7 @@ supports various popular protocols:
 
 - [[2 Tech-Specifics/Network/Protocols/SMB|SMB]]
 - [[3 Tools/shells/ssh|ssh]]
-- [[2 Tech-Specifics/Network/Protocols/LDAP|LDAP]]
+- [[2 Tech-Specifics/Network/Protocols/LDAP|LDAP]]: useful to check against the domain controller if credentials are valid
 - [[2 Tech-Specifics/Network/Protocols/FTP|FTP]]
 - [[2 Tech-Specifics/OS/Windows/WMI|WMI]]
 - [[2 Tech-Specifics/Network/Protocols/WinRM|winrm]]
@@ -31,10 +31,12 @@ The nxc wiki is pretty good: https://www.netexec.wiki/
 
 Example: `nxc smb <ip> -u <user> -p '<password>' -d <domain> --continue-on-success`
 
-- specify a range of IPs: e.g.`192.168.0.100-200`
-- user/password files are also supported
+**Hints**
 
-Output:
+- specify a range of IPs: e.g.`192.168.0.100-200`
+- hosts, users and password can also be supplied as files using the same parameters
+
+**Output:**
 
 - credentials are prepended with `[+]` if valid and `[-]` if invalid
 - when a user is cracked, it also shows `(Pwn3d!)` beside the credentials if the user has local admin privileges.
@@ -45,3 +47,11 @@ Output:
 > E.g. If credentials show as valid for RDP, that does not automatically mean that the user is authorised to log in via RDP.
 
 # Snippets
+
+Execute enumeration using multiple protocols in a loop:
+
+```sh
+for proto in rdp smb winrm wmi; do proxychains -q nxc "$proto" <hosts> -u <user> -p 'Mushroom!' -d <domain> --continue-on-success; done
+```
+
+**Note:** ssh enumeration is not compatiable with the `-d` option

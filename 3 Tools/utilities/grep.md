@@ -13,6 +13,7 @@ old but gold :)
 when grepping for a term with "-" at the beginning: double escape with \
 example: ```nmap -h | grep \\-F```
 
-| Option | Purpose     |
-| ------ | ----------- |
-| `-i`   | ignore case |
+| Option     | Purpose                 |
+| ---------- | ----------------------- |
+| `-i`       | ignore case             |
+| `-B <num>` | show lines before match |

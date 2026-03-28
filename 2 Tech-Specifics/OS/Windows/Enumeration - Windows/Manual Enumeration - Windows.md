@@ -144,10 +144,14 @@ Use `?`and `*`as wildcards.
 
 #### User files listing snippet
 
-This snippet lists all directories in a users home folder, as well as their files in Document, Desktop and Downloads
+This snippet lists:
+
+- each users users home directory
+- each users Document, Desktop and Downloads directories
+- the root directory of each file connected to the system
 
 ```powershell
-& { $ErrorActionPreference = 'SilentlyContinue'; Get-ChildItem "C:\Users" -Directory | ForEach-Object { $u = $_.FullName; Write-Host "`n=== $($_.Name) ===" -ForegroundColor Cyan; Write-Host "`n-- Home Folders --" -ForegroundColor Yellow; Get-ChildItem $u -Directory | ForEach-Object { Write-Host "  $($_.Name)" }; @("Documents","Desktop","Downloads") | ForEach-Object { $p = Join-Path $u $_; if (Test-Path $p -ErrorAction SilentlyContinue) { Write-Host "`n-- $_ --" -ForegroundColor Yellow; Get-ChildItem $p -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" } } } } }
+& { $ErrorActionPreference = 'SilentlyContinue'; Write-Host "`n=== Available Drives ===" -ForegroundColor Green; Get-PSDrive -PSProvider FileSystem | ForEach-Object { Write-Host "`n-- Drive $($_.Name):\ --" -ForegroundColor Yellow; Get-ChildItem "$($_.Root)" | ForEach-Object { Write-Host "  $($_.FullName)" } }; Get-ChildItem "C:\Users" -Directory | ForEach-Object { $u = $_.FullName; Write-Host "`n=== User: $($_.Name) ===" -ForegroundColor Cyan; Write-Host "`n-- Home Folders --" -ForegroundColor Yellow; Get-ChildItem $u -Directory | ForEach-Object { Write-Host "  $($_.Name)" }; @("Documents","Desktop","Downloads") | ForEach-Object { $p = Join-Path $u $_; if (Test-Path $p -ErrorAction SilentlyContinue) { Write-Host "`n-- $_ --" -ForegroundColor Yellow; Get-ChildItem $p -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" } } } } }
 ```
 
 ## Antivirus Enum

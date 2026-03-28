@@ -14,6 +14,7 @@ Essentially, upgrading a cached [[2 Tech-Specifics/_Other/Cryptography/Hashing f
 **Prerequites:** Local admin privileges
 
 **Workflow:**
+
 1. Obtain a username and its NTLM password hash - see [[2 Tech-Specifics/Active Directory/Credential Access - AD/Overview - Credential Access - AD|Overview - Credential Access - AD]]
 2. Use [[3 Tools/mimikatz|mimikatz]] to extract a cached NTLM hash
 3. Use [[3 Tools/mimikatz#Spawn Process with cached Credentials|mimikatz]] to spawn a process as another user whose credentials are cached.

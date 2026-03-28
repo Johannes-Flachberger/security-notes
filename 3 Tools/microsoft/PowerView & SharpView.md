@@ -19,6 +19,13 @@ Both implementations are not longer supported, but still useful today.
 
 # Usage
 
+> [!Warning] Cryptic errors
+> The produced errors, e.g. in case of an authentication failure can be quite cryptic.
+
+**Hint:**
+
+Depending on the context (e.g. if a [[2 Tech-Specifics/Network/Protocols/Kerberos|Kerberos]] TGT is already cached), you might need to pass credentials usign `-Credential <user>@<domain>/<passwor>`.
+
 **Usage:**
 
 1. Import script into scope: `Import-Module .\PowerView.ps1`
