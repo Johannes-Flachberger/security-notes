@@ -46,7 +46,7 @@ detect if you are in cmd or PowerShell:
 
 ## Useful Payloads
 
-- [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
+- [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Remote Shells]]
 - <https://github.com/payloadbox/command-injection-payload-list>
 - <https://hackersonlineclub.com/command-injection-cheatsheet/>
 

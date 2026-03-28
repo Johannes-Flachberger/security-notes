@@ -1,8 +1,9 @@
 ---
 tags:
   - "#type/tech-specific"
-  - "#attack/initial-access"
   - "#attack/lateral-movement"
+  - "#attack/initial-access/server-side"
+  - "#attack/initial-access/client-side"
 ---
 # Fundamentals
 

@@ -30,7 +30,7 @@ Services with atypical / user-defined executables might be vulnerable.
 
 3. Show privileges on executables `icacls "<path>"` or `Get-ACL`. Look for write (W) or full (F) privileges.
 4. If required privileges are present, replace the service with another executable, e.g.
-	- [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
+	- [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Remote Shells]]
 	- [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#AddUser Snippet|add a user]]
 5. If possible, manually restart the service, or reboot the machine if service StartMode is set to "auto" (requires `SeShutdownPrivilege`)
 
@@ -100,7 +100,7 @@ You can put a malicious executable in a place where windows tries to call it bef
 	- eg. `.\accesschk64.exe /accepteula -uwdq "<path>"`
 	- eg. `icacls "<path>"`
 3. insert a malicious executable
-	- [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]]
+	- [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Remote Shells]]
 	- [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#AddUser Snippet|add a user]]
 4. start/restart service
 	- `sc start [service name]`

@@ -2,6 +2,7 @@
 tags:
   - "#type/tech-specific"
   - attack/command-and-control
+  - "#attack/initial-access/server-side"
 ---
 # Fundamentals
 

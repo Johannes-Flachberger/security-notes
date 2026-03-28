@@ -27,6 +27,8 @@ flowchart LR
 
 ```
 
+### Basic port forwarding
+
 **Tools:**
 
 - [[3 Tools/shells/Socat|Socat]]: basic port forwarding
@@ -34,19 +36,34 @@ flowchart LR
 - [[3 Tools/shells/Netcat|Netcat]]: combine with FIFO
 - if on Linux & root privileges present: iptables
 
-## SSH Tunneling
+### SSH based
+
+**Tool:** [[3 Tools/shells/ssh|ssh]]
+
+- [[3 Tools/shells/ssh#Local Port Forwarding|Local Port Forwarding]]
+	- Packets are tunneled through ssh to a remote host and then (by the remote host) forwarded to a specified destination host&port
+	- See diagram below.
+- [[3 Tools/shells/ssh#Remote Port Forwarding|Remote Port Forwarding]]
+	- connect back from an ssh client to a local ssh server. Set up a listening port on the server & forward the packets to a specified destination host.
+
+### DNS based
+
+Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/DNS|DNS]]
+
+**Tools:**
+
+- [[3 Tools/network/tunneling/dnscat2|dnscat2]]
+
+## SOCKS Proxy
+
+### SSH Tunneling
 
 **Note:** ssh is preinstalled on modern windows versions and many Linux installs.
 
 There are several types of [[3 Tools/shells/ssh|ssh]] tunneling:
 
-- [[3 Tools/shells/ssh#Local Port Forwarding|Local Port Forwarding]]
-	- Packets are tunneled through ssh to a remote host and then (by the remote host) forwarded to a specified destination host&port
-	- See diagram below.
 - [[3 Tools/shells/ssh#Dynamic Port Forwarding|Dynamic Port Forwarding]]
 	- ssh sets up a socks proxy, so packets can be forwarded to multiple destination hosts
-- [[3 Tools/shells/ssh#Remote Port Forwarding|Remote Port Forwarding]]
-	- connect back from an ssh client to a local ssh server. Set up a listening port on the server & forward the packets to a specified destination host.
 - [[3 Tools/shells/ssh#Remote Dynamic Port Forwarding|Remote Dynamic Port Forwarding]]
 	- connect back from an ssh client and set up a socks proxy on the ssh server. Tunnels all packets through the ssh connection and forwards them to the destination hosts.
 	- **Prerequisite:** SSH client version higher than 7.6 (ssh server version is irrelevant)
@@ -66,30 +83,30 @@ flowchart LR
 
 ```
 
-**Alternative tool:** [[3 Tools/shells/sshuttle|sshuttle]]
+#### Windows Specifics
 
-## HTTP Tunneling
+- [[3 Tools/shells/Plink|Plink]]: alternative ssh client
+- Putty: alternative GUI ssh client
+- [[2 Tech-Specifics/OS/Windows/netsh|netsh]]: firewall config tool, requires admin privileges
 
-Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/HTTP(S)|HTTP(S)]]
+### HTTP Tunneling
+
+Set up a SOCKS proxy and encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/HTTP(S)|HTTP(S)]]
 
 **Tools:**
 
 - [[3 Tools/network/tunneling/Chisel|Chisel]]
 
-## DNS Tunneling
-
-Encapsulate data streams in [[2 Tech-Specifics/Network/Protocols/DNS|DNS]]
-
-**Tools:**
-
-- [[3 Tools/network/tunneling/dnscat2|dnscat2]]
-
-## Metasploit Tunneling
+### Metasploit Tunneling
 
 See [[3 Tools/exploitation frameworks/Metasploit/Pivoting with Metasploit|Pivoting with Metasploit]]
 
-## Windows Specifics
+## Transparent / VPN like tunneling
 
-- [[3 Tools/shells/Plink|Plink]]: alternative ssh client
-- Putty: alternative GUI ssh client
-- [[2 Tech-Specifics/OS/Windows/netsh|netsh]]: firewall config tool, requires admin privileges
+### sshuttle
+
+[[3 Tools/shells/sshuttle|sshuttle]] creates a transparent proxy on the testing workstation
+
+### ligolo-ng
+
+[ligolo-ng](https://github.com/nicocha30/ligolo-ng) agent based, creates a TUN interface on the testing workstation

@@ -1,7 +1,8 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#type/tool"  #attack/reconnaissance/active #attack/credential-access 
+  - "#type/tech-specific"
+  - "#type/tool"
+  - "#attack/credential-access"
 ---
 # Fundamentals
 
@@ -31,7 +32,7 @@ The MIB holds a lot of information about targets - e.g. on windows: user account
 
 ## Enumeration
 
-## Snmpwalk
+### Snmpwalk
 
 - enumerates the whole MIB tree of an smb server
 - requires credentials / community string

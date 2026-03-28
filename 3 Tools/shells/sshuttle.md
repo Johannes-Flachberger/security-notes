@@ -6,9 +6,10 @@ Purpose: create vpn-like tunnel using ssh
 ---
 # Info
 
-Uses SSH to create a VPN-like tunnel to a target system.
+Uses SSH to create a transparent proxy / VPN-like tunnel to a target system. All packets directed to the specified subnets are transmitted through the tunnel.
 
 **Prerequities:**
+
 - on SSH client: root privileges
 - on SSH server: python3
 

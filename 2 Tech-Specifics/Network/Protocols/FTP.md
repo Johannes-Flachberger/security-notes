@@ -1,6 +1,7 @@
 ---
 tags:
   - "#type/tech-specific"
+  - "#attack/initial-access/server-side"
 ---
 # Fundamentals
 

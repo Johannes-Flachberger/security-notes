@@ -3,6 +3,7 @@ tags:
   - "#type/tool"
   - "#attack/discovery"
   - "#type/tech-specific"
+  - "#attack/initial-access/server-side"
 Link:
 Purpose:
 ---

@@ -197,7 +197,7 @@ The `DllMain`function is the entrypoint of a DLL. Based on the context, one of t
 For pentesting purposes, code is typically added to the "Attached" cases, to e.g.
 
 - create a new user
-- open a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shell]]
+- open a [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Remote Shell]]
 
 DLL Code example from [Microsoft](https://learn.microsoft.com/en-us/troubleshoot/windows-client/setup-upgrade-and-drivers/dynamic-link-library#the-dll-entry-point):
 

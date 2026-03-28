@@ -1,8 +1,9 @@
 ---
 tags:
-  - "#type/tech-specific" 
-  - "#attack/reconnaissance/active" 
-  - "#attack/exfiltration" 
+  - "#type/tech-specific"
+  - "#attack/reconnaissance/active"
+  - "#attack/exfiltration"
+  - "#attack/initial-access/server-side"
 ---
 # Fundamentals
 

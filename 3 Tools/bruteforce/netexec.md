@@ -51,7 +51,7 @@ Example: `nxc smb <ip> -u <user> -p '<password>' -d <domain> --continue-on-succe
 Execute enumeration using multiple protocols in a loop:
 
 ```sh
-for proto in rdp smb winrm wmi; do proxychains -q nxc "$proto" <hosts> -u <user> -p 'Mushroom!' -d <domain> --continue-on-success; done
+for proto in rdp smb winrm wmi; do proxychains -q nxc "$proto" <hosts> -u <user> -p <pass> -d <domain> --continue-on-success; done
 ```
 
 **Note:** ssh enumeration is not compatiable with the `-d` option

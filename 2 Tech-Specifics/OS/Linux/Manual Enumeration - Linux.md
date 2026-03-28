@@ -7,7 +7,7 @@ tags:
 ---
 # Fundamentals
 
-See [[2 Tech-Specifics/OS/Linux/Privilege Escalation - Linux/Overview - Privilege Escalation - Linux|Overview - Privilege Escalation - Linux]]
+See [[2 Tech-Specifics/OS/Linux/Privilege Escalation - Linux/Overview - Privilege Escalation - Linux|Overview - Privilege Escalation - Linux]] and [[2 Tech-Specifics/OS/Linux/Fundamentals - Linux|Fundamentals - Linux]]
 
 # Pentesting
 
@@ -103,6 +103,14 @@ Tool: [[3 Tools/utilities/find|find]] - use `2>/dev/null` to suppress error mess
 | `find / -cmin -60` | find files changed within the last hour (60 minutes)  |
 | `find / -amin -60` | find files accesses within the last hour (60 minutes) |
 | `find / -size 50M` | find files with a 50 MB size                          |
+
+### Snippet: List user files
+
+This snippet lists mount points, as well as all files in `/home/` and `/root/` 3 levels deep
+
+```bash
+echo -e "\n=== Drives & Mounts ==="; df -h --output=target | tail -n +2; echo -e "\n=== Home Directories ==="; find /home -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; echo -e "\n=== Root Home ==="; find /root -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done
+```
 
 ## Mounts
 

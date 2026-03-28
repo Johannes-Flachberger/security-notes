@@ -1,6 +1,7 @@
 ---
 tags:
   - "#type/tech-specific"
+  - "#attack/credential-access"
 ---
 # Fundamentals
 

@@ -20,7 +20,7 @@ If possible, use [[#Automated Enumeration]]. If not use [[#Manual Enumeration]].
 ## Manual Enumeration
 
 - Generic Checklist: [[1 Methods/Security-Testing/6 Privilege Escalation/Generic Privilege Escalation Checklist|Generic Privilege Escalation Checklist]]
-- Cheat Sheet: [[2 Tech-Specifics/OS/Linux/Privilege Escalation - Linux/Manual Enumeration - Linux|Manual Enumeration - Linux]]
+- Cheat Sheet: [[2 Tech-Specifics/OS/Linux/Manual Enumeration - Linux|Manual Enumeration - Linux]]
 
 **External Checklists & Resources**
 

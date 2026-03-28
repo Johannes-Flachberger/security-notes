@@ -3,7 +3,9 @@ tags:
   - "#type/method" 
   - "#attack/command-and-control" 
 ---
+
 **There are 2 types of remote shells:**
+
 - Reverse shells: target connects to your machine - usually better
 - Bind shells: your machine connects to target
 
@@ -19,6 +21,7 @@ tags:
 # Payloads
 
 **Note:** When using a payload inside a webshell, [[2 Tech-Specifics/Web/encodings#URL|URL encode]] the payload properly.
+
 - [[3 Tools/shells/PowerShell#Reverse Shell Payloads|PowerShell]]
 - [[3 Tools/shells/bash#Simple Reverse Shell|bash]]
 

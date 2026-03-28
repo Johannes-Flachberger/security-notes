@@ -23,12 +23,20 @@ filters:
     - file.tags.contains("#attack/initial-access/client-side")
     - '!file.tags.contains("#type/tool")'
 formulas:
-  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2])
+  Domain: file.folder.split("/")[1] + if(file.folder.split("/")[2].isEmpty(),"", " / " + file.folder.split("/")[2]) 
 properties:
   formula.Domain:
     displayName: Domain
 views:
   - type: table
     name: Table
+    order:
+      - file.name
+      - formula.Domain
+    sort:
+      - property: formula.Domain
+        direction: ASC
+    columnSize:
+      file.name: 245
 
 ``` 

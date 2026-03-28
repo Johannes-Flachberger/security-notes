@@ -25,7 +25,7 @@ Used by default by [[3 Tools/shells/PowerShell#PowerShell Remoting|PowerShell Re
 
 ## Initial Access & Lateral Movement
 
-**Note:** Chaining a bind shell, such as most [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Remote Shells]] with a winrm connection does not work well.
+**Note:** Chaining a bind shell, such as most [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Remote Shells]] with a winrm connection does not work well.
 
 **Prerequisites:**
 
@@ -40,7 +40,7 @@ Used by default by [[3 Tools/shells/PowerShell#PowerShell Remoting|PowerShell Re
 	- supports [[2 Tech-Specifics/OS/Windows/Lateral Movement - Windows/Pass the Hash|Pass the Hash]]
 - [winrs](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/winrs): built in windows remote management utility
 	- Because of [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UAC|UAC]], this works only from domain users.
-	- e.g. use a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|Reverse Shell]] as payload.
+	- e.g. use a [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|Reverse Shell]] as payload.
 	- `winrs -r:<ip/hostname> -u:<user> -p:<password>  "<command>"`
 - [[3 Tools/shells/PowerShell#PowerShell Remoting|PowerShell Remoting]]
 

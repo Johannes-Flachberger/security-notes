@@ -11,23 +11,23 @@ supports more than 50 Protocols, including Telnet, RDP, SSH, FTP, HTTP, HTTPS, S
 
 # Usage
 
-`hydra -l [username] -P [wordlist path] [server] [service]`
+`hydra -l [username] -P [wordlist path] [server] [protocol]`
 
-eg. `hydra -t 4 -l [user] -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp`
+eg. `hydra -t 4 -l [user] -P /usr/share/wordlists/rockyou.txt -vV -u -f 10.10.10.6 ftp`
 
-| Option                    | Purpose                                                                              |
-| ------------------------- | ------------------------------------------------------------------------------------ |
-| `-t 4`                    | Number of parallel connections per target                                            |
-| `-l [user]`               | specify one user                                                                     |
-| `-L [userfile]`           | specify file of usernames                                                            |
-| `-P [path to dictionary]` | file of possible passwords                                                           |
-| `-p`                      | give one specific password                                                           |
-| `-vV`                     | Sets verbose mode to very verbose, shows the login+pass combination for each attempt |
-| `[machine IP]`            | The IP address of the target machine                                                 |
-| `-s [PORT]`               | set port                                                                             |
-| `[service]`               | Sets the protocol                                                                    |
-| `-d`                      | debug - print more info about whats going on                                         |
-| `http-post-form`          | see [[#Attack Web-Logins]]                                                           |
+| Option           | Purpose                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| `-t 4`           | Number of parallel connections per target                                            |
+| `-l <user>`      | specify one user                                                                     |
+| `-L <userfile>`  | specify file of usernames                                                            |
+| `-P <passfile>`  | file of possible passwords                                                           |
+| `-p`             | give one specific password                                                           |
+| `-vV`            | Sets verbose mode to very verbose, shows the login+pass combination for each attempt |
+| `-s <port>`      | set port                                                                             |
+| `-d`             | debug - print more info about whats going on                                         |
+| `http-post-form` | see [[#Attack Web-Logins]]                                                           |
+| `-u`             | password spraying. Try 1st password for all users, then move to 2nd password, etc.   |
+| `-f`             | stop on first password found for each host                                           |
 
 ## Modules
 

