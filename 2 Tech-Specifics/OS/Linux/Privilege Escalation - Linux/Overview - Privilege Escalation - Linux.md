@@ -42,4 +42,6 @@ scripts for privesc enumeration:
 - [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
 - [Linux Priv Checker](https://github.com/linted/linuxprivchecker)
 
+**Note:** Each tool has strengths and weaknesses. Running multiple tools can rule out false positives and reveal additional attack vectors.
+
 # Vectors:

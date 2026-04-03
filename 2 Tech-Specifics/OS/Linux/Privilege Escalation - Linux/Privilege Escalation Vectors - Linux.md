@@ -9,7 +9,7 @@ See:
 - [[2 Tech-Specifics/OS/Linux/Privilege Escalation - Linux/Overview - Privilege Escalation - Linux|Overview - Privilege Escalation - Linux]]
 - [[2 Tech-Specifics/OS/Linux/Manual Enumeration - Linux|Manual Enumeration - Linux]]
 
-**Kompendium of useful executables: [https://gtfobins.github.io/](https://gtfobins.github.io/)**
+**Collection of useful executables: [https://gtfobins.github.io/](https://gtfobins.github.io/)**
 
 # Pentesting
 

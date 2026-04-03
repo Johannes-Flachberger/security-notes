@@ -27,20 +27,20 @@ access right can be set for each share
 
 # Pentesting
 
-## Workflow
+**Workflow:**
 
-1. get credentials - see [[#Credential Access]]
+1. get credentials - see [[#Password Attacks]]
 2. Enumerate Workgroup, Shares, Permissions,... - see [[#Enumeration]]
 3. Access files - see [[#Exfiltration]] and [[#SMB Commands Cheat Sheet]]
 
-## Credential Access
+## Password Attacks
 
 Legacy systems or misconfigured systems might support "guest access" without authentication. Try:
 
 - Usernames `Guest`, `ANONYMOUS LOGON`, `nobody`
 - Null Session: empty user and password
 
-Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Dictionary Attack]].
+Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Dictionary Attack]].
 
 **Tools:**
 

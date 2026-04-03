@@ -15,7 +15,7 @@ During enumeration, never forget to cross-connect information to gather value. E
 If possible use [[#Tool-Based Enumeration]] (be aware of [[2 Tech-Specifics/OS/Antivirus Evasion|Antivirus Evasion]]).  
 If automated enumeration is not possible, use [[#Manual Enumeration]].
 
-## Workflow
+**Workflow:**
 
 1. Get an overview of the current system
 2. Perform in-depth enumeration & carry out attacks
@@ -25,7 +25,7 @@ If automated enumeration is not possible, use [[#Manual Enumeration]].
 > [!Warning] Warning
 > Privilege escalation tools sometimes tend to miss stuff that can be revealed by in-depth manual enumeration, or to fail on attack vectors that are manually exploitable.
 
-See:
+**See:**
 
 - [[3 Tools/privilige escalation/winPEAS|winPEAS]]: on kali, available as `peass`
 	- winPEAS may not distinguish between Windows 10 and 11 correctly
@@ -36,6 +36,8 @@ See:
 - [Seatbelt](https://github.com/GhostPack/Seatbelt)
 - [BeRoot](https://github.com/AlessandroZ/BeRoot)
 - [JAWS](https://github.com/411Hall/JAWS)
+
+**Note:** Each tool has strengths and weaknesses. Running multiple tools can rule out false positives and reveal additional attack vectors.
 
 ## Manual Enumeration
 

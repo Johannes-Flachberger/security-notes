@@ -76,7 +76,7 @@ AS-REQ queries can be used against a domain controller to check if a set of cred
 **See also:**
 
 - [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & Brute Force Attacks - AD Specifics|Wordlist & Brute Force Attacks - AD Specifics]]
-- [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
+- [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
 
 ### AS-REP Roasting
 
@@ -84,7 +84,7 @@ AS-REQ queries can be used against a domain controller to check if a set of cred
 
 **Prerequisite:** Kerberos Pre-Authentication must be disabled. This can be done per-user with the option "Do not require Kerberos preauthentication". By default, pre-authentication is enabled.
 
-If pre-authentication is disabled, anyone knowing a valid username (e.g. from [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration - AD|Enumeration]]) can make an AS-REQ for the target user and receive a TGT. Since the TGT is encrypted with the password hash of the user, the password can be [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|brute-forced locally]], e.g. using [[3 Tools/crypto/Hashcat|Hashcat]] (search modes for "Kerberos").
+If pre-authentication is disabled, anyone knowing a valid username (e.g. from [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration - AD|Enumeration]]) can make an AS-REQ for the target user and receive a TGT. Since the TGT is encrypted with the password hash of the user, the password can be [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|brute-forced locally]], e.g. using [[3 Tools/crypto/Hashcat|Hashcat]] (search modes for "Kerberos").
 
 **Note:** The brute-forcing involves first creating the hash of a candidate password and then trying to decrypt the TGT. If the result is a valid TGT, the password was right.
 
@@ -112,7 +112,7 @@ Two characteristics make Kerberoasting relevant:
 - When a client requests a TGS for a specific service (identified by an [[2 Tech-Specifics/Active Directory/Fundamentals - AD#Service Principal Names (SPN)|SPN]]), the KDC does not check if the client is allowed to access the application. --> A TGS can be requested for any application within the domain.
 - The service ticket / ticket-granting-service is encrypted with the service user's hash.
 
---> Any client having a TGT can make a TGS-REQ for any service on the domain and will receive the corresponding TGS-REP. The TGS-REP can be [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|brute-forced locally]], to extract the service users password e.g. using [[3 Tools/crypto/Hashcat|Hashcat]] (search modes for "Kerberos").
+--> Any client having a TGT can make a TGS-REQ for any service on the domain and will receive the corresponding TGS-REP. The TGS-REP can be [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|brute-forced locally]], to extract the service users password e.g. using [[3 Tools/crypto/Hashcat|Hashcat]] (search modes for "Kerberos").
 
 **Note:** The brute-forcing involves first creating the hash of a candidate password and then trying to decrypt the service ticket. If the result is a valid service ticket, the password was right.
 

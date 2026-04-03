@@ -10,7 +10,12 @@ Automation tool for active recon. It triggers other automated tools such as nmap
 
 # Usage
 
-**Example:** `autorecon --only-scans-dir --dirbuster.threads 100 --dirbuster.wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt <ip/cidr_range> [ip2] [ip3]`
+**Recommended Workflow:**
+
+1. If scanning a whole ip range, run a portscan using [[3 Tools/network/scanning/nmap|nmap]] and create a list of active hosts.
+2. Run autorecon on the list of active hosts without the `dirbuster` plugin (this one takes forever).
+
+**Example:** `autorecon --only-scans-dir --exclude-tags="dirbuster" <ip1> [ip2] [ip3]`
 
 While running, adjust verbosity with `up/down keys` - use high verbosity to print plugin output. Press `s` for status.
 

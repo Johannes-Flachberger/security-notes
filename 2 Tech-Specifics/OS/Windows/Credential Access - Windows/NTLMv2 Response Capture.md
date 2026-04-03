@@ -19,7 +19,7 @@ The client response includes the "Net-NTLMv2 hash".
 	- sniffing, e.g. using [[3 Tools/passive recon/Wireshark|Wireshark]] or
 	- set up an smb server (e.g. using [[3 Tools/network/Responder|Responder]]) and trigger the target to perform and smb request to this server - e.g. inject a [[2 Tech-Specifics/OS/Windows/Fundamentals - Windows#UNC Paths|UNC Path]]
 2. Use the hash for further attacks - e.g:
-	- Crack the hash - see [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
+	- Crack the hash - see [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
 	- Relay the handshake: [[2 Tech-Specifics/OS/Windows/Lateral Movement - Windows/NTLMv2 Relay Attack|NTLMv2 Relay Attack]]
 	- Create a Kerberos TGT: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Overpass the Hash|Overpass the Hash]]
 

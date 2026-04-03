@@ -1,11 +1,16 @@
 ---
 ---
-## Server Side Attacks
 
-target a server, i.e a machine that exposes a service - the exact techniques usually are service specific.
+Server Side Attacks target a server, i.e a machine that exposes a service - the exact techniques most often are service specific.
 
-> [!Hint]
-> If nothing else works, never forget to try a [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Overview - 8 Credential Access]] using [[1 Methods/Security-Testing/8 Credential Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]].
+## Password Attacks
+
+1. Use / spray gathered credentials. - use [[3 Tools/bruteforce/netexec|netexec]] or [[3 Tools/bruteforce/Hydra|Hydra]]
+2. Try default or weak credentials, like `admin:admin`, the service name as username & password.
+3. Spray all possible combinations of gathered credentials - beware from account lockout!
+	- Also try usernames as passwords.
+4. Some services have specific techniques, e.g. anonymous login on [[2 Tech-Specifics/Network/Protocols/FTP|FTP]]
+5. If nothing else works try using [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]].
 
 # Tech-Specific:
 

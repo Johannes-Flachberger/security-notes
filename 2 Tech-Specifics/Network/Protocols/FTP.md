@@ -42,3 +42,12 @@ operates on 2 channels/ports: control channel for commands & data channel for da
 | `less`             | show start of file contents  |
 | `get <filename> -` | show file content            |
 | `put <path>`       | send file                    |
+
+# Pentesting
+
+## Password Attacks
+
+Check for anonymous login:
+
+- Username: `anonymous`
+- Password: `anonymous` or nothing

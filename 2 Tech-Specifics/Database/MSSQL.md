@@ -23,7 +23,7 @@ From kali use [[3 Tools/network/impacket-scripts|impacket-scripts]]
 
 # Pentesting
 
-### Basic Enumeration
+## Basic Enumeration
 
 MSSQL provides metadata in form of "[system catalog views](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/catalog-views-transact-sql?view=sql-server-ver17)", e.g:
 
@@ -32,11 +32,11 @@ MSSQL provides metadata in form of "[system catalog views](https://learn.microso
 - show tables inside a database: `SELECT name FROM sys.tables;`
 - list colums of a table - use generic way: `SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'YourTableName';`
 
-### Injection
+## Injection
 
 - Methodology: [[2 Tech-Specifics/Web/Attacks - Web/Injection Attacks/SQL Injection|SQL Injection]]
 
-### Code Execution
+## Code Execution
 
 the [xp_cmdshell](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql) function is used to issue system commands
 
@@ -47,5 +47,13 @@ the [xp_cmdshell](https://learn.microsoft.com/en-us/sql/relational-databases/sys
 		- `EXECUTE sp_configure 'xp_cmdshell', 1;` and
 		- `RECONFIGURE;`
 - call with `EXECUTE` statement, e.g. `EXECUTE xp_cmdshell 'whoami';`
+
+## File read
+
+E.g. use this snippet to check for file read access:
+
+```sql
+SELECT * FROM OPENROWSET(BULK N'C:/Windows/System32/drivers/etc/hosts', SINGLE_CLOB) AS Contents
+```
 
 # Hardening

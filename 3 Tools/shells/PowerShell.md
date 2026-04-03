@@ -123,22 +123,28 @@ See [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Win
 
 ## Discovery
 
-### Perform ping sweep
+### Network Scanning
 
-```powershell
-1..255 | % {"192.168.0.$($_): $(Test-Connection -count 1 -comp 192.168.0.$($_) -quiet)"}
-```
+[PS2](https://github.com/nccgroup/PS2) is a network scanner purely written in powershell.
 
-### Perform TCP Port Scan
+### Network Scanning Snippets
+
+**Port Scan**
 
 ```powershell
 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 ```
 
-### Test Connection on One Tcp Port
+**Test Connection on One Tcp Port**
 
 ```powershell
 Test-NetConnection -Port 445 192.168.50.151
+```
+
+**Perform ping sweep**
+
+```powershell
+1..255 | % {"192.168.0.$($_): $(Test-Connection -count 1 -comp 192.168.0.$($_) -quiet)"}
 ```
 
 ## Exfiltration

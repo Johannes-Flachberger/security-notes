@@ -9,6 +9,16 @@ Purpose: compiler framework for linux
 
 # Usage
 
+## Compiling for the same architecture
+
+Example: `gcc exploit.c -o exploit -static`
+
+Note: `-static` links all libraries statically, this way the exploit might even work if the target has other library versions installed
+
+## Compiling for 32 bit targets
+
+Example: `gcc -m32 exploit.c -o exploit -static`
+
 ## Cross-Compiling on Linux Arm for x64
 
  `x86_64-linux-gnu-gcc <source> -o <outfile>`

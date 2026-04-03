@@ -26,11 +26,16 @@ If you can modify a pipeline definition, you can try to poison it to e.g. exfilt
 
 # Pentesting
 
+## Exfiltration
+
+If a git repo is exposed by a web service, use [git-dumper](github.com/arthaud/git-dumper) to download it: `git-dumper http://example.com ./output_folder`
+
 ## Credential Access
 
  Sometimes credentials get pushed to git repos by accident. --> When obtaining access to a git repo, scan its whole history for sensitive data.
 
 **Tools:**
+
 - [[3 Tools/passive recon/Trufflehog|Trufflehog]]: scan **local** and **remote** repos & verify the discovered credentials
 - [[3 Tools/passive recon/Gitleaks|Gitleaks]]: scan **local** repos
 

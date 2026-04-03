@@ -1,7 +1,7 @@
 ---
 tags:
-  - "#type/method" 
-  - "#attack/credential-access" 
+  - "#type/method"
+  - "#attack/initial-access/server-side"
 ---
 # Fundamentals
 

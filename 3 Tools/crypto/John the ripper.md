@@ -9,20 +9,20 @@ Purpose: hashcracking
 
 # Usage
 
-## Workflow
+**Workflow:**
 
 1. Prepare the hash file
 2. Run john with appropriate options
 3. Show cracked passwords
 
-## Command
-
 `john [options] [hash file]`
+
+Example: `john --wordlist=/usr/share/wordlists/rockyou.txt <hash_file>`
 
 | Option                | Purpose                                                          |
 | --------------------- | ---------------------------------------------------------------- |
 | `--wordlist=[path]`   | specify wordlist for dictionary attack                           |
-| `--format=[format]`   | specify the hash format                                          |
+| `--format=[format]`   | specify the hash format, not mandatory                           |
 | `--list=formats`      | list all supported hash formats                                  |
 | `--show`              | display all cracked passwords                                    |
 | `--single`            | use single crack mode for word mangling                          |
@@ -41,9 +41,9 @@ Reference: <https://www.openwall.com/john/doc/RULES.shtml>
 
 ## Conversion Tools
 
-There are many conversion tools located at: `/usr/share/john/`
+There are many conversion tools located at: `/usr/share/john/`  
 
-**zip files:** `zip2john [options] [zip file] > [output file]`
-**rar archives:** `rar2john [rar file] > [output file]`
-**ssh private key files:** `ssh2john [id_rsa private key file] > [output file]`
-if command is not found look for ssh2john script in `/usr/share/john/ssh2john.py`
+- **zip files:** `zip2john [options] [zip file] > [output file]`
+- **rar archives:** `rar2john [rar file] > [output file]`
+- **ssh private key files:** `ssh2john [id_rsa private key file] > [output file]`
+- **keepass databases:** `keepass2john`
