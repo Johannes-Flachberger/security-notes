@@ -9,7 +9,7 @@ tags:
 - Always consider that your prompts & the LLMs response may be analysed by the LLM provider.
 - A lot of LLMs provide dedicated research modes.
 
-# Tools:
+**Tools:**:
 
 - ChatGPT
 - Perplexity - much faster than ChatGPT deep research

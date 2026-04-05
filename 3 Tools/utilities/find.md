@@ -34,3 +34,13 @@ e.g. `find / -type f -name "myfile*"
 | `-printf`     | Custom output formatting (GNU find only)                            |
 
 # Snippets
+
+**time-based search
+
+| Command            | Purpose                                               |
+| ------------------ | ----------------------------------------------------- |
+| `find / -mtime 10` | find files that were modified in the last 10 days     |
+| `find / -atime 10` | find files that were accessed in the last 10 day      |
+| `find / -cmin -60` | find files changed within the last hour (60 minutes)  |
+| `find / -amin -60` | find files accesses within the last hour (60 minutes) |
+| `find / -size 50M` | find files with a 50 MB size                          |

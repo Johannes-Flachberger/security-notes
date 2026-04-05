@@ -102,7 +102,7 @@ Attempt to redirect execution flow to the payload, and then back to legitimate c
 	1. **Important:** Check if the antivirus sends samples of scanned artefacts - if possible disable it.
 	2. If the target as sample submission enabled, also enable it for further testing. (Sample submission needs internet connectivity, also on the target.)
 
-## Tools
+**Tools:**
 
 Good commercial tool: [The Enigma Protector](https://www.enigmaprotector.com/en/home.html)
 

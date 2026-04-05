@@ -12,6 +12,13 @@ See link for full list of commands.
 
 for help menu of each command: `/?`
 
+## Useful options
+
+| Purpose                               | Option |
+| ------------------------------------- | ------ |
+| search current directories & sub-dirs | `/s`   |
+| case in-sensitive search              | `/i`   |
+
 ## Useful Commands
 
 | Command                                 | Purpose                                                                                    |
@@ -30,7 +37,7 @@ for help menu of each command: `/?`
 
 ## Enumeration
 
-Also see [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+Also see [[2 Tech-Specifics/OS/Windows/Basic Enumeration - Windows|Basic Enumeration - Windows]]
 
 | Command                                         | Purpose                                                                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -48,3 +55,25 @@ In non-tty where you cannot respond to command prompts, pipe the answer into the
 ```powershell
 cmd.exe /c echo y | <command>
 ```
+
+## File Searching
+
+**Example** `dir /si [keyword] *.txt`
+
+**Name-based**
+
+| Command               | Purpose                    |
+| --------------------- | -------------------------- |
+| `dir /si *.txt`       | Filter by extension        |
+| `dir /si /a-d`        | Files only (no dirs)       |
+| `dir C:\MyFolder /si` | Start from a specific path |
+
+**Content-based**
+
+| Command                               | Purpose             |
+| ------------------------------------- | ------------------- |
+| `findstr /s /i "searchterm" *.*`      | Search all files    |
+| `findstr /s /i "searchterm" *.log`    | Filter by extension |
+| `findstr /s "term" *.*` (default)     | Case-sensitive      |
+| `findstr /s /i /m "searchterm" *.*`   | Show only filenames |
+| `findstr /s /r "searchterm[0-9]" *.*` | Regex search        |

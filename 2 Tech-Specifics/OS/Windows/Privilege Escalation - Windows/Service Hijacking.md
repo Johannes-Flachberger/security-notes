@@ -12,7 +12,7 @@ There are several ways to "hijack" a service, i.e. modify its code to achieve co
 
 If permissions on a binary that is run by a service are not set restrictive enough, the binary can be replaced and gets run by the service user (usually with )
 
-### Workflow
+**Workflow:**
 
 1. List running services and their executables:
 
@@ -44,7 +44,7 @@ The same approach as [[#Service Binary Hijacking]] but applied to DLLs.
 
 To achieve a DLL hijack, insert a malicious DLL in a higher position in the search order than the legitimate DLL is in.
 
-#### Workflow
+**Workflow:**
 
 1. Enumerate DLLs and their position in the search order.
 	- Typically [[3 Tools/microsoft/Sysinternals#ProcMon|ProcMon]] used to analyse an executable. - Since it requires admin privileges, mirror the target setup for preparation. ProcMon can be overwhelming. Filter for the target process name, the DLL name, take actions & relate the events to the actions.
@@ -90,7 +90,7 @@ You can put a malicious executable in a place where windows tries to call it bef
 1. Being able to write to a folder within the path of the service executable.
 2. Being able to restart the service (or reboot the machine - requires `SeShutdownPrivilege`)
 
-### Workflow
+**Workflow:**
 
 1. find service with unquoted path
 	- `wmic service get name,pathname,startmode`

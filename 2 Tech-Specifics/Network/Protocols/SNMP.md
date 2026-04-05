@@ -24,7 +24,7 @@ The MIB holds a lot of information about targets - e.g. on windows: user account
 
 # Pentesting
 
-## Workflow
+**Workflow:**
 
 1. port scan
 2. build list of community strings & brute force

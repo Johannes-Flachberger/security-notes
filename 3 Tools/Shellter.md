@@ -25,7 +25,7 @@ On kali available at: `/usr/share/windows-resources/`
 
 Shellter is built for windows --> use wine on linux.
 
-## Workflow
+**Workflow:**
 
 1. Choose a target executable.
 2. Start Shellter

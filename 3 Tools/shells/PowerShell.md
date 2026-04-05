@@ -27,6 +27,7 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/Attacks - Web
 | `-exec bypass`<br>or `-ep bypass` | bypass execution policies                  |
 | `-c`                              | execute string as command                  |
 | `-w hidden`                       | hide the powershell window                 |
+| `-Recurse`                        | perform recursive file search              |
 
 > [!HINT]
 > When encoding a command with [[3 Tools/utilities/Cyberchef|Cyberchef]]:
@@ -48,6 +49,34 @@ Check if you are running PowerShell or cmd: [[2 Tech-Specifics/Web/Attacks - Web
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Select-String` or `sls` | equivilant to `grep`on linux                                                                                                                                |
 | `icacls <path>`          | show permissions of file or folder<br>Reference: [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) |
+
+#### File Searching
+
+**Example:**
+
+```powershell
+Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Include "myfile.txt"
+```
+
+Use `?`and `*`as wildcards. Short form of `Get-ChildItem` is `gci`.
+
+**Name-based**
+
+| Command                      | Purpose                    |
+| ---------------------------- | -------------------------- |
+| `gci -Recurse -Filter *.txt` | Filter by extension        |
+| `gci -Recurse -File`         | Files only (no dirs)       |
+| `gci C:\MyFolder -Recurse`   | Start from a specific path |
+
+**Content-based**
+
+| Command                                                    | Purpose             |
+| ---------------------------------------------------------- | ------------------- |
+| `gci -Recurse -File \| Select-String "searchterm"`         | Search all files    |
+| `gci -Recurse -Filter *.log \| Select-String "searchterm"` | Filter by extension |
+| `Select-String "searchterm" -CaseSensitive`                | Case-sensitive      |
+| `... \| Select-Object -ExpandProperty Path`                | Show only filenames |
+| `Select-String "searchterm\d+"`                            | Regex search        |
 
 ### Filter command output
 
@@ -119,7 +148,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 ## Enumeration
 
-See [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Manual Enumeration - Windows|Manual Enumeration - Windows]]
+See [[2 Tech-Specifics/OS/Windows/Basic Enumeration - Windows|Basic Enumeration - Windows]]
 
 ## Discovery
 

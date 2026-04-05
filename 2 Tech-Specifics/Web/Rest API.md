@@ -7,7 +7,7 @@ tags:
 
 ## Enumeration
 
-### Workflow
+**Workflow:**
 
 emumerate the available paths step by step
 

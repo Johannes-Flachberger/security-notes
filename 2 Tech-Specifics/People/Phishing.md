@@ -45,7 +45,7 @@ The **basic components** of a phishing campaign are:
 
 All of the components can be optimised using fundamental [[2 Tech-Specifics/People/Social Engineering#Psychological Principles|Psychological Principles]] of social engineering.
 
-## Workflow
+**Workflow:**
 
 ### 1. Create a Good Pretext
 

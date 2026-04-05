@@ -40,12 +40,12 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 
 Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & Brute Force Attacks - AD Specifics|Wordlist & Brute Force Attacks - AD Specifics]]
 
-### Workflow
+**Workflow:**
 
 1. Prepare [[#Wordlists]]
 2. Try logging in with all entries in the Wordlist
 
-### Tools:
+**Tools:**
 
 - [[3 Tools/bruteforce/Hydra|Hydra]]
 - [[3 Tools/web/Burp Suite|Burp Suite]] Pro (for web applications)
@@ -55,7 +55,7 @@ Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & 
 
 **Fundamentals:** [[2 Tech-Specifics/_Other/Cryptography/Hashing fundamentals|Hashing fundamentals]]
 
-### Workflow
+**Workflow:***
 
 1. Extract hashes
 2. Format hashes
@@ -64,16 +64,14 @@ Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & 
 	- in most cases it is advised to apply rule-based mutations to wordlists
 5. Get cracking
 
-### Tools
-
-#### Hash identification
+**Tools for hash identification:**
 
 - LLMs
 - [[3 Tools/crypto/hashID|hashID]]
 - [hash-identifier](https://www.kali.org/tools/hash-identifier/)
 - [[3 Tools/crypto/Hashcat|Hashcat]]: use`--identify` option
 
-#### Hash cracking
+**Tools for hash cracking:**
 
 - [[3 Tools/crypto/Hashcat|Hashcat]]: faster, but more complex
 	- Primarily GPU-based, also supports CPU

@@ -9,7 +9,7 @@ Purpose: hashcracking
 
 # Usage
 
-## Workflow
+**Workflow:***
 
 1. put hashes to be cracked in file
 2. run hashcat

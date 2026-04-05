@@ -12,7 +12,7 @@ See [[2 Tech-Specifics/Active Directory/Fundamentals - AD|Fundamentals - AD]]
 
 ## Enumeration
 
-Use [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration - AD|Active Directory Enumeration]] and [[2 Tech-Specifics/OS/Windows/Enumeration - Windows/Overview - Enumeration - Windows|Windows Enumeration]].
+Use [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration - AD|Active Directory Enumeration]] and [[2 Tech-Specifics/OS/Windows/Privilege Escalation - Windows/Overview - Privilege Escalation - Windows|Overview - Privilege Escalation - Windows]].
 
 **Hint:** Tools for Kerberos attacks typically already perform the relevant enumeration.
 
