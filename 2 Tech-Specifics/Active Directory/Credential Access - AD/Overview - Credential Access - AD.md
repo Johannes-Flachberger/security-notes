@@ -21,7 +21,7 @@ Use [[2 Tech-Specifics/Active Directory/Enumeration - AD/Overview - Enumeration 
 See:
 
 - [[2 Tech-Specifics/OS/Windows/Credential Access - Windows/Overview - Credential Access - Windows|Windows Credential Access]]
-- [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & Brute Force Attacks - AD Specifics|Wordlist & Brute Force Attacks - AD Specifics]]
+- [[2 Tech-Specifics/Active Directory/Credential Access - AD/Password Attacks - AD Specifics|Password Attacks - AD Specifics]]
 - [[2 Tech-Specifics/Network/Protocols/Kerberos|Kerberos Attacks]]
 	- [[2 Tech-Specifics/Network/Protocols/Kerberos#AS-REP Roasting|AS-REP Roasting]]: capture a users password hash
 	- [[2 Tech-Specifics/Network/Protocols/Kerberos#Kerberoasting|Kerberoasting]]: capture password hash of a service account

@@ -7,7 +7,7 @@ tags:
 See:
 
 - [[2 Tech-Specifics/Active Directory/Fundamentals - AD|Fundamentals - AD]]
-- [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]]
+- [[1 Methods/Security-Testing/3 Initial Access/Password Attacks|Password Attacks]]
 
 # Pentesting
 

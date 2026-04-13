@@ -13,7 +13,7 @@ used to scan windows machines automatically for privesc opportunities
 
 # Usage
 
-best write output to file (winpeas > outfile.txt)
+**Example:** `.\winPEASx64.exe all -network="<ip1>,<ip2>,..." log=winpeas.log`
 
 | Option       | Purpose                              |
 | ------------ | ------------------------------------ |

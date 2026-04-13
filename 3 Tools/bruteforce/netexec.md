@@ -35,6 +35,7 @@ Example: `nxc smb <ip> -u <user> -p '<password>' -d <domain> --continue-on-succe
 
 - specify a range of IPs: e.g.`192.168.0.100-200`
 - hosts, users and password can also be supplied as files using the same parameters
+- also run with `--local-auth` to check for local users
 
 **Output:**
 
@@ -51,7 +52,7 @@ Example: `nxc smb <ip> -u <user> -p '<password>' -d <domain> --continue-on-succe
 Execute enumeration using multiple protocols in a loop:
 
 ```sh
-for proto in rdp smb winrm wmi; do nxc "$proto" <hosts> -u <user> -p <pass> -d <domain> --continue-on-success; done
+for proto in rdp smb winrm wmi; do echo "### $proto ###"; nxc "$proto" <hosts> -u <user> -p <pass> --continue-on-success; done
 ```
 
-**Note:** ssh enumeration is not compatible with the `-d` option
+**Hint:** also run with `--local-auth` to check for local users

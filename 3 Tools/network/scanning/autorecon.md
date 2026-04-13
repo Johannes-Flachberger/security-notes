@@ -15,7 +15,7 @@ Automation tool for active recon. It triggers other automated tools such as nmap
 1. If scanning a whole ip range, run a portscan using [[3 Tools/network/scanning/nmap|nmap]] and create a list of active hosts.
 2. Run autorecon on the list of active hosts without the `dirbuster` plugin (this one takes forever).
 
-**Example:** `autorecon --only-scans-dir --exclude-tags="dirbuster" <ip1> [ip2] [ip3]`
+**Example:** `sudo autorecon --only-scans-dir --exclude-tags="dirbuster" -o . <ip1> [ip2] [ip3]`
 
 While running, adjust verbosity with `up/down keys` - use high verbosity to print plugin output. Press `s` for status.
 

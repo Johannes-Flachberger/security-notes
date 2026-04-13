@@ -130,6 +130,8 @@ The following files might include sensitive information:
 - **password safe databases**
 - relevant filetypes: `*.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx,*.ini, *.kdbx, *.kdb` etc.
 
+Also see [[2 Tech-Specifics/OS/Windows/Credential Access - Windows/Local Credential Access - Windows|Local Credential Access - Windows]]
+
 #### Interesting files listing snippet
 
 This snippet lists:

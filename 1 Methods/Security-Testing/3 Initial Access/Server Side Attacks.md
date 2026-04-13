@@ -10,7 +10,7 @@ Server Side Attacks target a server, i.e a machine that exposes a service - the 
 3. Spray all possible combinations of gathered credentials - beware from account lockout!
 	- Also try usernames as passwords.
 4. Some services have specific techniques, e.g. anonymous login on [[2 Tech-Specifics/Network/Protocols/FTP|FTP]]
-5. If nothing else works try using [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]].
+5. If nothing else works try using [[1 Methods/Security-Testing/3 Initial Access/Password Attacks|Password Attacks]].
 
 # Tech-Specific:
 

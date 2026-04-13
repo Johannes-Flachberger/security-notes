@@ -5,7 +5,7 @@ tags:
 ---
 # Wordlist Generation
 
-Generate wordlists for [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Bruteforce and Dictionary Attacks]].
+Generate wordlists for [[1 Methods/Security-Testing/3 Initial Access/Password Attacks|Password Attacks]].
 
 Tools:
 

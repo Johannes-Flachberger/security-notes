@@ -2,10 +2,11 @@
 tags:
   - "#type/method"
   - "#attack/initial-access/server-side"
+  - "#attack/credential-access"
 ---
 # Fundamentals
 
-Two types:
+Two types of password attacks:
 
 - **Bruteforce Attacks** are usually not based on a wordlist but rather tries all possible permutations of an allowed list of characters
 - **Dictionary Attacks** use wordlists that are tried sequentially
@@ -28,6 +29,9 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 2. Generate a custom wordlist - see:
 	- [[1 Methods/Security-Testing/2 Ressource Development/Overview - 2 Ressource Development#Wordlist generation|Generate Wordlists]]
 
+> [!Hint] Context Specific wordlists
+> Never forget to try "obvious" words based on the context - e.g. the hostname, application name, etc. as user and password combinations, even if using a standard wordlist.
+
 # Pentesting
 
 > [!HINT] Hint
@@ -36,9 +40,9 @@ A wordlist is required for dictionary attacks. There are 2 Options:
 ## Remote Attacks
 
 > [!Warning]
-> Dictionary & Bruteforce Attacks generate a lot of noise - they are easily detected, and often blocked by modern applications.
+> Password attacks generate a lot of noise - they are easily detected, and often blocked by modern applications.
 
-Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Wordlist & Brute Force Attacks - AD Specifics|Wordlist & Brute Force Attacks - AD Specifics]]
+Also see: [[2 Tech-Specifics/Active Directory/Credential Access - AD/Password Attacks - AD Specifics|Password Attacks - AD Specifics]]
 
 **Workflow:**
 

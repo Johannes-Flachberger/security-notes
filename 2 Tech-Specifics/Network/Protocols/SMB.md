@@ -40,7 +40,7 @@ Legacy systems or misconfigured systems might support "guest access" without aut
 - Usernames `Guest`, `ANONYMOUS LOGON`, `nobody`
 - Null Session: empty user and password
 
-Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks|Dictionary Attack]].
+Also see [[1 Methods/Security-Testing/8 Credential Access/Overview - 8 Credential Access|Credential Access]], or try a [[1 Methods/Security-Testing/3 Initial Access/Password Attacks|Dictionary Attack]].
 
 **Tools:**
 

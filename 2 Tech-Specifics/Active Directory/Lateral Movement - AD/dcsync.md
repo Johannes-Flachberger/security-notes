@@ -36,7 +36,7 @@ By default, these groups have the necessary right:
 1. perform dcsync attack - e.g. extract password hashes
 	- [[3 Tools/mimikatz#DCSync Attack|mimikatz]]: from domain-joined windows machine
 	- [[3 Tools/network/impacket-scripts#Impacket-secretsdump|impacket-secretsdump]]: from non-domain joined machine (e.g. kali)
-2. try to [[1 Methods/Security-Testing/3 Initial Access/Bruteforce and Dictionary Attacks#Local Attacks (Hash-cracking)|crack the obtained hashes]]
+2. try to [[1 Methods/Security-Testing/3 Initial Access/Password Attacks#Local Attacks (Hash-cracking)|crack the obtained hashes]]
 	- [[3 Tools/crypto/Hashcat|Hashcat]] mode 1000 "NTLM"
 
 # Hardening
