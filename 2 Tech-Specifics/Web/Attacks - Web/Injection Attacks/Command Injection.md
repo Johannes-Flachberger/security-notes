@@ -24,7 +24,7 @@ execute shell commands on the webserver
 
 ### Verbose Command Injection
 
-webapp gives output
+webapp gives output - this is generally much easier to handle
 
 # Pentesting
 
@@ -53,6 +53,7 @@ detect if you are in cmd or PowerShell:
 ## Tricks
 
 - with reverse shells, sometimes things dont work as expected, e.g. the nc -e option might not work. In this case try different commands/ variations of the payload
+- avoid special characters as mus as possible, since they might influence parsing or might be filtered by a WAF - e.g. use [[3 Tools/web/wget|wget]] to download payloads to a target.
 
 # Hardening
 

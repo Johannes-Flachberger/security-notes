@@ -226,7 +226,7 @@ Credentials can be leaked in multiple ways:
 This snippet lists mount points, as well as all files in `/home/<user>`, `/root/`, `/media`, `/mnt`, `/opt` 3 levels deep
 
 ```bash
-echo -e "\n=== Drives & Mounts ==="; df -h --output=target | tail -n +2; echo -e "\n=== Home Directories ==="; find /home -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; echo -e "\n=== Root Home ==="; find /root -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; for dir in /media /mnt /opt /tmp; do echo -e "\n=== $dir ==="; find "$dir" -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; done
+echo -e "\n=== Drives & Mounts ==="; df -h --output=target | tail -n +2; echo -e "\n=== Home Directories ==="; find /home -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; echo -e "\n=== Root Home ==="; find /root -maxdepth 3 2>/dev/null | while read f; do echo "  $f"; done; for dir in /media /mnt /opt /tmp; do echo -e "\n=== $dir ==="; find "$dir" -maxdepth 6 2>/dev/null | while read f; do echo "  $f"; done; done
 ```
 
 ### Check further mount points

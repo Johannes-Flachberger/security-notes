@@ -17,7 +17,9 @@ Purpose: hashcracking
 
 ## Command
 
-`hashcat -m [hash mode number] [hash file] [wordlist file]`
+**Usage:** `hashcat -m [hash mode number] [hash file] [wordlist file]`
+
+**Example:** `hashcat -m 1000 hashes /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best66.rule -O -o cracked`
 
 | Option             | Purpose                                                                                                                                                                                                                                |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

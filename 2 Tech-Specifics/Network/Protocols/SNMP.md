@@ -20,6 +20,8 @@ tags:
 - SNMP 1,2 & 2c is unencrypted --> interception
 - [[2 Tech-Specifics/Network/Protocols/Fundamentals/SNMP Fundamentals#4️. SNMP Versions|SNMPv3]] supports encryption, message integrity and authentication - old versions only supported DES-56, which can be brute forced
 
+Data that is accessible by SNMP is organized in the "Management Information Base (MIB)". Each "datapoint" is identified by an OID, which contains an address and metadata. OIDs follow a tree structure. --> when enumerating you can start at the very root, or at a specific place. Some MIB branches are standardaized and therefore use the same OIDs accross manufacturers, but some are vendor specific.
+
 The MIB holds a lot of information about targets - e.g. on windows: user accounts, running programs, etc...
 
 # Pentesting
@@ -34,16 +36,20 @@ The MIB holds a lot of information about targets - e.g. on windows: user account
 
 ### Snmpwalk
 
-- enumerates the whole MIB tree of an smb server
+- enumerates the MIB of an smb server, starting from the defined OID
+	- per default, only the "mib-2-subtree" is enumerated, but the extended MIB can provide further information.
 - requires credentials / community string
-e.g. `snmpwalk -c public -v1 -t 10 192.168.50.151`
+**Example:** `snmpwalk -c public -v1 -t 10 192.168.50.151 .1`
 
-| Option | Purpose |
-|----------|--------------|
-| `-c` | community string |
-| `-v` | snmp version |
-| `-t` | timeout |
-| `-Oa` | decode hex strings to ascii |
+**E.g. - walk the extended MIB:** `snmpwalk -v 1 -c public <IP> NET-SNMP-EXTEND-MIB::nsExtendOutputFull`
+
+| Option           | Purpose                                                                           |
+| ---------------- | --------------------------------------------------------------------------------- |
+| `-c`             | community string                                                                  |
+| `-v`             | snmp version                                                                      |
+| `-t`             | timeout                                                                           |
+| `-Oa`            | decode hex strings to ascii                                                       |
+| `<starting OID>` | the OID where to start walking the MIB tree - use `.1` to enumerate the whole MIB |
 
 ## Snmp-check
 
