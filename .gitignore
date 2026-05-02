@@ -1,9 +1,21 @@
 # exclude workspace cache
 .obsidian/workspace.json
-
-# exclude workspace cache specific to mobile devices
 .obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/sync.json
 
-# Add below lines to exclude OS settings and caches
+# exclude plugins source code, but include settings of chosen plugins 
+.obsidian/plugins/*
+
+!.obsidian/plugins/obsidian-linter/
+.obsidian/plugins/obsidian-linter/*
+!.obsidian/plugins/obsidian-linter/data.json
+
+!.obsidian/plugins/folder-notes/
+.obsidian/plugins/folder-notes/*
+!.obsidian/plugins/folder-notes/data.json
+
+# misc
 .trash/
 .DS_Store

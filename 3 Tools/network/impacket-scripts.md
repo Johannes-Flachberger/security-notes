@@ -102,3 +102,22 @@ If the error `KRB_AP_ERR_SKEW(Clock skew too great)` is thrown, synchronize the 
 Output format of impacket-secretsdump:
 
 `<Username>:<RID>:<LM_hash>:<NT_hash>:...`
+
+# impacket-smbclient
+
+**Purpose:**
+
+- manual [[2 Tech-Specifics/Network/Protocols/SMB|SMB]] connections
+
+# impacket-ticketer
+
+**Purpose:**
+
+- [[2 Tech-Specifics/Active Directory/Credential Access - AD/Overpass the Hash|Overpass the Hash]]
+**Usage:**
+
+Example - silver ticket:
+
+```sh
+impacket-ticketer -nthash <hash> -domain-sid <SID> -domain <domain_name> -spn <spn> <target_user> -dc-ip <ip>
+```

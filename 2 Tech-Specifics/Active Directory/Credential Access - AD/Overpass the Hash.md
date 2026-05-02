@@ -17,7 +17,7 @@ Essentially, upgrading a cached [[2 Tech-Specifics/_Other/Cryptography/Hashing f
 
 1. Obtain a username and its NTLM password hash - see [[2 Tech-Specifics/Active Directory/Credential Access - AD/Overview - Credential Access - AD|Overview - Credential Access - AD]]
 2. Use [[3 Tools/mimikatz|mimikatz]] to extract a cached NTLM hash
-3. Use [[3 Tools/mimikatz#Spawn Process with cached Credentials|mimikatz]] to spawn a process as another user whose credentials are cached.
+3. Use [[3 Tools/mimikatz#Spawn Process with cached Credentials|mimikatz]] to spawn a process as another user whose credentials are cached. - alternatively use [[3 Tools/network/impacket-scripts|impacket-ticketer]] to create a TGT or TGS and skip step 4.
 4. Trigger a [[2 Tech-Specifics/Network/Protocols/Kerberos|Kerberos]] authentication request, to obtain a TGT or a TGS of the impersonated user.
 	- try to authenticate to any service in the domain - e.g. use `net use \\<hostname>` to attempt a connection to an [[2 Tech-Specifics/Network/Protocols/SMB|SMB]] share
 5. Use TGT or TGS Ticket:

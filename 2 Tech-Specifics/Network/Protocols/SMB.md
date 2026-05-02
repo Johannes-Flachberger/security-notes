@@ -58,7 +58,6 @@ This does not cover enumeration of files within an smb share - for that see [[#E
 
 - [[3 Tools/network/scanning/nmap snippets#SMB Enumeration|nmap]]: vulnerability scanning (use `nmap --script smb-vuln-*`)
 - [[3 Tools/bruteforce/netexec|netexec]]: password spraying, version enumeration, OS detection, share listing
-- [[3 Tools/network/smb/smbclient|smbclient]]: manual smb connection
 - [[3 Tools/network/net (windows built-in)|net (windows built-in)]]: use from windows
 - RPC enumeration:
 	- [enum4linux-ng](https://www.kali.org/tools/enum4linux-ng/): automated user/group/policy enumeration
@@ -77,7 +76,8 @@ Search through and browse data on smb shares.
 
 - [[3 Tools/network/smb/smbmap|smbmap]]: recursive directory listing, remote file searching
 - [[3 Tools/network/smb/Smbget|Smbget]]: recursive download of whole shares
-- [[3 Tools/network/smb/smbclient|smbclient]]: manual smb connection
+- [[3 Tools/network/impacket-scripts|impacket-smbclient]]: stable and easy to use
+- [[3 Tools/network/smb/smbclient|smbclient]]: manual smb connection - getting the cli agruments light can be a pain
 - [[3 Tools/network/net (windows built-in)|net (windows built-in)]]: use from windows
 
 ## Execution
