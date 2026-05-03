@@ -9,9 +9,9 @@ Purpose: manually send DNS queries, DNS enumeration
 
 # Usage
 
-**"Normal" Lookup:**`host <domain name>
+**"Normal" Lookup:**`host <domain name>`
 
-**Reverse Lookup:**`host <IP address>
+**Reverse Lookup:**`host <IP address>`
 
 | Option      | Purpose                                                                            |
 | ----------- | ---------------------------------------------------------------------------------- |

@@ -1,0 +1,18 @@
+{
+  "theme": "obsidian",
+  "translucency": false,
+  "cssTheme": "Seamless View",
+  "enabledCssSnippets": [
+    "colors",
+    "embeddedSearch",
+    "properties",
+    "tasks",
+    "consistentSpacing"
+  ],
+  "interfaceFontFamily": "",
+  "baseFontSize": 16,
+  "textFontFamily": "",
+  "accentColor": "#0468b4",
+  "showViewHeader": true,
+  "baseFontSizeAction": false
+}

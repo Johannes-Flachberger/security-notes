@@ -1,0 +1,25 @@
+{
+  "readableLineLength": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 70
+  },
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "root",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "meta/attachments",
+  "promptDelete": true,
+  "newLinkFormat": "absolute",
+  "userIgnoreFilters": [
+    "9_meta/"
+  ],
+  "showInlineTitle": true,
+  "strictLineBreaks": true,
+  "showLineNumber": false,
+  "rightToLeft": false,
+  "showIndentGuide": false,
+  "tabSize": 4
+}
